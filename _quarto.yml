@@ -1,0 +1,59 @@
+project:
+  type: manuscript
+
+manuscript:
+  article: index.qmd
+
+format:
+  html:
+    comments:
+      hypothesis: true
+    # color theme
+    theme:
+      dark: darkly
+      light: cosmo
+    # formatting
+    fontsize: "medium"
+  docx: default
+  jats: default
+  # elsevier-pdf: 
+  #   journal:
+  #     cite-style: authoryear
+  #   include-in-header: 
+  #     text: |
+  #       \newpageafter{toc}
+
+execute:
+  freeze: auto
+  # code reading options
+  warning: false
+  error: false
+  message: false
+
+# dates
+date-format: "D/MM/YYYY"
+date: 2024-02-02
+date-modified: last-modified
+
+# table of contents
+toc: true
+toc-location: right
+toc-depth: 2
+toc-expand: 1
+number-sections: true
+number-depth: 2
+
+# figures and captions
+fig-format: svg
+cap-location: top
+fig-cap-location: bottom
+tbl-cap-location: top
+
+# code
+code-annotations: hover
+
+# setting for proper numbering of sections
+crossref:
+  chapters: true
+
+
