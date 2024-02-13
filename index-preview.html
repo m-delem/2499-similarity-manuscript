@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="generator" content="quarto-1.5.11">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <meta name="author" content="Maël Delem">
+
+    <title>Unravelling mental representations in aphantasia through unsupervised alignment</title>
+    <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      div.columns{display: flex; gap: min(4vw, 1.5em);}
+      div.column{flex: auto; overflow-x: auto;}
+      div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+      ul.task-list{list-style: none;}
+      ul.task-list li input[type="checkbox"] {
+        width: 0.8em;
+        margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+        vertical-align: middle;
+      }
+      /* CSS for syntax highlighting */
+      pre > code.sourceCode { white-space: pre; position: relative; }
+      pre > code.sourceCode > span { line-height: 1.25; }
+      pre > code.sourceCode > span:empty { height: 1.2em; }
+      .sourceCode { overflow: visible; }
+      code.sourceCode > span { color: inherit; text-decoration: inherit; }
+      div.sourceCode { margin: 1em 0; }
+      pre.sourceCode { margin: 0; }
+      @media screen {
+      div.sourceCode { overflow: auto; }
+      }
+      @media print {
+      pre > code.sourceCode { white-space: pre-wrap; }
+      pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+      }
+      pre.numberSource code
+        { counter-reset: source-line 0; }
+      pre.numberSource code > span
+        { position: relative; left: -4em; counter-increment: source-line; }
+      pre.numberSource code > span > a:first-child::before
+        { content: counter(source-line);
+          position: relative; left: -1em; text-align: right; vertical-align: baseline;
+          border: none; display: inline-block;
+          -webkit-touch-callout: none; -webkit-user-select: none;
+          -khtml-user-select: none; -moz-user-select: none;
+          -ms-user-select: none; user-select: none;
+          padding: 0 4px; width: 4em;
+        }
+      pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+      div.sourceCode
+        {   }
+      @media screen {
+      pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+      }
+      /* CSS for citations */
+      div.csl-bib-body { }
+      div.csl-entry {
+        clear: both;
+        margin-bottom: 0em;
+      }
+      .hanging-indent div.csl-entry {
+        margin-left:2em;
+        text-indent:-2em;
+      }
+      div.csl-left-margin {
+        min-width:2em;
+        float:left;
+      }
+      div.csl-right-inline {
+        margin-left:2em;
+        padding-left:1em;
+      }
+      div.csl-indent {
+        margin-left: 2em;
+      }    </style>
+
+    <style>
+      body.hypothesis-enabled #quarto-embed-header {
+        padding-right: 36px;
+      }
+
+      #quarto-embed-header {
+        height: 3em;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: solid 1px;
+      }
+
+      #quarto-embed-header h6 {
+        font-size: 1.1em;
+        padding-top: 0.6em;
+        margin-left: 1em;
+        margin-right: 1em;
+        font-weight: 400;
+      }
+
+      #quarto-embed-header a.quarto-back-link,
+      #quarto-embed-header a.quarto-download-embed {
+        font-size: 0.8em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        margin-left: 1em;
+        margin-right: 1em;
+      }
+
+      .quarto-back-container {
+        padding-left: 0.5em;
+        display: flex;
+      }
+
+      .headroom {
+          will-change: transform;
+          transition: transform 200ms linear;
+      }
+
+      .headroom--pinned {
+          transform: translateY(0%);
+      }
+
+      .headroom--unpinned {
+          transform: translateY(-100%);
+      }      
+    </style>
+
+    <script>
+    window.document.addEventListener("DOMContentLoaded", function () {
+
+      var header = window.document.querySelector("#quarto-embed-header");
+      const titleBannerEl = window.document.querySelector("body > #title-block-header");
+      if (titleBannerEl) {
+        titleBannerEl.style.paddingTop = header.clientHeight + "px";
+      }
+      const contentEl = window.document.getElementById('quarto-content');
+      for (const child of contentEl.children) {
+        child.style.paddingTop = header.clientHeight + "px";
+        child.style.marginTop = "1em";
+      }
+
+      // Use the article root if the `back` call doesn't work. This isn't perfect
+      // but should typically work
+      window.quartoBackToArticle = () => {
+        var currentUrl = window.location.href;
+        window.history.back();
+        setTimeout(() => {
+            // if location was not changed in 100 ms, then there is no history back
+            if(currentUrl === window.location.href){              
+                // redirect to site root
+                window.location.href = "index.html";
+            }
+        }, 100);
+      }
+
+      const headroom = new window.Headroom(header, {
+        tolerance: 5,
+        onPin: function () {
+        },
+        onUnpin: function () {
+        },
+      });
+      headroom.init();
+    });
+    </script>
+
+    
+<script src="site_libs/manuscript-notebook/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+     <script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>  <script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="site_libs/plotly-binding-4.10.4/plotly.js"></script>
+<script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+<script src="site_libs/jquery-3.5.1/jquery.min.js"></script>
+<link href="site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+<script src="site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+<link href="site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
+<script src="site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script> 
+      <meta name="citation_title" content="Unravelling mental representations in aphantasia through unsupervised alignment">
+<meta name="citation_abstract" content="Research on aphantasia is confronted with a long-standing conundrum of all research on consciousness and representations, namely the theoretical inaccessibility of subjective representations. Drawing on concepts from similarity and representation research, I endorse the view that the study of an individual’s mental representations is made possible by exploiting second-order isomorphism. The concept of second-order isomorphism means that correspondence should not be sought in the first-order relation between (a) an external object and (b) the corresponding internal representation, but in the second-order relation between (a) the perceived similarities between various external objects and (b) the similarities between their corresponding internal representations. Building on this idea, this study project report is divided into five parts. **First**, I outline the central ideas underlying similarity research and its applicability to aphantasia research. **Second**, I present a methodological rationale and protocol based on inverse multidimensional scaling that can be implemented online to conduct such large-scale research with high efficiency. **Third**, I present a data analysis plan using a state-of-the-art method for similarity analysis, unsupervised alignment with Gromov-Wasserstein optimal transport (GWOT). **Fourth**, I report a data simulation of a potential outcome of this project and the successful analysis of this synthetic data using GWOT alignment. **Fifth**, I analyse the feasability of such a project given the material constraints of my thesis. I conclude with the expected utility and benefits of this project.
+">
+<meta name="citation_author" content="Maël Delem">
+<meta name="citation_publication_date" content="2024-02-02">
+<meta name="citation_cover_date" content="2024-02-02">
+<meta name="citation_year" content="2024">
+<meta name="citation_online_date" content="2024-02-02">
+<meta name="citation_language" content="en">
+<meta name="citation_reference" content="citation_title=Modeling similarity and psychological space;,citation_author=Brett D. Roads;,citation_author=Bradley C. Love;,citation_publication_date=2024-01;,citation_cover_date=2024-01;,citation_year=2024;,citation_fulltext_html_url=https://www.annualreviews.org/doi/10.1146/annurev-psych-040323-115131;,citation_issue=1;,citation_doi=10.1146/annurev-psych-040323-115131;,citation_issn=0066-4308, 1545-2085;,citation_volume=75;,citation_journal_title=Annual Review of Psychology;">
+<meta name="citation_reference" content="citation_title=Second-order isomorphism of internal representations: Shapes of states;,citation_author=Roger N Shepard;,citation_author=Susan Chipman;,citation_publication_date=1970-01;,citation_cover_date=1970-01;,citation_year=1970;,citation_fulltext_html_url=https://www.sciencedirect.com/science/article/pii/0010028570900022;,citation_issue=1;,citation_doi=10.1016/0010-0285(70)90002-2;,citation_issn=0010-0285;,citation_volume=1;,citation_journal_title=Cognitive Psychology;">
+<meta name="citation_reference" content="citation_title=Toolbox for gromov-wasserstein optimal transport: Application to unsupervised alignment in neuroscience;,citation_author=Masaru Sasaki;,citation_author=Ken Takeda;,citation_author=Kota Abe;,citation_author=Masafumi Oizumi;,citation_publication_date=2023;,citation_cover_date=2023;,citation_year=2023;,citation_fulltext_html_url=https://www.biorxiv.org/content/10.1101/2023.09.15.558038v1;,citation_doi=10.1101/2023.09.15.558038;">
+<meta name="citation_reference" content="citation_title=Representational similarity analysis - connecting the branches of systems neuroscience;,citation_author=Nikolaus Kriegeskorte;,citation_author=Marieke Mur;,citation_author=Peter Bandettini;,citation_publication_date=2008;,citation_cover_date=2008;,citation_year=2008;,citation_fulltext_html_url=https://www.frontiersin.org/articles/10.3389/neuro.06.004.2008;,citation_issn=1662-5137;,citation_volume=2;,citation_journal_title=Frontiers in Systems Neuroscience;">
+<meta name="citation_reference" content="citation_title=Enriched category as a model of qualia structure based on similarity judgements;,citation_author=Naotsugu Tsuchiya;,citation_author=Steven Phillips;,citation_author=Hayato Saigo;,citation_publication_date=2022-05-01;,citation_cover_date=2022-05-01;,citation_year=2022;,citation_fulltext_html_url=https://www.sciencedirect.com/science/article/pii/S1053810022000514;,citation_doi=10.1016/j.concog.2022.103319;,citation_volume=101;,citation_journal_title=Consciousness and Cognition;">
+<meta name="citation_reference" content="citation_title=Is my&amp;amp;amp;quot; red&amp;quot; your&quot; red&quot;?: Unsupervised alignment of qualia structures via optimal transport;,citation_author=Genji Kawakita;,citation_author=Ariel Zeleznikow-Johnston;,citation_author=Ken Takeda;,citation_author=Naotsugu Tsuchiya;,citation_author=Masafumi Oizumi;,citation_publication_date=2023;,citation_cover_date=2023;,citation_year=2023;">
+<meta name="citation_reference" content="citation_title=Comparing color similarity structures between humans and LLMs via unsupervised alignment;,citation_author=Genji Kawakita;,citation_author=Ariel Zeleznikow-Johnston;,citation_author=Naotsugu Tsuchiya;,citation_author=Masafumi Oizumi;,citation_doi=10.48550/arXiv.2308.04381;">
+<meta name="citation_reference" content="citation_title=Are color experiences the same across the visual field?;,citation_author=Ariel Zeleznikow-Johnston;,citation_author=Yasunori Aizawa;,citation_author=Makiko Yamada;,citation_author=Naotsugu Tsuchiya;,citation_publication_date=2023-04-01;,citation_cover_date=2023-04-01;,citation_year=2023;,citation_fulltext_html_url=https://doi.org/10.1162/jocn_a_01962;,citation_issue=4;,citation_doi=10.1162/jocn_a_01962;,citation_volume=35;,citation_journal_title=Journal of Cognitive Neuroscience;">
+<meta name="citation_reference" content="citation_title=Quantifying aphantasia through drawing: Those without visual imagery show deficits in object but not spatial memory;,citation_author=Wilma A. Bainbridge;,citation_author=Zoë Pounder;,citation_author=Alison F. Eardley;,citation_author=Chris I. Baker;,citation_publication_date=2021-02-01;,citation_cover_date=2021-02-01;,citation_year=2021;,citation_fulltext_html_url=https://www.sciencedirect.com/science/article/pii/S0010945220304317;,citation_doi=10.1016/j.cortex.2020.11.014;,citation_volume=135;,citation_journal_title=Cortex;">
+<meta name="citation_reference" content="citation_title=Inverse MDS: Inferring dissimilarity structure from multiple item arrangements;,citation_author=Nikolaus Kriegeskorte;,citation_author=Marieke Mur;,citation_publication_date=2012;,citation_cover_date=2012;,citation_year=2012;,citation_fulltext_html_url=https://www.frontiersin.org/articles/10.3389/fpsyg.2012.00245;,citation_volume=3;,citation_journal_title=Frontiers in Psychology;">
+<meta name="citation_reference" content="citation_title=Conceptual Spaces as a Framework for Knowledge Representation;,citation_author=Peter Gardenfors;,citation_language=en;">
+<meta name="citation_reference" content="citation_title=Similarity After Goodman;,citation_author=Lieven Decock;,citation_author=Igor Douven;,citation_publication_date=2011-03-01;,citation_cover_date=2011-03-01;,citation_year=2011;,citation_fulltext_html_url=https://doi.org/10.1007/s13164-010-0035-y;,citation_issue=1;,citation_doi=10.1007/s13164-010-0035-y;,citation_volume=2;,citation_language=en;,citation_journal_title=Review of Philosophy and Psychology;">
+<meta name="citation_reference" content="citation_title=Seven strictures on similarity;,citation_author=Nelson Goodman;,citation_publication_date=1972;,citation_cover_date=1972;,citation_year=1972;,citation_inbook_title=undefined;">
+<meta name="citation_reference" content="citation_title=Conceptual spaces as a framework for knowledge representation;,citation_author=Peter Gardenfors;,citation_publication_date=2004;,citation_cover_date=2004;,citation_year=2004;">
+<meta name="citation_reference" content="citation_title=Human object-similarity judgments reflect and transcend the primate-IT object representation;,citation_author=Marieke Mur;,citation_author=Mirjam Meys;,citation_author=Jerzy Bodurka;,citation_author=Rainer Goebel;,citation_author=Peter Bandettini;,citation_author=Nikolaus Kriegeskorte;,citation_publication_date=2013;,citation_cover_date=2013;,citation_year=2013;,citation_fulltext_html_url=https://www.frontiersin.org/articles/10.3389/fpsyg.2013.00128;,citation_volume=4;,citation_journal_title=Frontiers in Psychology;">
+<meta name="citation_reference" content="citation_title=Spatial multi-arrangement for clustering and multi-way similarity dataset construction;,citation_author=O. Majewska;,citation_author=D. McCarthy;,citation_author=J. Bosch;,citation_author=N. Kriegeskorte;,citation_author=I. Vulic;,citation_author=A. Korhonen;,citation_publication_date=2020;,citation_cover_date=2020;,citation_year=2020;,citation_fulltext_html_url=https://www.repository.cam.ac.uk/handle/1810/306834;,citation_language=eng;">
+</head>
+
+  <body class="quarto-notebook">
+    <div id="quarto-embed-header" class="headroom fixed-top bg-primary">
+      
+      <a onclick="window.quartoBackToArticle(); return false;" class="btn btn-primary quarto-back-link" href=""><i class="bi bi-caret-left"></i> Back to Article</a>
+      <h6><i class="bi bi-journal-code"></i> Article Notebook</h6>
+
+            <a href="./index.qmd" class="btn btn-primary quarto-download-embed" download="index.qmd">Download Source</a>
+          </div>
+
+     <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Unravelling mental representations in aphantasia through unsupervised alignment</h1>
+            <p class="subtitle lead">Project design and data analysis simulation - testing the Quarto publish</p>
+          </div>
+
+    
+    <div class="quarto-title-meta-container">
+      <div class="quarto-title-meta-column-start">
+        
+        <div class="quarto-title-meta">
+
+                <div>
+            <div class="quarto-title-meta-heading">Author</div>
+            <div class="quarto-title-meta-contents">
+                        <p>Maël Delem </p>
+                      </div>
+          </div>
+                
+                <div>
+            <div class="quarto-title-meta-heading">Published</div>
+            <div class="quarto-title-meta-contents">
+              <p class="date">2/02/2024</p>
+            </div>
+          </div>
+          
+                <div>
+            <div class="quarto-title-meta-heading">Modified</div>
+            <div class="quarto-title-meta-contents">
+              <p class="date-modified">13/02/2024</p>
+            </div>
+          </div>
+                
+              </div>
+      </div>
+      <div class="quarto-title-meta-column-end quarto-other-formats-target">
+      </div>
+    </div>
+
+    <div>
+      <div class="abstract">
+        <div class="block-title">Summary</div>
+        <p>Research on aphantasia is confronted with a long-standing conundrum of all research on consciousness and representations, namely the theoretical inaccessibility of subjective representations. Drawing on concepts from similarity and representation research, I endorse the view that the study of an individual’s mental representations is made possible by exploiting second-order isomorphism. The concept of second-order isomorphism means that correspondence should not be sought in the first-order relation between (a) an external object and (b) the corresponding internal representation, but in the second-order relation between (a) the perceived similarities between various external objects and (b) the similarities between their corresponding internal representations. Building on this idea, this study project report is divided into five parts. <strong>First</strong>, I outline the central ideas underlying similarity research and its applicability to aphantasia research. <strong>Second</strong>, I present a methodological rationale and protocol based on inverse multidimensional scaling that can be implemented online to conduct such large-scale research with high efficiency. <strong>Third</strong>, I present a data analysis plan using a state-of-the-art method for similarity analysis, unsupervised alignment with Gromov-Wasserstein optimal transport (GWOT). <strong>Fourth</strong>, I report a data simulation of a potential outcome of this project and the successful analysis of this synthetic data using GWOT alignment. <strong>Fifth</strong>, I analyse the feasability of such a project given the material constraints of my thesis. I conclude with the expected utility and benefits of this project.</p>
+      </div>
+    </div>
+
+
+    <div class="quarto-other-links-text-target">
+    </div>  </div>
+</header><div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
+  <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="1">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul class="collapse">
+  <li><a href="#theoretical-context" id="toc-theoretical-context" class="nav-link active" data-scroll-target="#theoretical-context"><span class="header-section-number">1</span> Theoretical context</a>
+  <ul class="collapse">
+  <li><a href="#psychological-spaces-and-aphantasia" id="toc-psychological-spaces-and-aphantasia" class="nav-link" data-scroll-target="#psychological-spaces-and-aphantasia"><span class="header-section-number">1.1</span> Psychological spaces and aphantasia</a></li>
+  </ul></li>
+  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology"><span class="header-section-number">2</span> Methodology</a>
+  <ul class="collapse">
+  <li><a href="#experimental-design" id="toc-experimental-design" class="nav-link" data-scroll-target="#experimental-design"><span class="header-section-number">2.1</span> Experimental design</a></li>
+  <li><a href="#hypotheses" id="toc-hypotheses" class="nav-link" data-scroll-target="#hypotheses"><span class="header-section-number">2.2</span> Hypotheses</a></li>
+  </ul></li>
+  <li><a href="#study-data-simulation-and-analysis" id="toc-study-data-simulation-and-analysis" class="nav-link" data-scroll-target="#study-data-simulation-and-analysis"><span class="header-section-number">3</span> Study data simulation and analysis</a>
+  <ul class="collapse">
+  <li><a href="#visual-spatial-verbal-model-of-cognitive-profiles" id="toc-visual-spatial-verbal-model-of-cognitive-profiles" class="nav-link" data-scroll-target="#visual-spatial-verbal-model-of-cognitive-profiles"><span class="header-section-number">3.1</span> Visual-spatial-verbal model of cognitive profiles</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">      
+
+       <div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Project inception
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>This project stems from several elements:</p>
+<ol type="1">
+<li><p>The long standing knowledge of the fact that internal representations seem impossible to reach due to their subjective nature.</p></li>
+<li><p>The discovery of the article of <span class="citation" data-cites="shepardSecondorderIsomorphismInternal1970">Shepard and Chipman (<a href="#ref-shepardSecondorderIsomorphismInternal1970" role="doc-biblioref">1970</a>)</span> that expose the idea of “second-order isomorphism”.</p></li>
+<li><p>The discovery of state-of-the-art and accessible unsupervised analytic methods to study this principle in an astonishing way. The last two discoveries (and many more) are the fruit of amazing discussions and recommendations from Ladislas when he came here. These motivated me to try to implement GWOT in R on data that I wanted to create myself to emulate a study we could do.</p></li>
+</ol>
+<p><em>I promise that I did this mostly on my spare time, we have too many other things to do elsewhere.</em></p>
+</div>
+</div>
+</div>
+<section id="theoretical-context" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Theoretical context</h1>
+<section id="psychological-spaces-and-aphantasia" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="psychological-spaces-and-aphantasia"><span class="header-section-number">1.1</span> Psychological spaces and aphantasia</h2>
+<p>While attempting to demonstrate the uselessness of the concept of similarity as a philosophical and scientific notion<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, <span class="citation" data-cites="goodmanSevenStricturesSimilarity1972">Goodman (<a href="#ref-goodmanSevenStricturesSimilarity1972" role="doc-biblioref">1972</a>)</span> has inadvertently expressed an aspect of similarity judgements of primary importance to us aphantasia researchers:</p>
+<blockquote class="blockquote">
+<p>Comparative judgments of similarity often require not merely selection of relevant properties but a weighting of their relative importance, and variation in both relevance and importance can be rapid and enormous. Consider baggage at an airport checking station. The spectator may notice shape, size, color, material, and even make of luggage; the pilot is more concerned with weight, and the passenger with destination and ownership. Which pieces are more alike than others depends not only upon what properties they share, but upon who makes the comparison, and when. . . . Circumstances alter similarities.</p>
+</blockquote>
+<p>This can be easily reversed as an argument in favor of the <strong>potential of similarity analyses to highlight the inter-individual differences in sensory mental representations</strong>. For example, should we ask individuals to judge the similarities in shape or color between various objects, the <em>differences between the similarity structures</em> of individuals will be precisely the most important phenomenon for us, far less than the constancy between these structures. If we can account for the context dependence, as we will propose here with explicit instructions, clever task design, and hypothesis-neutral analysis, we could overcome the limitations of the inherently subjective nature of similarity judgements.</p>
+<p>This idea of a difference in similarity judgements in aphantasia seems to transpire in the results of <span class="citation" data-cites="bainbridgeQuantifyingAphantasiaDrawing2021">Bainbridge et al. (<a href="#ref-bainbridgeQuantifyingAphantasiaDrawing2021" role="doc-biblioref">2021</a>)</span> on their drawing study. They have shown that aphantasics had more schematic representations during recall, accurate in their spatial positioning, but with less sensory details. This difference can be seen from two perspectives: (1) a memory deficit for sensory properties; (2) a different representational structure of the items in their psychological spaces. In the latter case, aphantasics would have greater/faster abstraction of their representation of a perceived scene, reducing the amount of encoded sensory details unconsciously considered to be relevant. Both (1) and (2) can theoretically explain the same behavioural response, i.e.&nbsp;less sensory elements and correct spatial recall accuracy in aphantasic drawings, but <strong>the two have drastically different consequences on how we define, characterize, and judge aphantasia.</strong></p>
+<p>The dominant hypothesis seems to be that aphantasics simply have an episodic or general memory deficit. Conversely, I hypothesize that aphantasics have different representational structures than phantasics in certain dimensions of their psychological spaces (notably sensory, but potentially abstract too). More generally, I hypothesize that the concept of visual imagery evaluates in reality the continuous spectrum of representational structures in <em>sensory</em> dimensions of psychological spaces. Mirroring visual imagery, spatial imagery could also be a rough psychometric evaluation of the continuous spectrum of structural differences in <em>conceptual/abstract</em> dimensions of psychological spaces. In this view, the psychological space of aphantasics would constrain internal representations to particularly abstract forms from a very early stage, thus selectively limiting the item properties thereafter encoded in long-term memory. In other terms, <strong>I hypothesize that aphantasia would not be characterized by an episodic memory deficit, but by an episodic memory <em>selectivity</em> caused by the specific characteristics of their representational structures and psychological spaces.</strong> This selectivity would have, as we already hypothesized several times, benefits and drawbacks.</p>
+<p><span class="citation" data-cites="gardenforsConceptualSpacesFramework2004">Gardenfors (<a href="#ref-gardenforsConceptualSpacesFramework2004" role="doc-biblioref">2004</a>)</span> proposed that differences in psychological (in his terms, conceptual) spaces could arise from various sources, whether innate, due to learning, or broader cultural or social differences. All these hypotheses could be coherent to explain the sources of aphantasia. Nevertheless, the study of these sources should be the subject of very large-scale or longitudinal studies, which are out of the scope of this project.</p>
+<p>Here, we shall rather attempt to <strong>develop a method to characterize the differences in aphantasics’ representational structures and psychological spaces.</strong></p>
+</section>
+</section>
+<section id="methodology" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Methodology</h1>
+<p><span class="citation" data-cites="roads2024">Roads and Love (<a href="#ref-roads2024" role="doc-biblioref">2024</a>)</span>, in a recent review on the state and perspectives of similarity research, highlighted two challenges that studies in this field had to face: (1) The high cost of collecting behavioral data on a large number of stimuli; (2) The lack of software packages being a high barrier to entry, making the task of coding models difficult for the uninitiated.</p>
+<p>To solve these problems, we present here two solutions, respectively for (1) experimental design and (2) data analysis:</p>
+<ol type="1">
+<li>A recent method to efficiently acquire similarity judgements, the “multiple arrangement of items” and “inverse multidimensional scaling” developed by <span class="citation" data-cites="kriegeskorteInverseMDSInferring2012">Kriegeskorte and Mur (<a href="#ref-kriegeskorteInverseMDSInferring2012" role="doc-biblioref">2012</a>)</span>.</li>
+<li>An accessible and robust Python toolbox provided by <span class="citation" data-cites="sasakiToolboxGromovWassersteinOptimal2023">Sasaki et al. (<a href="#ref-sasakiToolboxGromovWassersteinOptimal2023" role="doc-biblioref">2023</a>)</span> to conduct unsupervised alignment analysis using Gromov-Wasserstein optimal transport.</li>
+</ol>
+<section id="experimental-design" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="experimental-design"><span class="header-section-number">2.1</span> Experimental design</h2>
+<section id="multi-arrangement-and-inverse-multidimensional-scaling" class="level3">
+<h3 class="anchored" data-anchor-id="multi-arrangement-and-inverse-multidimensional-scaling">Multi-arrangement and inverse multidimensional scaling</h3>
+<p>Assuming a geometric model of representational similarities, <span class="citation" data-cites="kriegeskorteInverseMDSInferring2012">Kriegeskorte and Mur (<a href="#ref-kriegeskorteInverseMDSInferring2012" role="doc-biblioref">2012</a>)</span> developed a multi-arrangement (MA) method to efficiently acquire (dis)similarity judgments for large sets of objects. The subject has to perform multiple arrangements of item subsets adaptively designed for optimal measurement efficiency and for estimating the representational dissimilarity matrix (RDM) by combining the evidence from the subset arrangements.</p>
+<p>The procedure is illustrated in <a href="#fig-multi-arrangement" class="quarto-xref">Figure&nbsp;2.1</a>.</p>
+<div id="fig-multi-arrangement" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-multi-arrangement-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="">
+<a href="images/multi-arrangement-method-mur-2013.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;2.1: Acquiring similarity judgements with the multi-arrangement method. (A) Subjects are asked to arrange items according to their similarity, using mouse drag-and-drop on a computer. The similarity measure is taken as the distances between the items: similar items are closer, while dissimilar items are further apart. The upper part of the figure shows screenshots at different moments of the acquisition for one subject. Columns are trials and rows show the object arrangements over time, running from the start (top row) to the end (last row). The first trial contains all items; subsequent trials contain subsets of items that are adaptively selected to optimally estimate judged similarity for each subject. (B) Once acquisition of the final judgements is completed, inter-item distances in the final trial arrangements are combined over trials by rescaling and averaging to yield a single dissimilarity estimate for each object pair. The process is illustrated in this figure for two example item pairs: a boy’s face and a hand (red), and carrots and a stop sign (blue). Their single-trial dissimilarity estimates (arrows) are combined into a single dissimilarity estimate, which is placed at the corresponding entry of the RDM (lower panel). Mirror-symmetric entries are indicated by lighter colors. Figure taken from @murHumanObjectSimilarityJudgments2013."><img src="images/multi-arrangement-method-mur-2013.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-multi-arrangement-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.1: <strong>Acquiring similarity judgements with the multi-arrangement method. (A)</strong> Subjects are asked to arrange items according to their similarity, using mouse drag-and-drop on a computer. The similarity measure is taken as the distances between the items: similar items are closer, while dissimilar items are further apart. The upper part of the figure shows screenshots at different moments of the acquisition for one subject. Columns are trials and rows show the object arrangements over time, running from the start (top row) to the end (last row). The first trial contains all items; subsequent trials contain subsets of items that are adaptively selected to optimally estimate judged similarity for each subject. <strong>(B)</strong> Once acquisition of the final judgements is completed, inter-item distances in the final trial arrangements are combined over trials by rescaling and averaging to yield a single dissimilarity estimate for each object pair. The process is illustrated in this figure for two example item pairs: a boy’s face and a hand (red), and carrots and a stop sign (blue). Their single-trial dissimilarity estimates (arrows) are combined into a single dissimilarity estimate, which is placed at the corresponding entry of the RDM (lower panel). Mirror-symmetric entries are indicated by lighter colors. Figure taken from <span class="citation" data-cites="murHumanObjectSimilarityJudgments2013">Mur et al. (<a href="#ref-murHumanObjectSimilarityJudgments2013" role="doc-biblioref">2013</a>)</span>.
+</figcaption>
+</figure>
+</div>
+<p>A key strength of this method that sets it as particularly effective is the “adaptive” part. The goal of the process is to acquire similarity judgements as precisely as possible while minimizing the total amount of trials. To do so, starting from the second trial, selected subsets of the items to be compared are presented to the subject: these items are the ones that were very close on-screen in previous trials and thus had their distance evaluated with lower accuracy by the subject. As the subject has to fill the entire “arena” with the items, these subsequent trials will necessarily increase the level of precision in the similarity judgement between pairs of items. The second key benefit of this method is the time and effort gain compared to others. For example, to compare every pair of items among 64 different items would require <span class="math inline">\(\frac{64 \times (64-1)}{2} = 2016\)</span> comparisons (i.e.&nbsp;trials). This would be extremely time-consuming, while also losing the <em>context-independence</em> afforded by the MA method due to the presence of other items around every time the subject mentally performs a pairwise comparison.</p>
+<p>Historically, when referring to the projection of the representations of stimuli (e.g., coordinates in geometric space) from a high-dimensional space into a lower-dimensional space, inference algorithms were commonly called multidimensional scaling <span class="citation" data-cites="roads2024">(<a href="#ref-roads2024" role="doc-biblioref">Roads and Love 2024</a>)</span>. By analogy, the process of combining several lower-dimensional (2D) similarity judgements on-screen to form one higher dimensional similarity representation (in the RDM) can be conceptually seen as “inverse” multidimensional scaling, hence the name given to the method by <span class="citation" data-cites="kriegeskorteInverseMDSInferring2012">Kriegeskorte and Mur (<a href="#ref-kriegeskorteInverseMDSInferring2012" role="doc-biblioref">2012</a>)</span>.</p>
+</section>
+<section id="principle" class="level3">
+<h3 class="anchored" data-anchor-id="principle">Principle</h3>
+<p>The idea is simple: for a given set of items that have distinct and very pictorial visual properties, we would ask a wide range of aphantasics, phantasics or hyperphantasics to imagine, mentally compare and make similarity judgements between the items. To compare these representations with actual perceptual representations, the subjects would also perform the same task afterwards, this time with actual pictures to compare. Subjects would also fill our usual psychometric imagery questionnaires.</p>
+<p>To “compare imagined items”, we could use a “word” version of the MA paradigm. An example from <span class="citation" data-cites="majewskaSpatialMultiarrangementClustering2020">Majewska et al. (<a href="#ref-majewskaSpatialMultiarrangementClustering2020" role="doc-biblioref">2020</a>)</span> - <em>who used the method to build large-scale semantic similarity resources for Natural Language Processing systems</em> - is represented in <a href="#fig-majewska" class="quarto-xref">Figure&nbsp;2.2</a>.</p>
+<div id="fig-majewska" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-majewska-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/majewska-spam.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2.2: Arena layout of the MA protocol used by @majewskaSpatialMultiarrangementClustering2020 to acquire similarity judgements on word pairs."><img src="images/majewska-spam.png" class="img-fluid figure-img" style="width:50.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-majewska-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.2: Arena layout of the MA protocol used by <span class="citation" data-cites="majewskaSpatialMultiarrangementClustering2020">Majewska et al. (<a href="#ref-majewskaSpatialMultiarrangementClustering2020" role="doc-biblioref">2020</a>)</span> to acquire similarity judgements on word pairs.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="hypotheses" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="hypotheses"><span class="header-section-number">2.2</span> Hypotheses</h2>
+<section id="aphantasic-and-phantasic-psychological-spaces" class="level3">
+<h3 class="anchored" data-anchor-id="aphantasic-and-phantasic-psychological-spaces">Aphantasic and phantasic psychological spaces</h3>
+<p>The most representative members of a category are called prototypical members.</p>
+<p>Prototype theory builds on the observation that among the instances of a property, some are more representative than others. The most representative one is the prototype of the property.</p>
+<p>Thus, following the concepts illustrated by Gardenfors, we would expect that aphantasics, when doing shape similarity judgements, would be more inclined to group items close to the prototypical items due to a lower definition of the mental image. In comparison, phantasics would have a much more distributed conceptual space of item shapes due to their higher-resolution mental images of said items.</p>
+</section>
+<section id="subjective-imagery-and-psychological-spaces" class="level3">
+<h3 class="anchored" data-anchor-id="subjective-imagery-and-psychological-spaces">Subjective imagery and psychological spaces</h3>
+<p>In the proposed view of visual imagery as the subjective expression of a given type of psychological space, we mentioned earlier that <em>spatial</em> imagery could also constitute a subjective expression of other dimensions of psychological spaces. Hence, the <em>verbal</em> dimension of the simplified model of imagery we outlined in my thesis project could also represent different dimensions.</p>
+<p>This conception leads to the following theoretical hypothesis: provided that our visual-spatial-verbal model correctly fits subjective imagery, the imagery profile of individuals should map on their psychological spaces.</p>
+<p>Operationally, this would be evaluated by the fact that <strong>individuals with similar imagery profiles</strong> (visual, spatial, verbal, or any combination of the three) <strong>should have similar representations</strong> in their given psychological space, <strong>quantifiable by the degree of alignment between their similarity structures.</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/my-protocol-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="The two conditions for one subject."><img src="images/my-protocol-1.png" class="img-fluid figure-img" alt="The two conditions for one subject."></a></p>
+<figcaption>The two conditions for one subject.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/my-protocol-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="The comparison between the representational structure of aphantasics and phantasics. This figure illustrates the principle, but in reality all pairs of subjects will be compared to assess their representational structure alignment. This is computationnally heavy, but analytically very powerful."><img src="images/my-protocol-2.png" class="img-fluid figure-img" alt="The comparison between the representational structure of aphantasics and phantasics. This figure illustrates the principle, but in reality all pairs of subjects will be compared to assess their representational structure alignment. This is computationnally heavy, but analytically very powerful."></a></p>
+<figcaption>The comparison between the representational structure of aphantasics and phantasics. This figure illustrates the principle, but in reality all pairs of subjects will be compared to assess their representational structure alignment. This is computationnally heavy, but analytically very powerful.</figcaption>
+</figure>
+</div>
+<!-- Summary schematics of the proposed experimental protocol and data analysis plan. -->
+</section>
+</section>
+</section>
+<section id="study-data-simulation-and-analysis" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Study data simulation and analysis</h1>
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [1]:</pre></div><div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ═══ Packages ═════════════════════════════════════════════════════════════════</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(librarian)) <span class="fu">install.packages</span>(librarian) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>Le chargement a nécessité le package : librarian</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(librarian)                                     </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># now putting packages on our library's shelves:</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">shelf</span>(</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># ─── data management ─────────────────</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  holodeck,       <span class="co"># simulating multivariate data</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  cluster,        <span class="co"># dissimilarity matrices</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="co"># ─── modelling ───────────────────────</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  mclust,         <span class="co"># mixture clustering</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="co">#  data visualization ──────────────</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># palettes</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  viridis,        <span class="co"># colour-blind friendly palettes</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="co"># interactive</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  plotly,         <span class="co"># interactive plots</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  ggdendro,       <span class="co"># dendrograms</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  seriation,      <span class="co"># dissimilarity plots</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  webshot2,       <span class="co"># HTML screenshots for Word render</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>  webshot,</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>  <span class="co"># ─── essential package collections ───</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>  doParallel,     <span class="co"># parallel execution</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>  easystats,      <span class="co"># data analysis ecosystem</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>  reticulate,     <span class="co"># R to Python                    </span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>  tidyverse,      <span class="co"># modern R ecosystem</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+  These packages will be installed:
+
+  'holodeck', 'mclust', 'viridis', 'plotly', 'ggdendro', 'seriation',
+  'webshot2', 'webshot', 'doParallel', 'easystats', 'reticulate',
+  'tidyverse'
+
+  It may take some time.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>installation des dépendances 'sys', 'bit', 'askpass', 'ps', 'AsioHeaders', 'rematch', 'bit64', 'prettyunits', 'generics', 'tidyselect', 'fansi', 'pkgconfig', 'gtable', 'isoband', 'farver', 'labeling', 'munsell', 'curl', 'openssl', 'cpp11', 'permute', 'processx', 'websocket', 'rprojroot', 'backports', 'blob', 'DBI', 'gargle', 'uuid', 'cellranger', 'ids', 'rematch2', 'timechange', 'utf8', 'systemfonts', 'textshaping', 'clipr', 'crayon', 'vroom', 'tzdb', 'progress', 'selectr', 'dplyr', 'tibble', 'purrr', 'assertthat', 'viridisLite', 'ggplot2', 'gridExtra', 'scales', 'httr', 'htmlwidgets', 'tidyr', 'RColorBrewer', 'lazyeval', 'crosstalk', 'data.table', 'promises', 'ca', 'colorspace', 'foreach', 'gclus', 'qap', 'registry', 'TSP', 'vegan', 'callr', 'chromote', 'later', 'iterators', 'bayestestR', 'correlation', 'datawizard', 'effectsize', 'insight', 'modelbased', 'parameters', 'performance', 'report', 'see', 'Rcpp', 'RcppTOML', 'here', 'png', 'withr', 'broom', 'conflicted', 'dbplyr', 'dtplyr', 'forcats', 'googledrive', 'googlesheets4', 'haven', 'hms', 'lubridate', 'modelr', 'pillar', 'ragg', 'readr', 'readxl', 'reprex', 'rstudioapi', 'rvest', 'xml2'</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="annotated-cell-3"><pre class="sourceCode r code-annotation-code code-with-copy"><code class="sourceCode r"><span id="annotated-cell-3-1"><a href="#annotated-cell-3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ─── Global cosmetic theme ───</span></span>
+<span id="annotated-cell-3-2"><a href="#annotated-cell-3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_modern</span>(<span class="at">base_size =</span> <span class="dv">14</span>))</span>
+<span id="annotated-cell-3-3"><a href="#annotated-cell-3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-3-4"><a href="#annotated-cell-3-4" aria-hidden="true" tabindex="-1"></a>pal_okabe_ito <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="annotated-cell-3-5"><a href="#annotated-cell-3-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#E69F00"</span>, <span class="st">"#56B4E9"</span>, <span class="st">"#009E73"</span>,                            </span>
+<span id="annotated-cell-3-6"><a href="#annotated-cell-3-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#F5C710"</span>, <span class="st">"#0072B2"</span>, <span class="st">"#D55E00"</span>, <span class="st">"#CC79A7"</span>, <span class="st">"#6c0009"</span>)      </span>
+<span id="annotated-cell-3-7"><a href="#annotated-cell-3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-3-8"><a href="#annotated-cell-3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># We'll need 9 colors at some point</span></span>
+<span id="annotated-cell-3-9"><a href="#annotated-cell-3-9" aria-hidden="true" tabindex="-1"></a>pal_okabe_ito_extended <span class="ot">&lt;-</span> <span class="fu">c</span>(                                 </span>
+<span id="annotated-cell-3-10"><a href="#annotated-cell-3-10" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#E69F00"</span>, <span class="st">"#56B4E9"</span>, <span class="st">"#009E73"</span>,                           </span>
+<span id="annotated-cell-3-11"><a href="#annotated-cell-3-11" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#F5C710"</span>, <span class="st">"#0072B2"</span>, <span class="st">"#D55E00"</span>, <span class="st">"#CC79A7"</span>, <span class="st">"#6c0009"</span>, <span class="st">"#414487FF"</span>)</span>
+<span id="annotated-cell-3-12"><a href="#annotated-cell-3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-3-13"><a href="#annotated-cell-3-13" aria-hidden="true" tabindex="-1"></a><span class="co"># We'll need 30 colors at another moment</span></span>
+<span id="annotated-cell-3-14"><a href="#annotated-cell-3-14" aria-hidden="true" tabindex="-1"></a>cool_30_colors <span class="ot">&lt;-</span> <span class="fu">c</span>(                                                   </span>
+<span id="annotated-cell-3-15"><a href="#annotated-cell-3-15" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#3d51b4"</span>, <span class="st">"#414487FF"</span>, <span class="st">"#003d73"</span>, <span class="st">"#440154FF"</span>, <span class="st">"#6c0009"</span>, <span class="st">"#b64e4e"</span>,</span>
+<span id="annotated-cell-3-16"><a href="#annotated-cell-3-16" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#D55E00"</span>, <span class="st">"#E69F00"</span>, <span class="st">"#F5C710"</span>, <span class="st">"#FDE725FF"</span>, <span class="st">"#f2bb7b"</span>, <span class="st">"#f1afad"</span>, <span class="st">"#CC79A7"</span>, </span>
+<span id="annotated-cell-3-17"><a href="#annotated-cell-3-17" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#e57774"</span>, <span class="st">"#7AD151FF"</span>, <span class="st">"#57b571"</span>, <span class="st">"#318a4a"</span>, <span class="st">"#009E73"</span>, <span class="st">"#22A884FF"</span>, </span>
+<span id="annotated-cell-3-18"><a href="#annotated-cell-3-18" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#2A788EFF"</span>, <span class="st">"#0072B2"</span>, <span class="st">"#2da6b5"</span>, <span class="st">"#56B4E9"</span>, <span class="st">"#889be0"</span>, <span class="st">"#6677e0"</span>,   </span>
+<span id="annotated-cell-3-19"><a href="#annotated-cell-3-19" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#3d51b4"</span>, <span class="st">"#414487FF"</span>, <span class="st">"#003d73"</span>, <span class="st">"#440154FF"</span>, <span class="st">"#6c0009"</span>, <span class="st">"#b64e4e"</span>  </span>
+<span id="annotated-cell-3-20"><a href="#annotated-cell-3-20" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="annotated-cell-3-21"><a href="#annotated-cell-3-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-3-22"><a href="#annotated-cell-3-22" aria-hidden="true" tabindex="-1"></a>path <span class="ot">=</span> <span class="st">"notebooks/data/"</span></span>
+<span id="annotated-cell-3-23"><a href="#annotated-cell-3-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-3-24"><a href="#annotated-cell-3-24" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df.RDS"</span>))</span>
+<span id="annotated-cell-3-25"><a href="#annotated-cell-3-25" aria-hidden="true" tabindex="-1"></a>df_embeds <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_embeds.RDS"</span>))</span>
+<span id="annotated-cell-3-26"><a href="#annotated-cell-3-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Categorical and visual embeddings</span></span>
+<span id="annotated-cell-3-27"><a href="#annotated-cell-3-27" aria-hidden="true" tabindex="-1"></a>df_embeds_categ  <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_embeds_categ.RDS"</span>))</span>
+<span id="annotated-cell-3-28"><a href="#annotated-cell-3-28" aria-hidden="true" tabindex="-1"></a>df_embeds_visual <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_embeds_visual.RDS"</span>))</span>
+<span id="annotated-cell-3-29"><a href="#annotated-cell-3-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Subject embeddings per sub-group</span></span>
+<span id="annotated-cell-3-30"><a href="#annotated-cell-3-30" aria-hidden="true" tabindex="-1"></a>df_embed_c_sub  <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_embed_c_sub.RDS"</span>))</span>
+<span id="annotated-cell-3-31"><a href="#annotated-cell-3-31" aria-hidden="true" tabindex="-1"></a>df_embed_cs_sub <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_embed_cs_sub.RDS"</span>))</span>
+<span id="annotated-cell-3-32"><a href="#annotated-cell-3-32" aria-hidden="true" tabindex="-1"></a>df_embed_v_sub  <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_embed_v_sub.RDS"</span>))</span>
+<span id="annotated-cell-3-33"><a href="#annotated-cell-3-33" aria-hidden="true" tabindex="-1"></a>df_embed_vs_sub <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_embed_vs_sub.RDS"</span>))</span>
+<span id="annotated-cell-3-34"><a href="#annotated-cell-3-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Accuracy of the unsupervised alignment (bad = not tidy data)</span></span>
+<span id="annotated-cell-3-35"><a href="#annotated-cell-3-35" aria-hidden="true" tabindex="-1"></a>df_accuracy_all_bad <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_accuracy_all_bad.RDS"</span>))</span>
+<span id="annotated-cell-3-36"><a href="#annotated-cell-3-36" aria-hidden="true" tabindex="-1"></a>df_accuracy_cat_bad <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_accuracy_cat_bad.RDS"</span>))</span>
+<span id="annotated-cell-3-37"><a href="#annotated-cell-3-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Coordinates of the aligned embeddings from the Python output</span></span>
+<span id="annotated-cell-3-38"><a href="#annotated-cell-3-38" aria-hidden="true" tabindex="-1"></a>coordinates_aligned_embeddings <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"coordinates_aligned_embeddings.RDS"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>le package 'sys' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'bit' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'askpass' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'ps' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'AsioHeaders' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'rematch' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'bit64' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'prettyunits' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'generics' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'tidyselect' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'fansi' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'pkgconfig' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'gtable' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'isoband' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'farver' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'labeling' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'munsell' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'curl' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'openssl' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'cpp11' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'permute' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'processx' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'websocket' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'rprojroot' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'backports' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'blob' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'DBI' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'gargle' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'uuid' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'cellranger' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'ids' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'rematch2' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'timechange' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'utf8' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'systemfonts' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'textshaping' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'clipr' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'crayon' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'vroom' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'tzdb' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'progress' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'selectr' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'dplyr' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'tibble' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'purrr' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'assertthat' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'viridisLite' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'ggplot2' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'gridExtra' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'scales' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'httr' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'htmlwidgets' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'tidyr' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'RColorBrewer' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'lazyeval' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'crosstalk' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'data.table' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'promises' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'ca' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'colorspace' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'foreach' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'gclus' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'qap' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'registry' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'TSP' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'vegan' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'callr' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'chromote' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'later' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'iterators' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'bayestestR' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'correlation' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'datawizard' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'effectsize' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'insight' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'modelbased' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'parameters' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'performance' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'report' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'see' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'Rcpp' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'RcppTOML' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'here' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'png' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'withr' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'broom' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'conflicted' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'dbplyr' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'dtplyr' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'forcats' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'googledrive' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'googlesheets4' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'haven' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'hms' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'lubridate' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'modelr' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'pillar' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'ragg' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'readr' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'readxl' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'reprex' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'rstudioapi' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'rvest' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'xml2' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'holodeck' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'mclust' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'viridis' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'plotly' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'ggdendro' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'seriation' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'webshot2' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'webshot' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'doParallel' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'easystats' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'reticulate' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+le package 'tidyverse' a été décompressé et les sommes MD5 ont été vérifiées avec succés
+
+Les packages binaires téléchargés sont dans
+    C:\Users\Mael\AppData\Local\Temp\Rtmp6z6XcT\downloaded_packages</code></pre>
+</div>
+</div></div>
+<section id="visual-spatial-verbal-model-of-cognitive-profiles" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="visual-spatial-verbal-model-of-cognitive-profiles"><span class="header-section-number">3.1</span> Visual-spatial-verbal model of cognitive profiles</h2>
+<p>One of the objectives of the study would be to link the subjective cogntive profiles of individuals with their representational structures. To evaluate these profiles, we are going to use psychometric questionnaires evaluating the visual-object, spatial, and verbal dimensions of imagery which will yield three scores, one for each dimension.</p>
+<p>We are going to simulate 30 participants presenting four different cognitive profiles, that I defined as, respectively, <em>verbal</em> aphantasics, <em>spatial</em> aphantasics, <em>spatial</em> phantasics, and <em>visual</em> phantasics. Their imagery abilities are summarised in <a href="#tbl-imageries" class="quarto-xref">Table&nbsp;3.1</a>.</p>
+<p>To simulate these four sub-groups, we use the <code>holodeck</code> R package to generate multivariate normal distributions of scores on these three dimensions for each sub-group. For instance, verbal aphantasics have normally distributed visual imagery scores centered around a mean of 0 (normalized, so negative scores are possible), 0.4 for spatial imagery, and 0.7 for verbal style; Spatial aphantasics have means of 0 for visual, 0.75 spatial, and 0.3 for verbal; etc. The numbers are arbitrary, but have been chosen by trial-and-error to obtain a model that is both well-defined and not exagerrated. The 30 subjects’ imagery profiles are represented in the three dimensional space of the visual-spatial-verbal dimensions in <a href="#fig-plot_osv_model" class="quarto-xref">Figure&nbsp;3.1</a>.</p>
+<div id="tbl-imageries" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-imageries-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3.1: Imagery abilities of the four hypothesized cognitive profiles.
+</figcaption>
+<div aria-describedby="tbl-imageries-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<thead>
+<tr class="header">
+<th>Cognitive profile</th>
+<th style="text-align: center;">Visual imagery</th>
+<th style="text-align: center;">Spatial imagery</th>
+<th style="text-align: center;">Verbal style</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Verbal aphantasic</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">++</td>
+</tr>
+<tr class="even">
+<td>Spatial aphantasic</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: center;">++</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr class="odd">
+<td>Spatial phantasic</td>
+<td style="text-align: center;">+</td>
+<td style="text-align: center;">++</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr class="even">
+<td>Visual phantasic</td>
+<td style="text-align: center;">++</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>Down below is the code to generate these scores.</p>
+<div class="quarto-embed-nb-cell" data-notebook="/home/runner/work/2499-similarity-manuscript/2499-similarity-manuscript/notebooks/simulation-code.qmd" data-notebook-title="Simulation code" data-notebook-cellid="cell-osv_model">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [2]:</pre></div><div id="osv_model" class="cell">
+<details class="code-fold">
+<summary>Generating hypothetical imagery values for 30 subjects</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The function takes the variance and covariance of the imagery distributions</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co"># as arguments</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>generate_osv_model <span class="op">&lt;-</span> function(var, cov){</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  df <span class="op">&lt;-</span> </span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    tibble(group <span class="op">=</span> rep(c(<span class="st">"aph"</span>, <span class="st">"phant"</span>), each <span class="op">=</span> <span class="dv">8</span>)) <span class="op">|&gt;</span> </span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    group_by(group) <span class="op">|&gt;</span> </span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    mutate(</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>      spatial_group <span class="op">=</span> c(rep(<span class="st">"spa_low"</span>, <span class="dv">4</span>), rep(<span class="st">"spa_high"</span>, <span class="dv">4</span>)),</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>      vis_spa_group <span class="op">=</span> paste0(group, <span class="st">"_"</span>, spatial_group),</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>      verbal_group <span class="op">=</span> <span class="st">"verbal_low"</span>,</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>      verbal_group  <span class="op">=</span> case_when(</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>        vis_spa_group <span class="op">==</span> <span class="st">"aph_spa_low"</span> <span class="op">~</span> <span class="st">"verbal_high"</span>, </span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>        vis_spa_group <span class="op">==</span> <span class="st">"phant_spa_low"</span> <span class="op">~</span> <span class="st">"verbal_mid"</span>,</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>        TRUE <span class="op">~</span> verbal_group)</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    ) <span class="op">|&gt;</span> </span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    group_by(vis_spa_group) <span class="op">|&gt;</span> </span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># ─── visual ───</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>    sim_discr(</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>      n_vars <span class="op">=</span> <span class="dv">1</span>, </span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>      var <span class="op">=</span> var, </span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>      cov <span class="op">=</span> cov, </span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>      <span class="co"># aph_s, aph_v, phant_s, phant_v</span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>      group_means <span class="op">=</span> c(<span class="dv">0</span>, <span class="dv">0</span>, <span class="fl">0.6</span>, <span class="fl">0.87</span>), </span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>      name <span class="op">=</span> <span class="st">"v"</span>) <span class="op">|&gt;</span> </span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># ─── spatial ───</span></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>    sim_discr(</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>      n_vars <span class="op">=</span> <span class="dv">1</span>,  </span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>      var <span class="op">=</span> var, </span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>      cov <span class="op">=</span> cov, </span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>      <span class="co"># aph_s, aph_v, phant_s, phant_v</span></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>      group_means <span class="op">=</span> c(<span class="fl">0.75</span>, <span class="fl">0.4</span>, <span class="fl">0.7</span>, <span class="fl">0.3</span>), </span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>      name <span class="op">=</span> <span class="st">"s"</span>) <span class="op">|&gt;</span></span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>    <span class="co"># ─── verbal ───</span></span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>    sim_discr(</span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>      n_vars <span class="op">=</span> <span class="dv">1</span>,  </span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>      var <span class="op">=</span> var, </span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>      cov <span class="op">=</span> cov, </span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>      <span class="co"># aph_s, aph_v, phant_s, phant_v</span></span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>      group_means <span class="op">=</span> c(<span class="fl">0.3</span>, <span class="fl">0.7</span>, <span class="fl">0.3</span>, <span class="fl">0.5</span>), </span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>      name <span class="op">=</span> <span class="st">"i"</span>) <span class="op">|&gt;</span></span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>    rename(</span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>      visual_imagery  <span class="op">=</span> v_1,</span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a>      spatial_imagery <span class="op">=</span> s_1,</span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>      verbal_profile  <span class="op">=</span> i_1</span>
+<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a>df <span class="op">&lt;-</span> generate_osv_model(<span class="fl">0.03</span>, <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div></div>
+</div>
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [3]:</pre></div><div id="cell-fig-plot_osv_model" class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>plotting_osv_model <span class="ot">&lt;-</span> <span class="cf">function</span>(df, grouping_variable, size){</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  df <span class="sc">|&gt;</span> </span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">plot_ly</span>(</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>      <span class="at">x =</span> <span class="sc">~</span>visual_imagery,</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>      <span class="at">y =</span> <span class="sc">~</span>spatial_imagery,</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>      <span class="at">z =</span> <span class="sc">~</span>verbal_profile,</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>      <span class="at">color =</span> <span class="sc">~</span>df[[grouping_variable]],</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>      <span class="at">text  =</span> <span class="sc">~</span>df[[grouping_variable]],</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>      <span class="at">colors =</span> <span class="fu">c</span>(<span class="st">"#E69F00"</span>, <span class="st">"#56B4E9"</span>, <span class="st">"#009E73"</span>, <span class="st">"#F5C710"</span>),</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>      <span class="at">type =</span> <span class="st">"scatter3d"</span>,</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>      <span class="at">mode =</span> <span class="st">"markers+text"</span>,</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>      <span class="at">marker =</span> <span class="fu">list</span>(<span class="at">size =</span> size),</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>      <span class="at">textfont =</span> <span class="fu">list</span>(<span class="at">size =</span> size <span class="sc">+</span> <span class="dv">4</span>)</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">|&gt;</span> </span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">layout</span>(</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>      <span class="at">scene =</span> <span class="fu">list</span>(</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>        <span class="at">xaxis =</span> <span class="fu">list</span>(</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>          <span class="at">title =</span> <span class="fu">list</span>(<span class="at">text =</span> <span class="st">"Visual imagery"</span>, <span class="at">font =</span> <span class="fu">list</span>(<span class="at">color =</span> <span class="st">"grey"</span>)),</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>          <span class="at">tickfont =</span> <span class="fu">list</span>(<span class="at">color =</span> <span class="st">"grey"</span>)</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>          ),</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>        <span class="at">yaxis =</span> <span class="fu">list</span>(</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>          <span class="at">title =</span> <span class="fu">list</span>(<span class="at">text =</span> <span class="st">"Spatial imagery"</span>, <span class="at">font =</span> <span class="fu">list</span>(<span class="at">color =</span> <span class="st">"grey"</span>)),</span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>          <span class="at">tickfont =</span> <span class="fu">list</span>(<span class="at">color =</span> <span class="st">"grey"</span>)</span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>          ),</span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>        <span class="at">zaxis =</span> <span class="fu">list</span>(</span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>          <span class="at">title =</span> <span class="fu">list</span>(<span class="at">text =</span> <span class="st">"Verbal profile"</span>, <span class="at">font =</span> <span class="fu">list</span>(<span class="at">color =</span> <span class="st">"grey"</span>)),</span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>          <span class="at">tickfont =</span> <span class="fu">list</span>(<span class="at">color =</span> <span class="st">"grey"</span>)</span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>          )</span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>      ),</span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>      <span class="at">legend =</span> <span class="fu">list</span>(<span class="at">title =</span> <span class="fu">list</span>(<span class="at">text =</span> <span class="st">"Group"</span>)),</span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>      <span class="at">paper_bgcolor =</span> <span class="st">"transparent"</span></span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>df <span class="sc">|&gt;</span> </span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">vis_spa_group =</span> <span class="fu">case_when</span>(</span>
+<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>    vis_spa_group <span class="sc">==</span> <span class="st">"aph_spa_high"</span> <span class="sc">~</span> <span class="st">"Aph. spatial"</span>,</span>
+<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>    vis_spa_group <span class="sc">==</span> <span class="st">"aph_spa_low"</span>  <span class="sc">~</span> <span class="st">"Aph. verbal"</span>,</span>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>    vis_spa_group <span class="sc">==</span> <span class="st">"phant_spa_high"</span> <span class="sc">~</span> <span class="st">"Phant. spatial"</span>,</span>
+<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>    vis_spa_group <span class="sc">==</span> <span class="st">"phant_spa_low"</span>  <span class="sc">~</span> <span class="st">"Phant. visual"</span></span>
+<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">|&gt;</span> </span>
+<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plotting_osv_model</span>(<span class="at">grouping_variable =</span> <span class="st">"vis_spa_group"</span>, <span class="at">size =</span> <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="fig-plot_osv_model" class="cell-output-display quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-plot_osv_model-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-b4efef87301996c3c786" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-b4efef87301996c3c786">{"x":{"visdat":{"2728ae862b0":["function () ","plotlyVisDat"]},"cur_data":"2728ae862b0","attrs":{"2728ae862b0":{"x":{},"y":{},"z":{},"text":{},"mode":"markers+text","marker":{"size":4},"textfont":{"size":8},"color":{},"colors":["#E69F00","#56B4E9","#009E73","#F5C710"],"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter3d"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"scene":{"xaxis":{"title":{"text":"Visual imagery","font":{"color":"grey"}},"tickfont":{"color":"grey"}},"yaxis":{"title":{"text":"Spatial imagery","font":{"color":"grey"}},"tickfont":{"color":"grey"}},"zaxis":{"title":{"text":"Verbal profile","font":{"color":"grey"}},"tickfont":{"color":"grey"}}},"legend":{"title":{"text":"Group"}},"paper_bgcolor":"transparent","hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[-0.036640408157145976,0.032135165776453471,-0.23114036852084763,-0.03286385746881252,0.46365788701643423,0.046246978019755067,-0.15990438091959489],"y":[0.8092596649106395,0.9181050980868094,0.97440441509825804,1.0024534880692733,0.69229079295427742,0.89782001779250031,0.70406385738737387],"z":[0.23767465902410329,0.48935370636711645,0.16138488517155131,0.26781100284524345,0.27163625306646155,0.099616322742655999,0.1436690095419996],"text":["Aph. spatial","Aph. spatial","Aph. spatial","Aph. spatial","Aph. spatial","Aph. spatial","Aph. spatial"],"mode":"markers+text","marker":{"color":"rgba(230,159,0,1)","size":4,"line":{"color":"rgba(230,159,0,1)"}},"textfont":{"color":"rgba(230,159,0,1)","size":8},"type":"scatter3d","name":"Aph. spatial","error_y":{"color":"rgba(230,159,0,1)"},"error_x":{"color":"rgba(230,159,0,1)"},"line":{"color":"rgba(230,159,0,1)"},"frame":null},{"x":[-0.025429768636669441,0.20540568530003891,0.39728317988015294,0.14173565715250605,0.046671484230633879,-0.091550981754586078,0.24115219376733835,-0.0031252223462148957],"y":[0.28768025699895849,0.66052940881134692,0.51856860955690887,0.38961701935818965,0.1405293057853374,0.37274729653807609,0.25503830665271376,0.23688592302030451],"z":[0.64016397019294979,0.95193303931403672,0.80447184300766228,0.63985204409744911,0.8823914052752575,0.65998947099625216,0.81018776299107276,0.97201145308433856],"text":["Aph. verbal","Aph. verbal","Aph. verbal","Aph. verbal","Aph. verbal","Aph. verbal","Aph. verbal","Aph. verbal"],"mode":"markers+text","marker":{"color":"rgba(86,180,233,1)","size":4,"line":{"color":"rgba(86,180,233,1)"}},"textfont":{"color":"rgba(86,180,233,1)","size":8},"type":"scatter3d","name":"Aph. verbal","error_y":{"color":"rgba(86,180,233,1)"},"error_x":{"color":"rgba(86,180,233,1)"},"line":{"color":"rgba(86,180,233,1)"},"frame":null},{"x":[0.74481985224987479,0.63269072880560084,0.69925449101644432,0.65422881534251864,0.81601255966431641,0.81229196076556276,0.50160614878139609],"y":[0.67867666218266998,0.27831000980543458,0.52182701228762196,0.50943441424031544,0.61438500079481451,0.91029741083467663,0.76711977618888827],"z":[0.45913811760608259,0.3244745718620089,0.24346070415584314,0.01744647135913846,0.10174591033524269,0.25380696822500592,0.17896423253579011],"text":["Phant. spatial","Phant. spatial","Phant. spatial","Phant. spatial","Phant. spatial","Phant. spatial","Phant. spatial"],"mode":"markers+text","marker":{"color":"rgba(0,158,115,1)","size":4,"line":{"color":"rgba(0,158,115,1)"}},"textfont":{"color":"rgba(0,158,115,1)","size":8},"type":"scatter3d","name":"Phant. spatial","error_y":{"color":"rgba(0,158,115,1)"},"error_x":{"color":"rgba(0,158,115,1)"},"line":{"color":"rgba(0,158,115,1)"},"frame":null},{"x":[0.67831641540239429,1.1422797876722326,0.81262592711973258,1.060174306829138,0.662557283931551,1.0736825733106234,0.94234040029112065,1.0334903414928389],"y":[0.45873604497674658,0.52907881530186329,0.66152156986357102,0.0077177840797507113,0.32899576237076489,0.30893873337987554,0.44331306526420589,0.25071725641675868],"z":[0.66867015783560002,0.53043379043594585,0.26623635715828653,0.68633684399556916,0.34336243473597405,0.73504592448457806,0.64907679257819506,0.23109420803880515],"text":["Phant. visual","Phant. visual","Phant. visual","Phant. visual","Phant. visual","Phant. visual","Phant. visual","Phant. visual"],"mode":"markers+text","marker":{"color":"rgba(245,199,16,1)","size":4,"line":{"color":"rgba(245,199,16,1)"}},"textfont":{"color":"rgba(245,199,16,1)","size":8},"type":"scatter3d","name":"Phant. visual","error_y":{"color":"rgba(245,199,16,1)"},"error_x":{"color":"rgba(245,199,16,1)"},"line":{"color":"rgba(245,199,16,1)"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-plot_osv_model-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.1: Imagery profiles generated for 30 subjects on the three object, spatial, and verbal dimensions.
+</figcaption>
+</figure>
+</div>
+</div></div>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-bainbridgeQuantifyingAphantasiaDrawing2021" class="csl-entry" role="listitem">
+Bainbridge, Wilma A., Zoë Pounder, Alison F. Eardley, and Chris I. Baker. 2021. <span>“Quantifying Aphantasia Through Drawing: Those Without Visual Imagery Show Deficits in Object but Not Spatial Memory.”</span> <em>Cortex</em> 135 (February): 159–72. <a href="https://doi.org/10.1016/j.cortex.2020.11.014">https://doi.org/10.1016/j.cortex.2020.11.014</a>.
+</div>
+<div id="ref-decockSimilarityGoodman2011" class="csl-entry" role="listitem">
+Decock, Lieven, and Igor Douven. 2011. <span>“Similarity After Goodman.”</span> <em>Review of Philosophy and Psychology</em> 2 (1): 61–75. <a href="https://doi.org/10.1007/s13164-010-0035-y">https://doi.org/10.1007/s13164-010-0035-y</a>.
+</div>
+<div id="ref-gardenforsConceptualSpacesFramework2004" class="csl-entry" role="listitem">
+Gardenfors, Peter. 2004. <span>“Conceptual Spaces as a Framework for Knowledge Representation.”</span>
+</div>
+<div id="ref-goodmanSevenStricturesSimilarity1972" class="csl-entry" role="listitem">
+Goodman, Nelson. 1972. <span>“Seven Strictures on Similarity.”</span> In. Bobs-Merril.
+</div>
+<div id="ref-kriegeskorteInverseMDSInferring2012" class="csl-entry" role="listitem">
+Kriegeskorte, Nikolaus, and Marieke Mur. 2012. <span>“Inverse MDS: Inferring Dissimilarity Structure from Multiple Item Arrangements.”</span> <em>Frontiers in Psychology</em> 3. <a href="https://www.frontiersin.org/articles/10.3389/fpsyg.2012.00245">https://www.frontiersin.org/articles/10.3389/fpsyg.2012.00245</a>.
+</div>
+<div id="ref-majewskaSpatialMultiarrangementClustering2020" class="csl-entry" role="listitem">
+Majewska, O., D. McCarthy, J. van den Bosch, N. Kriegeskorte, I. Vulic, and A. Korhonen. 2020. <em>Spatial multi-arrangement for clustering and multi-way similarity dataset construction</em>. European Language Resources Association. <a href="https://www.repository.cam.ac.uk/handle/1810/306834">https://www.repository.cam.ac.uk/handle/1810/306834</a>.
+</div>
+<div id="ref-murHumanObjectSimilarityJudgments2013" class="csl-entry" role="listitem">
+Mur, Marieke, Mirjam Meys, Jerzy Bodurka, Rainer Goebel, Peter Bandettini, and Nikolaus Kriegeskorte. 2013. <span>“Human Object-Similarity Judgments Reflect and Transcend the Primate-IT Object Representation.”</span> <em>Frontiers in Psychology</em> 4. <a href="https://www.frontiersin.org/articles/10.3389/fpsyg.2013.00128">https://www.frontiersin.org/articles/10.3389/fpsyg.2013.00128</a>.
+</div>
+<div id="ref-roads2024" class="csl-entry" role="listitem">
+Roads, Brett D., and Bradley C. Love. 2024. <span>“Modeling Similarity and Psychological Space.”</span> <em>Annual Review of Psychology</em> 75 (1): 215–40. <a href="https://doi.org/10.1146/annurev-psych-040323-115131">https://doi.org/10.1146/annurev-psych-040323-115131</a>.
+</div>
+<div id="ref-sasakiToolboxGromovWassersteinOptimal2023" class="csl-entry" role="listitem">
+Sasaki, Masaru, Ken Takeda, Kota Abe, and Masafumi Oizumi. 2023. <span>“Toolbox for Gromov-Wasserstein Optimal Transport: Application to Unsupervised Alignment in Neuroscience.”</span> <a href="https://doi.org/10.1101/2023.09.15.558038">https://doi.org/10.1101/2023.09.15.558038</a>.
+</div>
+<div id="ref-shepardSecondorderIsomorphismInternal1970" class="csl-entry" role="listitem">
+Shepard, Roger N, and Susan Chipman. 1970. <span>“Second-Order Isomorphism of Internal Representations: Shapes of States.”</span> <em>Cognitive Psychology</em> 1 (1): 1–17. <a href="https://doi.org/10.1016/0010-0285(70)90002-2">https://doi.org/10.1016/0010-0285(70)90002-2</a>.
+</div>
+</div>
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>A claim dismissed since then by propositions of robust mathematical models of similarity, e.g. <span class="citation" data-cites="gardenforsConceptualSpacesFramework2004">Gardenfors (<a href="#ref-gardenforsConceptualSpacesFramework2004" role="doc-biblioref">2004</a>)</span>, <span class="citation" data-cites="decockSimilarityGoodman2011">Decock and Douven (<a href="#ref-decockSimilarityGoodman2011" role="doc-biblioref">2011</a>)</span>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+     </main>
+<!-- /main column -->  <script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = true;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      const annoteTargets = window.document.querySelectorAll('.code-annotation-anchor');
+      for (let i=0; i<annoteTargets.length; i++) {
+        const annoteTarget = annoteTargets[i];
+        const targetCell = annoteTarget.getAttribute("data-target-cell");
+        const targetAnnotation = annoteTarget.getAttribute("data-target-annotation");
+        const contentFn = () => {
+          const content = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          if (content) {
+            const tipContent = content.cloneNode(true);
+            tipContent.classList.add("code-annotation-tip-content");
+            return tipContent.outerHTML;
+          }
+        }
+        const config = {
+          allowHTML: true,
+          content: contentFn,
+          onShow: (instance) => {
+            selectCodeLines(instance.reference);
+            instance.reference.classList.add('code-annotation-active');
+            window.tippy.hideAll();
+          },
+          onHide: (instance) => {
+            unselectCodeLines();
+            instance.reference.classList.remove('code-annotation-active');
+          },
+          maxWidth: 300,
+          delay: [50, 0],
+          duration: [200, 0],
+          offset: [5, 10],
+          arrow: true,
+          appendTo: function(el) {
+            return el.parentElement.parentElement.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'quarto',
+          placement: 'right',
+          popperOptions: {
+            modifiers: [
+            {
+              name: 'flip',
+              options: {
+                flipVariations: false, // true by default
+                allowedAutoPlacements: ['right'],
+                fallbackPlacements: ['right', 'top', 'top-start', 'top-end', 'bottom', 'bottom-start', 'bottom-end', 'left'],
+              },
+            },
+            {
+              name: 'preventOverflow',
+              options: {
+                mainAxis: false,
+                altAxis: false
+              }
+            }
+            ]        
+          }      
+        };
+        window.tippy(annoteTarget, config); 
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","loop":false,"openEffect":"zoom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script> 
+  
+</body></html>

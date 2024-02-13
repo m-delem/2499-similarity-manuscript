@@ -1,6 +1,6 @@
 ---
 title: Unravelling mental representations in aphantasia through unsupervised alignment
-subtitle: Project design and data analysis simulation
+subtitle: Project design and data analysis simulation - testing the Quarto publish
 author: Maël Delem
 abstract-title: Summary
 abstract: |
