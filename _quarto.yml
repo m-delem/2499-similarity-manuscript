@@ -3,11 +3,17 @@ project:
 
 manuscript:
   article: index.qmd
+  code-links:
+    - text: Repository of this manuscript
+      icon: github
+      repo: https://github.com/m-delem/2499-similarity-manuscript
 
 format:
   html:
+    repo-url: 
     comments:
-      hypothesis: true
+      utterances: 
+        repo: m-delem/2499-similarity-manuscript
     # color theme
     theme:
       dark: darkly
