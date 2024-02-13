@@ -172,7 +172,7 @@ too many other things to do elsewhere.</italic></p>
     psychological spaces.</bold> This selectivity would have, as we
     already hypothesized several times, benefits and drawbacks.</p>
     <p>Gardenfors
-    (<xref alt="2004" rid="ref-gardenforsConceptualSpacesFramework2004" ref-type="bibr">2004</xref>)
+    (<xref alt="2004a" rid="ref-gardenforsConceptualSpacesFramework2004" ref-type="bibr">2004a</xref>)
     proposed that differences in psychological (in his terms,
     conceptual) spaces could arise from various sources, whether innate,
     due to learning, or broader cultural or social differences. All
@@ -250,9 +250,9 @@ too many other things to do elsewhere.</italic></p>
         Their single-trial dissimilarity estimates (arrows) are combined
         into a single dissimilarity estimate, which is placed at the
         corresponding entry of the RDM (lower panel). Mirror-symmetric
-        entries are indicated by lighter colors. Figure taken from Mur
-        et al.
-        (<xref alt="2013" rid="ref-murHumanObjectSimilarityJudgments2013" ref-type="bibr">2013</xref>).</p></caption>
+        entries are indicated by lighter colors (figure from
+        <xref alt="Mur et al. 2013" rid="ref-murHumanObjectSimilarityJudgments2013" ref-type="bibr">Mur
+        et al. 2013</xref>).</p></caption>
         <graphic mimetype="image" mime-subtype="png" xlink:href="images/multi-arrangement-method-mur-2013.png" />
       </fig>
       <p>A key strength of this method that sets it as particularly
@@ -307,15 +307,311 @@ too many other things to do elsewhere.</italic></p>
       <xref alt="Figure 2.2" rid="fig-majewska">Figure 2.2</xref>.</p>
       <fig id="fig-majewska">
         <caption><p>Figure 2.2: Arena layout of the MA protocol used by
-        Majewska et al.
-        (<xref alt="2020" rid="ref-majewskaSpatialMultiarrangementClustering2020" ref-type="bibr">2020</xref>)
-        to acquire similarity judgements on word pairs.</p></caption>
+        to acquire similarity judgements on word pairs (figure from
+        <xref alt="Majewska et al. 2020" rid="ref-majewskaSpatialMultiarrangementClustering2020" ref-type="bibr">Majewska
+        et al. 2020</xref>).</p></caption>
         <graphic mimetype="image" mime-subtype="png" xlink:href="images/majewska-spam.png" />
+      </fig>
+      <p>We could have the stimuli rated by another set of participants
+      on several features.</p>
+      <disp-quote>
+        <p>« <italic>We deliberately did not specify which object
+        properties to focus on, to avoid biasing participants’
+        spontaneous mental representation of the similarities between
+        objects. Our aim was to obtain similarity judgments that reflect
+        the natural representation of objects without forcing
+        participants to rely on one given dimension. However,
+        participants were asked after having performed the task, what
+        dimension(s) they used in judging object similarity.</italic> »
+        (<xref alt="Jozwik, Kriegeskorte, and Mur 2016" rid="ref-jozwik2016" ref-type="bibr">Jozwik,
+        Kriegeskorte, and Mur 2016</xref>)</p>
+      </disp-quote>
+      <disp-quote>
+        <p>« <bold><italic>All but one of the 16 participants reported
+        arranging the images according to a categorical
+        structure.</italic></bold> »
+        (<xref alt="Jozwik et al. 2017" rid="ref-jozwik2017" ref-type="bibr">Jozwik
+        et al. 2017</xref>)</p>
+      </disp-quote>
+      <p>This result of Jozwik et al.
+      (<xref alt="2017" rid="ref-jozwik2017" ref-type="bibr">2017</xref>)
+      suggests that we should give an explicit instruction about the
+      features to focus on, otherwise everyone might bypass visual
+      features and mental images in favour of concepts and categories,
+      regardless of their mental imagery profile.</p>
+      <p>In contrast, if we ask to focus specifically on the visual
+      features, then ask subjects about the strategy they used to
+      evaluate the similarities, then on the subjectively felt mental
+      format of these strategies, we might grasp better insight on the
+      sensory representations of subjects.</p>
+      <p>We could even go for several comparisons - even though this
+      would increase quadratically the number of trials - e.g. :</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Evaluate to what extent the <bold>shape</bold> <italic>of
+          these animals are</italic>
+          <bold><italic>similar</italic></bold> <bold>at rest, ignoring
+          size differences.</bold></p>
+        </list-item>
+        <list-item>
+          <p>Evaluate to what extent these animals <bold>sound like each
+          other.</bold></p>
+        </list-item>
+        <list-item>
+          <p>Etc.</p>
+        </list-item>
+      </list>
+      <disp-quote>
+        <p><italic>Note to be added: if you do not know the animal, just
+        guess its placement, as this situation is quite unlikely to
+        happen (animals chosen are fairly common
+        knowledge).</italic></p>
+      </disp-quote>
+      <p>Kawakita et al.
+      (<xref alt="2023" rid="ref-kawakita2023" ref-type="bibr">2023</xref>):
+      To assess whether the color dissimilarity structures from
+      different participants can be aligned in an unsupervised manner,
+      we divided color pair similarity data from a large pool of 426
+      participants into five participant groups (85 or 86 participants
+      per group) to obtain five independent and complete sets of
+      pairwise dissimilarity ratings for 93 color stimuli (Fig. 3a).
+      Each participant provided a pairwise dissimilarity judgment for a
+      randomly allocated subset of the 4371 possible color pairs. We
+      computed the mean of all judgments for each color pair in each
+      group, generating five full dissimilarity matrices referred to as
+      Group 1 to Group 5.</p>
+    </sec>
+    <sec id="stimuli">
+      <title>Stimuli</title>
+      <p>We would have a list of animal items, that would have several
+      characteristics:</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>A name</p>
+        </list-item>
+        <list-item>
+          <p>A category</p>
+        </list-item>
+        <list-item>
+          <p>A shape</p>
+        </list-item>
+      </list>
+      <p>We need orthogonal data:</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Each class of animal should include each shape
+          (roughly)</p>
+        </list-item>
+        <list-item>
+          <p>Each shape should have an animal</p>
+        </list-item>
+      </list>
+      <p>This would imply that category cannot be derived from shape,
+      and vice-versa. Thus, a <bold>sorting by shape would reveal to be
+      innately visual</bold> (or maybe spatial, if shape concerns this
+      type of imagery), and a <bold>sorting by category would reveal an
+      abstraction</bold> from these shapes. We expect that the two will
+      be mixed to some degree in every subject, but that low-imagery
+      would rather tend towards category sorting, while high-imagery
+      would tend towards shape sorting.</p>
+      <p>Shapes could be very tricky stimuli to discuss. Gardenfors
+      (<xref alt="2004b" rid="ref-gardenfors2004" ref-type="bibr">2004b</xref>)
+      noted that we only have a very sketchy understanding of how we
+      perceive and conceptualize things according to their shapes. The
+      works of Marr, Nishihara, and Brenner
+      (<xref alt="1997" rid="ref-marr1997" ref-type="bibr">1997</xref>)
+      highlight this difficulty when analysing the complexity of the
+      hierarchical judgements of shapes and volumes, as shown in
+      <xref alt="Figure 2.3" rid="fig-marr">Figure 2.3</xref>.</p>
+      <fig id="fig-marr">
+        <caption><p>Figure 2.3: Representing the characteristics of
+        shapes with cylinders (figure from
+        <xref alt="Marr, Nishihara, and Brenner 1997" rid="ref-marr1997" ref-type="bibr">Marr,
+        Nishihara, and Brenner 1997</xref>).</p></caption>
+        <graphic mimetype="image" mime-subtype="png" xlink:href="images/shapes-marr.png" />
       </fig>
     </sec>
   </sec>
+</sec>
+<sec id="data-analysis-plan">
+  <title>3. Data analysis plan</title>
+  <sec id="unsupervised-alignment-rationale">
+    <title>3.1 Unsupervised alignment rationale</title>
+    <p>Visual images can be represented as points in a multidimensional
+    psychological space. Embedding algorithms can be used to infer
+    latent representations from human similarity judgments. While there
+    are an infinite number of potential visual features, an embedding
+    algorithm can be used to identify the subset of salient features
+    that accurately model human-perceived similarity. (<italic>From
+    Roads’ CV</italic>)</p>
+    <p>Using an optimization algorithm, the free parameters of a
+    psychological space are found by maximizing goodness of fit (i.e.,
+    the loss function) to the observed data. Historically, when
+    referring specifically to the free parameters that correspond to the
+    representation of stimuli (e.g., coordinates in geometric space),
+    inference algorithms were commonly called multidimensional scaling
+    (MDS), or simply scaling, algorithms.</p>
+    <p>In the machine learning literature, analogous inference
+    algorithms are often called embedding algorithms. The term
+    “embedding” denotes a higher-dimensional representation that is
+    embedded in a lower-dimensional space. For that reason, the inferred
+    mental representations of a psychological space could also be called
+    a psychological embedding.</p>
+    <p>Numerous techniques exist, and each has limitations. Popular
+    techniques for comparing representations include RSA Kriegeskorte,
+    Mur, and Bandettini
+    (<xref alt="2008" rid="ref-kriegeskorte2008" ref-type="bibr">2008</xref>)
+    and canonical correlation analysis (CCA) (Hotelling 1936). Briefly,
+    RSA is a method for comparing two representations that assesses the
+    correlation between the implied pairwise similarity matrices. CCA is
+    a method that compares two representations by finding a pair of
+    latent variables (one for each domain) that are maximally
+    correlated.</p>
+    <p>One might be tempted to compare two dissimilarity matrices
+    assuming stimulus-level “external” correspondence: my “red”
+    corresponds to your “red”(Fig. 1d). This type of supervised
+    comparison between dissimilarity matrices, known as Representational
+    Similarity Analysis (RSA), has been widely used in neuroscience to
+    compare various similarity matrices obtained from behavioural and
+    neural data. However, there is no guarantee that the same stimulus
+    will necessarily evoke the same subjective experience across
+    different participants. Accordingly, when considering which stimuli
+    evoke which qualia for different individuals, we need to consider
+    all possibilities of correspondence: my “red” might correspond to
+    your “red”, “green”, “purple”, or might lie somewhere between your
+    “orange” and “pink”(Fig. 1e). Thus, we compare qualia structures in
+    a purely unsupervised manner, without assuming any correspondence
+    between individual qualia across participants.</p>
+  </sec>
+  <sec id="gromov-wasserstein-optimal-transport">
+    <title>3.2 Gromov-Wasserstein optimal transport</title>
+    <p>To account for all possible correspondences, we use an
+    unsupervised alignment method for quantifying the degree of
+    similarity between qualia structures. As shown in Fig. 2a, in
+    unsupervised alignment, we do not attach any external (stimuli)
+    labels to the qualia embeddings. Instead, we try to find the best
+    matching between qualia structures based only on their internal
+    relationships (see Methods). After finding the optimal alignment, we
+    can use external labels, such as the identity of a color stimulus
+    (Fig. 2b), to evaluate how the embeddings of different individuals
+    relate to each other. This allows us to determine which color
+    embeddings correspond to the same color embeddings across
+    individuals or which do not. Checking the assumption that these
+    external labels are consistent across individuals allows us to
+    assess the plausibility of determining accurate inter-individual
+    correspondences between qualia structures of different
+    participants.</p>
+    <p>To this end, we used the Gromov-Wasserstein optimal transport
+    (GWOT) method, which has been applied with great success in various
+    fields. GWOT aims to find the optimal mapping between two point
+    clouds in different domains based on the distance between points
+    within each domain. Importantly, the distances (or correspondences)
+    between points “across” different domains are not given while those
+    “within” the same domain are given. GWOT aligns the point clouds
+    according to the principle that a point in one domain should
+    correspond to another point in the other domain that has a similar
+    relationship to other points. The principle of the method is
+    illustrated in
+    <xref alt="Figure 3.1" rid="fig-gwot-kawa">Figure 3.1</xref></p>
+    <fig id="fig-gwot-kawa">
+      <caption><p>Figure 3.1: Gromov-Wassertein optimal transport
+      principle (figure from
+      <xref alt="Kawakita et al. 2023" rid="ref-kawakita2023" ref-type="bibr">Kawakita
+      et al. 2023</xref>).</p></caption>
+      <graphic mimetype="image" mime-subtype="png" xlink:href="images/kawa-gwot-2.PNG" />
+    </fig>
+    <p>We first computed the GWD for all pairs of the dissimilarity
+    matrices of the 5 groups (Group 1-5) using the optimized
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[\epsilon]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>ϵ</mml:mi></mml:math></alternatives></inline-formula>.
+    In Fig. 3b, we show the optimized mapping
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[\Gamma*]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>Γ</mml:mi><mml:mo>*</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
+    between Group 1 and Groups 2-5 (see Supplementary Figure S1 for the
+    other pairs). As shown in Fig. 3b, most of the diagonal elements in
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[\Gamma*]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>Γ</mml:mi><mml:mo>*</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
+    show high values, indicating that most colors in one group
+    correspond to the same colors in the other groups with high
+    probability. We next performed unsupervised alignment of the vector
+    embeddings of qualia structures. Although
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[\Gamma*]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>Γ</mml:mi><mml:mo>*</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
+    provides the rough correspondence between the embeddings of qualia
+    structures, we should find a more precise mathematical mapping
+    between qualia structures in terms of their vector embeddings to
+    more accurately assess the similarity between the qualia structures.
+    Here, we consider aligning the embeddings of all the groups in a
+    common space.</p>
+    <p>By applying MDS, we obtained the 3-dimensional embeddings of
+    Group 1 and Groups 2-5, referred to as X and Yi, where i = 2, …, 5
+    (Fig. 3c). We then aligned Yi to X with the orthogonal rotation
+    matrix Qi, which was obtained by solving a Procrustes-type problem
+    using the optimized transportation plan
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[\Gamma*]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>Γ</mml:mi><mml:mo>*</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
+    obtained through GWOT (see Methods). Fig. 3d shows the aligned
+    embed- dings of Group 2-5 (QiYi) and the embedding of Group 1 (X)
+    plotted in the embedded space of X. Each color represents the label
+    of a corresponding external color stimulus. Note that even though
+    the color labels are shown in Fig. 3d, this is only for the
+    visualization purpose and the whole alignment procedure is performed
+    in a purely unsupervised manner without relying on the color labels.
+    As can be seen in Fig. 3d, the embeddings of similar colors from the
+    five groups are located close to each other, indicating that similar
+    colors are ‘correctly’ aligned by the unsupervised alignment
+    method.</p>
+    <p>To evaluate the performance of the unsupervised alignment, we
+    computed the k-nearest color matching rate in the aligned space. If
+    the same colors from two groups are within the k-nearest colors in
+    the aligned space, we consider that the colors are correctly
+    matched. We evaluated the matching rates between all the pairs of
+    Groups 1-5. The averaged matching rates are 51% when k = 1, 83% when
+    k = 3, and 92% when k = 5, respectively. This demonstrates the
+    effectiveness of the GW alignment for correctly aligning the qualia
+    structures of different participants in an unsupervised manner.</p>
+    <p>However, as can be seen in Fig. 4b, the optimized mapping
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[\Gamma*]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>Γ</mml:mi><mml:mo>*</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
+    is not lined up diagonally unlike the optimized map- pings between
+    color-neurotypical participants groups shown in Fig. 3b (see
+    Supplementary Figure S1 for the other pairs). Accordingly, top k
+    matching rate between Group 1-5 and Group 6 is 3.0% when k = 1 (Fig.
+    4c), which is only slightly above chance
+    (<inline-formula><alternatives>
+    <tex-math><![CDATA[\approx]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mo>≈</mml:mo></mml:math></alternatives></inline-formula>
+    1%). The matching rate did not improve even when we relaxed the
+    criterion (6.9% and 11% for k = 3 and k = 5, respectively).
+    Moreover, all of the GWD values between Group 1-5 and Group 6 are
+    larger than any of the GWD values between color-neurotypical
+    participant groups (Fig. 4d).</p>
+    <p>These results indicate that the difference between the qualia
+    structures of neuro-typical and atypical participants is
+    significantly larger than the difference between the qualia
+    structures of neuro-typical participants.</p>
+    <fig>
+      <caption><p>The two conditions for one subject.</p></caption>
+      <graphic mimetype="image" mime-subtype="png" xlink:href="images/my-protocol-1.png" />
+    </fig>
+    <fig>
+      <caption><p>The comparison between the representational structure
+      of aphantasics and phantasics. This figure illustrates the
+      principle, but in reality all pairs of subjects will be compared
+      to assess their representational structure alignment. This is
+      computationnally heavy, but analytically very
+      powerful.</p></caption>
+      <graphic mimetype="image" mime-subtype="png" xlink:href="images/my-protocol-2.png" />
+    </fig>
+  </sec>
   <sec id="hypotheses">
-    <title>2.2 Hypotheses</title>
+    <title>3.3 Hypotheses</title>
     <sec id="aphantasic-and-phantasic-psychological-spaces">
       <title>Aphantasic and phantasic psychological spaces</title>
       <p>The most representative members of a category are called
@@ -323,8 +619,9 @@ too many other things to do elsewhere.</italic></p>
       <p>Prototype theory builds on the observation that among the
       instances of a property, some are more representative than others.
       The most representative one is the prototype of the property.</p>
-      <p>Thus, following the concepts illustrated by Gardenfors, we
-      would expect that aphantasics, when doing shape similarity
+      <p>Thus, following the concepts illustrated by Gardenfors
+      (<xref alt="2004b" rid="ref-gardenfors2004" ref-type="bibr">2004b</xref>),
+      we would expect that aphantasics, when doing shape similarity
       judgements, would be more inclined to group items close to the
       prototypical items due to a lower definition of the mental image.
       In comparison, phantasics would have a much more distributed
@@ -350,26 +647,13 @@ too many other things to do elsewhere.</italic></p>
       have similar representations</bold> in their given psychological
       space, <bold>quantifiable by the degree of alignment between their
       similarity structures.</bold></p>
-      <fig>
-        <caption><p>The two conditions for one subject.</p></caption>
-        <graphic mimetype="image" mime-subtype="png" xlink:href="images/my-protocol-1.png" />
-      </fig>
-      <fig>
-        <caption><p>The comparison between the representational
-        structure of aphantasics and phantasics. This figure illustrates
-        the principle, but in reality all pairs of subjects will be
-        compared to assess their representational structure alignment.
-        This is computationnally heavy, but analytically very
-        powerful.</p></caption>
-        <graphic mimetype="image" mime-subtype="png" xlink:href="images/my-protocol-2.png" />
-      </fig>
     </sec>
   </sec>
 </sec>
-<sec id="study-data-simulation-and-analysis">
-  <title>3. Study data simulation and analysis</title>
+<sec id="study-simulation-and-analysis">
+  <title>4. Study simulation and analysis</title>
   <sec id="visual-spatial-verbal-model-of-cognitive-profiles">
-    <title>3.1 Visual-spatial-verbal model of cognitive profiles</title>
+    <title>4.1 Visual-spatial-verbal model of cognitive profiles</title>
     <p>One of the objectives of the study would be to link the
     subjective cognitive profiles of individuals with their
     representational structures. To evaluate these profiles, we are
@@ -382,7 +666,7 @@ too many other things to do elsewhere.</italic></p>
     aphantasics, <italic>spatial</italic> phantasics, and
     <italic>visual</italic> phantasics. Their imagery abilities are
     summarised in
-    <xref alt="Table 3.1" rid="tbl-imageries">Table 3.1</xref>.</p>
+    <xref alt="Table 4.1" rid="tbl-imageries">Table 4.1</xref>.</p>
     <p>To simulate these four sub-groups, we use the
     <monospace>holodeck</monospace> R package to generate multivariate
     normal distributions of scores on these three dimensions for each
@@ -395,9 +679,9 @@ too many other things to do elsewhere.</italic></p>
     that is both well-defined and not exaggerated. The 30 subjects’
     imagery profiles are represented in the three dimensional space of
     the visual-spatial-verbal dimensions in
-    <xref alt="Figure 3.1" rid="fig-plot-osv-model">Figure 3.1</xref>.</p>
+    <xref alt="Figure 4.1" rid="fig-plot-osv-model">Figure 4.1</xref>.</p>
     <fig id="tbl-imageries">
-      <caption><p>Table 3.1: Imagery abilities of the four hypothesized
+      <caption><p>Table 4.1: Imagery abilities of the four hypothesized
       cognitive profiles.</p></caption>
       <table-wrap>
         <table>
@@ -438,61 +722,497 @@ too many other things to do elsewhere.</italic></p>
         </table>
       </table-wrap>
     </fig>
-    <p>Down below is the code to generate these scores.</p>
-    <code language="python"># The function takes the variance and covariance of the imagery distributions
-# as arguments
-generate_osv_model &lt;- function(var, cov){
-  df &lt;- 
-    tibble(group = rep(c(&quot;aph&quot;, &quot;phant&quot;), each = 8)) |&gt; 
-    group_by(group) |&gt; 
-    mutate(
-      spatial_group = c(rep(&quot;spa_low&quot;, 4), rep(&quot;spa_high&quot;, 4)),
-      vis_spa_group = paste0(group, &quot;_&quot;, spatial_group),
-      verbal_group = &quot;verbal_low&quot;,
-      verbal_group  = case_when(
-        vis_spa_group == &quot;aph_spa_low&quot; ~ &quot;verbal_high&quot;, 
-        vis_spa_group == &quot;phant_spa_low&quot; ~ &quot;verbal_mid&quot;,
-        TRUE ~ verbal_group)
-    ) |&gt; 
-    group_by(vis_spa_group) |&gt; 
-    # ─── visual ───
-    sim_discr(
-      n_vars = 1, 
-      var = var, 
-      cov = cov, 
-      # aph_s, aph_v, phant_s, phant_v
-      group_means = c(0, 0, 0.6, 0.87), 
-      name = &quot;v&quot;) |&gt; 
-    # ─── spatial ───
-    sim_discr(
-      n_vars = 1,  
-      var = var, 
-      cov = cov, 
-      # aph_s, aph_v, phant_s, phant_v
-      group_means = c(0.75, 0.4, 0.7, 0.3), 
-      name = &quot;s&quot;) |&gt;
-    # ─── verbal ───
-    sim_discr(
-      n_vars = 1,  
-      var = var, 
-      cov = cov, 
-      # aph_s, aph_v, phant_s, phant_v
-      group_means = c(0.3, 0.7, 0.3, 0.5), 
-      name = &quot;i&quot;) |&gt;
-    rename(
-      visual_imagery  = v_1,
-      spatial_imagery = s_1,
-      verbal_profile  = i_1
-      )
-}
-
-df &lt;- generate_osv_model(0.03, 0)</code>
     <fig id="fig-plot-osv-model">
-      <caption><p>Figure 3.1: Imagery profiles generated for 30 subjects
+      <caption><p>Figure 4.1: Imagery profiles generated for 30 subjects
       on the three object, spatial, and verbal dimensions.</p></caption>
       <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-plot-osv-model-1.png" />
     </fig>
   </sec>
+  <sec id="data-simulation-creating-representational-structures">
+    <title>4.2 Data simulation: Creating representational
+    structures</title>
+    <p>Gardenfors
+    (<xref alt="2004b" rid="ref-gardenfors2004" ref-type="bibr">2004b</xref>)
+    invokes two scientific concepts, to wit, prototypes and Voronoi
+    tessellations. Prototype theory builds on the observation that among
+    the instances of a property, some are more representative than
+    others. The most representative one is the prototype of the
+    property. <italic>We hypothesize that aphantasics will be more
+    inclined to categorize items according to prototypes than
+    phantasics.</italic></p>
+    <p>A Voronoi tesselation of a given space divides that space into a
+    number of cells such that each cell has a center and consists of all
+    and only those points that lie no closer to the center of any other
+    cell than to its own center; the centers of the various cells are
+    called the generator points of the tesselation. This principle will
+    underlie our data simulation, as we will build representations in a
+    3D space based on distances to “centroids”, namely, prototypes.
+    These representations will thus be located inside of the
+    tessellations around these prototypes, more or less close to the
+    centroid depending on the subject’s representational structures.</p>
+    <sec id="generating-prototype-embeddings-from-a-sphere">
+      <title>Generating “prototype” embeddings from a sphere</title>
+      <p>A function will be used to generate embeddings. These spherical
+      embeddings are displayed in
+      <xref alt="Figure 4.2" rid="fig-perfect-embeddings">Figure 4.2</xref>
+      We get 8 nicely distributed clusters. We’ll retrieve the centroids
+      of each cluster, which would be the “perfect” categories of each
+      species group (say, generated by a computational model on
+      categorical criteria).</p>
+      <code language="python">generate_sphere &lt;- function(n){
+  z     &lt;- 2*runif(n) - 1          # uniform on [-1, 1]
+  theta &lt;- 2*pi*runif(n) - pi      # uniform on [-pi, pi]
+  x     &lt;- sin(theta)*sqrt(1-z^2)  # based on angle
+  y     &lt;- cos(theta)*sqrt(1-z^2) 
+  
+  df &lt;- tibble(x = x, y = y, z = z)
+  
+  return(df)
+}
+
+# 1000 random observations with embeddings uniformly distributed on a sphere
+df_embeds &lt;- generate_sphere(1000)
+
+# Clustering the observations in 8 groups based on their coordinates
+clusters &lt;- Mclust(df_embeds, G = 8)
+
+# adding the classification to the data
+df_embeds &lt;- df_embeds |&gt; mutate(group = as.factor(clusters$classification))
+
+# getting the centroids of each cluster
+df_centroids &lt;- 
+  df_embeds |&gt; 
+  group_by(group) |&gt; 
+  summarise(
+    x_centroid = mean(x),
+    y_centroid = mean(y),
+    z_centroid = mean(z)
+  )
+
+# adding them to the data
+df_embeds_2 &lt;- left_join(df_embeds, df_centroids, by = &quot;group&quot;)</code>
+      <fig id="fig-perfect-embeddings">
+        <caption><p>Figure 4.2: Generated spherical distribution of 1000
+        observations grouped in 8 equal clusers with Gaussian Mixture
+        Clustering to represent the theoretical embeddings of 8 groups
+        (i.e. groups of species here). <bold><italic>Interact with the
+        figures to see the details.</italic></bold></p></caption>
+        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-perfect-embeddings-1.png" />
+      </fig>
+      <p>Now we want two sets of embeddings: one where the observations
+      are very concentrated around the centroids, which would be the
+      <bold>categorical model</bold>, and one where the observations are
+      more spread out, which would be the <bold>visual model</bold>.</p>
+      <p>We need to select 8 observations per cluster, which would be
+      our animals per group. These observations will be subsets of the
+      1000 observations we generated.</p>
+    </sec>
+    <sec id="categorical-model-embeddings">
+      <title>Categorical model embeddings</title>
+      <p>The selection procedure for the <bold>categorical model</bold>
+      will consist of selecting points that are rather <italic>close to
+      the centroids</italic>. Thus, we will filter the observations of
+      the large sets to keep only points for which the distance to the
+      centroid is inferior to a given value. That is, points for which
+      the Euclidean norm of the vector from the observation to the
+      centroid:</p>
+      <p><disp-formula><alternatives>
+      <tex-math><![CDATA[d(centroid, observation) = \sqrt{(x_{c} - x_{o})^{2} + (y_{c} - y_{o})^{2} + (z_{c} - z_{o})^{2}}]]></tex-math>
+      <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>d</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>c</mml:mi><mml:mi>e</mml:mi><mml:mi>n</mml:mi><mml:mi>t</mml:mi><mml:mi>r</mml:mi><mml:mi>o</mml:mi><mml:mi>i</mml:mi><mml:mi>d</mml:mi><mml:mo>,</mml:mo><mml:mi>o</mml:mi><mml:mi>b</mml:mi><mml:mi>s</mml:mi><mml:mi>e</mml:mi><mml:mi>r</mml:mi><mml:mi>v</mml:mi><mml:mi>a</mml:mi><mml:mi>t</mml:mi><mml:mi>i</mml:mi><mml:mi>o</mml:mi><mml:mi>n</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:msqrt><mml:mrow><mml:msup><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>x</mml:mi><mml:mi>c</mml:mi></mml:msub><mml:mo>−</mml:mo><mml:msub><mml:mi>x</mml:mi><mml:mi>o</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mn>2</mml:mn></mml:msup><mml:mo>+</mml:mo><mml:msup><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>y</mml:mi><mml:mi>c</mml:mi></mml:msub><mml:mo>−</mml:mo><mml:msub><mml:mi>y</mml:mi><mml:mi>o</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mn>2</mml:mn></mml:msup><mml:mo>+</mml:mo><mml:msup><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>z</mml:mi><mml:mi>c</mml:mi></mml:msub><mml:mo>−</mml:mo><mml:msub><mml:mi>z</mml:mi><mml:mi>o</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mn>2</mml:mn></mml:msup></mml:mrow></mml:msqrt></mml:mrow></mml:math></alternatives></disp-formula></p>
+      <p>This can be done using the function
+      <monospace>norm(coordinates, type = &quot;2&quot;)</monospace> in
+      R.</p>
+      <code language="python"># Function to filter points of the sphere based on the distance to the centroids
+generate_embeddings &lt;- function(df, n_embeddings, distance_quantile){
+  df &lt;- 
+    df |&gt; 
+    # computing the euclidean distance to the centroids for each observation
+    rowwise() |&gt; 
+    mutate(
+      distance = norm(
+        c((x_centroid - x), (y_centroid - y), (z_centroid - z)),
+        type = &quot;2&quot;)
+      ) |&gt; 
+    # filtering by distance to the centroid by group
+    group_by(group) |&gt; 
+    # selecting the X% closest (specified with &quot;distance_quantile&quot;)
+    filter(distance &lt; quantile(distance, probs = distance_quantile)) |&gt; 
+    # selecting X random observations per cluster in these 
+    # (specified with &quot;n_embeddings&quot;)
+    slice(1:n_embeddings) |&gt; 
+    select(group, x, y, z) |&gt;
+    ungroup()
+}
+
+df_embeds_categ &lt;- generate_embeddings(df_embeds_2, 8, 0.5)</code>
+      <fig id="fig-categorical-embeddings">
+        <caption><p>Figure 4.3: Selection of 64 points to represent
+        prototypical categorical embeddings, based on the distances to
+        each groups’ centroid. These will be the bases of the verbal
+        aphantasics’ embeddings. <bold><italic>Interact with the figure
+        to see the details.</italic></bold></p></caption>
+        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-categorical-embeddings-1.png" />
+      </fig>
+    </sec>
+    <sec id="visual-model-embeddings">
+      <title>Visual model embeddings</title>
+      <p>In the case of the <bold>visual model</bold>, we would like
+      approximately evenly distributed embeddings, that could also dive
+      <italic>inside</italic> the sphere, i.e. representing species that
+      are visually close although diametrically opposed when it comes to
+      taxonomy. To do this we could try to simulate multivariate normal
+      distributions around the
+      centroids<xref ref-type="fn" rid="fn2">2</xref>. This can be done
+      with the <monospace>holodeck</monospace> package.</p>
+      <code language="python"># defining the variance and covariance of the distributions
+var2 &lt;- 0.05
+cov2 &lt;- 0
+
+# generating multivariate distributions around the categorical 3D means
+df_embeds_visual &lt;-
+  tibble(
+    id = as.factor(seq(1,6400)),
+    category = as.factor(rep(seq(1:64), each = 100))
+  )|&gt; 
+  group_by(category) |&gt; 
+  sim_discr(
+    n_vars = 1, 
+    var = var2, 
+    cov = cov2, 
+    group_means = df_embeds_categ$x, 
+    name = &quot;x&quot;) |&gt; 
+  sim_discr(
+    n_vars = 1, 
+    var = var2, 
+    cov = cov2, 
+    group_means = df_embeds_categ$y, 
+    name = &quot;y&quot;) |&gt; 
+  sim_discr(
+    n_vars = 1, 
+    var = var2, 
+    cov = cov2, 
+    group_means = df_embeds_categ$z, 
+    name = &quot;z&quot;) |&gt; 
+  # keeping only 8 points per distribution
+  slice(1) |&gt; 
+  ungroup() |&gt; 
+  mutate(group = as.factor(rep(seq(1, 8), each = 8))) |&gt; 
+  rename(x = x_1, y = y_1, z = z_1) |&gt; 
+  select(group, x, y, z)</code>
+      <fig id="fig-visual-embeddings">
+        <caption><p>Figure 4.4: Selection of 64 points to represent
+        prototypical visual embeddings, chosen randomly in multivariate
+        distributions centered around each categorical embedding. The
+        visual embeddings are overlaid as diamonds along with
+        categorical ones as dots. The two distributions keep the group
+        structure, but are pretty far apart at times.
+        <bold><italic>Interact with the figure to see the
+        details.</italic></bold></p></caption>
+        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-visual-embeddings-1.png" />
+      </fig>
+    </sec>
+    <sec id="intermediate-embeddings">
+      <title>Intermediate embeddings</title>
+      <fig id="fig-distances-graph">
+        <caption><p>Figure 4.5: Model of the distances between
+        participants’ representations. Note that here d is a
+        one-dimensional distance between the representations, but it
+        will be computed as a three-dimensional distance in our
+        toy-model. The verbal aphantasic profile is hypothesized to be
+        very categorical, thus diametrically opposed to the visual
+        phantasic profile, by a given distance d. Spatial profiles are
+        in-between: they are close to each other (10% x d), but the
+        spatial aphantasic profile is a bit closer to the verbal
+        aphantasic one (45% x d), and the spatial phantasic is a bit
+        closer to the visual phantasic one (45% x d).</p></caption>
+        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/mermaid-figure-2.png" />
+      </fig>
+      <code language="r script">dist_c = 0.45
+dist_v = 0.55
+
+df_embeddings &lt;-
+  df_embeds_categ |&gt;
+  rename(
+    group_c = group,
+    x_c = x,
+    y_c = y,
+    z_c = z
+  ) |&gt;
+  bind_cols(df_embeds_visual) |&gt;
+  rename(
+    group_v = group,
+    x_v = x,
+    y_v = y,
+    z_v = z
+  ) |&gt; 
+  select(!group_v) |&gt; 
+  rename(group = group_c) |&gt; 
+  mutate(
+    x_cs = x_c + dist_c*(x_v - x_c),
+    y_cs = y_c + dist_c*(y_v - y_c),
+    z_cs = z_c + dist_c*(z_v - z_c),
+    x_vs = x_c + dist_v*(x_v - x_c),
+    y_vs = y_c + dist_v*(y_v - y_c),
+    z_vs = z_c + dist_v*(z_v - z_c)
+  )</code>
+      <fig id="fig-intermediate-embeddings">
+        <caption><p>Figure 4.6: Space of embeddings with 128 additional
+        points based on the euclidean distances between the visual and
+        categorical embeddings. The empty dots are the
+        <italic>aphantasics-spatial</italic> ones, and the empty
+        diamonds are the <italic>phantasic-spatial</italic> ones. Some
+        can be very close together, and sometimes further apart due to
+        the various pairs of visual and categorical points used to
+        create them. A network-like structure seems to appear, with
+        empty points seemingly ‘connecting’ the dots and diamonds.
+        <bold><italic>Interact with the figure to see the
+        details.</italic></bold></p></caption>
+        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-intermediate-embeddings-1.png" />
+      </fig>
+    </sec>
+    <sec id="labelling-the-species">
+      <title>Labelling the species</title>
+      <p>The distributions created are still gathered around the
+      centroids of each group, but are much more widespread, each group
+      getting close to each other and even reaching inside the
+      sphere.</p>
+      <p>Perfect! Now we have two 3D embeddings per animal, in a
+      categorical or a visual description of their features. Let’s add
+      labels for each species in a group:</p>
+      <code language="r script">df_embeddings &lt;- 
+  df_embeddings |&gt; 
+  mutate(
+    group = case_when(
+    group == 1 ~ &quot;a&quot;, 
+    group == 2 ~ &quot;b&quot;,
+    group == 3 ~ &quot;c&quot;,
+    group == 4 ~ &quot;d&quot;,
+    group == 5 ~ &quot;e&quot;,
+    group == 6 ~ &quot;f&quot;,
+    group == 7 ~ &quot;g&quot;,
+    group == 8 ~ &quot;h&quot;,
+    TRUE ~ group
+    )
+  ) |&gt; 
+  group_by(group) |&gt; 
+  mutate(
+    species = paste0(&quot;species_&quot;, group, 1:8),
+    species = as.factor(species),
+    group   = as.factor(group)
+    ) |&gt; 
+  select(group, species, everything())</code>
+      <p>Now we have four sets of coherent coordinates, that we need to
+      assign to the 30 participants: i.e. generating 8 points for C
+      (aph_spa_low), 7 points for CS (aph_spa_high), 7 points for VS
+      (phant_spa_high), and 8 points for V (phant_spa_low).</p>
+    </sec>
+    <sec id="generating-the-subject-embeddings">
+      <title>Generating the subject embeddings</title>
+      <p>We have four “reference” sets of embeddings which represent
+      animals either judged according to their similarity in categorical
+      terms (namely, species), or in visual terms (namely shape or color
+      similarities, assuming that these similarities are more evenly
+      distributed, e.g. the crab looks like a spider, but is also pretty
+      close to a scorpion, etc.).</p>
+      <p>To generate the embeddings of each subject in each condition,
+      we will start from these reference embeddings and generate random
+      noise around <italic>each item</italic>, i.e. for all 64 animals.
+      For 100 subjects, we would thus generate 100 noisy points around
+      each animal, each point corresponding to a given subject.</p>
+      <p>The visual and verbal groups will be generated with slightly
+      more intra-group variance, so as to try to make the spatial groups
+      as coherent as possible (and avoid blurring everything and making
+      the groups disappear in noise).</p>
+      <p>Although the groupings in this distribution sound simple when
+      we color it using the knowledge about how we built it, the
+      algorithm will only be fed with the data for each subject, without
+      any labeling or additional information. Thus,
+      <xref alt="Figure 4.8" rid="fig-subject-embeddings-b">Figure 4.8</xref>
+      here is what the algorithm will “see” (and what it will try to
+      decrypt). Admittedly, that looks a lot more complicated.</p>
+      <code language="python"># creating dfs with participants
+df_subjects_7 &lt;- 
+  tibble(subject = seq(1, 7, 1)) |&gt; 
+  mutate(subject = paste0(&quot;subject_&quot;, subject))
+
+df_subjects_8 &lt;- 
+  tibble(subject = seq(1, 8, 1)) |&gt; 
+  mutate(subject = paste0(&quot;subject_&quot;, subject))
+
+# splitting df_embeddings
+df_embed_c  &lt;- df_embeddings |&gt; select(group, species,  x_c:z_c)
+df_embed_cs &lt;- df_embeddings |&gt; select(group, species, x_cs:z_cs)
+df_embed_vs &lt;- df_embeddings |&gt; select(group, species, x_vs:z_vs)
+df_embed_v  &lt;- df_embeddings |&gt; select(group, species,  x_v:z_v)
+
+# function to create embeddings per subject with normal random noise
+generate_subject_embeddings &lt;- function(df, df_subjects, var){
+  df &lt;-
+    df |&gt; 
+    mutate(subject = list(df_subjects)) |&gt; 
+    unnest(subject) |&gt; 
+    group_by(species) |&gt; 
+    # simulating x coordinates
+    sim_discr(
+      n_vars = 1, 
+      var = var, 
+      cov = 0, 
+      group_means = pull(df, 3), 
+      name = &quot;x&quot;) |&gt; 
+    # simulating y coordinates
+    sim_discr(
+      n_vars = 1, 
+      var = var, 
+      cov = 0, 
+      group_means = pull(df, 4), 
+      name = &quot;y&quot;) |&gt; 
+    # simulating z coordinates
+    sim_discr(
+      n_vars = 1, 
+      var = var, 
+      cov = 0, 
+      group_means = pull(df, 5), 
+      name = &quot;z&quot;) |&gt;
+  select(group, species, subject, 7:9) |&gt; 
+  rename(x = 4, y = 5, z = 6) |&gt; 
+  ungroup()
+  
+  return(df)
+}
+
+var_s1 = 0.001
+var_s2 = 0.0005
+
+df_embed_c_sub  &lt;- generate_subject_embeddings(df_embed_c,  df_subjects_4, var_s1)
+df_embed_cs_sub &lt;- generate_subject_embeddings(df_embed_cs, df_subjects_4, var_s2)
+df_embed_vs_sub &lt;- generate_subject_embeddings(df_embed_vs, df_subjects_4, var_s2)
+df_embed_v_sub  &lt;- generate_subject_embeddings(df_embed_v,  df_subjects_4, var_s1)</code>
+      <fig id="fig-subject-embeddings-a">
+        <caption><p>Figure 4.7: Final distribution of the 64 embeddings
+        of all the 30 subjects, amounting to 1920 points total.
+        Embeddings are <bold><italic>colored by the species
+        groups</italic></bold> they represent. The symbols represent the
+        four imagery groups (Aph. verbal, spatial, etc.).
+        <bold><italic>Interact with the figures to see the
+        details.</italic></bold></p></caption>
+        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-subject-embeddings-a-1.png" />
+      </fig>
+      <fig id="fig-subject-embeddings-b">
+        <caption><p>Figure 4.8: Final distribution of the 64 embeddings
+        of all the 30 subjects, amounting to 1920 points total.
+        Embeddings are <bold><italic>lored by subject</italic></bold>.
+        The symbols represent the four imagery groups (Aph. verbal,
+        spatial, etc.). <bold><italic>Interact with the figures to see
+        the details.</italic></bold></p></caption>
+        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-subject-embeddings-b-1.png" />
+      </fig>
+      <p>To feed this data to the algorithm, we’ll group the 64
+      embeddings per subject in matrices tied to each of them.</p>
+      <code language="r script">df_embeddings_sub &lt;-
+  bind_rows(
+    # aphantasic spatial
+    df_embed_cs_sub |&gt; 
+      separate_wider_delim(
+        subject,
+        delim = &quot;_&quot;,
+        names = c(&quot;subject&quot;, &quot;number&quot;)
+      ) |&gt; 
+      mutate(subject = paste0(subject,&quot;_a_aph_s&quot;, number), .keep = &quot;unused&quot;),
+    
+    # aphantasic verbal
+    df_embed_c_sub  |&gt;
+      separate_wider_delim(
+        subject,
+        delim = &quot;_&quot;,
+        names = c(&quot;subject&quot;, &quot;number&quot;)
+      ) |&gt; 
+      mutate(subject = paste0(subject,&quot;_b_aph_v&quot;, number), .keep = &quot;unused&quot;),
+    
+    # phantasic spatial
+    df_embed_vs_sub  |&gt;
+      separate_wider_delim(
+        subject,
+        delim = &quot;_&quot;,
+        names = c(&quot;subject&quot;, &quot;number&quot;)
+      ) |&gt; 
+      mutate(subject = paste0(subject,&quot;_c_phant_s&quot;, number), .keep = &quot;unused&quot;),
+    
+    # phantasic visual
+    df_embed_v_sub  |&gt;
+      separate_wider_delim(
+        subject,
+        delim = &quot;_&quot;,
+        names = c(&quot;subject&quot;, &quot;number&quot;)
+      ) |&gt; 
+      mutate(subject = paste0(subject,&quot;_d_phant_v&quot;, number), .keep = &quot;unused&quot;)
+  ) |&gt; 
+  mutate(subject = as.factor(subject)) |&gt; 
+  select(!c(group, species)) |&gt; 
+  group_by(subject) |&gt; 
+  nest() |&gt; 
+  rename(embedding = data) |&gt; 
+  rowwise() |&gt; 
+  mutate(embedding = list(as.matrix(embedding)))</code>
+    </sec>
+  </sec>
+  <sec id="data-analysis-aligning-representational-structures">
+    <title>4.3 Data analysis: Aligning representational
+    structures</title>
+  </sec>
+  <sec id="simulation-summary">
+    <title>4.4 Simulation summary</title>
+    <p>Kawakita et al.
+    (<xref alt="2023" rid="ref-kawakita2023" ref-type="bibr">2023</xref>):
+    These results indicate that the difference between the qualia
+    structures of neuro-typical and atypical participants is
+    significantly larger than the difference between the qualia
+    structures of neuro-typical participants.</p>
+    <p>A notable difference is that greenish colors and reddish colors
+    are close in the embedding space of color atypical participants
+    while they are distant in the embedding space of color neurotypical
+    participants. This structural difference is likely to prevent the
+    unsupervised alignment between the embeddings of color-neurotypical
+    and atypical participants even though the correlation coefficient
+    between the dissimilarity matrices of color neuro-typical and
+    atypical participants is reasonably high.</p>
+    <p>For a long time, assessing the similarity of subjective
+    experiences across participants has been challenging. To address
+    this problem, we proposed the “qualia structure” paradigm, which
+    focuses on quantitative structural comparisons of subjective
+    experiences. Using an unsupervised alignment method, we were able to
+    match the qualia structures of colors and natural objects of
+    different groups of participants based only on the way the qualia
+    relate to each other, without using any external labels.</p>
+    <p>Our results on color qualia structures are consistent with an
+    idea that the relational properties of color qualia are universally
+    shared by color-neurotypical individuals. Intriguingly, our results
+    also suggest that individuals with color-atypical vision may have a
+    different structure of their color experiences, rather than just
+    failing to experience a certain subset of colors. Longstanding
+    thought experiments that challenge the feasibility of
+    inter-subjective color comparisons, such as individuals with color
+    qualia inversion, should be resolvable with our relational
+    unsupervised approach. Beyond traditional measures such as Pearson’s
+    correlation coefficient, our method provides a more fundamental
+    structural characterization of how two structures are similar or
+    different, which will be crucial for future investigations of qualia
+    structures across psychological, neuroscientific, and computational
+    fields.</p>
+  </sec>
+</sec>
+<sec id="feasibility">
+  <title>5. Feasibility</title>
+</sec>
+<sec id="conclusion">
+  <title>6. Conclusion</title>
+  <p>Modern psychology builds on the relativistic framework of
+  philosophy, accepting that humans cannot know reality in an absolute
+  sense. Focusing on relative comparisons, or similarity, is more than a
+  clever philosophical work-around. similarity is a common currency of
+  perception and cognition. In addition to operating at all levels of
+  cognition, similarity—or, more accurately, the second-order
+  isomorphism defined by a set of similarity relations—has been a
+  powerful tool for analyzing and comparing psychological spaces.</p>
 </sec>
 </body>
 
@@ -649,14 +1369,109 @@ df &lt;- generate_osv_model(0.03, 0)</code>
       <uri>https://www.repository.cam.ac.uk/handle/1810/306834</uri>
     </element-citation>
   </ref>
+  <ref id="ref-gardenfors2004">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Gardenfors</surname><given-names>Peter</given-names></name>
+      </person-group>
+      <article-title>Conceptual Spaces as a Framework for Knowledge Representation</article-title>
+      <year iso-8601-date="2004">2004</year>
+    </element-citation>
+  </ref>
+  <ref id="ref-jozwik2016">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Jozwik</surname><given-names>Kamila M.</given-names></name>
+        <name><surname>Kriegeskorte</surname><given-names>Nikolaus</given-names></name>
+        <name><surname>Mur</surname><given-names>Marieke</given-names></name>
+      </person-group>
+      <article-title>Visual features as stepping stones toward semantics: Explaining object similarity in IT and perception with non-negative least squares</article-title>
+      <source>Neuropsychologia</source>
+      <year iso-8601-date="2016-03-01">2016</year><month>03</month><day>01</day>
+      <volume>83</volume>
+      <uri>https://www.sciencedirect.com/science/article/pii/S0028393215301998</uri>
+      <pub-id pub-id-type="doi">10.1016/j.neuropsychologia.2015.10.023</pub-id>
+      <fpage>201</fpage>
+      <lpage>226</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-jozwik2017">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Jozwik</surname><given-names>Kamila M.</given-names></name>
+        <name><surname>Kriegeskorte</surname><given-names>Nikolaus</given-names></name>
+        <name><surname>Storrs</surname><given-names>Katherine R.</given-names></name>
+        <name><surname>Mur</surname><given-names>Marieke</given-names></name>
+      </person-group>
+      <article-title>Deep convolutional neural networks outperform feature-based but not categorical models in explaining object similarity judgments</article-title>
+      <source>Frontiers in Psychology</source>
+      <year iso-8601-date="2017">2017</year>
+      <volume>8</volume>
+      <uri>https://www.frontiersin.org/articles/10.3389/fpsyg.2017.01726</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-marr1997">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Marr</surname><given-names>D.</given-names></name>
+        <name><surname>Nishihara</surname><given-names>H. K.</given-names></name>
+        <name><surname>Brenner</surname><given-names>Sydney</given-names></name>
+      </person-group>
+      <article-title>Representation and recognition of the spatial organization of three-dimensional shapes</article-title>
+      <source>Proceedings of the Royal Society of London. Series B. Biological Sciences</source>
+      <year iso-8601-date="1997-01">1997</year><month>01</month>
+      <volume>200</volume>
+      <issue>1140</issue>
+      <uri>https://royalsocietypublishing.org/doi/abs/10.1098/rspb.1978.0020</uri>
+      <pub-id pub-id-type="doi">10.1098/rspb.1978.0020</pub-id>
+      <fpage>269</fpage>
+      <lpage>294</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-kriegeskorte2008">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Kriegeskorte</surname><given-names>Nikolaus</given-names></name>
+        <name><surname>Mur</surname><given-names>Marieke</given-names></name>
+        <name><surname>Bandettini</surname><given-names>Peter</given-names></name>
+      </person-group>
+      <article-title>Representational similarity analysis - connecting the branches of systems neuroscience</article-title>
+      <source>Frontiers in Systems Neuroscience</source>
+      <year iso-8601-date="2008">2008</year>
+      <volume>2</volume>
+      <uri>https://www.frontiersin.org/articles/10.3389/neuro.06.004.2008</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-kawakita2023">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Kawakita</surname><given-names>Genji</given-names></name>
+        <name><surname>Zeleznikow-Johnston</surname><given-names>Ariel</given-names></name>
+        <name><surname>Takeda</surname><given-names>Ken</given-names></name>
+        <name><surname>Tsuchiya</surname><given-names>Naotsugu</given-names></name>
+        <name><surname>Oizumi</surname><given-names>Masafumi</given-names></name>
+      </person-group>
+      <article-title>Is my&quot; red&quot; your&quot; red&quot;?: Unsupervised alignment of qualia structures via optimal transport</article-title>
+      <year iso-8601-date="2023">2023</year>
+    </element-citation>
+  </ref>
 </ref-list>
 <fn-group>
   <fn id="fn1">
     <label>1</label><p>A claim dismissed since then by propositions of
     robust mathematical models of similarity, e.g. Gardenfors
-    (<xref alt="2004" rid="ref-gardenforsConceptualSpacesFramework2004" ref-type="bibr">2004</xref>),
+    (<xref alt="2004a" rid="ref-gardenforsConceptualSpacesFramework2004" ref-type="bibr">2004a</xref>),
     Decock and Douven
     (<xref alt="2011" rid="ref-decockSimilarityGoodman2011" ref-type="bibr">2011</xref>).</p>
+  </fn>
+  <fn id="fn2">
+    <label>2</label><p>A simpler alternative would be generating the
+    visual embeddings with the same code as the categorical ones,
+    selecting 8 points per cluster but much more spread out
+    (e.g. selecting 8 among the 90% closest to the centroids, which
+    would create more variability than the categorical one set to 60%).
+    I chose otherwise because this wouldn’t have had points reaching
+    <italic>inside</italic> the sphere.</p>
   </fn>
 </fn-group>
 </back>
@@ -809,7 +1624,7 @@ utility and benefits of this project.</p>
     psychological spaces.</bold> This selectivity would have, as we
     already hypothesized several times, benefits and drawbacks.</p>
     <p>Gardenfors
-    (<xref alt="2004" rid="ref-gardenforsConceptualSpacesFramework2004-nb-article" ref-type="bibr">2004</xref>)
+    (<xref alt="2004a" rid="ref-gardenforsConceptualSpacesFramework2004-nb-article" ref-type="bibr">2004a</xref>)
     proposed that differences in psychological (in his terms,
     conceptual) spaces could arise from various sources, whether innate,
     due to learning, or broader cultural or social differences. All
@@ -887,9 +1702,9 @@ utility and benefits of this project.</p>
         Their single-trial dissimilarity estimates (arrows) are combined
         into a single dissimilarity estimate, which is placed at the
         corresponding entry of the RDM (lower panel). Mirror-symmetric
-        entries are indicated by lighter colors. Figure taken from Mur
-        et al.
-        (<xref alt="2013" rid="ref-murHumanObjectSimilarityJudgments2013-nb-article" ref-type="bibr">2013</xref>).</p></caption>
+        entries are indicated by lighter colors (figure from
+        <xref alt="Mur et al. 2013" rid="ref-murHumanObjectSimilarityJudgments2013-nb-article" ref-type="bibr">Mur
+        et al. 2013</xref>).</p></caption>
         <graphic mimetype="image" mime-subtype="png" xlink:href="images/multi-arrangement-method-mur-2013.png" />
       </fig>
       <p>A key strength of this method that sets it as particularly
@@ -944,15 +1759,311 @@ utility and benefits of this project.</p>
       <xref alt="Figure 2.2" rid="fig-majewska-nb-article">Figure 2.2</xref>.</p>
       <fig id="fig-majewska-nb-article">
         <caption><p>Figure 2.2: Arena layout of the MA protocol used by
-        Majewska et al.
-        (<xref alt="2020" rid="ref-majewskaSpatialMultiarrangementClustering2020-nb-article" ref-type="bibr">2020</xref>)
-        to acquire similarity judgements on word pairs.</p></caption>
+        to acquire similarity judgements on word pairs (figure from
+        <xref alt="Majewska et al. 2020" rid="ref-majewskaSpatialMultiarrangementClustering2020-nb-article" ref-type="bibr">Majewska
+        et al. 2020</xref>).</p></caption>
         <graphic mimetype="image" mime-subtype="png" xlink:href="images/majewska-spam.png" />
+      </fig>
+      <p>We could have the stimuli rated by another set of participants
+      on several features.</p>
+      <disp-quote>
+        <p>« <italic>We deliberately did not specify which object
+        properties to focus on, to avoid biasing participants’
+        spontaneous mental representation of the similarities between
+        objects. Our aim was to obtain similarity judgments that reflect
+        the natural representation of objects without forcing
+        participants to rely on one given dimension. However,
+        participants were asked after having performed the task, what
+        dimension(s) they used in judging object similarity.</italic> »
+        (<xref alt="Jozwik, Kriegeskorte, and Mur 2016" rid="ref-jozwik2016-nb-article" ref-type="bibr">Jozwik,
+        Kriegeskorte, and Mur 2016</xref>)</p>
+      </disp-quote>
+      <disp-quote>
+        <p>« <bold><italic>All but one of the 16 participants reported
+        arranging the images according to a categorical
+        structure.</italic></bold> »
+        (<xref alt="Jozwik et al. 2017" rid="ref-jozwik2017-nb-article" ref-type="bibr">Jozwik
+        et al. 2017</xref>)</p>
+      </disp-quote>
+      <p>This result of Jozwik et al.
+      (<xref alt="2017" rid="ref-jozwik2017-nb-article" ref-type="bibr">2017</xref>)
+      suggests that we should give an explicit instruction about the
+      features to focus on, otherwise everyone might bypass visual
+      features and mental images in favour of concepts and categories,
+      regardless of their mental imagery profile.</p>
+      <p>In contrast, if we ask to focus specifically on the visual
+      features, then ask subjects about the strategy they used to
+      evaluate the similarities, then on the subjectively felt mental
+      format of these strategies, we might grasp better insight on the
+      sensory representations of subjects.</p>
+      <p>We could even go for several comparisons - even though this
+      would increase quadratically the number of trials - e.g. :</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Evaluate to what extent the <bold>shape</bold> <italic>of
+          these animals are</italic>
+          <bold><italic>similar</italic></bold> <bold>at rest, ignoring
+          size differences.</bold></p>
+        </list-item>
+        <list-item>
+          <p>Evaluate to what extent these animals <bold>sound like each
+          other.</bold></p>
+        </list-item>
+        <list-item>
+          <p>Etc.</p>
+        </list-item>
+      </list>
+      <disp-quote>
+        <p><italic>Note to be added: if you do not know the animal, just
+        guess its placement, as this situation is quite unlikely to
+        happen (animals chosen are fairly common
+        knowledge).</italic></p>
+      </disp-quote>
+      <p>Kawakita et al.
+      (<xref alt="2023" rid="ref-kawakita2023-nb-article" ref-type="bibr">2023</xref>):
+      To assess whether the color dissimilarity structures from
+      different participants can be aligned in an unsupervised manner,
+      we divided color pair similarity data from a large pool of 426
+      participants into five participant groups (85 or 86 participants
+      per group) to obtain five independent and complete sets of
+      pairwise dissimilarity ratings for 93 color stimuli (Fig. 3a).
+      Each participant provided a pairwise dissimilarity judgment for a
+      randomly allocated subset of the 4371 possible color pairs. We
+      computed the mean of all judgments for each color pair in each
+      group, generating five full dissimilarity matrices referred to as
+      Group 1 to Group 5.</p>
+    </sec>
+    <sec id="stimuli-nb-article">
+      <title>Stimuli</title>
+      <p>We would have a list of animal items, that would have several
+      characteristics:</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>A name</p>
+        </list-item>
+        <list-item>
+          <p>A category</p>
+        </list-item>
+        <list-item>
+          <p>A shape</p>
+        </list-item>
+      </list>
+      <p>We need orthogonal data:</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Each class of animal should include each shape
+          (roughly)</p>
+        </list-item>
+        <list-item>
+          <p>Each shape should have an animal</p>
+        </list-item>
+      </list>
+      <p>This would imply that category cannot be derived from shape,
+      and vice-versa. Thus, a <bold>sorting by shape would reveal to be
+      innately visual</bold> (or maybe spatial, if shape concerns this
+      type of imagery), and a <bold>sorting by category would reveal an
+      abstraction</bold> from these shapes. We expect that the two will
+      be mixed to some degree in every subject, but that low-imagery
+      would rather tend towards category sorting, while high-imagery
+      would tend towards shape sorting.</p>
+      <p>Shapes could be very tricky stimuli to discuss. Gardenfors
+      (<xref alt="2004b" rid="ref-gardenfors2004-nb-article" ref-type="bibr">2004b</xref>)
+      noted that we only have a very sketchy understanding of how we
+      perceive and conceptualize things according to their shapes. The
+      works of Marr, Nishihara, and Brenner
+      (<xref alt="1997" rid="ref-marr1997-nb-article" ref-type="bibr">1997</xref>)
+      highlight this difficulty when analysing the complexity of the
+      hierarchical judgements of shapes and volumes, as shown in
+      <xref alt="Figure 2.3" rid="fig-marr-nb-article">Figure 2.3</xref>.</p>
+      <fig id="fig-marr-nb-article">
+        <caption><p>Figure 2.3: Representing the characteristics of
+        shapes with cylinders (figure from
+        <xref alt="Marr, Nishihara, and Brenner 1997" rid="ref-marr1997-nb-article" ref-type="bibr">Marr,
+        Nishihara, and Brenner 1997</xref>).</p></caption>
+        <graphic mimetype="image" mime-subtype="png" xlink:href="images/shapes-marr.png" />
       </fig>
     </sec>
   </sec>
+</sec>
+<sec id="data-analysis-plan-nb-article">
+  <title>3. Data analysis plan</title>
+  <sec id="unsupervised-alignment-rationale-nb-article">
+    <title>3.1 Unsupervised alignment rationale</title>
+    <p>Visual images can be represented as points in a multidimensional
+    psychological space. Embedding algorithms can be used to infer
+    latent representations from human similarity judgments. While there
+    are an infinite number of potential visual features, an embedding
+    algorithm can be used to identify the subset of salient features
+    that accurately model human-perceived similarity. (<italic>From
+    Roads’ CV</italic>)</p>
+    <p>Using an optimization algorithm, the free parameters of a
+    psychological space are found by maximizing goodness of fit (i.e.,
+    the loss function) to the observed data. Historically, when
+    referring specifically to the free parameters that correspond to the
+    representation of stimuli (e.g., coordinates in geometric space),
+    inference algorithms were commonly called multidimensional scaling
+    (MDS), or simply scaling, algorithms.</p>
+    <p>In the machine learning literature, analogous inference
+    algorithms are often called embedding algorithms. The term
+    “embedding” denotes a higher-dimensional representation that is
+    embedded in a lower-dimensional space. For that reason, the inferred
+    mental representations of a psychological space could also be called
+    a psychological embedding.</p>
+    <p>Numerous techniques exist, and each has limitations. Popular
+    techniques for comparing representations include RSA Kriegeskorte,
+    Mur, and Bandettini
+    (<xref alt="2008" rid="ref-kriegeskorte2008-nb-article" ref-type="bibr">2008</xref>)
+    and canonical correlation analysis (CCA) (Hotelling 1936). Briefly,
+    RSA is a method for comparing two representations that assesses the
+    correlation between the implied pairwise similarity matrices. CCA is
+    a method that compares two representations by finding a pair of
+    latent variables (one for each domain) that are maximally
+    correlated.</p>
+    <p>One might be tempted to compare two dissimilarity matrices
+    assuming stimulus-level “external” correspondence: my “red”
+    corresponds to your “red”(Fig. 1d). This type of supervised
+    comparison between dissimilarity matrices, known as Representational
+    Similarity Analysis (RSA), has been widely used in neuroscience to
+    compare various similarity matrices obtained from behavioural and
+    neural data. However, there is no guarantee that the same stimulus
+    will necessarily evoke the same subjective experience across
+    different participants. Accordingly, when considering which stimuli
+    evoke which qualia for different individuals, we need to consider
+    all possibilities of correspondence: my “red” might correspond to
+    your “red”, “green”, “purple”, or might lie somewhere between your
+    “orange” and “pink”(Fig. 1e). Thus, we compare qualia structures in
+    a purely unsupervised manner, without assuming any correspondence
+    between individual qualia across participants.</p>
+  </sec>
+  <sec id="gromov-wasserstein-optimal-transport-nb-article">
+    <title>3.2 Gromov-Wasserstein optimal transport</title>
+    <p>To account for all possible correspondences, we use an
+    unsupervised alignment method for quantifying the degree of
+    similarity between qualia structures. As shown in Fig. 2a, in
+    unsupervised alignment, we do not attach any external (stimuli)
+    labels to the qualia embeddings. Instead, we try to find the best
+    matching between qualia structures based only on their internal
+    relationships (see Methods). After finding the optimal alignment, we
+    can use external labels, such as the identity of a color stimulus
+    (Fig. 2b), to evaluate how the embeddings of different individuals
+    relate to each other. This allows us to determine which color
+    embeddings correspond to the same color embeddings across
+    individuals or which do not. Checking the assumption that these
+    external labels are consistent across individuals allows us to
+    assess the plausibility of determining accurate inter-individual
+    correspondences between qualia structures of different
+    participants.</p>
+    <p>To this end, we used the Gromov-Wasserstein optimal transport
+    (GWOT) method, which has been applied with great success in various
+    fields. GWOT aims to find the optimal mapping between two point
+    clouds in different domains based on the distance between points
+    within each domain. Importantly, the distances (or correspondences)
+    between points “across” different domains are not given while those
+    “within” the same domain are given. GWOT aligns the point clouds
+    according to the principle that a point in one domain should
+    correspond to another point in the other domain that has a similar
+    relationship to other points. The principle of the method is
+    illustrated in
+    <xref alt="Figure 3.1" rid="fig-gwot-kawa-nb-article">Figure 3.1</xref></p>
+    <fig id="fig-gwot-kawa-nb-article">
+      <caption><p>Figure 3.1: Gromov-Wassertein optimal transport
+      principle (figure from
+      <xref alt="Kawakita et al. 2023" rid="ref-kawakita2023-nb-article" ref-type="bibr">Kawakita
+      et al. 2023</xref>).</p></caption>
+      <graphic mimetype="image" mime-subtype="png" xlink:href="images/kawa-gwot-2.PNG" />
+    </fig>
+    <p>We first computed the GWD for all pairs of the dissimilarity
+    matrices of the 5 groups (Group 1-5) using the optimized
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[\epsilon]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>ϵ</mml:mi></mml:math></alternatives></inline-formula>.
+    In Fig. 3b, we show the optimized mapping
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[\Gamma*]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>Γ</mml:mi><mml:mo>*</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
+    between Group 1 and Groups 2-5 (see Supplementary Figure S1 for the
+    other pairs). As shown in Fig. 3b, most of the diagonal elements in
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[\Gamma*]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>Γ</mml:mi><mml:mo>*</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
+    show high values, indicating that most colors in one group
+    correspond to the same colors in the other groups with high
+    probability. We next performed unsupervised alignment of the vector
+    embeddings of qualia structures. Although
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[\Gamma*]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>Γ</mml:mi><mml:mo>*</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
+    provides the rough correspondence between the embeddings of qualia
+    structures, we should find a more precise mathematical mapping
+    between qualia structures in terms of their vector embeddings to
+    more accurately assess the similarity between the qualia structures.
+    Here, we consider aligning the embeddings of all the groups in a
+    common space.</p>
+    <p>By applying MDS, we obtained the 3-dimensional embeddings of
+    Group 1 and Groups 2-5, referred to as X and Yi, where i = 2, …, 5
+    (Fig. 3c). We then aligned Yi to X with the orthogonal rotation
+    matrix Qi, which was obtained by solving a Procrustes-type problem
+    using the optimized transportation plan
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[\Gamma*]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>Γ</mml:mi><mml:mo>*</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
+    obtained through GWOT (see Methods). Fig. 3d shows the aligned
+    embed- dings of Group 2-5 (QiYi) and the embedding of Group 1 (X)
+    plotted in the embedded space of X. Each color represents the label
+    of a corresponding external color stimulus. Note that even though
+    the color labels are shown in Fig. 3d, this is only for the
+    visualization purpose and the whole alignment procedure is performed
+    in a purely unsupervised manner without relying on the color labels.
+    As can be seen in Fig. 3d, the embeddings of similar colors from the
+    five groups are located close to each other, indicating that similar
+    colors are ‘correctly’ aligned by the unsupervised alignment
+    method.</p>
+    <p>To evaluate the performance of the unsupervised alignment, we
+    computed the k-nearest color matching rate in the aligned space. If
+    the same colors from two groups are within the k-nearest colors in
+    the aligned space, we consider that the colors are correctly
+    matched. We evaluated the matching rates between all the pairs of
+    Groups 1-5. The averaged matching rates are 51% when k = 1, 83% when
+    k = 3, and 92% when k = 5, respectively. This demonstrates the
+    effectiveness of the GW alignment for correctly aligning the qualia
+    structures of different participants in an unsupervised manner.</p>
+    <p>However, as can be seen in Fig. 4b, the optimized mapping
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[\Gamma*]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>Γ</mml:mi><mml:mo>*</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>
+    is not lined up diagonally unlike the optimized map- pings between
+    color-neurotypical participants groups shown in Fig. 3b (see
+    Supplementary Figure S1 for the other pairs). Accordingly, top k
+    matching rate between Group 1-5 and Group 6 is 3.0% when k = 1 (Fig.
+    4c), which is only slightly above chance
+    (<inline-formula><alternatives>
+    <tex-math><![CDATA[\approx]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mo>≈</mml:mo></mml:math></alternatives></inline-formula>
+    1%). The matching rate did not improve even when we relaxed the
+    criterion (6.9% and 11% for k = 3 and k = 5, respectively).
+    Moreover, all of the GWD values between Group 1-5 and Group 6 are
+    larger than any of the GWD values between color-neurotypical
+    participant groups (Fig. 4d).</p>
+    <p>These results indicate that the difference between the qualia
+    structures of neuro-typical and atypical participants is
+    significantly larger than the difference between the qualia
+    structures of neuro-typical participants.</p>
+    <fig>
+      <caption><p>The two conditions for one subject.</p></caption>
+      <graphic mimetype="image" mime-subtype="png" xlink:href="images/my-protocol-1.png" />
+    </fig>
+    <fig>
+      <caption><p>The comparison between the representational structure
+      of aphantasics and phantasics. This figure illustrates the
+      principle, but in reality all pairs of subjects will be compared
+      to assess their representational structure alignment. This is
+      computationnally heavy, but analytically very
+      powerful.</p></caption>
+      <graphic mimetype="image" mime-subtype="png" xlink:href="images/my-protocol-2.png" />
+    </fig>
+  </sec>
   <sec id="hypotheses-nb-article">
-    <title>2.2 Hypotheses</title>
+    <title>3.3 Hypotheses</title>
     <sec id="aphantasic-and-phantasic-psychological-spaces-nb-article">
       <title>Aphantasic and phantasic psychological spaces</title>
       <p>The most representative members of a category are called
@@ -960,8 +2071,9 @@ utility and benefits of this project.</p>
       <p>Prototype theory builds on the observation that among the
       instances of a property, some are more representative than others.
       The most representative one is the prototype of the property.</p>
-      <p>Thus, following the concepts illustrated by Gardenfors, we
-      would expect that aphantasics, when doing shape similarity
+      <p>Thus, following the concepts illustrated by Gardenfors
+      (<xref alt="2004b" rid="ref-gardenfors2004-nb-article" ref-type="bibr">2004b</xref>),
+      we would expect that aphantasics, when doing shape similarity
       judgements, would be more inclined to group items close to the
       prototypical items due to a lower definition of the mental image.
       In comparison, phantasics would have a much more distributed
@@ -987,24 +2099,11 @@ utility and benefits of this project.</p>
       have similar representations</bold> in their given psychological
       space, <bold>quantifiable by the degree of alignment between their
       similarity structures.</bold></p>
-      <fig>
-        <caption><p>The two conditions for one subject.</p></caption>
-        <graphic mimetype="image" mime-subtype="png" xlink:href="images/my-protocol-1.png" />
-      </fig>
-      <fig>
-        <caption><p>The comparison between the representational
-        structure of aphantasics and phantasics. This figure illustrates
-        the principle, but in reality all pairs of subjects will be
-        compared to assess their representational structure alignment.
-        This is computationnally heavy, but analytically very
-        powerful.</p></caption>
-        <graphic mimetype="image" mime-subtype="png" xlink:href="images/my-protocol-2.png" />
-      </fig>
     </sec>
   </sec>
 </sec>
-<sec id="study-data-simulation-and-analysis-nb-article">
-  <title>3. Study data simulation and analysis</title>
+<sec id="study-simulation-and-analysis-nb-article">
+  <title>4. Study simulation and analysis</title>
   <sec id="nb-code-cell-1-nb-article" specific-use="notebook-code">
   <code language="r script"># ═══ Packages ═════════════════════════════════════════════════════════════════
 
@@ -1080,7 +2179,7 @@ coordinates_aligned_embeddings &lt;- read_rds(paste0(path, &quot;coordinates_ali
   </sec>
   </sec>
   <sec id="visual-spatial-verbal-model-of-cognitive-profiles-nb-article">
-    <title>3.1 Visual-spatial-verbal model of cognitive profiles</title>
+    <title>4.1 Visual-spatial-verbal model of cognitive profiles</title>
     <p>One of the objectives of the study would be to link the
     subjective cognitive profiles of individuals with their
     representational structures. To evaluate these profiles, we are
@@ -1093,7 +2192,7 @@ coordinates_aligned_embeddings &lt;- read_rds(paste0(path, &quot;coordinates_ali
     aphantasics, <italic>spatial</italic> phantasics, and
     <italic>visual</italic> phantasics. Their imagery abilities are
     summarised in
-    <xref alt="Table 3.1" rid="tbl-imageries-nb-article">Table 3.1</xref>.</p>
+    <xref alt="Table 4.1" rid="tbl-imageries-nb-article">Table 4.1</xref>.</p>
     <p>To simulate these four sub-groups, we use the
     <monospace>holodeck</monospace> R package to generate multivariate
     normal distributions of scores on these three dimensions for each
@@ -1106,9 +2205,9 @@ coordinates_aligned_embeddings &lt;- read_rds(paste0(path, &quot;coordinates_ali
     that is both well-defined and not exaggerated. The 30 subjects’
     imagery profiles are represented in the three dimensional space of
     the visual-spatial-verbal dimensions in
-    <xref alt="Figure 3.1" rid="fig-plot-osv-model-nb-article">Figure 3.1</xref>.</p>
+    <xref alt="Figure 4.1" rid="fig-plot-osv-model-nb-article">Figure 4.1</xref>.</p>
     <fig id="tbl-imageries-nb-article">
-      <caption><p>Table 3.1: Imagery abilities of the four hypothesized
+      <caption><p>Table 4.1: Imagery abilities of the four hypothesized
       cognitive profiles.</p></caption>
       <table-wrap>
         <table>
@@ -1149,57 +2248,6 @@ coordinates_aligned_embeddings &lt;- read_rds(paste0(path, &quot;coordinates_ali
         </table>
       </table-wrap>
     </fig>
-    <p>Down below is the code to generate these scores.</p>
-    <sec id="osv-model-nb-article" specific-use="notebook-code">
-    <code language="python"># The function takes the variance and covariance of the imagery distributions
-# as arguments
-generate_osv_model &lt;- function(var, cov){
-  df &lt;- 
-    tibble(group = rep(c(&quot;aph&quot;, &quot;phant&quot;), each = 8)) |&gt; 
-    group_by(group) |&gt; 
-    mutate(
-      spatial_group = c(rep(&quot;spa_low&quot;, 4), rep(&quot;spa_high&quot;, 4)),
-      vis_spa_group = paste0(group, &quot;_&quot;, spatial_group),
-      verbal_group = &quot;verbal_low&quot;,
-      verbal_group  = case_when(
-        vis_spa_group == &quot;aph_spa_low&quot; ~ &quot;verbal_high&quot;, 
-        vis_spa_group == &quot;phant_spa_low&quot; ~ &quot;verbal_mid&quot;,
-        TRUE ~ verbal_group)
-    ) |&gt; 
-    group_by(vis_spa_group) |&gt; 
-    # ─── visual ───
-    sim_discr(
-      n_vars = 1, 
-      var = var, 
-      cov = cov, 
-      # aph_s, aph_v, phant_s, phant_v
-      group_means = c(0, 0, 0.6, 0.87), 
-      name = &quot;v&quot;) |&gt; 
-    # ─── spatial ───
-    sim_discr(
-      n_vars = 1,  
-      var = var, 
-      cov = cov, 
-      # aph_s, aph_v, phant_s, phant_v
-      group_means = c(0.75, 0.4, 0.7, 0.3), 
-      name = &quot;s&quot;) |&gt;
-    # ─── verbal ───
-    sim_discr(
-      n_vars = 1,  
-      var = var, 
-      cov = cov, 
-      # aph_s, aph_v, phant_s, phant_v
-      group_means = c(0.3, 0.7, 0.3, 0.5), 
-      name = &quot;i&quot;) |&gt;
-    rename(
-      visual_imagery  = v_1,
-      spatial_imagery = s_1,
-      verbal_profile  = i_1
-      )
-}
-
-df &lt;- generate_osv_model(0.03, 0)</code>
-    </sec>
     <sec id="cell-fig-plot-osv-model-nb-article" specific-use="notebook-code">
     <code language="r script">plotting_osv_model &lt;- function(df, grouping_variable, size){
   df |&gt; 
@@ -1244,7 +2292,7 @@ df |&gt;
   )) |&gt; 
   plotting_osv_model(grouping_variable = &quot;vis_spa_group&quot;, size = 4)</code>
     <fig id="fig-plot-osv-model-nb-article">
-      <caption><p>Figure 3.1: Imagery profiles generated for 30 subjects
+      <caption><p>Figure 4.1: Imagery profiles generated for 30 subjects
       on the three object, spatial, and verbal dimensions.</p></caption>
       <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-plot-osv-model-1.png" />
     </fig>
@@ -1253,6 +2301,726 @@ df |&gt;
     </sec>
     </sec>
   </sec>
+  <sec id="data-simulation-creating-representational-structures-nb-article">
+    <title>4.2 Data simulation: Creating representational
+    structures</title>
+    <p>Gardenfors
+    (<xref alt="2004b" rid="ref-gardenfors2004-nb-article" ref-type="bibr">2004b</xref>)
+    invokes two scientific concepts, to wit, prototypes and Voronoi
+    tessellations. Prototype theory builds on the observation that among
+    the instances of a property, some are more representative than
+    others. The most representative one is the prototype of the
+    property. <italic>We hypothesize that aphantasics will be more
+    inclined to categorize items according to prototypes than
+    phantasics.</italic></p>
+    <p>A Voronoi tesselation of a given space divides that space into a
+    number of cells such that each cell has a center and consists of all
+    and only those points that lie no closer to the center of any other
+    cell than to its own center; the centers of the various cells are
+    called the generator points of the tesselation. This principle will
+    underlie our data simulation, as we will build representations in a
+    3D space based on distances to “centroids”, namely, prototypes.
+    These representations will thus be located inside of the
+    tessellations around these prototypes, more or less close to the
+    centroid depending on the subject’s representational structures.</p>
+    <sec id="generating-prototype-embeddings-from-a-sphere-nb-article">
+      <title>Generating “prototype” embeddings from a sphere</title>
+      <sec id="nb-code-cell-2-nb-article" specific-use="notebook-code">
+      <code language="r script"># getting the centroids of each cluster
+df_centroids &lt;- 
+  df_embeds |&gt; 
+  group_by(group) |&gt; 
+  summarise(
+    x_centroid = mean(x),
+    y_centroid = mean(y),
+    z_centroid = mean(z)
+  )
+
+# adding them to the data
+df_embeds_2 &lt;- left_join(df_embeds, df_centroids, by = &quot;group&quot;)</code>
+      </sec>
+      <p>A function will be used to generate embeddings. These spherical
+      embeddings are displayed in
+      <xref alt="Figure 4.2" rid="fig-perfect-embeddings-nb-article">Figure 4.2</xref>
+      We get 8 nicely distributed clusters. We’ll retrieve the centroids
+      of each cluster, which would be the “perfect” categories of each
+      species group (say, generated by a computational model on
+      categorical criteria).</p>
+      <sec id="generating-sphere-nb-article" specific-use="notebook-code">
+      <code language="python">generate_sphere &lt;- function(n){
+  z     &lt;- 2*runif(n) - 1          # uniform on [-1, 1]
+  theta &lt;- 2*pi*runif(n) - pi      # uniform on [-pi, pi]
+  x     &lt;- sin(theta)*sqrt(1-z^2)  # based on angle
+  y     &lt;- cos(theta)*sqrt(1-z^2) 
+  
+  df &lt;- tibble(x = x, y = y, z = z)
+  
+  return(df)
+}
+
+# 1000 random observations with embeddings uniformly distributed on a sphere
+df_embeds &lt;- generate_sphere(1000)
+
+# Clustering the observations in 8 groups based on their coordinates
+clusters &lt;- Mclust(df_embeds, G = 8)
+
+# adding the classification to the data
+df_embeds &lt;- df_embeds |&gt; mutate(group = as.factor(clusters$classification))
+
+# getting the centroids of each cluster
+df_centroids &lt;- 
+  df_embeds |&gt; 
+  group_by(group) |&gt; 
+  summarise(
+    x_centroid = mean(x),
+    y_centroid = mean(y),
+    z_centroid = mean(z)
+  )
+
+# adding them to the data
+df_embeds_2 &lt;- left_join(df_embeds, df_centroids, by = &quot;group&quot;)</code>
+      </sec>
+      <sec id="cell-fig-perfect-embeddings-nb-article" specific-use="notebook-code">
+      <code language="r script">##| fig-subcap: 
+##|   - &quot;Generated spherical distribution of 1000 observations grouped in 8 equal clusers with Gaussian Mixture Clustering.&quot;
+##|   - &quot;Centroids of the 8 clusters created on the sphere.&quot;
+##| layout-ncol: 2
+
+# function for 3D plotting up to 8 groups (due to the palette)
+plotting_3d &lt;- function(df, size, opacity){
+  df |&gt; 
+    plot_ly(
+      type = &quot;scatter3d&quot;,
+      mode = &quot;markers&quot;,
+      x = ~x,
+      y = ~y,
+      z = ~z,
+      color = ~paste0(&quot;Species group &quot;, group),
+      colors = pal_okabe_ito,
+      marker = list(size = size, opacity = opacity)
+    ) |&gt; 
+    layout(paper_bgcolor = &quot;transparent&quot;)
+}
+
+plotting_3d(df_embeds, 3, 1) |&gt; 
+  layout(legend = list(
+    yanchor = &quot;top&quot;,
+    y = 1,
+    xanchor = &quot;right&quot;,
+    x = 0
+    ))</code>
+      <fig id="fig-perfect-embeddings-nb-article">
+        <caption><p>Figure 4.2: Generated spherical distribution of 1000
+        observations grouped in 8 equal clusers with Gaussian Mixture
+        Clustering to represent the theoretical embeddings of 8 groups
+        (i.e. groups of species here). <bold><italic>Interact with the
+        figures to see the details.</italic></bold></p></caption>
+        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-perfect-embeddings-1.png" />
+      </fig>
+      <code language="r script">centroid_figure &lt;- # quarto manuscript can render columns for now
+  df_centroids |&gt; 
+  plot_ly(
+    type = &quot;scatter3d&quot;,
+    mode = &quot;markers+text&quot;,
+    x = ~x_centroid,
+    y = ~y_centroid,
+    z = ~z_centroid,
+    text = ~paste0(&quot;Species group &quot;, group),
+    color = ~paste0(&quot;Species group &quot;, group),
+    colors = pal_okabe_ito,
+    marker = list(size = 12, opacity = 1)
+    ) |&gt; 
+  layout(
+    scene = list(
+      xaxis = list(title = &quot;x&quot;),
+      yaxis = list(title = &quot;y&quot;),
+      zaxis = list(title = &quot;z&quot;)
+    ),
+    paper_bgcolor = &quot;transparent&quot;,
+    showlegend = FALSE
+    )</code>
+      </sec>
+      <p>Now we want two sets of embeddings: one where the observations
+      are very concentrated around the centroids, which would be the
+      <bold>categorical model</bold>, and one where the observations are
+      more spread out, which would be the <bold>visual model</bold>.</p>
+      <p>We need to select 8 observations per cluster, which would be
+      our animals per group. These observations will be subsets of the
+      1000 observations we generated.</p>
+    </sec>
+    <sec id="categorical-model-embeddings-nb-article">
+      <title>Categorical model embeddings</title>
+      <p>The selection procedure for the <bold>categorical model</bold>
+      will consist of selecting points that are rather <italic>close to
+      the centroids</italic>. Thus, we will filter the observations of
+      the large sets to keep only points for which the distance to the
+      centroid is inferior to a given value. That is, points for which
+      the Euclidean norm of the vector from the observation to the
+      centroid:</p>
+      <p><disp-formula><alternatives>
+      <tex-math><![CDATA[d(centroid, observation) = \sqrt{(x_{c} - x_{o})^{2} + (y_{c} - y_{o})^{2} + (z_{c} - z_{o})^{2}}]]></tex-math>
+      <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>d</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>c</mml:mi><mml:mi>e</mml:mi><mml:mi>n</mml:mi><mml:mi>t</mml:mi><mml:mi>r</mml:mi><mml:mi>o</mml:mi><mml:mi>i</mml:mi><mml:mi>d</mml:mi><mml:mo>,</mml:mo><mml:mi>o</mml:mi><mml:mi>b</mml:mi><mml:mi>s</mml:mi><mml:mi>e</mml:mi><mml:mi>r</mml:mi><mml:mi>v</mml:mi><mml:mi>a</mml:mi><mml:mi>t</mml:mi><mml:mi>i</mml:mi><mml:mi>o</mml:mi><mml:mi>n</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:msqrt><mml:mrow><mml:msup><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>x</mml:mi><mml:mi>c</mml:mi></mml:msub><mml:mo>−</mml:mo><mml:msub><mml:mi>x</mml:mi><mml:mi>o</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mn>2</mml:mn></mml:msup><mml:mo>+</mml:mo><mml:msup><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>y</mml:mi><mml:mi>c</mml:mi></mml:msub><mml:mo>−</mml:mo><mml:msub><mml:mi>y</mml:mi><mml:mi>o</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mn>2</mml:mn></mml:msup><mml:mo>+</mml:mo><mml:msup><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>z</mml:mi><mml:mi>c</mml:mi></mml:msub><mml:mo>−</mml:mo><mml:msub><mml:mi>z</mml:mi><mml:mi>o</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mn>2</mml:mn></mml:msup></mml:mrow></mml:msqrt></mml:mrow></mml:math></alternatives></disp-formula></p>
+      <p>This can be done using the function
+      <monospace>norm(coordinates, type = &quot;2&quot;)</monospace> in
+      R.</p>
+      <sec id="categorical-embeddings-nb-article" specific-use="notebook-code">
+      <code language="python"># Function to filter points of the sphere based on the distance to the centroids
+generate_embeddings &lt;- function(df, n_embeddings, distance_quantile){
+  df &lt;- 
+    df |&gt; 
+    # computing the euclidean distance to the centroids for each observation
+    rowwise() |&gt; 
+    mutate(
+      distance = norm(
+        c((x_centroid - x), (y_centroid - y), (z_centroid - z)),
+        type = &quot;2&quot;)
+      ) |&gt; 
+    # filtering by distance to the centroid by group
+    group_by(group) |&gt; 
+    # selecting the X% closest (specified with &quot;distance_quantile&quot;)
+    filter(distance &lt; quantile(distance, probs = distance_quantile)) |&gt; 
+    # selecting X random observations per cluster in these 
+    # (specified with &quot;n_embeddings&quot;)
+    slice(1:n_embeddings) |&gt; 
+    select(group, x, y, z) |&gt;
+    ungroup()
+}
+
+df_embeds_categ &lt;- generate_embeddings(df_embeds_2, 8, 0.5)</code>
+      </sec>
+      <sec id="cell-fig-categorical-embeddings-nb-article" specific-use="notebook-code">
+      <code language="r script"># Plotting these observations
+plotting_3d(df_embeds_categ, 6, 1)</code>
+      <fig id="fig-categorical-embeddings-nb-article">
+        <caption><p>Figure 4.3: Selection of 64 points to represent
+        prototypical categorical embeddings, based on the distances to
+        each groups’ centroid. These will be the bases of the verbal
+        aphantasics’ embeddings. <bold><italic>Interact with the figure
+        to see the details.</italic></bold></p></caption>
+        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-categorical-embeddings-1.png" />
+      </fig>
+      </sec>
+    </sec>
+    <sec id="visual-model-embeddings-nb-article">
+      <title>Visual model embeddings</title>
+      <p>In the case of the <bold>visual model</bold>, we would like
+      approximately evenly distributed embeddings, that could also dive
+      <italic>inside</italic> the sphere, i.e. representing species that
+      are visually close although diametrically opposed when it comes to
+      taxonomy. To do this we could try to simulate multivariate normal
+      distributions around the
+      centroids<xref ref-type="fn" rid="fn2-nb-article">2</xref>. This can be done
+      with the <monospace>holodeck</monospace> package.</p>
+      <sec id="visual-embeddings-nb-article" specific-use="notebook-code">
+      <code language="python"># defining the variance and covariance of the distributions
+var2 &lt;- 0.05
+cov2 &lt;- 0
+
+# generating multivariate distributions around the categorical 3D means
+df_embeds_visual &lt;-
+  tibble(
+    id = as.factor(seq(1,6400)),
+    category = as.factor(rep(seq(1:64), each = 100))
+  )|&gt; 
+  group_by(category) |&gt; 
+  sim_discr(
+    n_vars = 1, 
+    var = var2, 
+    cov = cov2, 
+    group_means = df_embeds_categ$x, 
+    name = &quot;x&quot;) |&gt; 
+  sim_discr(
+    n_vars = 1, 
+    var = var2, 
+    cov = cov2, 
+    group_means = df_embeds_categ$y, 
+    name = &quot;y&quot;) |&gt; 
+  sim_discr(
+    n_vars = 1, 
+    var = var2, 
+    cov = cov2, 
+    group_means = df_embeds_categ$z, 
+    name = &quot;z&quot;) |&gt; 
+  # keeping only 8 points per distribution
+  slice(1) |&gt; 
+  ungroup() |&gt; 
+  mutate(group = as.factor(rep(seq(1, 8), each = 8))) |&gt; 
+  rename(x = x_1, y = y_1, z = z_1) |&gt; 
+  select(group, x, y, z)</code>
+      </sec>
+      <sec id="cell-fig-visual-embeddings-nb-article" specific-use="notebook-code">
+      <code language="r script">plotting_3d(df_embeds_categ, 4, 1) |&gt; 
+  add_trace(
+      data = df_embeds_visual,
+      type = &quot;scatter3d&quot;,
+      mode = &quot;markers&quot;,
+      x = ~x,
+      y = ~y,
+      z = ~z,
+      color = ~paste0(&quot;Species group &quot;, group),
+      colors = pal_okabe_ito,
+      marker = list(size = 4, opacity = 1, symbol = &quot;diamond&quot;)
+  )</code>
+      <fig id="fig-visual-embeddings-nb-article">
+        <caption><p>Figure 4.4: Selection of 64 points to represent
+        prototypical visual embeddings, chosen randomly in multivariate
+        distributions centered around each categorical embedding. The
+        visual embeddings are overlaid as diamonds along with
+        categorical ones as dots. The two distributions keep the group
+        structure, but are pretty far apart at times.
+        <bold><italic>Interact with the figure to see the
+        details.</italic></bold></p></caption>
+        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-visual-embeddings-1.png" />
+      </fig>
+      </sec>
+    </sec>
+    <sec id="intermediate-embeddings-nb-article">
+      <title>Intermediate embeddings</title>
+      <sec id="nb-code-cell-3-nb-article" specific-use="notebook-code">
+      <fig id="fig-distances-graph-nb-article">
+        <caption><p>Figure 4.5: Model of the distances between
+        participants’ representations. Note that here d is a
+        one-dimensional distance between the representations, but it
+        will be computed as a three-dimensional distance in our
+        toy-model. The verbal aphantasic profile is hypothesized to be
+        very categorical, thus diametrically opposed to the visual
+        phantasic profile, by a given distance d. Spatial profiles are
+        in-between: they are close to each other (10% x d), but the
+        spatial aphantasic profile is a bit closer to the verbal
+        aphantasic one (45% x d), and the spatial phantasic is a bit
+        closer to the visual phantasic one (45% x d).</p></caption>
+        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/mermaid-figure-2.png" />
+      </fig>
+      </sec>
+      <sec id="nb-code-cell-4-nb-article" specific-use="notebook-code">
+      <code language="r script">dist_c = 0.45
+dist_v = 0.55
+
+df_embeddings &lt;-
+  df_embeds_categ |&gt;
+  rename(
+    group_c = group,
+    x_c = x,
+    y_c = y,
+    z_c = z
+  ) |&gt;
+  bind_cols(df_embeds_visual) |&gt;
+  rename(
+    group_v = group,
+    x_v = x,
+    y_v = y,
+    z_v = z
+  ) |&gt; 
+  select(!group_v) |&gt; 
+  rename(group = group_c) |&gt; 
+  mutate(
+    x_cs = x_c + dist_c*(x_v - x_c),
+    y_cs = y_c + dist_c*(y_v - y_c),
+    z_cs = z_c + dist_c*(z_v - z_c),
+    x_vs = x_c + dist_v*(x_v - x_c),
+    y_vs = y_c + dist_v*(y_v - y_c),
+    z_vs = z_c + dist_v*(z_v - z_c)
+  )</code>
+      <sec id="nb-code-cell-4-output-0-nb-article" specific-use="notebook-output">
+      <preformat>New names:
+• `species` -&gt; `species...2`
+• `species` -&gt; `species...7`</preformat>
+      </sec>
+      </sec>
+      <sec id="cell-fig-intermediate-embeddings-nb-article" specific-use="notebook-code">
+      <code language="r script">size = 3
+
+df_embeddings |&gt; 
+  plot_ly(
+    type = &quot;scatter3d&quot;, 
+    mode = &quot;marker&quot;,
+    color  = ~paste0(&quot;Species group &quot;, group),
+    colors = ~pal_okabe_ito
+    ) |&gt; 
+  add_markers(
+    x = ~x_c, y = ~y_c, z = ~z_c, 
+    mode = &quot;marker&quot;,
+    marker = list(size = size, symbol = &quot;circle&quot;)
+  ) |&gt; 
+  add_markers(
+    x = ~x_v, y = ~y_v, z = ~z_v, 
+    mode = &quot;marker&quot;,
+    marker = list(size = size, symbol = &quot;diamond&quot;)
+  ) |&gt; 
+  add_markers(
+    x = ~x_cs, y = ~y_cs, z = ~z_cs, 
+    mode = &quot;marker&quot;,
+    marker = list(size = size, symbol = &quot;circle-open&quot;)
+  ) |&gt; 
+  add_markers(
+    x = ~x_vs, y = ~y_vs, z = ~z_vs, 
+    mode = &quot;marker&quot;,
+    marker = list(size = size, symbol = &quot;diamond-open&quot;)
+  ) |&gt; 
+  layout(
+    scene = list(
+      xaxis = list(title = &quot;x&quot;),
+      yaxis = list(title = &quot;y&quot;),
+      zaxis = list(title = &quot;z&quot;)
+    ),
+    paper_bgcolor = &quot;transparent&quot;)</code>
+      <fig id="fig-intermediate-embeddings-nb-article">
+        <caption><p>Figure 4.6: Space of embeddings with 128 additional
+        points based on the euclidean distances between the visual and
+        categorical embeddings. The empty dots are the
+        <italic>aphantasics-spatial</italic> ones, and the empty
+        diamonds are the <italic>phantasic-spatial</italic> ones. Some
+        can be very close together, and sometimes further apart due to
+        the various pairs of visual and categorical points used to
+        create them. A network-like structure seems to appear, with
+        empty points seemingly ‘connecting’ the dots and diamonds.
+        <bold><italic>Interact with the figure to see the
+        details.</italic></bold></p></caption>
+        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-intermediate-embeddings-1.png" />
+      </fig>
+      </sec>
+    </sec>
+    <sec id="labelling-the-species-nb-article">
+      <title>Labelling the species</title>
+      <p>The distributions created are still gathered around the
+      centroids of each group, but are much more widespread, each group
+      getting close to each other and even reaching inside the
+      sphere.</p>
+      <p>Perfect! Now we have two 3D embeddings per animal, in a
+      categorical or a visual description of their features. Let’s add
+      labels for each species in a group:</p>
+      <sec id="nb-code-cell-5-nb-article" specific-use="notebook-code">
+      <code language="r script">df_embeddings &lt;- 
+  df_embeddings |&gt; 
+  mutate(
+    group = case_when(
+    group == 1 ~ &quot;a&quot;, 
+    group == 2 ~ &quot;b&quot;,
+    group == 3 ~ &quot;c&quot;,
+    group == 4 ~ &quot;d&quot;,
+    group == 5 ~ &quot;e&quot;,
+    group == 6 ~ &quot;f&quot;,
+    group == 7 ~ &quot;g&quot;,
+    group == 8 ~ &quot;h&quot;,
+    TRUE ~ group
+    )
+  ) |&gt; 
+  group_by(group) |&gt; 
+  mutate(
+    species = paste0(&quot;species_&quot;, group, 1:8),
+    species = as.factor(species),
+    group   = as.factor(group)
+    ) |&gt; 
+  select(group, species, everything())</code>
+      </sec>
+      <p>Now we have four sets of coherent coordinates, that we need to
+      assign to the 30 participants: i.e. generating 8 points for C
+      (aph_spa_low), 7 points for CS (aph_spa_high), 7 points for VS
+      (phant_spa_high), and 8 points for V (phant_spa_low).</p>
+    </sec>
+    <sec id="generating-the-subject-embeddings-nb-article">
+      <title>Generating the subject embeddings</title>
+      <p>We have four “reference” sets of embeddings which represent
+      animals either judged according to their similarity in categorical
+      terms (namely, species), or in visual terms (namely shape or color
+      similarities, assuming that these similarities are more evenly
+      distributed, e.g. the crab looks like a spider, but is also pretty
+      close to a scorpion, etc.).</p>
+      <p>To generate the embeddings of each subject in each condition,
+      we will start from these reference embeddings and generate random
+      noise around <italic>each item</italic>, i.e. for all 64 animals.
+      For 100 subjects, we would thus generate 100 noisy points around
+      each animal, each point corresponding to a given subject.</p>
+      <p>The visual and verbal groups will be generated with slightly
+      more intra-group variance, so as to try to make the spatial groups
+      as coherent as possible (and avoid blurring everything and making
+      the groups disappear in noise).</p>
+      <p>Although the groupings in this distribution sound simple when
+      we color it using the knowledge about how we built it, the
+      algorithm will only be fed with the data for each subject, without
+      any labeling or additional information. Thus,
+      <xref alt="Figure 4.8" rid="fig-subject-embeddings-b-nb-article">Figure 4.8</xref>
+      here is what the algorithm will “see” (and what it will try to
+      decrypt). Admittedly, that looks a lot more complicated.</p>
+      <sec id="subject-embeddings-nb-article" specific-use="notebook-code">
+      <code language="python"># creating dfs with participants
+df_subjects_7 &lt;- 
+  tibble(subject = seq(1, 7, 1)) |&gt; 
+  mutate(subject = paste0(&quot;subject_&quot;, subject))
+
+df_subjects_8 &lt;- 
+  tibble(subject = seq(1, 8, 1)) |&gt; 
+  mutate(subject = paste0(&quot;subject_&quot;, subject))
+
+# splitting df_embeddings
+df_embed_c  &lt;- df_embeddings |&gt; select(group, species,  x_c:z_c)
+df_embed_cs &lt;- df_embeddings |&gt; select(group, species, x_cs:z_cs)
+df_embed_vs &lt;- df_embeddings |&gt; select(group, species, x_vs:z_vs)
+df_embed_v  &lt;- df_embeddings |&gt; select(group, species,  x_v:z_v)
+
+# function to create embeddings per subject with normal random noise
+generate_subject_embeddings &lt;- function(df, df_subjects, var){
+  df &lt;-
+    df |&gt; 
+    mutate(subject = list(df_subjects)) |&gt; 
+    unnest(subject) |&gt; 
+    group_by(species) |&gt; 
+    # simulating x coordinates
+    sim_discr(
+      n_vars = 1, 
+      var = var, 
+      cov = 0, 
+      group_means = pull(df, 3), 
+      name = &quot;x&quot;) |&gt; 
+    # simulating y coordinates
+    sim_discr(
+      n_vars = 1, 
+      var = var, 
+      cov = 0, 
+      group_means = pull(df, 4), 
+      name = &quot;y&quot;) |&gt; 
+    # simulating z coordinates
+    sim_discr(
+      n_vars = 1, 
+      var = var, 
+      cov = 0, 
+      group_means = pull(df, 5), 
+      name = &quot;z&quot;) |&gt;
+  select(group, species, subject, 7:9) |&gt; 
+  rename(x = 4, y = 5, z = 6) |&gt; 
+  ungroup()
+  
+  return(df)
+}
+
+var_s1 = 0.001
+var_s2 = 0.0005
+
+df_embed_c_sub  &lt;- generate_subject_embeddings(df_embed_c,  df_subjects_4, var_s1)
+df_embed_cs_sub &lt;- generate_subject_embeddings(df_embed_cs, df_subjects_4, var_s2)
+df_embed_vs_sub &lt;- generate_subject_embeddings(df_embed_vs, df_subjects_4, var_s2)
+df_embed_v_sub  &lt;- generate_subject_embeddings(df_embed_v,  df_subjects_4, var_s1)</code>
+      </sec>
+      <sec id="cell-fig-subject-embeddings-a-nb-article" specific-use="notebook-code">
+      <code language="r script">size = 2
+
+plot_ly(
+    type = &quot;scatter3d&quot;, 
+    mode = &quot;marker&quot;,
+    colors = ~pal_okabe_ito
+    ) |&gt; 
+  add_markers(
+    data = df_embed_c_sub, 
+    x = ~x, y = ~y, z = ~z, color  = ~paste0(&quot;Species group &quot;, group),
+    mode = &quot;marker&quot;,
+    marker = list(size = size, symbol = &quot;circle&quot;)
+  ) |&gt; 
+  add_markers(
+    data = df_embed_v_sub, 
+    x = ~x, y = ~y, z = ~z, color  = ~paste0(&quot;Species group &quot;, group),
+    mode = &quot;marker&quot;,
+    marker = list(size = size, symbol = &quot;diamond&quot;)
+  ) |&gt; 
+  add_markers(
+    data = df_embed_cs_sub, 
+    x = ~x, y = ~y, z = ~z, color  = ~paste0(&quot;Species group &quot;, group), 
+    mode = &quot;marker&quot;,
+    marker = list(size = size, symbol = &quot;circle-open&quot;)
+  ) |&gt; 
+  add_markers(
+    data = df_embed_vs_sub, 
+    x = ~x, y = ~y, z = ~z, color  = ~paste0(&quot;Species group &quot;, group), 
+    mode = &quot;marker&quot;,
+    marker = list(size = size, symbol = &quot;diamond-open&quot;)
+  ) |&gt; 
+  layout(legend = list(
+    yanchor = &quot;top&quot;,
+    y = 1,
+    xanchor = &quot;right&quot;,
+    x = 0
+    ),
+    paper_bgcolor = &quot;transparent&quot;,
+    showlegend = FALSE
+    )</code>
+      <fig id="fig-subject-embeddings-a-nb-article">
+        <caption><p>Figure 4.7: Final distribution of the 64 embeddings
+        of all the 30 subjects, amounting to 1920 points total.
+        Embeddings are <bold><italic>colored by the species
+        groups</italic></bold> they represent. The symbols represent the
+        four imagery groups (Aph. verbal, spatial, etc.).
+        <bold><italic>Interact with the figures to see the
+        details.</italic></bold></p></caption>
+        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-subject-embeddings-a-1.png" />
+      </fig>
+      </sec>
+      <sec id="cell-fig-subject-embeddings-b-nb-article" specific-use="notebook-code">
+      <code language="r script">bind_rows(
+  # aph_spatial
+  df_embed_cs_sub |&gt; 
+    separate_wider_delim(
+      subject,
+      delim = &quot;_&quot;,
+      names = c(&quot;subject&quot;, &quot;number&quot;)
+    ) |&gt; 
+    mutate(subject = paste0(subject,&quot;_a_aph_s&quot;, number), .keep = &quot;unused&quot;),
+  
+  # aph_verbal
+  df_embed_c_sub  |&gt;
+    separate_wider_delim(
+      subject,
+      delim = &quot;_&quot;,
+      names = c(&quot;subject&quot;, &quot;number&quot;)
+    ) |&gt; 
+    mutate(subject = paste0(subject,&quot;_b_aph_v&quot;, number), .keep = &quot;unused&quot;),
+  
+  # phant spatial
+  df_embed_vs_sub  |&gt;
+    separate_wider_delim(
+      subject,
+      delim = &quot;_&quot;,
+      names = c(&quot;subject&quot;, &quot;number&quot;)
+    ) |&gt; 
+    mutate(subject = paste0(subject,&quot;_c_phant_s&quot;, number), .keep = &quot;unused&quot;),
+  
+  # phant visual
+  df_embed_v_sub  |&gt;
+    separate_wider_delim(
+      subject,
+      delim = &quot;_&quot;,
+      names = c(&quot;subject&quot;, &quot;number&quot;)
+    ) |&gt; 
+    mutate(subject = paste0(subject,&quot;_d_phant_v&quot;, number), .keep = &quot;unused&quot;)
+  ) |&gt;
+  plot_ly() |&gt; 
+  add_markers(
+      x = ~x, y = ~y, z = ~z,
+      color = ~subject,
+      colors = cool_30_colors,
+      marker = list(size = 3)
+    ) |&gt; 
+  layout(
+    paper_bgcolor = &quot;transparent&quot;,
+    showlegend = FALSE
+    )</code>
+      <fig id="fig-subject-embeddings-b-nb-article">
+        <caption><p>Figure 4.8: Final distribution of the 64 embeddings
+        of all the 30 subjects, amounting to 1920 points total.
+        Embeddings are <bold><italic>lored by subject</italic></bold>.
+        The symbols represent the four imagery groups (Aph. verbal,
+        spatial, etc.). <bold><italic>Interact with the figures to see
+        the details.</italic></bold></p></caption>
+        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-subject-embeddings-b-1.png" />
+      </fig>
+      </sec>
+      <p>To feed this data to the algorithm, we’ll group the 64
+      embeddings per subject in matrices tied to each of them.</p>
+      <sec id="nb-code-cell-6-nb-article" specific-use="notebook-code">
+      <code language="r script">df_embeddings_sub &lt;-
+  bind_rows(
+    # aphantasic spatial
+    df_embed_cs_sub |&gt; 
+      separate_wider_delim(
+        subject,
+        delim = &quot;_&quot;,
+        names = c(&quot;subject&quot;, &quot;number&quot;)
+      ) |&gt; 
+      mutate(subject = paste0(subject,&quot;_a_aph_s&quot;, number), .keep = &quot;unused&quot;),
+    
+    # aphantasic verbal
+    df_embed_c_sub  |&gt;
+      separate_wider_delim(
+        subject,
+        delim = &quot;_&quot;,
+        names = c(&quot;subject&quot;, &quot;number&quot;)
+      ) |&gt; 
+      mutate(subject = paste0(subject,&quot;_b_aph_v&quot;, number), .keep = &quot;unused&quot;),
+    
+    # phantasic spatial
+    df_embed_vs_sub  |&gt;
+      separate_wider_delim(
+        subject,
+        delim = &quot;_&quot;,
+        names = c(&quot;subject&quot;, &quot;number&quot;)
+      ) |&gt; 
+      mutate(subject = paste0(subject,&quot;_c_phant_s&quot;, number), .keep = &quot;unused&quot;),
+    
+    # phantasic visual
+    df_embed_v_sub  |&gt;
+      separate_wider_delim(
+        subject,
+        delim = &quot;_&quot;,
+        names = c(&quot;subject&quot;, &quot;number&quot;)
+      ) |&gt; 
+      mutate(subject = paste0(subject,&quot;_d_phant_v&quot;, number), .keep = &quot;unused&quot;)
+  ) |&gt; 
+  mutate(subject = as.factor(subject)) |&gt; 
+  select(!c(group, species)) |&gt; 
+  group_by(subject) |&gt; 
+  nest() |&gt; 
+  rename(embedding = data) |&gt; 
+  rowwise() |&gt; 
+  mutate(embedding = list(as.matrix(embedding)))</code>
+      </sec>
+    </sec>
+  </sec>
+  <sec id="data-analysis-aligning-representational-structures-nb-article">
+    <title>4.3 Data analysis: Aligning representational
+    structures</title>
+  </sec>
+  <sec id="simulation-summary-nb-article">
+    <title>4.4 Simulation summary</title>
+    <p>Kawakita et al.
+    (<xref alt="2023" rid="ref-kawakita2023-nb-article" ref-type="bibr">2023</xref>):
+    These results indicate that the difference between the qualia
+    structures of neuro-typical and atypical participants is
+    significantly larger than the difference between the qualia
+    structures of neuro-typical participants.</p>
+    <p>A notable difference is that greenish colors and reddish colors
+    are close in the embedding space of color atypical participants
+    while they are distant in the embedding space of color neurotypical
+    participants. This structural difference is likely to prevent the
+    unsupervised alignment between the embeddings of color-neurotypical
+    and atypical participants even though the correlation coefficient
+    between the dissimilarity matrices of color neuro-typical and
+    atypical participants is reasonably high.</p>
+    <p>For a long time, assessing the similarity of subjective
+    experiences across participants has been challenging. To address
+    this problem, we proposed the “qualia structure” paradigm, which
+    focuses on quantitative structural comparisons of subjective
+    experiences. Using an unsupervised alignment method, we were able to
+    match the qualia structures of colors and natural objects of
+    different groups of participants based only on the way the qualia
+    relate to each other, without using any external labels.</p>
+    <p>Our results on color qualia structures are consistent with an
+    idea that the relational properties of color qualia are universally
+    shared by color-neurotypical individuals. Intriguingly, our results
+    also suggest that individuals with color-atypical vision may have a
+    different structure of their color experiences, rather than just
+    failing to experience a certain subset of colors. Longstanding
+    thought experiments that challenge the feasibility of
+    inter-subjective color comparisons, such as individuals with color
+    qualia inversion, should be resolvable with our relational
+    unsupervised approach. Beyond traditional measures such as Pearson’s
+    correlation coefficient, our method provides a more fundamental
+    structural characterization of how two structures are similar or
+    different, which will be crucial for future investigations of qualia
+    structures across psychological, neuroscientific, and computational
+    fields.</p>
+  </sec>
+</sec>
+<sec id="feasibility-nb-article">
+  <title>5. Feasibility</title>
+</sec>
+<sec id="conclusion-nb-article">
+  <title>6. Conclusion</title>
+  <p>Modern psychology builds on the relativistic framework of
+  philosophy, accepting that humans cannot know reality in an absolute
+  sense. Focusing on relative comparisons, or similarity, is more than a
+  clever philosophical work-around. similarity is a common currency of
+  perception and cognition. In addition to operating at all levels of
+  cognition, similarity—or, more accurately, the second-order
+  isomorphism defined by a set of similarity relations—has been a
+  powerful tool for analyzing and comparing psychological spaces.</p>
 </sec>
 </body>
 
@@ -1411,14 +3179,109 @@ df |&gt;
       <uri>https://www.repository.cam.ac.uk/handle/1810/306834</uri>
     </element-citation>
   </ref>
+  <ref id="ref-gardenfors2004-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Gardenfors</surname><given-names>Peter</given-names></name>
+      </person-group>
+      <article-title>Conceptual Spaces as a Framework for Knowledge Representation</article-title>
+      <year iso-8601-date="2004">2004</year>
+    </element-citation>
+  </ref>
+  <ref id="ref-jozwik2016-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Jozwik</surname><given-names>Kamila M.</given-names></name>
+        <name><surname>Kriegeskorte</surname><given-names>Nikolaus</given-names></name>
+        <name><surname>Mur</surname><given-names>Marieke</given-names></name>
+      </person-group>
+      <article-title>Visual features as stepping stones toward semantics: Explaining object similarity in IT and perception with non-negative least squares</article-title>
+      <source>Neuropsychologia</source>
+      <year iso-8601-date="2016-03-01">2016</year><month>03</month><day>01</day>
+      <volume>83</volume>
+      <uri>https://www.sciencedirect.com/science/article/pii/S0028393215301998</uri>
+      <pub-id pub-id-type="doi">10.1016/j.neuropsychologia.2015.10.023</pub-id>
+      <fpage>201</fpage>
+      <lpage>226</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-jozwik2017-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Jozwik</surname><given-names>Kamila M.</given-names></name>
+        <name><surname>Kriegeskorte</surname><given-names>Nikolaus</given-names></name>
+        <name><surname>Storrs</surname><given-names>Katherine R.</given-names></name>
+        <name><surname>Mur</surname><given-names>Marieke</given-names></name>
+      </person-group>
+      <article-title>Deep convolutional neural networks outperform feature-based but not categorical models in explaining object similarity judgments</article-title>
+      <source>Frontiers in Psychology</source>
+      <year iso-8601-date="2017">2017</year>
+      <volume>8</volume>
+      <uri>https://www.frontiersin.org/articles/10.3389/fpsyg.2017.01726</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-marr1997-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Marr</surname><given-names>D.</given-names></name>
+        <name><surname>Nishihara</surname><given-names>H. K.</given-names></name>
+        <name><surname>Brenner</surname><given-names>Sydney</given-names></name>
+      </person-group>
+      <article-title>Representation and recognition of the spatial organization of three-dimensional shapes</article-title>
+      <source>Proceedings of the Royal Society of London. Series B. Biological Sciences</source>
+      <year iso-8601-date="1997-01">1997</year><month>01</month>
+      <volume>200</volume>
+      <issue>1140</issue>
+      <uri>https://royalsocietypublishing.org/doi/abs/10.1098/rspb.1978.0020</uri>
+      <pub-id pub-id-type="doi">10.1098/rspb.1978.0020</pub-id>
+      <fpage>269</fpage>
+      <lpage>294</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-kriegeskorte2008-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Kriegeskorte</surname><given-names>Nikolaus</given-names></name>
+        <name><surname>Mur</surname><given-names>Marieke</given-names></name>
+        <name><surname>Bandettini</surname><given-names>Peter</given-names></name>
+      </person-group>
+      <article-title>Representational similarity analysis - connecting the branches of systems neuroscience</article-title>
+      <source>Frontiers in Systems Neuroscience</source>
+      <year iso-8601-date="2008">2008</year>
+      <volume>2</volume>
+      <uri>https://www.frontiersin.org/articles/10.3389/neuro.06.004.2008</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-kawakita2023-nb-article">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Kawakita</surname><given-names>Genji</given-names></name>
+        <name><surname>Zeleznikow-Johnston</surname><given-names>Ariel</given-names></name>
+        <name><surname>Takeda</surname><given-names>Ken</given-names></name>
+        <name><surname>Tsuchiya</surname><given-names>Naotsugu</given-names></name>
+        <name><surname>Oizumi</surname><given-names>Masafumi</given-names></name>
+      </person-group>
+      <article-title>Is my&quot; red&quot; your&quot; red&quot;?: Unsupervised alignment of qualia structures via optimal transport</article-title>
+      <year iso-8601-date="2023">2023</year>
+    </element-citation>
+  </ref>
 </ref-list>
 <fn-group>
   <fn id="fn1-nb-article">
     <label>1</label><p>A claim dismissed since then by propositions of
     robust mathematical models of similarity, e.g. Gardenfors
-    (<xref alt="2004" rid="ref-gardenforsConceptualSpacesFramework2004-nb-article" ref-type="bibr">2004</xref>),
+    (<xref alt="2004a" rid="ref-gardenforsConceptualSpacesFramework2004-nb-article" ref-type="bibr">2004a</xref>),
     Decock and Douven
     (<xref alt="2011" rid="ref-decockSimilarityGoodman2011-nb-article" ref-type="bibr">2011</xref>).</p>
+  </fn>
+  <fn id="fn2-nb-article">
+    <label>2</label><p>A simpler alternative would be generating the
+    visual embeddings with the same code as the categorical ones,
+    selecting 8 points per cluster but much more spread out
+    (e.g. selecting 8 among the 90% closest to the centroids, which
+    would create more variability than the categorical one set to 60%).
+    I chose otherwise because this wouldn’t have had points reaching
+    <italic>inside</italic> the sphere.</p>
   </fn>
 </fn-group>
 </back>
@@ -1555,7 +3418,7 @@ cool_30_colors &lt;- c(
 <sub-article article-type="notebook" id="nb-8-nb-2">
 <front-stub>
 <title-group>
-<article-title>Simulation code</article-title>
+<article-title>Study simulation</article-title>
 </title-group>
 <contrib-group>
 <contrib contrib-type="author">
@@ -1578,7 +3441,7 @@ cool_30_colors &lt;- c(
     document (<italic>hover over the numbers on the far right for
     additional explanation of code and mechanics</italic>).</p>
     <sec id="nb-code-cell-1-nb-2" specific-use="notebook-code">
-    <code id="annotated-cell-2-nb-2" language="r script">
+    <code id="annotated-cell-6-nb-2" language="r script">
 # ═══ Packages ═════════════════════════════════════════════════════════════════
 
 if (!require(librarian)) install.packages(librarian)
@@ -1621,7 +3484,7 @@ if (!require(librarian)) install.packages(librarian)
         </def>
       </def-item>
     </def-list>
-    <code id="annotated-cell-3-nb-2" language="r script">
+    <code id="annotated-cell-7-nb-2" language="r script">
 library(librarian)
 
 # now putting packages on our library's shelves:
@@ -1695,8 +3558,26 @@ coordinates_aligned_embeddings &lt;- read_rds(paste0(path, &quot;coordinates_ali
     </sec>
   </disp-quote>
 </boxed-text>
-<sec id="nb-code-cell-2-nb-2" specific-use="notebook-code">
-<code language="r script">
+<sec id="visual-spatial-verbal-model-of-cognitive-profiles-nb-2">
+  <title>Visual-spatial-verbal model of cognitive profiles</title>
+  <p>We are going to simulate 30 participants presenting four different
+  cognitive profiles, that I defined as, respectively,
+  <italic>verbal</italic> aphantasics, <italic>spatial</italic>
+  aphantasics, <italic>spatial</italic> phantasics, and
+  <italic>visual</italic> phantasics. Their imagery abilities are
+  summarised in @tbl-imageries.</p>
+  <p>To simulate these four sub-groups, we use the
+  <monospace>holodeck</monospace> R package to generate multivariate
+  normal distributions of scores on these three dimensions for each
+  sub-group. For instance, verbal aphantasics have normally distributed
+  visual imagery scores centered around a mean of 0 (normalized, so
+  negative scores are possible), 0.4 for spatial imagery, and 0.7 for
+  verbal style; Spatial aphantasics have means of 0 for visual, 0.75
+  spatial, and 0.3 for verbal; etc. The numbers are arbitrary, but have
+  been chosen by trial-and-error to obtain a model that is both
+  well-defined and not exaggerated.</p>
+  <sec id="nb-code-cell-2-nb-2" specific-use="notebook-code">
+  <code language="r script">
 # The function takes the variance and covariance of the imagery distributions
 # as arguments
 generate_osv_model &lt;- function(var, cov){
@@ -1745,13 +3626,243 @@ generate_osv_model &lt;- function(var, cov){
 }
 
 df &lt;- generate_osv_model(0.03, 0)
-</code>
+  </code>
+  </sec>
+  <sec id="generating-prototype-embeddings-from-a-sphere-nb-2">
+    <title>Generating “prototype” embeddings from a sphere</title>
+    <p>Proposal from
+    <ext-link ext-link-type="uri" xlink:href="https://stats.stackexchange.com/questions/7977/how-to-generate-uniformly-distributed-points-on-the-surface-of-the-3-d-unit-sphe">StackExchange</ext-link>
+    to generate points on a sphere:</p>
+    <p>Let’s use a function to generate embeddings. We get 8 nicely
+    distributed clusters. We’ll retrieve the centroids of each cluster,
+    which would be the “perfect” categories of each species group (say,
+    generated by a computational model on categorical criteria).</p>
+    <sec id="nb-code-cell-3-nb-2" specific-use="notebook-code">
+    <code language="r script">
+generate_sphere &lt;- function(n){
+  z     &lt;- 2*runif(n) - 1          # uniform on [-1, 1]
+  theta &lt;- 2*pi*runif(n) - pi      # uniform on [-pi, pi]
+  x     &lt;- sin(theta)*sqrt(1-z^2)  # based on angle
+  y     &lt;- cos(theta)*sqrt(1-z^2) 
+  
+  df &lt;- tibble(x = x, y = y, z = z)
+  
+  return(df)
+}
+
+# 1000 random observations with embeddings uniformly distributed on a sphere
+df_embeds &lt;- generate_sphere(1000)
+
+# Clustering the observations in 8 groups based on their coordinates
+clusters &lt;- Mclust(df_embeds, G = 8)
+
+# adding the classification to the data
+df_embeds &lt;- df_embeds |&gt; mutate(group = as.factor(clusters$classification))
+
+# getting the centroids of each cluster
+df_centroids &lt;- 
+  df_embeds |&gt; 
+  group_by(group) |&gt; 
+  summarise(
+    x_centroid = mean(x),
+    y_centroid = mean(y),
+    z_centroid = mean(z)
+  )
+
+# adding them to the data
+df_embeds_2 &lt;- left_join(df_embeds, df_centroids, by = &quot;group&quot;)
+    </code>
+    </sec>
+  </sec>
+  <sec id="categorical-model-embeddings-nb-2">
+    <title>Categorical model embeddings</title>
+    <p>The selection procedure for the <bold>categorical model</bold>
+    will consist of selecting points that are rather <italic>close to
+    the centroids</italic>. Thus, we will filter the observations of the
+    large sets to keep only points for which the distance to the
+    centroid is inferior to a given value. That is, points for which the
+    Euclidean norm of the vector from the observation to the
+    centroid:</p>
+    <p><disp-formula><alternatives>
+    <tex-math><![CDATA[d(centroid, observation) = \sqrt{(x_{c} - x_{o})^{2} + (y_{c} - y_{o})^{2} + (z_{c} - z_{o})^{2}}]]></tex-math>
+    <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>d</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>c</mml:mi><mml:mi>e</mml:mi><mml:mi>n</mml:mi><mml:mi>t</mml:mi><mml:mi>r</mml:mi><mml:mi>o</mml:mi><mml:mi>i</mml:mi><mml:mi>d</mml:mi><mml:mo>,</mml:mo><mml:mi>o</mml:mi><mml:mi>b</mml:mi><mml:mi>s</mml:mi><mml:mi>e</mml:mi><mml:mi>r</mml:mi><mml:mi>v</mml:mi><mml:mi>a</mml:mi><mml:mi>t</mml:mi><mml:mi>i</mml:mi><mml:mi>o</mml:mi><mml:mi>n</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:msqrt><mml:mrow><mml:msup><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>x</mml:mi><mml:mi>c</mml:mi></mml:msub><mml:mo>−</mml:mo><mml:msub><mml:mi>x</mml:mi><mml:mi>o</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mn>2</mml:mn></mml:msup><mml:mo>+</mml:mo><mml:msup><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>y</mml:mi><mml:mi>c</mml:mi></mml:msub><mml:mo>−</mml:mo><mml:msub><mml:mi>y</mml:mi><mml:mi>o</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mn>2</mml:mn></mml:msup><mml:mo>+</mml:mo><mml:msup><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>z</mml:mi><mml:mi>c</mml:mi></mml:msub><mml:mo>−</mml:mo><mml:msub><mml:mi>z</mml:mi><mml:mi>o</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mn>2</mml:mn></mml:msup></mml:mrow></mml:msqrt></mml:mrow></mml:math></alternatives></disp-formula></p>
+    <p>This can be done using the function
+    <monospace>norm(coordinates, type = &quot;2&quot;)</monospace> in
+    R.</p>
+    <sec id="nb-code-cell-4-nb-2" specific-use="notebook-code">
+    <code language="r script">
+# Function to filter points of the sphere based on the distance to the centroids
+generate_embeddings &lt;- function(df, n_embeddings, distance_quantile){
+  df &lt;- 
+    df |&gt; 
+    # computing the euclidean distance to the centroids for each observation
+    rowwise() |&gt; 
+    mutate(
+      distance = norm(
+        c((x_centroid - x), (y_centroid - y), (z_centroid - z)),
+        type = &quot;2&quot;)
+      ) |&gt; 
+    # filtering by distance to the centroid by group
+    group_by(group) |&gt; 
+    # selecting the X% closest (specified with &quot;distance_quantile&quot;)
+    filter(distance &lt; quantile(distance, probs = distance_quantile)) |&gt; 
+    # selecting X random observations per cluster in these 
+    # (specified with &quot;n_embeddings&quot;)
+    slice(1:n_embeddings) |&gt; 
+    select(group, x, y, z) |&gt;
+    ungroup()
+}
+
+df_embeds_categ &lt;- generate_embeddings(df_embeds_2, 8, 0.5)
+    </code>
+    </sec>
+  </sec>
+  <sec id="visual-model-embeddings-nb-2">
+    <title>Visual model embeddings</title>
+    <p>In the case of the <bold>visual model</bold>, we would like
+    approximately evenly distributed embeddings, that could also dive
+    <italic>inside</italic> the sphere, i.e. representing species that
+    are visually close although diametrically opposed when it comes to
+    taxonomy. To do this we could try to simulate multivariate normal
+    distributions around the
+    centroids<xref ref-type="fn" rid="fn1-nb-2">1</xref>. This can be done
+    with the <monospace>holodeck</monospace> package.</p>
+    <sec id="nb-code-cell-5-nb-2" specific-use="notebook-code">
+    <code language="r script">
+# defining the variance and covariance of the distributions
+var2 &lt;- 0.05
+cov2 &lt;- 0
+
+# generating multivariate distributions around the categorical 3D means
+df_embeds_visual &lt;-
+  tibble(
+    id = as.factor(seq(1,6400)),
+    category = as.factor(rep(seq(1:64), each = 100))
+  )|&gt; 
+  group_by(category) |&gt; 
+  sim_discr(
+    n_vars = 1, 
+    var = var2, 
+    cov = cov2, 
+    group_means = df_embeds_categ$x, 
+    name = &quot;x&quot;) |&gt; 
+  sim_discr(
+    n_vars = 1, 
+    var = var2, 
+    cov = cov2, 
+    group_means = df_embeds_categ$y, 
+    name = &quot;y&quot;) |&gt; 
+  sim_discr(
+    n_vars = 1, 
+    var = var2, 
+    cov = cov2, 
+    group_means = df_embeds_categ$z, 
+    name = &quot;z&quot;) |&gt; 
+  # keeping only 8 points per distribution
+  slice(1) |&gt; 
+  ungroup() |&gt; 
+  mutate(group = as.factor(rep(seq(1, 8), each = 8))) |&gt; 
+  rename(x = x_1, y = y_1, z = z_1) |&gt; 
+  select(group, x, y, z)
+    </code>
+    </sec>
+  </sec>
+  <sec id="generating-the-subject-embeddings-nb-2">
+    <title>Generating the subject embeddings</title>
+    <p>We have four “reference” sets of embeddings which represent
+    animals either judged according to their similarity in categorical
+    terms (namely, species), or in visual terms (namely shape or color
+    similarities, assuming that these similarities are more evenly
+    distributed, e.g. the crab looks like a spider, but is also pretty
+    close to a scorpion, etc.).</p>
+    <p>To generate the embeddings of each subject in each condition, we
+    will start from these reference embeddings and generate random noise
+    around <italic>each item</italic>, i.e. for all 64 animals. For 100
+    subjects, we would thus generate 100 noisy points around each
+    animal, each point corresponding to a given subject.</p>
+    <p>The visual and verbal groups will be generated with slightly more
+    intra-group variance, so as to try to make the spatial groups as
+    coherent as possible (and avoid blurring everything and making the
+    groups disappear in noise).</p>
+    <sec id="nb-code-cell-6-nb-2" specific-use="notebook-code">
+    <code language="r script">
+# creating dfs with participants
+df_subjects_7 &lt;- 
+  tibble(subject = seq(1, 7, 1)) |&gt; 
+  mutate(subject = paste0(&quot;subject_&quot;, subject))
+
+df_subjects_8 &lt;- 
+  tibble(subject = seq(1, 8, 1)) |&gt; 
+  mutate(subject = paste0(&quot;subject_&quot;, subject))
+
+# splitting df_embeddings
+df_embed_c  &lt;- df_embeddings |&gt; select(group, species,  x_c:z_c)
+df_embed_cs &lt;- df_embeddings |&gt; select(group, species, x_cs:z_cs)
+df_embed_vs &lt;- df_embeddings |&gt; select(group, species, x_vs:z_vs)
+df_embed_v  &lt;- df_embeddings |&gt; select(group, species,  x_v:z_v)
+
+# function to create embeddings per subject with normal random noise
+generate_subject_embeddings &lt;- function(df, df_subjects, var){
+  df &lt;-
+    df |&gt; 
+    mutate(subject = list(df_subjects)) |&gt; 
+    unnest(subject) |&gt; 
+    group_by(species) |&gt; 
+    # simulating x coordinates
+    sim_discr(
+      n_vars = 1, 
+      var = var, 
+      cov = 0, 
+      group_means = pull(df, 3), 
+      name = &quot;x&quot;) |&gt; 
+    # simulating y coordinates
+    sim_discr(
+      n_vars = 1, 
+      var = var, 
+      cov = 0, 
+      group_means = pull(df, 4), 
+      name = &quot;y&quot;) |&gt; 
+    # simulating z coordinates
+    sim_discr(
+      n_vars = 1, 
+      var = var, 
+      cov = 0, 
+      group_means = pull(df, 5), 
+      name = &quot;z&quot;) |&gt;
+  select(group, species, subject, 7:9) |&gt; 
+  rename(x = 4, y = 5, z = 6) |&gt; 
+  ungroup()
+  
+  return(df)
+}
+
+var_s1 = 0.001
+var_s2 = 0.0005
+
+df_embed_c_sub  &lt;- generate_subject_embeddings(df_embed_c,  df_subjects_4, var_s1)
+df_embed_cs_sub &lt;- generate_subject_embeddings(df_embed_cs, df_subjects_4, var_s2)
+df_embed_vs_sub &lt;- generate_subject_embeddings(df_embed_vs, df_subjects_4, var_s2)
+df_embed_v_sub  &lt;- generate_subject_embeddings(df_embed_v,  df_subjects_4, var_s1)
+    </code>
+    </sec>
+  </sec>
 </sec>
 </body>
 
 
 
 <back>
+<fn-group>
+  <fn id="fn1-nb-2">
+    <label>1</label><p>A simpler alternative would be generating the
+    visual embeddings with the same code as the categorical ones,
+    selecting 8 points per cluster but much more spread out
+    (e.g. selecting 8 among the 90% closest to the centroids, which
+    would create more variability than the categorical one set to 60%).
+    I chose otherwise because this wouldn’t have had points reaching
+    <italic>inside</italic> the sphere.</p>
+  </fn>
+</fn-group>
 </back>
 
 

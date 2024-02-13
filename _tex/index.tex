@@ -174,6 +174,10 @@
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
+\makeatletter
+\@ifpackageloaded{sidenotes}{}{\usepackage{sidenotes}}
+\@ifpackageloaded{marginnote}{}{\usepackage{marginnote}}
+\makeatother
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
@@ -246,7 +250,7 @@ and benefits of this project.
 \setcounter{tocdepth}{2}
 \tableofcontents
 }
-\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, breakable, titlerule=0mm, coltitle=black, colbacktitle=quarto-callout-tip-color!10!white, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Project inception}, bottomtitle=1mm, leftrule=.75mm, opacitybacktitle=0.6, colframe=quarto-callout-tip-color-frame, toptitle=1mm, arc=.35mm, left=2mm, toprule=.15mm, opacityback=0, bottomrule=.15mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, left=2mm, coltitle=black, bottomrule=.15mm, colback=white, bottomtitle=1mm, colframe=quarto-callout-tip-color-frame, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, leftrule=.75mm, toptitle=1mm, opacitybacktitle=0.6, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Project inception}, breakable, toprule=.15mm, arc=.35mm]
 
 This project stems from several elements:
 
@@ -428,8 +432,8 @@ pairs: a boy's face and a hand (red), and carrots and a stop sign
 (blue). Their single-trial dissimilarity estimates (arrows) are combined
 into a single dissimilarity estimate, which is placed at the
 corresponding entry of the RDM (lower panel). Mirror-symmetric entries
-are indicated by lighter colors. Figure taken from
-\citet{murHumanObjectSimilarityJudgments2013}.}
+are indicated by lighter colors \citep[figure
+from][]{murHumanObjectSimilarityJudgments2013}.}
 
 \end{figure}%
 
@@ -487,52 +491,270 @@ Figure~\ref{fig-majewska}.
 
 }
 
-\caption{\label{fig-majewska}Arena layout of the MA protocol used by
-\citet{majewskaSpatialMultiarrangementClustering2020} to acquire
-similarity judgements on word pairs.}
+\caption{\label{fig-majewska}Arena layout of the MA protocol used by to
+acquire similarity judgements on word pairs \citep[figure
+from][]{majewskaSpatialMultiarrangementClustering2020}.}
 
 \end{figure}%
 
-\subsection{Hypotheses}\label{hypotheses}
+We could have the stimuli rated by another set of participants on
+several features.
 
-\subsubsection{Aphantasic and phantasic psychological
-spaces}\label{aphantasic-and-phantasic-psychological-spaces}
+\begin{quote}
+« \emph{We deliberately did not specify which object properties to focus
+on, to avoid biasing participants' spontaneous mental representation of
+the similarities between objects. Our aim was to obtain similarity
+judgments that reflect the natural representation of objects without
+forcing participants to rely on one given dimension. However,
+participants were asked after having performed the task, what
+dimension(s) they used in judging object similarity.} »
+\citep{jozwik2016}
+\end{quote}
 
-The most representative members of a category are called prototypical
-members.
+\begin{quote}
+« \textbf{\emph{All but one of the 16 participants reported arranging
+the images according to a categorical structure.}} » \citep{jozwik2017}
+\end{quote}
 
-Prototype theory builds on the observation that among the instances of a
-property, some are more representative than others. The most
-representative one is the prototype of the property.
+This result of \citet{jozwik2017} suggests that we should give an
+explicit instruction about the features to focus on, otherwise everyone
+might bypass visual features and mental images in favour of concepts and
+categories, regardless of their mental imagery profile.
 
-Thus, following the concepts illustrated by Gardenfors, we would expect
-that aphantasics, when doing shape similarity judgements, would be more
-inclined to group items close to the prototypical items due to a lower
-definition of the mental image. In comparison, phantasics would have a
-much more distributed conceptual space of item shapes due to their
-higher-resolution mental images of said items.
+In contrast, if we ask to focus specifically on the visual features,
+then ask subjects about the strategy they used to evaluate the
+similarities, then on the subjectively felt mental format of these
+strategies, we might grasp better insight on the sensory representations
+of subjects.
 
-\subsubsection{Subjective imagery and psychological
-spaces}\label{subjective-imagery-and-psychological-spaces}
+We could even go for several comparisons - even though this would
+increase quadratically the number of trials - e.g.~:
 
-In the proposed view of visual imagery as the subjective expression of a
-given type of psychological space, we mentioned earlier that
-\emph{spatial} imagery could also constitute a subjective expression of
-other dimensions of psychological spaces. Hence, the \emph{verbal}
-dimension of the simplified model of imagery we outlined in my thesis
-project could also represent different dimensions.
+\begin{itemize}
+\item
+  Evaluate to what extent the \textbf{shape} \emph{of these animals are}
+  \textbf{\emph{similar}} \textbf{at rest, ignoring size differences.}
+\item
+  Evaluate to what extent these animals \textbf{sound like each other.}
+\item
+  Etc.
+\end{itemize}
 
-This conception leads to the following theoretical hypothesis: provided
-that our visual-spatial-verbal model correctly fits subjective imagery,
-the imagery profile of individuals should map on their psychological
-spaces.
+\begin{quote}
+\emph{Note to be added: if you do not know the animal, just guess its
+placement, as this situation is quite unlikely to happen (animals chosen
+are fairly common knowledge).}
+\end{quote}
 
-Operationally, this would be evaluated by the fact that
-\textbf{individuals with similar imagery profiles} (visual, spatial,
-verbal, or any combination of the three) \textbf{should have similar
-representations} in their given psychological space,
-\textbf{quantifiable by the degree of alignment between their similarity
-structures.}
+\citet{kawakita2023}: To assess whether the color dissimilarity
+structures from different participants can be aligned in an unsupervised
+manner, we divided color pair similarity data from a large pool of 426
+participants into five participant groups (85 or 86 participants per
+group) to obtain five independent and complete sets of pairwise
+dissimilarity ratings for 93 color stimuli (Fig. 3a). Each participant
+provided a pairwise dissimilarity judgment for a randomly allocated
+subset of the 4371 possible color pairs. We computed the mean of all
+judgments for each color pair in each group, generating five full
+dissimilarity matrices referred to as Group 1 to Group 5.
+
+\subsubsection{Stimuli}\label{stimuli}
+
+We would have a list of animal items, that would have several
+characteristics:
+
+\begin{itemize}
+\item
+  A name
+\item
+  A category
+\item
+  A shape
+\end{itemize}
+
+We need orthogonal data:
+
+\begin{itemize}
+\item
+  Each class of animal should include each shape (roughly)
+\item
+  Each shape should have an animal
+\end{itemize}
+
+This would imply that category cannot be derived from shape, and
+vice-versa. Thus, a \textbf{sorting by shape would reveal to be innately
+visual} (or maybe spatial, if shape concerns this type of imagery), and
+a \textbf{sorting by category would reveal an abstraction} from these
+shapes. We expect that the two will be mixed to some degree in every
+subject, but that low-imagery would rather tend towards category
+sorting, while high-imagery would tend towards shape sorting.
+
+Shapes could be very tricky stimuli to discuss. \citet{gardenfors2004}
+noted that we only have a very sketchy understanding of how we perceive
+and conceptualize things according to their shapes. The works of
+\citet{marr1997} highlight this difficulty when analysing the complexity
+of the hierarchical judgements of shapes and volumes, as shown in
+Figure~\ref{fig-marr}.
+
+\begin{figure}
+
+\centering{
+
+\includegraphics{images/shapes-marr.png}
+
+}
+
+\caption{\label{fig-marr}Representing the characteristics of shapes with
+cylinders \citep[figure from][]{marr1997}.}
+
+\end{figure}%
+
+\section{Data analysis plan}\label{data-analysis-plan}
+
+\subsection{Unsupervised alignment
+rationale}\label{unsupervised-alignment-rationale}
+
+Visual images can be represented as points in a multidimensional
+psychological space. Embedding algorithms can be used to infer latent
+representations from human similarity judgments. While there are an
+infinite number of potential visual features, an embedding algorithm can
+be used to identify the subset of salient features that accurately model
+human-perceived similarity. (\emph{From Roads' CV})
+
+Using an optimization algorithm, the free parameters of a psychological
+space are found by maximizing goodness of fit (i.e., the loss function)
+to the observed data. Historically, when referring specifically to the
+free parameters that correspond to the representation of stimuli (e.g.,
+coordinates in geometric space), inference algorithms were commonly
+called multidimensional scaling (MDS), or simply scaling, algorithms.
+
+In the machine learning literature, analogous inference algorithms are
+often called embedding algorithms. The term ``embedding'' denotes a
+higher-dimensional representation that is embedded in a
+lower-dimensional space. For that reason, the inferred mental
+representations of a psychological space could also be called a
+psychological embedding.
+
+Numerous techniques exist, and each has limitations. Popular techniques
+for comparing representations include RSA \citet{kriegeskorte2008} and
+canonical correlation analysis (CCA) (Hotelling 1936). Briefly, RSA is a
+method for comparing two representations that assesses the correlation
+between the implied pairwise similarity matrices. CCA is a method that
+compares two representations by finding a pair of latent variables (one
+for each domain) that are maximally correlated.
+
+One might be tempted to compare two dissimilarity matrices assuming
+stimulus-level ``external'' correspondence: my ``red'' corresponds to
+your ``red''(Fig. 1d). This type of supervised comparison between
+dissimilarity matrices, known as Representational Similarity Analysis
+(RSA), has been widely used in neuroscience to compare various
+similarity matrices obtained from behavioural and neural data. However,
+there is no guarantee that the same stimulus will necessarily evoke the
+same subjective experience across different participants. Accordingly,
+when considering which stimuli evoke which qualia for different
+individuals, we need to consider all possibilities of correspondence: my
+``red'' might correspond to your ``red'', ``green'', ``purple'', or
+might lie somewhere between your ``orange'' and ``pink''(Fig. 1e). Thus,
+we compare qualia structures in a purely unsupervised manner, without
+assuming any correspondence between individual qualia across
+participants.
+
+\subsection{Gromov-Wasserstein optimal
+transport}\label{gromov-wasserstein-optimal-transport}
+
+To account for all possible correspondences, we use an unsupervised
+alignment method for quantifying the degree of similarity between qualia
+structures. As shown in Fig. 2a, in unsupervised alignment, we do not
+attach any external (stimuli) labels to the qualia embeddings. Instead,
+we try to find the best matching between qualia structures based only on
+their internal relationships (see Methods). After finding the optimal
+alignment, we can use external labels, such as the identity of a color
+stimulus (Fig. 2b), to evaluate how the embeddings of different
+individuals relate to each other. This allows us to determine which
+color embeddings correspond to the same color embeddings across
+individuals or which do not. Checking the assumption that these external
+labels are consistent across individuals allows us to assess the
+plausibility of determining accurate inter-individual correspondences
+between qualia structures of different participants.
+
+To this end, we used the Gromov-Wasserstein optimal transport (GWOT)
+method, which has been applied with great success in various fields.
+GWOT aims to find the optimal mapping between two point clouds in
+different domains based on the distance between points within each
+domain. Importantly, the distances (or correspondences) between points
+``across'' different domains are not given while those ``within'' the
+same domain are given. GWOT aligns the point clouds according to the
+principle that a point in one domain should correspond to another point
+in the other domain that has a similar relationship to other points. The
+principle of the method is illustrated in Figure~\ref{fig-gwot-kawa}
+
+\begin{figure}
+
+\centering{
+
+\includegraphics{images/kawa-gwot-2.PNG}
+
+}
+
+\caption{\label{fig-gwot-kawa}Gromov-Wassertein optimal transport
+principle \citep[figure from][]{kawakita2023}.}
+
+\end{figure}%
+
+We first computed the GWD for all pairs of the dissimilarity matrices of
+the 5 groups (Group 1-5) using the optimized \(\epsilon\). In Fig. 3b,
+we show the optimized mapping \(\Gamma*\) between Group 1 and Groups 2-5
+(see Supplementary Figure S1 for the other pairs). As shown in Fig. 3b,
+most of the diagonal elements in \(\Gamma*\) show high values,
+indicating that most colors in one group correspond to the same colors
+in the other groups with high probability. We next performed
+unsupervised alignment of the vector embeddings of qualia structures.
+Although \(\Gamma*\) provides the rough correspondence between the
+embeddings of qualia structures, we should find a more precise
+mathematical mapping between qualia structures in terms of their vector
+embeddings to more accurately assess the similarity between the qualia
+structures. Here, we consider aligning the embeddings of all the groups
+in a common space.
+
+By applying MDS, we obtained the 3-dimensional embeddings of Group 1 and
+Groups 2-5, referred to as X and Yi, where i = 2, \ldots, 5 (Fig. 3c).
+We then aligned Yi to X with the orthogonal rotation matrix Qi, which
+was obtained by solving a Procrustes-type problem using the optimized
+transportation plan \(\Gamma*\) obtained through GWOT (see Methods).
+Fig. 3d shows the aligned embed- dings of Group 2-5 (QiYi) and the
+embedding of Group 1 (X) plotted in the embedded space of X. Each color
+represents the label of a corresponding external color stimulus. Note
+that even though the color labels are shown in Fig. 3d, this is only for
+the visualization purpose and the whole alignment procedure is performed
+in a purely unsupervised manner without relying on the color labels. As
+can be seen in Fig. 3d, the embeddings of similar colors from the five
+groups are located close to each other, indicating that similar colors
+are `correctly' aligned by the unsupervised alignment method.
+
+To evaluate the performance of the unsupervised alignment, we computed
+the k-nearest color matching rate in the aligned space. If the same
+colors from two groups are within the k-nearest colors in the aligned
+space, we consider that the colors are correctly matched. We evaluated
+the matching rates between all the pairs of Groups 1-5. The averaged
+matching rates are 51\% when k = 1, 83\% when k = 3, and 92\% when k =
+5, respectively. This demonstrates the effectiveness of the GW alignment
+for correctly aligning the qualia structures of different participants
+in an unsupervised manner.
+
+However, as can be seen in Fig. 4b, the optimized mapping \(\Gamma*\) is
+not lined up diagonally unlike the optimized map- pings between
+color-neurotypical participants groups shown in Fig. 3b (see
+Supplementary Figure S1 for the other pairs). Accordingly, top k
+matching rate between Group 1-5 and Group 6 is 3.0\% when k = 1 (Fig.
+4c), which is only slightly above chance (\(\approx\) 1\%). The matching
+rate did not improve even when we relaxed the criterion (6.9\% and 11\%
+for k = 3 and k = 5, respectively). Moreover, all of the GWD values
+between Group 1-5 and Group 6 are larger than any of the GWD values
+between color-neurotypical participant groups (Fig. 4d).
+
+These results indicate that the difference between the qualia structures
+of neuro-typical and atypical participants is significantly larger than
+the difference between the qualia structures of neuro-typical
+participants.
 
 \begin{figure}[H]
 
@@ -557,8 +779,49 @@ but analytically very powerful.}
 
 \end{figure}%
 
-\section{Study data simulation and
-analysis}\label{study-data-simulation-and-analysis}
+\subsection{Hypotheses}\label{hypotheses}
+
+\subsubsection{Aphantasic and phantasic psychological
+spaces}\label{aphantasic-and-phantasic-psychological-spaces}
+
+The most representative members of a category are called prototypical
+members.
+
+Prototype theory builds on the observation that among the instances of a
+property, some are more representative than others. The most
+representative one is the prototype of the property.
+
+Thus, following the concepts illustrated by \citet{gardenfors2004}, we
+would expect that aphantasics, when doing shape similarity judgements,
+would be more inclined to group items close to the prototypical items
+due to a lower definition of the mental image. In comparison, phantasics
+would have a much more distributed conceptual space of item shapes due
+to their higher-resolution mental images of said items.
+
+\subsubsection{Subjective imagery and psychological
+spaces}\label{subjective-imagery-and-psychological-spaces}
+
+In the proposed view of visual imagery as the subjective expression of a
+given type of psychological space, we mentioned earlier that
+\emph{spatial} imagery could also constitute a subjective expression of
+other dimensions of psychological spaces. Hence, the \emph{verbal}
+dimension of the simplified model of imagery we outlined in my thesis
+project could also represent different dimensions.
+
+This conception leads to the following theoretical hypothesis: provided
+that our visual-spatial-verbal model correctly fits subjective imagery,
+the imagery profile of individuals should map on their psychological
+spaces.
+
+Operationally, this would be evaluated by the fact that
+\textbf{individuals with similar imagery profiles} (visual, spatial,
+verbal, or any combination of the three) \textbf{should have similar
+representations} in their given psychological space,
+\textbf{quantifiable by the degree of alignment between their similarity
+structures.}
+
+\section{Study simulation and
+analysis}\label{study-simulation-and-analysis}
 
 \textsubscript{Source:
 \href{https://m-delem.github.io/2499-similarity-manuscript/index.qmd.html}{Article
@@ -611,65 +874,6 @@ Spatial phantasic & + & ++ & - \\
 Visual phantasic & ++ & - & + \\
 \end{longtable}
 
-Down below is the code to generate these scores.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# The function takes the variance and covariance of the imagery distributions}
-\CommentTok{\# as arguments}
-\NormalTok{generate\_osv\_model }\OperatorTok{\textless{}{-}}\NormalTok{ function(var, cov)\{}
-\NormalTok{  df }\OperatorTok{\textless{}{-}} 
-\NormalTok{    tibble(group }\OperatorTok{=}\NormalTok{ rep(c(}\StringTok{"aph"}\NormalTok{, }\StringTok{"phant"}\NormalTok{), each }\OperatorTok{=} \DecValTok{8}\NormalTok{)) }\OperatorTok{|\textgreater{}} 
-\NormalTok{    group\_by(group) }\OperatorTok{|\textgreater{}} 
-\NormalTok{    mutate(}
-\NormalTok{      spatial\_group }\OperatorTok{=}\NormalTok{ c(rep(}\StringTok{"spa\_low"}\NormalTok{, }\DecValTok{4}\NormalTok{), rep(}\StringTok{"spa\_high"}\NormalTok{, }\DecValTok{4}\NormalTok{)),}
-\NormalTok{      vis\_spa\_group }\OperatorTok{=}\NormalTok{ paste0(group, }\StringTok{"\_"}\NormalTok{, spatial\_group),}
-\NormalTok{      verbal\_group }\OperatorTok{=} \StringTok{"verbal\_low"}\NormalTok{,}
-\NormalTok{      verbal\_group  }\OperatorTok{=}\NormalTok{ case\_when(}
-\NormalTok{        vis\_spa\_group }\OperatorTok{==} \StringTok{"aph\_spa\_low"} \OperatorTok{\textasciitilde{}} \StringTok{"verbal\_high"}\NormalTok{, }
-\NormalTok{        vis\_spa\_group }\OperatorTok{==} \StringTok{"phant\_spa\_low"} \OperatorTok{\textasciitilde{}} \StringTok{"verbal\_mid"}\NormalTok{,}
-\NormalTok{        TRUE }\OperatorTok{\textasciitilde{}}\NormalTok{ verbal\_group)}
-\NormalTok{    ) }\OperatorTok{|\textgreater{}} 
-\NormalTok{    group\_by(vis\_spa\_group) }\OperatorTok{|\textgreater{}} 
-    \CommentTok{\# ─── visual ───}
-\NormalTok{    sim\_discr(}
-\NormalTok{      n\_vars }\OperatorTok{=} \DecValTok{1}\NormalTok{, }
-\NormalTok{      var }\OperatorTok{=}\NormalTok{ var, }
-\NormalTok{      cov }\OperatorTok{=}\NormalTok{ cov, }
-      \CommentTok{\# aph\_s, aph\_v, phant\_s, phant\_v}
-\NormalTok{      group\_means }\OperatorTok{=}\NormalTok{ c(}\DecValTok{0}\NormalTok{, }\DecValTok{0}\NormalTok{, }\FloatTok{0.6}\NormalTok{, }\FloatTok{0.87}\NormalTok{), }
-\NormalTok{      name }\OperatorTok{=} \StringTok{"v"}\NormalTok{) }\OperatorTok{|\textgreater{}} 
-    \CommentTok{\# ─── spatial ───}
-\NormalTok{    sim\_discr(}
-\NormalTok{      n\_vars }\OperatorTok{=} \DecValTok{1}\NormalTok{,  }
-\NormalTok{      var }\OperatorTok{=}\NormalTok{ var, }
-\NormalTok{      cov }\OperatorTok{=}\NormalTok{ cov, }
-      \CommentTok{\# aph\_s, aph\_v, phant\_s, phant\_v}
-\NormalTok{      group\_means }\OperatorTok{=}\NormalTok{ c(}\FloatTok{0.75}\NormalTok{, }\FloatTok{0.4}\NormalTok{, }\FloatTok{0.7}\NormalTok{, }\FloatTok{0.3}\NormalTok{), }
-\NormalTok{      name }\OperatorTok{=} \StringTok{"s"}\NormalTok{) }\OperatorTok{|\textgreater{}}
-    \CommentTok{\# ─── verbal ───}
-\NormalTok{    sim\_discr(}
-\NormalTok{      n\_vars }\OperatorTok{=} \DecValTok{1}\NormalTok{,  }
-\NormalTok{      var }\OperatorTok{=}\NormalTok{ var, }
-\NormalTok{      cov }\OperatorTok{=}\NormalTok{ cov, }
-      \CommentTok{\# aph\_s, aph\_v, phant\_s, phant\_v}
-\NormalTok{      group\_means }\OperatorTok{=}\NormalTok{ c(}\FloatTok{0.3}\NormalTok{, }\FloatTok{0.7}\NormalTok{, }\FloatTok{0.3}\NormalTok{, }\FloatTok{0.5}\NormalTok{), }
-\NormalTok{      name }\OperatorTok{=} \StringTok{"i"}\NormalTok{) }\OperatorTok{|\textgreater{}}
-\NormalTok{    rename(}
-\NormalTok{      visual\_imagery  }\OperatorTok{=}\NormalTok{ v\_1,}
-\NormalTok{      spatial\_imagery }\OperatorTok{=}\NormalTok{ s\_1,}
-\NormalTok{      verbal\_profile  }\OperatorTok{=}\NormalTok{ i\_1}
-\NormalTok{      )}
-\NormalTok{\}}
-
-\NormalTok{df }\OperatorTok{\textless{}{-}}\NormalTok{ generate\_osv\_model(}\FloatTok{0.03}\NormalTok{, }\DecValTok{0}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\textsubscript{Source:
-\href{https://m-delem.github.io/2499-similarity-manuscript/notebooks/simulation-code-preview.html\#cell-osv-model}{Simulation
-code}}
-
 \phantomsection\label{cell-fig-plot-osv-model}
 \begin{figure}[H]
 
@@ -687,6 +891,648 @@ subjects on the three object, spatial, and verbal dimensions.}
 \textsubscript{Source:
 \href{https://m-delem.github.io/2499-similarity-manuscript/index.qmd.html}{Article
 Notebook}}
+
+\subsection{Data simulation: Creating representational
+structures}\label{data-simulation-creating-representational-structures}
+
+\citet{gardenfors2004} invokes two scientific concepts, to wit,
+prototypes and Voronoi tessellations. Prototype theory builds on the
+observation that among the instances of a property, some are more
+representative than others. The most representative one is the prototype
+of the property. \emph{We hypothesize that aphantasics will be more
+inclined to categorize items according to prototypes than phantasics.}
+
+A Voronoi tesselation of a given space divides that space into a number
+of cells such that each cell has a center and consists of all and only
+those points that lie no closer to the center of any other cell than to
+its own center; the centers of the various cells are called the
+generator points of the tesselation. This principle will underlie our
+data simulation, as we will build representations in a 3D space based on
+distances to ``centroids'', namely, prototypes. These representations
+will thus be located inside of the tessellations around these
+prototypes, more or less close to the centroid depending on the
+subject's representational structures.
+
+\subsubsection{Generating ``prototype'' embeddings from a
+sphere}\label{generating-prototype-embeddings-from-a-sphere}
+
+\textsubscript{Source:
+\href{https://m-delem.github.io/2499-similarity-manuscript/index.qmd.html}{Article
+Notebook}}
+
+A function will be used to generate embeddings. These spherical
+embeddings are displayed in Figure~\ref{fig-perfect-embeddings} We get 8
+nicely distributed clusters. We'll retrieve the centroids of each
+cluster, which would be the ``perfect'' categories of each species group
+(say, generated by a computational model on categorical criteria).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{generate\_sphere }\OperatorTok{\textless{}{-}}\NormalTok{ function(n)\{}
+\NormalTok{  z     }\OperatorTok{\textless{}{-}} \DecValTok{2}\OperatorTok{*}\NormalTok{runif(n) }\OperatorTok{{-}} \DecValTok{1}          \CommentTok{\# uniform on [{-}1, 1]}
+\NormalTok{  theta }\OperatorTok{\textless{}{-}} \DecValTok{2}\OperatorTok{*}\NormalTok{pi}\OperatorTok{*}\NormalTok{runif(n) }\OperatorTok{{-}}\NormalTok{ pi      }\CommentTok{\# uniform on [{-}pi, pi]}
+\NormalTok{  x     }\OperatorTok{\textless{}{-}}\NormalTok{ sin(theta)}\OperatorTok{*}\NormalTok{sqrt(}\DecValTok{1}\OperatorTok{{-}}\NormalTok{z}\OperatorTok{\^{}}\DecValTok{2}\NormalTok{)  }\CommentTok{\# based on angle}
+\NormalTok{  y     }\OperatorTok{\textless{}{-}}\NormalTok{ cos(theta)}\OperatorTok{*}\NormalTok{sqrt(}\DecValTok{1}\OperatorTok{{-}}\NormalTok{z}\OperatorTok{\^{}}\DecValTok{2}\NormalTok{) }
+  
+\NormalTok{  df }\OperatorTok{\textless{}{-}}\NormalTok{ tibble(x }\OperatorTok{=}\NormalTok{ x, y }\OperatorTok{=}\NormalTok{ y, z }\OperatorTok{=}\NormalTok{ z)}
+  
+  \ControlFlowTok{return}\NormalTok{(df)}
+\NormalTok{\}}
+
+\CommentTok{\# 1000 random observations with embeddings uniformly distributed on a sphere}
+\NormalTok{df\_embeds }\OperatorTok{\textless{}{-}}\NormalTok{ generate\_sphere(}\DecValTok{1000}\NormalTok{)}
+
+\CommentTok{\# Clustering the observations in 8 groups based on their coordinates}
+\NormalTok{clusters }\OperatorTok{\textless{}{-}}\NormalTok{ Mclust(df\_embeds, G }\OperatorTok{=} \DecValTok{8}\NormalTok{)}
+
+\CommentTok{\# adding the classification to the data}
+\NormalTok{df\_embeds }\OperatorTok{\textless{}{-}}\NormalTok{ df\_embeds }\OperatorTok{|\textgreater{}}\NormalTok{ mutate(group }\OperatorTok{=} \ImportTok{as}\NormalTok{.factor(clusters$classification))}
+
+\CommentTok{\# getting the centroids of each cluster}
+\NormalTok{df\_centroids }\OperatorTok{\textless{}{-}} 
+\NormalTok{  df\_embeds }\OperatorTok{|\textgreater{}} 
+\NormalTok{  group\_by(group) }\OperatorTok{|\textgreater{}} 
+\NormalTok{  summarise(}
+\NormalTok{    x\_centroid }\OperatorTok{=}\NormalTok{ mean(x),}
+\NormalTok{    y\_centroid }\OperatorTok{=}\NormalTok{ mean(y),}
+\NormalTok{    z\_centroid }\OperatorTok{=}\NormalTok{ mean(z)}
+\NormalTok{  )}
+
+\CommentTok{\# adding them to the data}
+\NormalTok{df\_embeds\_2 }\OperatorTok{\textless{}{-}}\NormalTok{ left\_join(df\_embeds, df\_centroids, by }\OperatorTok{=} \StringTok{"group"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\textsubscript{Source:
+\href{https://m-delem.github.io/2499-similarity-manuscript/notebooks/simulation-code-preview.html\#cell-generating-sphere}{Study
+simulation}}
+
+\phantomsection\label{cell-fig-perfect-embeddings}
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{index_files/figure-pdf/fig-perfect-embeddings-1.png}
+
+}
+
+\caption{\label{fig-perfect-embeddings}Generated spherical distribution
+of 1000 observations grouped in 8 equal clusers with Gaussian Mixture
+Clustering to represent the theoretical embeddings of 8 groups
+(i.e.~groups of species here). \textbf{\emph{Interact with the figures
+to see the details.}}}
+
+\end{figure}%
+
+\textsubscript{Source:
+\href{https://m-delem.github.io/2499-similarity-manuscript/index.qmd.html}{Article
+Notebook}}
+
+Now we want two sets of embeddings: one where the observations are very
+concentrated around the centroids, which would be the
+\textbf{categorical model}, and one where the observations are more
+spread out, which would be the \textbf{visual model}.
+
+We need to select 8 observations per cluster, which would be our animals
+per group. These observations will be subsets of the 1000 observations
+we generated.
+
+\subsubsection{Categorical model
+embeddings}\label{categorical-model-embeddings}
+
+The selection procedure for the \textbf{categorical model} will consist
+of selecting points that are rather \emph{close to the centroids}. Thus,
+we will filter the observations of the large sets to keep only points
+for which the distance to the centroid is inferior to a given value.
+That is, points for which the Euclidean norm of the vector from the
+observation to the centroid:
+
+\[d(centroid, observation) = \sqrt{(x_{c} - x_{o})^{2} + (y_{c} - y_{o})^{2} + (z_{c} - z_{o})^{2}}\]
+
+This can be done using the function
+\texttt{norm(coordinates,\ type\ =\ "2")} in R.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Function to filter points of the sphere based on the distance to the centroids}
+\NormalTok{generate\_embeddings }\OperatorTok{\textless{}{-}}\NormalTok{ function(df, n\_embeddings, distance\_quantile)\{}
+\NormalTok{  df }\OperatorTok{\textless{}{-}} 
+\NormalTok{    df }\OperatorTok{|\textgreater{}} 
+    \CommentTok{\# computing the euclidean distance to the centroids for each observation}
+\NormalTok{    rowwise() }\OperatorTok{|\textgreater{}} 
+\NormalTok{    mutate(}
+\NormalTok{      distance }\OperatorTok{=}\NormalTok{ norm(}
+\NormalTok{        c((x\_centroid }\OperatorTok{{-}}\NormalTok{ x), (y\_centroid }\OperatorTok{{-}}\NormalTok{ y), (z\_centroid }\OperatorTok{{-}}\NormalTok{ z)),}
+        \BuiltInTok{type} \OperatorTok{=} \StringTok{"2"}\NormalTok{)}
+\NormalTok{      ) }\OperatorTok{|\textgreater{}} 
+    \CommentTok{\# filtering by distance to the centroid by group}
+\NormalTok{    group\_by(group) }\OperatorTok{|\textgreater{}} 
+    \CommentTok{\# selecting the X\% closest (specified with "distance\_quantile")}
+    \BuiltInTok{filter}\NormalTok{(distance }\OperatorTok{\textless{}}\NormalTok{ quantile(distance, probs }\OperatorTok{=}\NormalTok{ distance\_quantile)) }\OperatorTok{|\textgreater{}} 
+    \CommentTok{\# selecting X random observations per cluster in these }
+    \CommentTok{\# (specified with "n\_embeddings")}
+    \BuiltInTok{slice}\NormalTok{(}\DecValTok{1}\NormalTok{:n\_embeddings) }\OperatorTok{|\textgreater{}} 
+\NormalTok{    select(group, x, y, z) }\OperatorTok{|\textgreater{}}
+\NormalTok{    ungroup()}
+\NormalTok{\}}
+
+\NormalTok{df\_embeds\_categ }\OperatorTok{\textless{}{-}}\NormalTok{ generate\_embeddings(df\_embeds\_2, }\DecValTok{8}\NormalTok{, }\FloatTok{0.5}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\textsubscript{Source:
+\href{https://m-delem.github.io/2499-similarity-manuscript/notebooks/simulation-code-preview.html\#cell-categorical-embeddings}{Study
+simulation}}
+
+\phantomsection\label{cell-fig-categorical-embeddings}
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{index_files/figure-pdf/fig-categorical-embeddings-1.png}
+
+}
+
+\caption{\label{fig-categorical-embeddings}Selection of 64 points to
+represent prototypical categorical embeddings, based on the distances to
+each groups' centroid. These will be the bases of the verbal
+aphantasics' embeddings. \textbf{\emph{Interact with the figure to see
+the details.}}}
+
+\end{figure}%
+
+\textsubscript{Source:
+\href{https://m-delem.github.io/2499-similarity-manuscript/index.qmd.html}{Article
+Notebook}}
+
+\subsubsection{Visual model embeddings}\label{visual-model-embeddings}
+
+In the case of the \textbf{visual model}, we would like approximately
+evenly distributed embeddings, that could also dive \emph{inside} the
+sphere, i.e.~representing species that are visually close although
+diametrically opposed when it comes to taxonomy. To do this we could try
+to simulate multivariate normal distributions around the
+centroids\footnote{A simpler alternative would be generating the visual
+  embeddings with the same code as the categorical ones, selecting 8
+  points per cluster but much more spread out (e.g.~selecting 8 among
+  the 90\% closest to the centroids, which would create more variability
+  than the categorical one set to 60\%). I chose otherwise because this
+  wouldn't have had points reaching \emph{inside} the sphere.}. This can
+be done with the \texttt{holodeck} package.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# defining the variance and covariance of the distributions}
+\NormalTok{var2 }\OperatorTok{\textless{}{-}} \FloatTok{0.05}
+\NormalTok{cov2 }\OperatorTok{\textless{}{-}} \DecValTok{0}
+
+\CommentTok{\# generating multivariate distributions around the categorical 3D means}
+\NormalTok{df\_embeds\_visual }\OperatorTok{\textless{}{-}}
+\NormalTok{  tibble(}
+    \BuiltInTok{id} \OperatorTok{=} \ImportTok{as}\NormalTok{.factor(seq(}\DecValTok{1}\NormalTok{,}\DecValTok{6400}\NormalTok{)),}
+\NormalTok{    category }\OperatorTok{=} \ImportTok{as}\NormalTok{.factor(rep(seq(}\DecValTok{1}\NormalTok{:}\DecValTok{64}\NormalTok{), each }\OperatorTok{=} \DecValTok{100}\NormalTok{))}
+\NormalTok{  )}\OperatorTok{|\textgreater{}} 
+\NormalTok{  group\_by(category) }\OperatorTok{|\textgreater{}} 
+\NormalTok{  sim\_discr(}
+\NormalTok{    n\_vars }\OperatorTok{=} \DecValTok{1}\NormalTok{, }
+\NormalTok{    var }\OperatorTok{=}\NormalTok{ var2, }
+\NormalTok{    cov }\OperatorTok{=}\NormalTok{ cov2, }
+\NormalTok{    group\_means }\OperatorTok{=}\NormalTok{ df\_embeds\_categ$x, }
+\NormalTok{    name }\OperatorTok{=} \StringTok{"x"}\NormalTok{) }\OperatorTok{|\textgreater{}} 
+\NormalTok{  sim\_discr(}
+\NormalTok{    n\_vars }\OperatorTok{=} \DecValTok{1}\NormalTok{, }
+\NormalTok{    var }\OperatorTok{=}\NormalTok{ var2, }
+\NormalTok{    cov }\OperatorTok{=}\NormalTok{ cov2, }
+\NormalTok{    group\_means }\OperatorTok{=}\NormalTok{ df\_embeds\_categ$y, }
+\NormalTok{    name }\OperatorTok{=} \StringTok{"y"}\NormalTok{) }\OperatorTok{|\textgreater{}} 
+\NormalTok{  sim\_discr(}
+\NormalTok{    n\_vars }\OperatorTok{=} \DecValTok{1}\NormalTok{, }
+\NormalTok{    var }\OperatorTok{=}\NormalTok{ var2, }
+\NormalTok{    cov }\OperatorTok{=}\NormalTok{ cov2, }
+\NormalTok{    group\_means }\OperatorTok{=}\NormalTok{ df\_embeds\_categ$z, }
+\NormalTok{    name }\OperatorTok{=} \StringTok{"z"}\NormalTok{) }\OperatorTok{|\textgreater{}} 
+  \CommentTok{\# keeping only 8 points per distribution}
+  \BuiltInTok{slice}\NormalTok{(}\DecValTok{1}\NormalTok{) }\OperatorTok{|\textgreater{}} 
+\NormalTok{  ungroup() }\OperatorTok{|\textgreater{}} 
+\NormalTok{  mutate(group }\OperatorTok{=} \ImportTok{as}\NormalTok{.factor(rep(seq(}\DecValTok{1}\NormalTok{, }\DecValTok{8}\NormalTok{), each }\OperatorTok{=} \DecValTok{8}\NormalTok{))) }\OperatorTok{|\textgreater{}} 
+\NormalTok{  rename(x }\OperatorTok{=}\NormalTok{ x\_1, y }\OperatorTok{=}\NormalTok{ y\_1, z }\OperatorTok{=}\NormalTok{ z\_1) }\OperatorTok{|\textgreater{}} 
+\NormalTok{  select(group, x, y, z)}
+\end{Highlighting}
+\end{Shaded}
+
+\textsubscript{Source:
+\href{https://m-delem.github.io/2499-similarity-manuscript/notebooks/simulation-code-preview.html\#cell-visual-embeddings}{Study
+simulation}}
+
+\phantomsection\label{cell-fig-visual-embeddings}
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{index_files/figure-pdf/fig-visual-embeddings-1.png}
+
+}
+
+\caption{\label{fig-visual-embeddings}Selection of 64 points to
+represent prototypical visual embeddings, chosen randomly in
+multivariate distributions centered around each categorical embedding.
+The visual embeddings are overlaid as diamonds along with categorical
+ones as dots. The two distributions keep the group structure, but are
+pretty far apart at times. \textbf{\emph{Interact with the figure to see
+the details.}}}
+
+\end{figure}%
+
+\textsubscript{Source:
+\href{https://m-delem.github.io/2499-similarity-manuscript/index.qmd.html}{Article
+Notebook}}
+
+\subsubsection{Intermediate embeddings}\label{intermediate-embeddings}
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=10.42in,height=1.06in]{index_files/figure-latex/mermaid-figure-3.png}
+
+}
+
+\caption{\label{fig-distances-graph}Model of the distances between
+participants' representations. Note that here d is a one-dimensional
+distance between the representations, but it will be computed as a
+three-dimensional distance in our toy-model. The verbal aphantasic
+profile is hypothesized to be very categorical, thus diametrically
+opposed to the visual phantasic profile, by a given distance d.~Spatial
+profiles are in-between: they are close to each other (10\% x d), but
+the spatial aphantasic profile is a bit closer to the verbal aphantasic
+one (45\% x d), and the spatial phantasic is a bit closer to the visual
+phantasic one (45\% x d).}
+
+\end{figure}%
+
+\textsubscript{Source:
+\href{https://m-delem.github.io/2499-similarity-manuscript/index.qmd.html}{Article
+Notebook}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dist\_c }\OtherTok{=} \FloatTok{0.45}
+\NormalTok{dist\_v }\OtherTok{=} \FloatTok{0.55}
+
+\NormalTok{df\_embeddings }\OtherTok{\textless{}{-}}
+\NormalTok{  df\_embeds\_categ }\SpecialCharTok{|\textgreater{}}
+  \FunctionTok{rename}\NormalTok{(}
+    \AttributeTok{group\_c =}\NormalTok{ group,}
+    \AttributeTok{x\_c =}\NormalTok{ x,}
+    \AttributeTok{y\_c =}\NormalTok{ y,}
+    \AttributeTok{z\_c =}\NormalTok{ z}
+\NormalTok{  ) }\SpecialCharTok{|\textgreater{}}
+  \FunctionTok{bind\_cols}\NormalTok{(df\_embeds\_visual) }\SpecialCharTok{|\textgreater{}}
+  \FunctionTok{rename}\NormalTok{(}
+    \AttributeTok{group\_v =}\NormalTok{ group,}
+    \AttributeTok{x\_v =}\NormalTok{ x,}
+    \AttributeTok{y\_v =}\NormalTok{ y,}
+    \AttributeTok{z\_v =}\NormalTok{ z}
+\NormalTok{  ) }\SpecialCharTok{|\textgreater{}} 
+  \FunctionTok{select}\NormalTok{(}\SpecialCharTok{!}\NormalTok{group\_v) }\SpecialCharTok{|\textgreater{}} 
+  \FunctionTok{rename}\NormalTok{(}\AttributeTok{group =}\NormalTok{ group\_c) }\SpecialCharTok{|\textgreater{}} 
+  \FunctionTok{mutate}\NormalTok{(}
+    \AttributeTok{x\_cs =}\NormalTok{ x\_c }\SpecialCharTok{+}\NormalTok{ dist\_c}\SpecialCharTok{*}\NormalTok{(x\_v }\SpecialCharTok{{-}}\NormalTok{ x\_c),}
+    \AttributeTok{y\_cs =}\NormalTok{ y\_c }\SpecialCharTok{+}\NormalTok{ dist\_c}\SpecialCharTok{*}\NormalTok{(y\_v }\SpecialCharTok{{-}}\NormalTok{ y\_c),}
+    \AttributeTok{z\_cs =}\NormalTok{ z\_c }\SpecialCharTok{+}\NormalTok{ dist\_c}\SpecialCharTok{*}\NormalTok{(z\_v }\SpecialCharTok{{-}}\NormalTok{ z\_c),}
+    \AttributeTok{x\_vs =}\NormalTok{ x\_c }\SpecialCharTok{+}\NormalTok{ dist\_v}\SpecialCharTok{*}\NormalTok{(x\_v }\SpecialCharTok{{-}}\NormalTok{ x\_c),}
+    \AttributeTok{y\_vs =}\NormalTok{ y\_c }\SpecialCharTok{+}\NormalTok{ dist\_v}\SpecialCharTok{*}\NormalTok{(y\_v }\SpecialCharTok{{-}}\NormalTok{ y\_c),}
+    \AttributeTok{z\_vs =}\NormalTok{ z\_c }\SpecialCharTok{+}\NormalTok{ dist\_v}\SpecialCharTok{*}\NormalTok{(z\_v }\SpecialCharTok{{-}}\NormalTok{ z\_c)}
+\NormalTok{  )}
+\end{Highlighting}
+\end{Shaded}
+
+\textsubscript{Source:
+\href{https://m-delem.github.io/2499-similarity-manuscript/index.qmd.html}{Article
+Notebook}}
+
+\phantomsection\label{cell-fig-intermediate-embeddings}
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{index_files/figure-pdf/fig-intermediate-embeddings-1.png}
+
+}
+
+\caption{\label{fig-intermediate-embeddings}Space of embeddings with 128
+additional points based on the euclidean distances between the visual
+and categorical embeddings. The empty dots are the
+\emph{aphantasics-spatial} ones, and the empty diamonds are the
+\emph{phantasic-spatial} ones. Some can be very close together, and
+sometimes further apart due to the various pairs of visual and
+categorical points used to create them. A network-like structure seems
+to appear, with empty points seemingly `connecting' the dots and
+diamonds. \textbf{\emph{Interact with the figure to see the details.}}}
+
+\end{figure}%
+
+\textsubscript{Source:
+\href{https://m-delem.github.io/2499-similarity-manuscript/index.qmd.html}{Article
+Notebook}}
+
+\subsubsection{Labelling the species}\label{labelling-the-species}
+
+The distributions created are still gathered around the centroids of
+each group, but are much more widespread, each group getting close to
+each other and even reaching inside the sphere.
+
+Perfect! Now we have two 3D embeddings per animal, in a categorical or a
+visual description of their features. Let's add labels for each species
+in a group:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{df\_embeddings }\OtherTok{\textless{}{-}} 
+\NormalTok{  df\_embeddings }\SpecialCharTok{|\textgreater{}} 
+  \FunctionTok{mutate}\NormalTok{(}
+    \AttributeTok{group =} \FunctionTok{case\_when}\NormalTok{(}
+\NormalTok{    group }\SpecialCharTok{==} \DecValTok{1} \SpecialCharTok{\textasciitilde{}} \StringTok{"a"}\NormalTok{, }
+\NormalTok{    group }\SpecialCharTok{==} \DecValTok{2} \SpecialCharTok{\textasciitilde{}} \StringTok{"b"}\NormalTok{,}
+\NormalTok{    group }\SpecialCharTok{==} \DecValTok{3} \SpecialCharTok{\textasciitilde{}} \StringTok{"c"}\NormalTok{,}
+\NormalTok{    group }\SpecialCharTok{==} \DecValTok{4} \SpecialCharTok{\textasciitilde{}} \StringTok{"d"}\NormalTok{,}
+\NormalTok{    group }\SpecialCharTok{==} \DecValTok{5} \SpecialCharTok{\textasciitilde{}} \StringTok{"e"}\NormalTok{,}
+\NormalTok{    group }\SpecialCharTok{==} \DecValTok{6} \SpecialCharTok{\textasciitilde{}} \StringTok{"f"}\NormalTok{,}
+\NormalTok{    group }\SpecialCharTok{==} \DecValTok{7} \SpecialCharTok{\textasciitilde{}} \StringTok{"g"}\NormalTok{,}
+\NormalTok{    group }\SpecialCharTok{==} \DecValTok{8} \SpecialCharTok{\textasciitilde{}} \StringTok{"h"}\NormalTok{,}
+    \ConstantTok{TRUE} \SpecialCharTok{\textasciitilde{}}\NormalTok{ group}
+\NormalTok{    )}
+\NormalTok{  ) }\SpecialCharTok{|\textgreater{}} 
+  \FunctionTok{group\_by}\NormalTok{(group) }\SpecialCharTok{|\textgreater{}} 
+  \FunctionTok{mutate}\NormalTok{(}
+    \AttributeTok{species =} \FunctionTok{paste0}\NormalTok{(}\StringTok{"species\_"}\NormalTok{, group, }\DecValTok{1}\SpecialCharTok{:}\DecValTok{8}\NormalTok{),}
+    \AttributeTok{species =} \FunctionTok{as.factor}\NormalTok{(species),}
+    \AttributeTok{group   =} \FunctionTok{as.factor}\NormalTok{(group)}
+\NormalTok{    ) }\SpecialCharTok{|\textgreater{}} 
+  \FunctionTok{select}\NormalTok{(group, species, }\FunctionTok{everything}\NormalTok{())}
+\end{Highlighting}
+\end{Shaded}
+
+\textsubscript{Source:
+\href{https://m-delem.github.io/2499-similarity-manuscript/index.qmd.html}{Article
+Notebook}}
+
+Now we have four sets of coherent coordinates, that we need to assign to
+the 30 participants: i.e.~generating 8 points for C (aph\_spa\_low), 7
+points for CS (aph\_spa\_high), 7 points for VS (phant\_spa\_high), and
+8 points for V (phant\_spa\_low).
+
+\subsubsection{Generating the subject
+embeddings}\label{generating-the-subject-embeddings}
+
+We have four ``reference'' sets of embeddings which represent animals
+either judged according to their similarity in categorical terms
+(namely, species), or in visual terms (namely shape or color
+similarities, assuming that these similarities are more evenly
+distributed, e.g.~the crab looks like a spider, but is also pretty close
+to a scorpion, etc.).
+
+To generate the embeddings of each subject in each condition, we will
+start from these reference embeddings and generate random noise around
+\emph{each item}, i.e.~for all 64 animals. For 100 subjects, we would
+thus generate 100 noisy points around each animal, each point
+corresponding to a given subject.
+
+The visual and verbal groups will be generated with slightly more
+intra-group variance, so as to try to make the spatial groups as
+coherent as possible (and avoid blurring everything and making the
+groups disappear in noise).
+
+Although the groupings in this distribution sound simple when we color
+it using the knowledge about how we built it, the algorithm will only be
+fed with the data for each subject, without any labeling or additional
+information. Thus, Figure~\ref{fig-subject-embeddings-b} here is what
+the algorithm will ``see'' (and what it will try to decrypt).
+Admittedly, that looks a lot more complicated.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# creating dfs with participants}
+\NormalTok{df\_subjects\_7 }\OperatorTok{\textless{}{-}} 
+\NormalTok{  tibble(subject }\OperatorTok{=}\NormalTok{ seq(}\DecValTok{1}\NormalTok{, }\DecValTok{7}\NormalTok{, }\DecValTok{1}\NormalTok{)) }\OperatorTok{|\textgreater{}} 
+\NormalTok{  mutate(subject }\OperatorTok{=}\NormalTok{ paste0(}\StringTok{"subject\_"}\NormalTok{, subject))}
+
+\NormalTok{df\_subjects\_8 }\OperatorTok{\textless{}{-}} 
+\NormalTok{  tibble(subject }\OperatorTok{=}\NormalTok{ seq(}\DecValTok{1}\NormalTok{, }\DecValTok{8}\NormalTok{, }\DecValTok{1}\NormalTok{)) }\OperatorTok{|\textgreater{}} 
+\NormalTok{  mutate(subject }\OperatorTok{=}\NormalTok{ paste0(}\StringTok{"subject\_"}\NormalTok{, subject))}
+
+\CommentTok{\# splitting df\_embeddings}
+\NormalTok{df\_embed\_c  }\OperatorTok{\textless{}{-}}\NormalTok{ df\_embeddings }\OperatorTok{|\textgreater{}}\NormalTok{ select(group, species,  x\_c:z\_c)}
+\NormalTok{df\_embed\_cs }\OperatorTok{\textless{}{-}}\NormalTok{ df\_embeddings }\OperatorTok{|\textgreater{}}\NormalTok{ select(group, species, x\_cs:z\_cs)}
+\NormalTok{df\_embed\_vs }\OperatorTok{\textless{}{-}}\NormalTok{ df\_embeddings }\OperatorTok{|\textgreater{}}\NormalTok{ select(group, species, x\_vs:z\_vs)}
+\NormalTok{df\_embed\_v  }\OperatorTok{\textless{}{-}}\NormalTok{ df\_embeddings }\OperatorTok{|\textgreater{}}\NormalTok{ select(group, species,  x\_v:z\_v)}
+
+\CommentTok{\# function to create embeddings per subject with normal random noise}
+\NormalTok{generate\_subject\_embeddings }\OperatorTok{\textless{}{-}}\NormalTok{ function(df, df\_subjects, var)\{}
+\NormalTok{  df }\OperatorTok{\textless{}{-}}
+\NormalTok{    df }\OperatorTok{|\textgreater{}} 
+\NormalTok{    mutate(subject }\OperatorTok{=} \BuiltInTok{list}\NormalTok{(df\_subjects)) }\OperatorTok{|\textgreater{}} 
+\NormalTok{    unnest(subject) }\OperatorTok{|\textgreater{}} 
+\NormalTok{    group\_by(species) }\OperatorTok{|\textgreater{}} 
+    \CommentTok{\# simulating x coordinates}
+\NormalTok{    sim\_discr(}
+\NormalTok{      n\_vars }\OperatorTok{=} \DecValTok{1}\NormalTok{, }
+\NormalTok{      var }\OperatorTok{=}\NormalTok{ var, }
+\NormalTok{      cov }\OperatorTok{=} \DecValTok{0}\NormalTok{, }
+\NormalTok{      group\_means }\OperatorTok{=}\NormalTok{ pull(df, }\DecValTok{3}\NormalTok{), }
+\NormalTok{      name }\OperatorTok{=} \StringTok{"x"}\NormalTok{) }\OperatorTok{|\textgreater{}} 
+    \CommentTok{\# simulating y coordinates}
+\NormalTok{    sim\_discr(}
+\NormalTok{      n\_vars }\OperatorTok{=} \DecValTok{1}\NormalTok{, }
+\NormalTok{      var }\OperatorTok{=}\NormalTok{ var, }
+\NormalTok{      cov }\OperatorTok{=} \DecValTok{0}\NormalTok{, }
+\NormalTok{      group\_means }\OperatorTok{=}\NormalTok{ pull(df, }\DecValTok{4}\NormalTok{), }
+\NormalTok{      name }\OperatorTok{=} \StringTok{"y"}\NormalTok{) }\OperatorTok{|\textgreater{}} 
+    \CommentTok{\# simulating z coordinates}
+\NormalTok{    sim\_discr(}
+\NormalTok{      n\_vars }\OperatorTok{=} \DecValTok{1}\NormalTok{, }
+\NormalTok{      var }\OperatorTok{=}\NormalTok{ var, }
+\NormalTok{      cov }\OperatorTok{=} \DecValTok{0}\NormalTok{, }
+\NormalTok{      group\_means }\OperatorTok{=}\NormalTok{ pull(df, }\DecValTok{5}\NormalTok{), }
+\NormalTok{      name }\OperatorTok{=} \StringTok{"z"}\NormalTok{) }\OperatorTok{|\textgreater{}}
+\NormalTok{  select(group, species, subject, }\DecValTok{7}\NormalTok{:}\DecValTok{9}\NormalTok{) }\OperatorTok{|\textgreater{}} 
+\NormalTok{  rename(x }\OperatorTok{=} \DecValTok{4}\NormalTok{, y }\OperatorTok{=} \DecValTok{5}\NormalTok{, z }\OperatorTok{=} \DecValTok{6}\NormalTok{) }\OperatorTok{|\textgreater{}} 
+\NormalTok{  ungroup()}
+  
+  \ControlFlowTok{return}\NormalTok{(df)}
+\NormalTok{\}}
+
+\NormalTok{var\_s1 }\OperatorTok{=} \FloatTok{0.001}
+\NormalTok{var\_s2 }\OperatorTok{=} \FloatTok{0.0005}
+
+\NormalTok{df\_embed\_c\_sub  }\OperatorTok{\textless{}{-}}\NormalTok{ generate\_subject\_embeddings(df\_embed\_c,  df\_subjects\_4, var\_s1)}
+\NormalTok{df\_embed\_cs\_sub }\OperatorTok{\textless{}{-}}\NormalTok{ generate\_subject\_embeddings(df\_embed\_cs, df\_subjects\_4, var\_s2)}
+\NormalTok{df\_embed\_vs\_sub }\OperatorTok{\textless{}{-}}\NormalTok{ generate\_subject\_embeddings(df\_embed\_vs, df\_subjects\_4, var\_s2)}
+\NormalTok{df\_embed\_v\_sub  }\OperatorTok{\textless{}{-}}\NormalTok{ generate\_subject\_embeddings(df\_embed\_v,  df\_subjects\_4, var\_s1)}
+\end{Highlighting}
+\end{Shaded}
+
+\textsubscript{Source:
+\href{https://m-delem.github.io/2499-similarity-manuscript/notebooks/simulation-code-preview.html\#cell-subject-embeddings}{Study
+simulation}}
+
+\phantomsection\label{cell-fig-subject-embeddings-a}
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{index_files/figure-pdf/fig-subject-embeddings-a-1.png}
+
+}
+
+\caption{\label{fig-subject-embeddings-a}Final distribution of the 64
+embeddings of all the 30 subjects, amounting to 1920 points total.
+Embeddings are \textbf{\emph{colored by the species groups}} they
+represent. The symbols represent the four imagery groups (Aph. verbal,
+spatial, etc.). \textbf{\emph{Interact with the figures to see the
+details.}}}
+
+\end{figure}%
+
+\textsubscript{Source:
+\href{https://m-delem.github.io/2499-similarity-manuscript/index.qmd.html}{Article
+Notebook}}
+
+\phantomsection\label{cell-fig-subject-embeddings-b}
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{index_files/figure-pdf/fig-subject-embeddings-b-1.png}
+
+}
+
+\caption{\label{fig-subject-embeddings-b}Final distribution of the 64
+embeddings of all the 30 subjects, amounting to 1920 points total.
+Embeddings are \textbf{\emph{lored by subject}}. The symbols represent
+the four imagery groups (Aph. verbal, spatial, etc.).
+\textbf{\emph{Interact with the figures to see the details.}}}
+
+\end{figure}%
+
+\textsubscript{Source:
+\href{https://m-delem.github.io/2499-similarity-manuscript/index.qmd.html}{Article
+Notebook}}
+
+To feed this data to the algorithm, we'll group the 64 embeddings per
+subject in matrices tied to each of them.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{df\_embeddings\_sub }\OtherTok{\textless{}{-}}
+  \FunctionTok{bind\_rows}\NormalTok{(}
+    \CommentTok{\# aphantasic spatial}
+\NormalTok{    df\_embed\_cs\_sub }\SpecialCharTok{|\textgreater{}} 
+      \FunctionTok{separate\_wider\_delim}\NormalTok{(}
+\NormalTok{        subject,}
+        \AttributeTok{delim =} \StringTok{"\_"}\NormalTok{,}
+        \AttributeTok{names =} \FunctionTok{c}\NormalTok{(}\StringTok{"subject"}\NormalTok{, }\StringTok{"number"}\NormalTok{)}
+\NormalTok{      ) }\SpecialCharTok{|\textgreater{}} 
+      \FunctionTok{mutate}\NormalTok{(}\AttributeTok{subject =} \FunctionTok{paste0}\NormalTok{(subject,}\StringTok{"\_a\_aph\_s"}\NormalTok{, number), }\AttributeTok{.keep =} \StringTok{"unused"}\NormalTok{),}
+    
+    \CommentTok{\# aphantasic verbal}
+\NormalTok{    df\_embed\_c\_sub  }\SpecialCharTok{|\textgreater{}}
+      \FunctionTok{separate\_wider\_delim}\NormalTok{(}
+\NormalTok{        subject,}
+        \AttributeTok{delim =} \StringTok{"\_"}\NormalTok{,}
+        \AttributeTok{names =} \FunctionTok{c}\NormalTok{(}\StringTok{"subject"}\NormalTok{, }\StringTok{"number"}\NormalTok{)}
+\NormalTok{      ) }\SpecialCharTok{|\textgreater{}} 
+      \FunctionTok{mutate}\NormalTok{(}\AttributeTok{subject =} \FunctionTok{paste0}\NormalTok{(subject,}\StringTok{"\_b\_aph\_v"}\NormalTok{, number), }\AttributeTok{.keep =} \StringTok{"unused"}\NormalTok{),}
+    
+    \CommentTok{\# phantasic spatial}
+\NormalTok{    df\_embed\_vs\_sub  }\SpecialCharTok{|\textgreater{}}
+      \FunctionTok{separate\_wider\_delim}\NormalTok{(}
+\NormalTok{        subject,}
+        \AttributeTok{delim =} \StringTok{"\_"}\NormalTok{,}
+        \AttributeTok{names =} \FunctionTok{c}\NormalTok{(}\StringTok{"subject"}\NormalTok{, }\StringTok{"number"}\NormalTok{)}
+\NormalTok{      ) }\SpecialCharTok{|\textgreater{}} 
+      \FunctionTok{mutate}\NormalTok{(}\AttributeTok{subject =} \FunctionTok{paste0}\NormalTok{(subject,}\StringTok{"\_c\_phant\_s"}\NormalTok{, number), }\AttributeTok{.keep =} \StringTok{"unused"}\NormalTok{),}
+    
+    \CommentTok{\# phantasic visual}
+\NormalTok{    df\_embed\_v\_sub  }\SpecialCharTok{|\textgreater{}}
+      \FunctionTok{separate\_wider\_delim}\NormalTok{(}
+\NormalTok{        subject,}
+        \AttributeTok{delim =} \StringTok{"\_"}\NormalTok{,}
+        \AttributeTok{names =} \FunctionTok{c}\NormalTok{(}\StringTok{"subject"}\NormalTok{, }\StringTok{"number"}\NormalTok{)}
+\NormalTok{      ) }\SpecialCharTok{|\textgreater{}} 
+      \FunctionTok{mutate}\NormalTok{(}\AttributeTok{subject =} \FunctionTok{paste0}\NormalTok{(subject,}\StringTok{"\_d\_phant\_v"}\NormalTok{, number), }\AttributeTok{.keep =} \StringTok{"unused"}\NormalTok{)}
+\NormalTok{  ) }\SpecialCharTok{|\textgreater{}} 
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{subject =} \FunctionTok{as.factor}\NormalTok{(subject)) }\SpecialCharTok{|\textgreater{}} 
+  \FunctionTok{select}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{c}\NormalTok{(group, species)) }\SpecialCharTok{|\textgreater{}} 
+  \FunctionTok{group\_by}\NormalTok{(subject) }\SpecialCharTok{|\textgreater{}} 
+  \FunctionTok{nest}\NormalTok{() }\SpecialCharTok{|\textgreater{}} 
+  \FunctionTok{rename}\NormalTok{(}\AttributeTok{embedding =}\NormalTok{ data) }\SpecialCharTok{|\textgreater{}} 
+  \FunctionTok{rowwise}\NormalTok{() }\SpecialCharTok{|\textgreater{}} 
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{embedding =} \FunctionTok{list}\NormalTok{(}\FunctionTok{as.matrix}\NormalTok{(embedding)))}
+\end{Highlighting}
+\end{Shaded}
+
+\textsubscript{Source:
+\href{https://m-delem.github.io/2499-similarity-manuscript/index.qmd.html}{Article
+Notebook}}
+
+\subsection{Data analysis: Aligning representational
+structures}\label{data-analysis-aligning-representational-structures}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Simulation summary}\label{simulation-summary}
+
+\citet{kawakita2023}: These results indicate that the difference between
+the qualia structures of neuro-typical and atypical participants is
+significantly larger than the difference between the qualia structures
+of neuro-typical participants.
+
+A notable difference is that greenish colors and reddish colors are
+close in the embedding space of color atypical participants while they
+are distant in the embedding space of color neurotypical participants.
+This structural difference is likely to prevent the unsupervised
+alignment between the embeddings of color-neurotypical and atypical
+participants even though the correlation coefficient between the
+dissimilarity matrices of color neuro-typical and atypical participants
+is reasonably high.
+
+For a long time, assessing the similarity of subjective experiences
+across participants has been challenging. To address this problem, we
+proposed the ``qualia structure'' paradigm, which focuses on
+quantitative structural comparisons of subjective experiences. Using an
+unsupervised alignment method, we were able to match the qualia
+structures of colors and natural objects of different groups of
+participants based only on the way the qualia relate to each other,
+without using any external labels.
+
+Our results on color qualia structures are consistent with an idea that
+the relational properties of color qualia are universally shared by
+color-neurotypical individuals. Intriguingly, our results also suggest
+that individuals with color-atypical vision may have a different
+structure of their color experiences, rather than just failing to
+experience a certain subset of colors. Longstanding thought experiments
+that challenge the feasibility of inter-subjective color comparisons,
+such as individuals with color qualia inversion, should be resolvable
+with our relational unsupervised approach. Beyond traditional measures
+such as Pearson's correlation coefficient, our method provides a more
+fundamental structural characterization of how two structures are
+similar or different, which will be crucial for future investigations of
+qualia structures across psychological, neuroscientific, and
+computational fields.
+
+\section{Feasibility}\label{feasibility}
+
+\section{Conclusion}\label{conclusion}
+
+Modern psychology builds on the relativistic framework of philosophy,
+accepting that humans cannot know reality in an absolute sense. Focusing
+on relative comparisons, or similarity, is more than a clever
+philosophical work-around. similarity is a common currency of perception
+and cognition. In addition to operating at all levels of cognition,
+similarity---or, more accurately, the second-order isomorphism defined
+by a set of similarity relations---has been a powerful tool for
+analyzing and comparing psychological spaces.
 
 
   \bibliography{references.bib}
