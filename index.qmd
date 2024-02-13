@@ -175,11 +175,11 @@ coordinates_aligned_embeddings <- read_rds(paste0(path, "coordinates_aligned_emb
 
 ## Visual-spatial-verbal model of cognitive profiles
 
-One of the objectives of the study would be to link the subjective cogntive profiles of individuals with their representational structures. To evaluate these profiles, we are going to use psychometric questionnaires evaluating the visual-object, spatial, and verbal dimensions of imagery which will yield three scores, one for each dimension.
+One of the objectives of the study would be to link the subjective cognitive profiles of individuals with their representational structures. To evaluate these profiles, we are going to use psychometric questionnaires evaluating the visual-object, spatial, and verbal dimensions of imagery which will yield three scores, one for each dimension.
 
 We are going to simulate 30 participants presenting four different cognitive profiles, that I defined as, respectively, *verbal* aphantasics, *spatial* aphantasics, *spatial* phantasics, and *visual* phantasics. Their imagery abilities are summarised in @tbl-imageries.
 
-To simulate these four sub-groups, we use the `holodeck` R package to generate multivariate normal distributions of scores on these three dimensions for each sub-group. For instance, verbal aphantasics have normally distributed visual imagery scores centered around a mean of 0 (normalized, so negative scores are possible), 0.4 for spatial imagery, and 0.7 for verbal style; Spatial aphantasics have means of 0 for visual, 0.75 spatial, and 0.3 for verbal; etc. The numbers are arbitrary, but have been chosen by trial-and-error to obtain a model that is both well-defined and not exagerrated. The 30 subjects' imagery profiles are represented in the three dimensional space of the visual-spatial-verbal dimensions in @fig-plot-osv-model.
+To simulate these four sub-groups, we use the `holodeck` R package to generate multivariate normal distributions of scores on these three dimensions for each sub-group. For instance, verbal aphantasics have normally distributed visual imagery scores centered around a mean of 0 (normalized, so negative scores are possible), 0.4 for spatial imagery, and 0.7 for verbal style; Spatial aphantasics have means of 0 for visual, 0.75 spatial, and 0.3 for verbal; etc. The numbers are arbitrary, but have been chosen by trial-and-error to obtain a model that is both well-defined and not exaggerated. The 30 subjects' imagery profiles are represented in the three dimensional space of the visual-spatial-verbal dimensions in @fig-plot-osv-model.
 
 | Cognitive profile  | Visual imagery | Spatial imagery | Verbal style |
 |--------------------|:--------------:|:---------------:|:------------:|
@@ -241,3 +241,4 @@ df |>
   )) |> 
   plotting_osv_model(grouping_variable = "vis_spa_group", size = 4)
 ```
+

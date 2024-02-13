@@ -6,7 +6,7 @@ manuscript:
   code-links:
     - text: Repository of this manuscript
       icon: github
-      link: https://github.com/m-delem/2499-similarity-manuscript
+      href: https://github.com/m-delem/2499-similarity-manuscript
 
 format:
   html:
