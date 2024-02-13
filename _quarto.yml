@@ -16,12 +16,12 @@ format:
     fontsize: "medium"
   docx: default
   jats: default
-  # elsevier-pdf: 
-  #   journal:
-  #     cite-style: authoryear
-  #   include-in-header: 
-  #     text: |
-  #       \newpageafter{toc}
+  elsevier-pdf:
+    journal:
+      cite-style: authoryear
+    include-in-header:
+      text: |
+        \newpageafter{abstract}
 
 execute:
   freeze: auto

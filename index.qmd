@@ -1,6 +1,6 @@
 ---
 title: Unravelling mental representations in aphantasia through unsupervised alignment
-subtitle: Project design and data analysis simulation - testing the Quarto publish
+subtitle: Project design and data analysis simulation
 author: Maël Delem
 abstract-title: Summary
 abstract: |
@@ -179,7 +179,7 @@ One of the objectives of the study would be to link the subjective cogntive prof
 
 We are going to simulate 30 participants presenting four different cognitive profiles, that I defined as, respectively, *verbal* aphantasics, *spatial* aphantasics, *spatial* phantasics, and *visual* phantasics. Their imagery abilities are summarised in @tbl-imageries.
 
-To simulate these four sub-groups, we use the `holodeck` R package to generate multivariate normal distributions of scores on these three dimensions for each sub-group. For instance, verbal aphantasics have normally distributed visual imagery scores centered around a mean of 0 (normalized, so negative scores are possible), 0.4 for spatial imagery, and 0.7 for verbal style; Spatial aphantasics have means of 0 for visual, 0.75 spatial, and 0.3 for verbal; etc. The numbers are arbitrary, but have been chosen by trial-and-error to obtain a model that is both well-defined and not exagerrated. The 30 subjects' imagery profiles are represented in the three dimensional space of the visual-spatial-verbal dimensions in @fig-plot_osv_model.
+To simulate these four sub-groups, we use the `holodeck` R package to generate multivariate normal distributions of scores on these three dimensions for each sub-group. For instance, verbal aphantasics have normally distributed visual imagery scores centered around a mean of 0 (normalized, so negative scores are possible), 0.4 for spatial imagery, and 0.7 for verbal style; Spatial aphantasics have means of 0 for visual, 0.75 spatial, and 0.3 for verbal; etc. The numbers are arbitrary, but have been chosen by trial-and-error to obtain a model that is both well-defined and not exagerrated. The 30 subjects' imagery profiles are represented in the three dimensional space of the visual-spatial-verbal dimensions in @fig-plot-osv-model.
 
 | Cognitive profile  | Visual imagery | Spatial imagery | Verbal style |
 |--------------------|:--------------:|:---------------:|:------------:|
@@ -192,10 +192,10 @@ To simulate these four sub-groups, we use the `holodeck` R package to generate m
 
 Down below is the code to generate these scores.
 
-{{< embed notebooks/simulation-code.qmd#osv_model >}}
+{{< embed notebooks/simulation-code.qmd#osv-model >}}
 
 ```{r plot_osv_model}
-#| label: fig-plot_osv_model
+#| label: fig-plot-osv-model
 #| fig-cap: "Imagery profiles generated for 30 subjects on the three object, spatial, and verbal dimensions."
 
 plotting_osv_model <- function(df, grouping_variable, size){
