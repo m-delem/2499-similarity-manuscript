@@ -1428,133 +1428,6 @@ df |&gt;
 <sub-article article-type="notebook" id="nb-4-nb-1">
 <front-stub>
 <title-group>
-<article-title>Unsupervised alignment</article-title>
-</title-group>
-<contrib-group>
-<contrib contrib-type="author">
-<name>
-<surname>Delem</surname>
-<given-names>Maël</given-names>
-</name>
-<string-name>Maël Delem</string-name>
-
-</contrib>
-</contrib-group>
-</front-stub>
-
-<body>
-<boxed-text>
-  <disp-quote>
-    <p><bold>Packages and setup</bold></p>
-    <p>Down below is the code to load necessary packages used for the
-    simulation and analysis, along with some setups for the whole
-    document (<italic>hover over the numbers on the far right for
-    additional explanation of code and mechanics</italic>).</p>
-    <sec id="nb-code-cell-1-nb-1" specific-use="notebook-code">
-    <code id="annotated-cell-1-nb-1" language="r script">
-# ═══ Packages ═════════════════════════════════════════════════════════════════
-
-if (!require(librarian)) install.packages(librarian)
-    </code>
-    <def-list>
-      <def-item>
-        <term>Line 4</term>
-        <def>
-          <p>The package <monospace>librairian</monospace> eases package
-          management with the “shelf” function, which automatically: (1)
-          checks if a package is installed; (2) installs it if need be;
-          (3) loads the package like the “library()” function would.</p>
-        </def>
-      </def-item>
-      <def-item>
-        <term>Line 28</term>
-        <def>
-          <p><monospace>reticulate</monospace> allows to translate and
-          transfer objects and functions from R to Python and
-          vice-versa, and was thus of primary importance for the
-          successful use of the Python toolbox on our simulated
-          data.</p>
-        </def>
-      </def-item>
-      <def-item>
-        <term>Lines 35,51</term>
-        <def>
-          <p>These are personal custom color palettes meant to extend my
-          favourite palette, the color-atypical friendly Okabe-Ito color
-          palette. The palette originally has only eight colors, but I
-          will need nine, then up to 30 for later graphs, so I extended
-          it with a hand-picked selection of mine.</p>
-        </def>
-      </def-item>
-    </def-list>
-    <code id="annotated-cell-2-nb-1" language="r script">
-library(librarian)
-
-# now putting packages on our library's shelves:
-shelf(
-  # ─── data management ─────────────────
-  holodeck,       # simulating multivariate data
-  cluster,        # dissimilarity matrices
-  
-  # ─── modelling ───────────────────────
-  mclust,         # mixture clustering
-  
-  #  data visualization ──────────────
-  # palettes
-  viridis,        # colour-blind friendly palettes
-  # interactive
-  plotly,         # interactive plots
-  ggdendro,       # dendrograms
-  seriation,      # dissimilarity plots
-  webshot2,       # HTML screenshots for Word render
-  webshot,
-  
-  # ─── essential package collections ───
-  doParallel,     # parallel execution
-  easystats,      # data analysis ecosystem
-  reticulate,     # R to Python
-  tidyverse,      # modern R ecosystem
-)
-
-# ─── Global cosmetic theme ───
-theme_set(theme_modern(base_size = 14))
-
-pal_okabe_ito &lt;- c(
-  &quot;#E69F00&quot;, &quot;#56B4E9&quot;, &quot;#009E73&quot;,                            
-  &quot;#F5C710&quot;, &quot;#0072B2&quot;, &quot;#D55E00&quot;, &quot;#CC79A7&quot;, &quot;#6c0009&quot;)      
-
-# We'll need 9 colors at some point
-pal_okabe_ito_extended &lt;- c(                                 
-  &quot;#E69F00&quot;, &quot;#56B4E9&quot;, &quot;#009E73&quot;,                           
-  &quot;#F5C710&quot;, &quot;#0072B2&quot;, &quot;#D55E00&quot;, &quot;#CC79A7&quot;, &quot;#6c0009&quot;, &quot;#414487FF&quot;)
-
-# We'll need 30 colors at another moment
-cool_30_colors &lt;- c(                                                   
-  &quot;#3d51b4&quot;, &quot;#414487FF&quot;, &quot;#003d73&quot;, &quot;#440154FF&quot;, &quot;#6c0009&quot;, &quot;#b64e4e&quot;,
-  &quot;#D55E00&quot;, &quot;#E69F00&quot;, &quot;#F5C710&quot;, &quot;#FDE725FF&quot;, &quot;#f2bb7b&quot;, &quot;#f1afad&quot;, &quot;#CC79A7&quot;, 
-  &quot;#e57774&quot;, &quot;#7AD151FF&quot;, &quot;#57b571&quot;, &quot;#318a4a&quot;, &quot;#009E73&quot;, &quot;#22A884FF&quot;, 
-  &quot;#2A788EFF&quot;, &quot;#0072B2&quot;, &quot;#2da6b5&quot;, &quot;#56B4E9&quot;, &quot;#889be0&quot;, &quot;#6677e0&quot;,   
-  &quot;#3d51b4&quot;, &quot;#414487FF&quot;, &quot;#003d73&quot;, &quot;#440154FF&quot;, &quot;#6c0009&quot;, &quot;#b64e4e&quot;  
-  )
-    </code>
-    <sec id="nb-code-cell-1-output-0-nb-1" specific-use="notebook-output">
-    <preformat>Le chargement a nécessité le package : librarian</preformat>
-    </sec>
-    </sec>
-  </disp-quote>
-</boxed-text>
-</body>
-
-
-
-<back>
-</back>
-
-
-</sub-article>
-<sub-article article-type="notebook" id="nb-8-nb-2">
-<front-stub>
-<title-group>
 <article-title>Simulation code</article-title>
 </title-group>
 <contrib-group>
@@ -1577,8 +1450,8 @@ cool_30_colors &lt;- c(
     simulation and analysis, along with some setups for the whole
     document (<italic>hover over the numbers on the far right for
     additional explanation of code and mechanics</italic>).</p>
-    <sec id="nb-code-cell-1-nb-2" specific-use="notebook-code">
-    <code id="annotated-cell-2-nb-2" language="r script">
+    <sec id="nb-code-cell-1-nb-1" specific-use="notebook-code">
+    <code id="annotated-cell-2-nb-1" language="r script">
 # ═══ Packages ═════════════════════════════════════════════════════════════════
 
 if (!require(librarian)) install.packages(librarian)
@@ -1621,7 +1494,7 @@ if (!require(librarian)) install.packages(librarian)
         </def>
       </def-item>
     </def-list>
-    <code id="annotated-cell-3-nb-2" language="r script">
+    <code id="annotated-cell-3-nb-1" language="r script">
 library(librarian)
 
 # now putting packages on our library's shelves:
@@ -1689,13 +1562,13 @@ df_accuracy_cat_bad &lt;- read_rds(paste0(path, &quot;df_accuracy_cat_bad.RDS&qu
 # Coordinates of the aligned embeddings from the Python output
 coordinates_aligned_embeddings &lt;- read_rds(paste0(path, &quot;coordinates_aligned_embeddings.RDS&quot;))
     </code>
-    <sec id="nb-code-cell-1-output-0-nb-2" specific-use="notebook-output">
+    <sec id="nb-code-cell-1-output-0-nb-1" specific-use="notebook-output">
     <preformat>Le chargement a nécessité le package : librarian</preformat>
     </sec>
     </sec>
   </disp-quote>
 </boxed-text>
-<sec id="nb-code-cell-2-nb-2" specific-use="notebook-code">
+<sec id="nb-code-cell-2-nb-1" specific-use="notebook-code">
 <code language="r script">
 # The function takes the variance and covariance of the imagery distributions
 # as arguments
@@ -1747,6 +1620,133 @@ generate_osv_model &lt;- function(var, cov){
 df &lt;- generate_osv_model(0.03, 0)
 </code>
 </sec>
+</body>
+
+
+
+<back>
+</back>
+
+
+</sub-article>
+<sub-article article-type="notebook" id="nb-8-nb-2">
+<front-stub>
+<title-group>
+<article-title>Unsupervised alignment</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<name>
+<surname>Delem</surname>
+<given-names>Maël</given-names>
+</name>
+<string-name>Maël Delem</string-name>
+
+</contrib>
+</contrib-group>
+</front-stub>
+
+<body>
+<boxed-text>
+  <disp-quote>
+    <p><bold>Packages and setup</bold></p>
+    <p>Down below is the code to load necessary packages used for the
+    simulation and analysis, along with some setups for the whole
+    document (<italic>hover over the numbers on the far right for
+    additional explanation of code and mechanics</italic>).</p>
+    <sec id="nb-code-cell-1-nb-2" specific-use="notebook-code">
+    <code id="annotated-cell-1-nb-2" language="r script">
+# ═══ Packages ═════════════════════════════════════════════════════════════════
+
+if (!require(librarian)) install.packages(librarian)
+    </code>
+    <def-list>
+      <def-item>
+        <term>Line 4</term>
+        <def>
+          <p>The package <monospace>librairian</monospace> eases package
+          management with the “shelf” function, which automatically: (1)
+          checks if a package is installed; (2) installs it if need be;
+          (3) loads the package like the “library()” function would.</p>
+        </def>
+      </def-item>
+      <def-item>
+        <term>Line 28</term>
+        <def>
+          <p><monospace>reticulate</monospace> allows to translate and
+          transfer objects and functions from R to Python and
+          vice-versa, and was thus of primary importance for the
+          successful use of the Python toolbox on our simulated
+          data.</p>
+        </def>
+      </def-item>
+      <def-item>
+        <term>Lines 35,51</term>
+        <def>
+          <p>These are personal custom color palettes meant to extend my
+          favourite palette, the color-atypical friendly Okabe-Ito color
+          palette. The palette originally has only eight colors, but I
+          will need nine, then up to 30 for later graphs, so I extended
+          it with a hand-picked selection of mine.</p>
+        </def>
+      </def-item>
+    </def-list>
+    <code id="annotated-cell-2-nb-2" language="r script">
+library(librarian)
+
+# now putting packages on our library's shelves:
+shelf(
+  # ─── data management ─────────────────
+  holodeck,       # simulating multivariate data
+  cluster,        # dissimilarity matrices
+  
+  # ─── modelling ───────────────────────
+  mclust,         # mixture clustering
+  
+  #  data visualization ──────────────
+  # palettes
+  viridis,        # colour-blind friendly palettes
+  # interactive
+  plotly,         # interactive plots
+  ggdendro,       # dendrograms
+  seriation,      # dissimilarity plots
+  webshot2,       # HTML screenshots for Word render
+  webshot,
+  
+  # ─── essential package collections ───
+  doParallel,     # parallel execution
+  easystats,      # data analysis ecosystem
+  reticulate,     # R to Python
+  tidyverse,      # modern R ecosystem
+)
+
+# ─── Global cosmetic theme ───
+theme_set(theme_modern(base_size = 14))
+
+pal_okabe_ito &lt;- c(
+  &quot;#E69F00&quot;, &quot;#56B4E9&quot;, &quot;#009E73&quot;,                            
+  &quot;#F5C710&quot;, &quot;#0072B2&quot;, &quot;#D55E00&quot;, &quot;#CC79A7&quot;, &quot;#6c0009&quot;)      
+
+# We'll need 9 colors at some point
+pal_okabe_ito_extended &lt;- c(                                 
+  &quot;#E69F00&quot;, &quot;#56B4E9&quot;, &quot;#009E73&quot;,                           
+  &quot;#F5C710&quot;, &quot;#0072B2&quot;, &quot;#D55E00&quot;, &quot;#CC79A7&quot;, &quot;#6c0009&quot;, &quot;#414487FF&quot;)
+
+# We'll need 30 colors at another moment
+cool_30_colors &lt;- c(                                                   
+  &quot;#3d51b4&quot;, &quot;#414487FF&quot;, &quot;#003d73&quot;, &quot;#440154FF&quot;, &quot;#6c0009&quot;, &quot;#b64e4e&quot;,
+  &quot;#D55E00&quot;, &quot;#E69F00&quot;, &quot;#F5C710&quot;, &quot;#FDE725FF&quot;, &quot;#f2bb7b&quot;, &quot;#f1afad&quot;, &quot;#CC79A7&quot;, 
+  &quot;#e57774&quot;, &quot;#7AD151FF&quot;, &quot;#57b571&quot;, &quot;#318a4a&quot;, &quot;#009E73&quot;, &quot;#22A884FF&quot;, 
+  &quot;#2A788EFF&quot;, &quot;#0072B2&quot;, &quot;#2da6b5&quot;, &quot;#56B4E9&quot;, &quot;#889be0&quot;, &quot;#6677e0&quot;,   
+  &quot;#3d51b4&quot;, &quot;#414487FF&quot;, &quot;#003d73&quot;, &quot;#440154FF&quot;, &quot;#6c0009&quot;, &quot;#b64e4e&quot;  
+  )
+    </code>
+    <sec id="nb-code-cell-1-output-0-nb-2" specific-use="notebook-output">
+    <preformat>Le chargement a nécessité le package : librarian</preformat>
+    </sec>
+    </sec>
+  </disp-quote>
+</boxed-text>
 </body>
 
 
