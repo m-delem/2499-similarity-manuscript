@@ -6,13 +6,13 @@ manuscript:
   code-links:
     - text: Repository of this manuscript
       icon: github
-      repo: m-delem/2499-similarity-manuscript
+      repo: "m-delem/2499-similarity-manuscript"
 
 format:
   html:
     comments:
       utterances: 
-        repo: m-delem/2499-similarity-manuscript
+        repo: "m-delem/2499-similarity-manuscript"
     # color theme
     theme:
       dark: darkly
