@@ -235,7 +235,7 @@
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">Unravelling mental representations in aphantasia through unsupervised alignment</h1>
-            <p class="subtitle lead">Project design and data analysis simulation - testing the Quarto publish</p>
+            <p class="subtitle lead">Project design and data analysis simulation</p>
           </div>
 
     
@@ -430,215 +430,79 @@ Figure&nbsp;2.2: Arena layout of the MA protocol used by <span class="citation" 
 </div>
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(librarian)                                     </span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># now putting packages on our library's shelves:</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">shelf</span>(</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># ─── data management ─────────────────</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  holodeck,       <span class="co"># simulating multivariate data</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  cluster,        <span class="co"># dissimilarity matrices</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="co"># ─── modelling ───────────────────────</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  mclust,         <span class="co"># mixture clustering</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="co">#  data visualization ──────────────</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># palettes</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  viridis,        <span class="co"># colour-blind friendly palettes</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="co"># interactive</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  plotly,         <span class="co"># interactive plots</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  ggdendro,       <span class="co"># dendrograms</span></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  seriation,      <span class="co"># dissimilarity plots</span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  webshot2,       <span class="co"># HTML screenshots for Word render</span></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>  webshot,</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>  <span class="co"># ─── essential package collections ───</span></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>  doParallel,     <span class="co"># parallel execution</span></span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>  easystats,      <span class="co"># data analysis ecosystem</span></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>  reticulate,     <span class="co"># R to Python                    </span></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>  tidyverse,      <span class="co"># modern R ecosystem</span></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="annotated-cell-2"><pre class="sourceCode r code-annotation-code code-with-copy"><code class="sourceCode r"><span id="annotated-cell-2-1"><a href="#annotated-cell-2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(librarian)                                     </span>
+<span id="annotated-cell-2-2"><a href="#annotated-cell-2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-2-3"><a href="#annotated-cell-2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># now putting packages on our library's shelves:</span></span>
+<span id="annotated-cell-2-4"><a href="#annotated-cell-2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">shelf</span>(</span>
+<span id="annotated-cell-2-5"><a href="#annotated-cell-2-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># ─── data management ─────────────────</span></span>
+<span id="annotated-cell-2-6"><a href="#annotated-cell-2-6" aria-hidden="true" tabindex="-1"></a>  holodeck,       <span class="co"># simulating multivariate data</span></span>
+<span id="annotated-cell-2-7"><a href="#annotated-cell-2-7" aria-hidden="true" tabindex="-1"></a>  cluster,        <span class="co"># dissimilarity matrices</span></span>
+<span id="annotated-cell-2-8"><a href="#annotated-cell-2-8" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="annotated-cell-2-9"><a href="#annotated-cell-2-9" aria-hidden="true" tabindex="-1"></a>  <span class="co"># ─── modelling ───────────────────────</span></span>
+<span id="annotated-cell-2-10"><a href="#annotated-cell-2-10" aria-hidden="true" tabindex="-1"></a>  mclust,         <span class="co"># mixture clustering</span></span>
+<span id="annotated-cell-2-11"><a href="#annotated-cell-2-11" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="annotated-cell-2-12"><a href="#annotated-cell-2-12" aria-hidden="true" tabindex="-1"></a>  <span class="co">#  data visualization ──────────────</span></span>
+<span id="annotated-cell-2-13"><a href="#annotated-cell-2-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># palettes</span></span>
+<span id="annotated-cell-2-14"><a href="#annotated-cell-2-14" aria-hidden="true" tabindex="-1"></a>  viridis,        <span class="co"># colour-blind friendly palettes</span></span>
+<span id="annotated-cell-2-15"><a href="#annotated-cell-2-15" aria-hidden="true" tabindex="-1"></a>  <span class="co"># interactive</span></span>
+<span id="annotated-cell-2-16"><a href="#annotated-cell-2-16" aria-hidden="true" tabindex="-1"></a>  plotly,         <span class="co"># interactive plots</span></span>
+<span id="annotated-cell-2-17"><a href="#annotated-cell-2-17" aria-hidden="true" tabindex="-1"></a>  ggdendro,       <span class="co"># dendrograms</span></span>
+<span id="annotated-cell-2-18"><a href="#annotated-cell-2-18" aria-hidden="true" tabindex="-1"></a>  seriation,      <span class="co"># dissimilarity plots</span></span>
+<span id="annotated-cell-2-19"><a href="#annotated-cell-2-19" aria-hidden="true" tabindex="-1"></a>  webshot2,       <span class="co"># HTML screenshots for Word render</span></span>
+<span id="annotated-cell-2-20"><a href="#annotated-cell-2-20" aria-hidden="true" tabindex="-1"></a>  webshot,</span>
+<span id="annotated-cell-2-21"><a href="#annotated-cell-2-21" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="annotated-cell-2-22"><a href="#annotated-cell-2-22" aria-hidden="true" tabindex="-1"></a>  <span class="co"># ─── essential package collections ───</span></span>
+<span id="annotated-cell-2-23"><a href="#annotated-cell-2-23" aria-hidden="true" tabindex="-1"></a>  doParallel,     <span class="co"># parallel execution</span></span>
+<span id="annotated-cell-2-24"><a href="#annotated-cell-2-24" aria-hidden="true" tabindex="-1"></a>  easystats,      <span class="co"># data analysis ecosystem</span></span>
+<span id="annotated-cell-2-25"><a href="#annotated-cell-2-25" aria-hidden="true" tabindex="-1"></a>  reticulate,     <span class="co"># R to Python                    </span></span>
+<span id="annotated-cell-2-26"><a href="#annotated-cell-2-26" aria-hidden="true" tabindex="-1"></a>  tidyverse,      <span class="co"># modern R ecosystem</span></span>
+<span id="annotated-cell-2-27"><a href="#annotated-cell-2-27" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="annotated-cell-2-28"><a href="#annotated-cell-2-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-2-29"><a href="#annotated-cell-2-29" aria-hidden="true" tabindex="-1"></a><span class="co"># ─── Global cosmetic theme ───</span></span>
+<span id="annotated-cell-2-30"><a href="#annotated-cell-2-30" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_modern</span>(<span class="at">base_size =</span> <span class="dv">14</span>))</span>
+<span id="annotated-cell-2-31"><a href="#annotated-cell-2-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-2-32"><a href="#annotated-cell-2-32" aria-hidden="true" tabindex="-1"></a>pal_okabe_ito <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="annotated-cell-2-33"><a href="#annotated-cell-2-33" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#E69F00"</span>, <span class="st">"#56B4E9"</span>, <span class="st">"#009E73"</span>,                            </span>
+<span id="annotated-cell-2-34"><a href="#annotated-cell-2-34" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#F5C710"</span>, <span class="st">"#0072B2"</span>, <span class="st">"#D55E00"</span>, <span class="st">"#CC79A7"</span>, <span class="st">"#6c0009"</span>)      </span>
+<span id="annotated-cell-2-35"><a href="#annotated-cell-2-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-2-36"><a href="#annotated-cell-2-36" aria-hidden="true" tabindex="-1"></a><span class="co"># We'll need 9 colors at some point</span></span>
+<span id="annotated-cell-2-37"><a href="#annotated-cell-2-37" aria-hidden="true" tabindex="-1"></a>pal_okabe_ito_extended <span class="ot">&lt;-</span> <span class="fu">c</span>(                                 </span>
+<span id="annotated-cell-2-38"><a href="#annotated-cell-2-38" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#E69F00"</span>, <span class="st">"#56B4E9"</span>, <span class="st">"#009E73"</span>,                           </span>
+<span id="annotated-cell-2-39"><a href="#annotated-cell-2-39" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#F5C710"</span>, <span class="st">"#0072B2"</span>, <span class="st">"#D55E00"</span>, <span class="st">"#CC79A7"</span>, <span class="st">"#6c0009"</span>, <span class="st">"#414487FF"</span>)</span>
+<span id="annotated-cell-2-40"><a href="#annotated-cell-2-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-2-41"><a href="#annotated-cell-2-41" aria-hidden="true" tabindex="-1"></a><span class="co"># We'll need 30 colors at another moment</span></span>
+<span id="annotated-cell-2-42"><a href="#annotated-cell-2-42" aria-hidden="true" tabindex="-1"></a>cool_30_colors <span class="ot">&lt;-</span> <span class="fu">c</span>(                                                   </span>
+<span id="annotated-cell-2-43"><a href="#annotated-cell-2-43" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#3d51b4"</span>, <span class="st">"#414487FF"</span>, <span class="st">"#003d73"</span>, <span class="st">"#440154FF"</span>, <span class="st">"#6c0009"</span>, <span class="st">"#b64e4e"</span>,</span>
+<span id="annotated-cell-2-44"><a href="#annotated-cell-2-44" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#D55E00"</span>, <span class="st">"#E69F00"</span>, <span class="st">"#F5C710"</span>, <span class="st">"#FDE725FF"</span>, <span class="st">"#f2bb7b"</span>, <span class="st">"#f1afad"</span>, <span class="st">"#CC79A7"</span>, </span>
+<span id="annotated-cell-2-45"><a href="#annotated-cell-2-45" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#e57774"</span>, <span class="st">"#7AD151FF"</span>, <span class="st">"#57b571"</span>, <span class="st">"#318a4a"</span>, <span class="st">"#009E73"</span>, <span class="st">"#22A884FF"</span>, </span>
+<span id="annotated-cell-2-46"><a href="#annotated-cell-2-46" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#2A788EFF"</span>, <span class="st">"#0072B2"</span>, <span class="st">"#2da6b5"</span>, <span class="st">"#56B4E9"</span>, <span class="st">"#889be0"</span>, <span class="st">"#6677e0"</span>,   </span>
+<span id="annotated-cell-2-47"><a href="#annotated-cell-2-47" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#3d51b4"</span>, <span class="st">"#414487FF"</span>, <span class="st">"#003d73"</span>, <span class="st">"#440154FF"</span>, <span class="st">"#6c0009"</span>, <span class="st">"#b64e4e"</span>  </span>
+<span id="annotated-cell-2-48"><a href="#annotated-cell-2-48" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="annotated-cell-2-49"><a href="#annotated-cell-2-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-2-50"><a href="#annotated-cell-2-50" aria-hidden="true" tabindex="-1"></a>path <span class="ot">=</span> <span class="st">"notebooks/data/"</span></span>
+<span id="annotated-cell-2-51"><a href="#annotated-cell-2-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-2-52"><a href="#annotated-cell-2-52" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df.RDS"</span>))</span>
+<span id="annotated-cell-2-53"><a href="#annotated-cell-2-53" aria-hidden="true" tabindex="-1"></a>df_embeds <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_embeds.RDS"</span>))</span>
+<span id="annotated-cell-2-54"><a href="#annotated-cell-2-54" aria-hidden="true" tabindex="-1"></a><span class="co"># Categorical and visual embeddings</span></span>
+<span id="annotated-cell-2-55"><a href="#annotated-cell-2-55" aria-hidden="true" tabindex="-1"></a>df_embeds_categ  <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_embeds_categ.RDS"</span>))</span>
+<span id="annotated-cell-2-56"><a href="#annotated-cell-2-56" aria-hidden="true" tabindex="-1"></a>df_embeds_visual <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_embeds_visual.RDS"</span>))</span>
+<span id="annotated-cell-2-57"><a href="#annotated-cell-2-57" aria-hidden="true" tabindex="-1"></a><span class="co"># Subject embeddings per sub-group</span></span>
+<span id="annotated-cell-2-58"><a href="#annotated-cell-2-58" aria-hidden="true" tabindex="-1"></a>df_embed_c_sub  <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_embed_c_sub.RDS"</span>))</span>
+<span id="annotated-cell-2-59"><a href="#annotated-cell-2-59" aria-hidden="true" tabindex="-1"></a>df_embed_cs_sub <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_embed_cs_sub.RDS"</span>))</span>
+<span id="annotated-cell-2-60"><a href="#annotated-cell-2-60" aria-hidden="true" tabindex="-1"></a>df_embed_v_sub  <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_embed_v_sub.RDS"</span>))</span>
+<span id="annotated-cell-2-61"><a href="#annotated-cell-2-61" aria-hidden="true" tabindex="-1"></a>df_embed_vs_sub <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_embed_vs_sub.RDS"</span>))</span>
+<span id="annotated-cell-2-62"><a href="#annotated-cell-2-62" aria-hidden="true" tabindex="-1"></a><span class="co"># Accuracy of the unsupervised alignment (bad = not tidy data)</span></span>
+<span id="annotated-cell-2-63"><a href="#annotated-cell-2-63" aria-hidden="true" tabindex="-1"></a>df_accuracy_all_bad <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_accuracy_all_bad.RDS"</span>))</span>
+<span id="annotated-cell-2-64"><a href="#annotated-cell-2-64" aria-hidden="true" tabindex="-1"></a>df_accuracy_cat_bad <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_accuracy_cat_bad.RDS"</span>))</span>
+<span id="annotated-cell-2-65"><a href="#annotated-cell-2-65" aria-hidden="true" tabindex="-1"></a><span class="co"># Coordinates of the aligned embeddings from the Python output</span></span>
+<span id="annotated-cell-2-66"><a href="#annotated-cell-2-66" aria-hidden="true" tabindex="-1"></a>coordinates_aligned_embeddings <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"coordinates_aligned_embeddings.RDS"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-  These packages will be installed:
-
-  'holodeck', 'mclust', 'viridis', 'plotly', 'ggdendro', 'seriation',
-  'webshot2', 'webshot', 'doParallel', 'easystats', 'reticulate',
-  'tidyverse'
-
-  It may take some time.</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>installation des dépendances 'sys', 'bit', 'askpass', 'ps', 'AsioHeaders', 'rematch', 'bit64', 'prettyunits', 'generics', 'tidyselect', 'fansi', 'pkgconfig', 'gtable', 'isoband', 'farver', 'labeling', 'munsell', 'curl', 'openssl', 'cpp11', 'permute', 'processx', 'websocket', 'rprojroot', 'backports', 'blob', 'DBI', 'gargle', 'uuid', 'cellranger', 'ids', 'rematch2', 'timechange', 'utf8', 'systemfonts', 'textshaping', 'clipr', 'crayon', 'vroom', 'tzdb', 'progress', 'selectr', 'dplyr', 'tibble', 'purrr', 'assertthat', 'viridisLite', 'ggplot2', 'gridExtra', 'scales', 'httr', 'htmlwidgets', 'tidyr', 'RColorBrewer', 'lazyeval', 'crosstalk', 'data.table', 'promises', 'ca', 'colorspace', 'foreach', 'gclus', 'qap', 'registry', 'TSP', 'vegan', 'callr', 'chromote', 'later', 'iterators', 'bayestestR', 'correlation', 'datawizard', 'effectsize', 'insight', 'modelbased', 'parameters', 'performance', 'report', 'see', 'Rcpp', 'RcppTOML', 'here', 'png', 'withr', 'broom', 'conflicted', 'dbplyr', 'dtplyr', 'forcats', 'googledrive', 'googlesheets4', 'haven', 'hms', 'lubridate', 'modelr', 'pillar', 'ragg', 'readr', 'readxl', 'reprex', 'rstudioapi', 'rvest', 'xml2'</code></pre>
-</div>
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="annotated-cell-3"><pre class="sourceCode r code-annotation-code code-with-copy"><code class="sourceCode r"><span id="annotated-cell-3-1"><a href="#annotated-cell-3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ─── Global cosmetic theme ───</span></span>
-<span id="annotated-cell-3-2"><a href="#annotated-cell-3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_modern</span>(<span class="at">base_size =</span> <span class="dv">14</span>))</span>
-<span id="annotated-cell-3-3"><a href="#annotated-cell-3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="annotated-cell-3-4"><a href="#annotated-cell-3-4" aria-hidden="true" tabindex="-1"></a>pal_okabe_ito <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="annotated-cell-3-5"><a href="#annotated-cell-3-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#E69F00"</span>, <span class="st">"#56B4E9"</span>, <span class="st">"#009E73"</span>,                            </span>
-<span id="annotated-cell-3-6"><a href="#annotated-cell-3-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#F5C710"</span>, <span class="st">"#0072B2"</span>, <span class="st">"#D55E00"</span>, <span class="st">"#CC79A7"</span>, <span class="st">"#6c0009"</span>)      </span>
-<span id="annotated-cell-3-7"><a href="#annotated-cell-3-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="annotated-cell-3-8"><a href="#annotated-cell-3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># We'll need 9 colors at some point</span></span>
-<span id="annotated-cell-3-9"><a href="#annotated-cell-3-9" aria-hidden="true" tabindex="-1"></a>pal_okabe_ito_extended <span class="ot">&lt;-</span> <span class="fu">c</span>(                                 </span>
-<span id="annotated-cell-3-10"><a href="#annotated-cell-3-10" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#E69F00"</span>, <span class="st">"#56B4E9"</span>, <span class="st">"#009E73"</span>,                           </span>
-<span id="annotated-cell-3-11"><a href="#annotated-cell-3-11" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#F5C710"</span>, <span class="st">"#0072B2"</span>, <span class="st">"#D55E00"</span>, <span class="st">"#CC79A7"</span>, <span class="st">"#6c0009"</span>, <span class="st">"#414487FF"</span>)</span>
-<span id="annotated-cell-3-12"><a href="#annotated-cell-3-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="annotated-cell-3-13"><a href="#annotated-cell-3-13" aria-hidden="true" tabindex="-1"></a><span class="co"># We'll need 30 colors at another moment</span></span>
-<span id="annotated-cell-3-14"><a href="#annotated-cell-3-14" aria-hidden="true" tabindex="-1"></a>cool_30_colors <span class="ot">&lt;-</span> <span class="fu">c</span>(                                                   </span>
-<span id="annotated-cell-3-15"><a href="#annotated-cell-3-15" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#3d51b4"</span>, <span class="st">"#414487FF"</span>, <span class="st">"#003d73"</span>, <span class="st">"#440154FF"</span>, <span class="st">"#6c0009"</span>, <span class="st">"#b64e4e"</span>,</span>
-<span id="annotated-cell-3-16"><a href="#annotated-cell-3-16" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#D55E00"</span>, <span class="st">"#E69F00"</span>, <span class="st">"#F5C710"</span>, <span class="st">"#FDE725FF"</span>, <span class="st">"#f2bb7b"</span>, <span class="st">"#f1afad"</span>, <span class="st">"#CC79A7"</span>, </span>
-<span id="annotated-cell-3-17"><a href="#annotated-cell-3-17" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#e57774"</span>, <span class="st">"#7AD151FF"</span>, <span class="st">"#57b571"</span>, <span class="st">"#318a4a"</span>, <span class="st">"#009E73"</span>, <span class="st">"#22A884FF"</span>, </span>
-<span id="annotated-cell-3-18"><a href="#annotated-cell-3-18" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#2A788EFF"</span>, <span class="st">"#0072B2"</span>, <span class="st">"#2da6b5"</span>, <span class="st">"#56B4E9"</span>, <span class="st">"#889be0"</span>, <span class="st">"#6677e0"</span>,   </span>
-<span id="annotated-cell-3-19"><a href="#annotated-cell-3-19" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#3d51b4"</span>, <span class="st">"#414487FF"</span>, <span class="st">"#003d73"</span>, <span class="st">"#440154FF"</span>, <span class="st">"#6c0009"</span>, <span class="st">"#b64e4e"</span>  </span>
-<span id="annotated-cell-3-20"><a href="#annotated-cell-3-20" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="annotated-cell-3-21"><a href="#annotated-cell-3-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="annotated-cell-3-22"><a href="#annotated-cell-3-22" aria-hidden="true" tabindex="-1"></a>path <span class="ot">=</span> <span class="st">"notebooks/data/"</span></span>
-<span id="annotated-cell-3-23"><a href="#annotated-cell-3-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="annotated-cell-3-24"><a href="#annotated-cell-3-24" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df.RDS"</span>))</span>
-<span id="annotated-cell-3-25"><a href="#annotated-cell-3-25" aria-hidden="true" tabindex="-1"></a>df_embeds <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_embeds.RDS"</span>))</span>
-<span id="annotated-cell-3-26"><a href="#annotated-cell-3-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Categorical and visual embeddings</span></span>
-<span id="annotated-cell-3-27"><a href="#annotated-cell-3-27" aria-hidden="true" tabindex="-1"></a>df_embeds_categ  <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_embeds_categ.RDS"</span>))</span>
-<span id="annotated-cell-3-28"><a href="#annotated-cell-3-28" aria-hidden="true" tabindex="-1"></a>df_embeds_visual <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_embeds_visual.RDS"</span>))</span>
-<span id="annotated-cell-3-29"><a href="#annotated-cell-3-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Subject embeddings per sub-group</span></span>
-<span id="annotated-cell-3-30"><a href="#annotated-cell-3-30" aria-hidden="true" tabindex="-1"></a>df_embed_c_sub  <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_embed_c_sub.RDS"</span>))</span>
-<span id="annotated-cell-3-31"><a href="#annotated-cell-3-31" aria-hidden="true" tabindex="-1"></a>df_embed_cs_sub <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_embed_cs_sub.RDS"</span>))</span>
-<span id="annotated-cell-3-32"><a href="#annotated-cell-3-32" aria-hidden="true" tabindex="-1"></a>df_embed_v_sub  <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_embed_v_sub.RDS"</span>))</span>
-<span id="annotated-cell-3-33"><a href="#annotated-cell-3-33" aria-hidden="true" tabindex="-1"></a>df_embed_vs_sub <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_embed_vs_sub.RDS"</span>))</span>
-<span id="annotated-cell-3-34"><a href="#annotated-cell-3-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Accuracy of the unsupervised alignment (bad = not tidy data)</span></span>
-<span id="annotated-cell-3-35"><a href="#annotated-cell-3-35" aria-hidden="true" tabindex="-1"></a>df_accuracy_all_bad <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_accuracy_all_bad.RDS"</span>))</span>
-<span id="annotated-cell-3-36"><a href="#annotated-cell-3-36" aria-hidden="true" tabindex="-1"></a>df_accuracy_cat_bad <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_accuracy_cat_bad.RDS"</span>))</span>
-<span id="annotated-cell-3-37"><a href="#annotated-cell-3-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Coordinates of the aligned embeddings from the Python output</span></span>
-<span id="annotated-cell-3-38"><a href="#annotated-cell-3-38" aria-hidden="true" tabindex="-1"></a>coordinates_aligned_embeddings <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"coordinates_aligned_embeddings.RDS"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>le package 'sys' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'bit' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'askpass' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'ps' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'AsioHeaders' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'rematch' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'bit64' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'prettyunits' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'generics' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'tidyselect' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'fansi' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'pkgconfig' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'gtable' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'isoband' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'farver' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'labeling' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'munsell' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'curl' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'openssl' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'cpp11' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'permute' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'processx' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'websocket' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'rprojroot' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'backports' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'blob' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'DBI' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'gargle' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'uuid' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'cellranger' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'ids' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'rematch2' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'timechange' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'utf8' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'systemfonts' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'textshaping' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'clipr' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'crayon' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'vroom' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'tzdb' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'progress' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'selectr' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'dplyr' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'tibble' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'purrr' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'assertthat' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'viridisLite' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'ggplot2' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'gridExtra' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'scales' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'httr' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'htmlwidgets' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'tidyr' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'RColorBrewer' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'lazyeval' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'crosstalk' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'data.table' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'promises' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'ca' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'colorspace' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'foreach' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'gclus' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'qap' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'registry' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'TSP' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'vegan' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'callr' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'chromote' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'later' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'iterators' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'bayestestR' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'correlation' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'datawizard' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'effectsize' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'insight' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'modelbased' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'parameters' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'performance' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'report' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'see' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'Rcpp' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'RcppTOML' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'here' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'png' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'withr' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'broom' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'conflicted' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'dbplyr' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'dtplyr' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'forcats' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'googledrive' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'googlesheets4' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'haven' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'hms' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'lubridate' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'modelr' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'pillar' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'ragg' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'readr' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'readxl' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'reprex' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'rstudioapi' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'rvest' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'xml2' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'holodeck' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'mclust' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'viridis' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'plotly' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'ggdendro' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'seriation' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'webshot2' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'webshot' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'doParallel' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'easystats' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'reticulate' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-le package 'tidyverse' a été décompressé et les sommes MD5 ont été vérifiées avec succés
-
-Les packages binaires téléchargés sont dans
-    C:\Users\Mael\AppData\Local\Temp\Rtmp6z6XcT\downloaded_packages</code></pre>
-</div>
 </div></div>
 <section id="visual-spatial-verbal-model-of-cognitive-profiles" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="visual-spatial-verbal-model-of-cognitive-profiles"><span class="header-section-number">3.1</span> Visual-spatial-verbal model of cognitive profiles</h2>
 <p>One of the objectives of the study would be to link the subjective cogntive profiles of individuals with their representational structures. To evaluate these profiles, we are going to use psychometric questionnaires evaluating the visual-object, spatial, and verbal dimensions of imagery which will yield three scores, one for each dimension.</p>
 <p>We are going to simulate 30 participants presenting four different cognitive profiles, that I defined as, respectively, <em>verbal</em> aphantasics, <em>spatial</em> aphantasics, <em>spatial</em> phantasics, and <em>visual</em> phantasics. Their imagery abilities are summarised in <a href="#tbl-imageries" class="quarto-xref">Table&nbsp;3.1</a>.</p>
-<p>To simulate these four sub-groups, we use the <code>holodeck</code> R package to generate multivariate normal distributions of scores on these three dimensions for each sub-group. For instance, verbal aphantasics have normally distributed visual imagery scores centered around a mean of 0 (normalized, so negative scores are possible), 0.4 for spatial imagery, and 0.7 for verbal style; Spatial aphantasics have means of 0 for visual, 0.75 spatial, and 0.3 for verbal; etc. The numbers are arbitrary, but have been chosen by trial-and-error to obtain a model that is both well-defined and not exagerrated. The 30 subjects’ imagery profiles are represented in the three dimensional space of the visual-spatial-verbal dimensions in <a href="#fig-plot_osv_model" class="quarto-xref">Figure&nbsp;3.1</a>.</p>
+<p>To simulate these four sub-groups, we use the <code>holodeck</code> R package to generate multivariate normal distributions of scores on these three dimensions for each sub-group. For instance, verbal aphantasics have normally distributed visual imagery scores centered around a mean of 0 (normalized, so negative scores are possible), 0.4 for spatial imagery, and 0.7 for verbal style; Spatial aphantasics have means of 0 for visual, 0.75 spatial, and 0.3 for verbal; etc. The numbers are arbitrary, but have been chosen by trial-and-error to obtain a model that is both well-defined and not exagerrated. The 30 subjects’ imagery profiles are represented in the three dimensional space of the visual-spatial-verbal dimensions in <a href="#fig-plot-osv-model" class="quarto-xref">Figure&nbsp;3.1</a>.</p>
 <div id="tbl-imageries" class="quarto-float anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-imageries-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -685,114 +549,114 @@ Table&nbsp;3.1: Imagery abilities of the four hypothesized cognitive profiles.
 </figure>
 </div>
 <p>Down below is the code to generate these scores.</p>
-<div class="quarto-embed-nb-cell" data-notebook="/home/runner/work/2499-similarity-manuscript/2499-similarity-manuscript/notebooks/simulation-code.qmd" data-notebook-title="Simulation code" data-notebook-cellid="cell-osv_model">
-<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [2]:</pre></div><div id="osv_model" class="cell">
+<div class="quarto-embed-nb-cell" data-notebook="/home/runner/work/2499-similarity-manuscript/2499-similarity-manuscript/notebooks/simulation-code.qmd" data-notebook-title="Simulation code" data-notebook-cellid="cell-osv-model">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [2]:</pre></div><div id="osv-model" class="cell">
 <details class="code-fold">
 <summary>Generating hypothetical imagery values for 30 subjects</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The function takes the variance and covariance of the imagery distributions</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co"># as arguments</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>generate_osv_model <span class="op">&lt;-</span> function(var, cov){</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  df <span class="op">&lt;-</span> </span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    tibble(group <span class="op">=</span> rep(c(<span class="st">"aph"</span>, <span class="st">"phant"</span>), each <span class="op">=</span> <span class="dv">8</span>)) <span class="op">|&gt;</span> </span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    group_by(group) <span class="op">|&gt;</span> </span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    mutate(</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>      spatial_group <span class="op">=</span> c(rep(<span class="st">"spa_low"</span>, <span class="dv">4</span>), rep(<span class="st">"spa_high"</span>, <span class="dv">4</span>)),</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>      vis_spa_group <span class="op">=</span> paste0(group, <span class="st">"_"</span>, spatial_group),</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>      verbal_group <span class="op">=</span> <span class="st">"verbal_low"</span>,</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>      verbal_group  <span class="op">=</span> case_when(</span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>        vis_spa_group <span class="op">==</span> <span class="st">"aph_spa_low"</span> <span class="op">~</span> <span class="st">"verbal_high"</span>, </span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>        vis_spa_group <span class="op">==</span> <span class="st">"phant_spa_low"</span> <span class="op">~</span> <span class="st">"verbal_mid"</span>,</span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>        TRUE <span class="op">~</span> verbal_group)</span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    ) <span class="op">|&gt;</span> </span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    group_by(vis_spa_group) <span class="op">|&gt;</span> </span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># ─── visual ───</span></span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>    sim_discr(</span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>      n_vars <span class="op">=</span> <span class="dv">1</span>, </span>
-<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>      var <span class="op">=</span> var, </span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>      cov <span class="op">=</span> cov, </span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>      <span class="co"># aph_s, aph_v, phant_s, phant_v</span></span>
-<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>      group_means <span class="op">=</span> c(<span class="dv">0</span>, <span class="dv">0</span>, <span class="fl">0.6</span>, <span class="fl">0.87</span>), </span>
-<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>      name <span class="op">=</span> <span class="st">"v"</span>) <span class="op">|&gt;</span> </span>
-<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># ─── spatial ───</span></span>
-<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>    sim_discr(</span>
-<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>      n_vars <span class="op">=</span> <span class="dv">1</span>,  </span>
-<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>      var <span class="op">=</span> var, </span>
-<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>      cov <span class="op">=</span> cov, </span>
-<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>      <span class="co"># aph_s, aph_v, phant_s, phant_v</span></span>
-<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>      group_means <span class="op">=</span> c(<span class="fl">0.75</span>, <span class="fl">0.4</span>, <span class="fl">0.7</span>, <span class="fl">0.3</span>), </span>
-<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>      name <span class="op">=</span> <span class="st">"s"</span>) <span class="op">|&gt;</span></span>
-<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>    <span class="co"># ─── verbal ───</span></span>
-<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>    sim_discr(</span>
-<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>      n_vars <span class="op">=</span> <span class="dv">1</span>,  </span>
-<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>      var <span class="op">=</span> var, </span>
-<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>      cov <span class="op">=</span> cov, </span>
-<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>      <span class="co"># aph_s, aph_v, phant_s, phant_v</span></span>
-<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>      group_means <span class="op">=</span> c(<span class="fl">0.3</span>, <span class="fl">0.7</span>, <span class="fl">0.3</span>, <span class="fl">0.5</span>), </span>
-<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>      name <span class="op">=</span> <span class="st">"i"</span>) <span class="op">|&gt;</span></span>
-<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>    rename(</span>
-<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>      visual_imagery  <span class="op">=</span> v_1,</span>
-<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a>      spatial_imagery <span class="op">=</span> s_1,</span>
-<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>      verbal_profile  <span class="op">=</span> i_1</span>
-<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a>      )</span>
-<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a>df <span class="op">&lt;-</span> generate_osv_model(<span class="fl">0.03</span>, <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The function takes the variance and covariance of the imagery distributions</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># as arguments</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>generate_osv_model <span class="op">&lt;-</span> function(var, cov){</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  df <span class="op">&lt;-</span> </span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    tibble(group <span class="op">=</span> rep(c(<span class="st">"aph"</span>, <span class="st">"phant"</span>), each <span class="op">=</span> <span class="dv">8</span>)) <span class="op">|&gt;</span> </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    group_by(group) <span class="op">|&gt;</span> </span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    mutate(</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>      spatial_group <span class="op">=</span> c(rep(<span class="st">"spa_low"</span>, <span class="dv">4</span>), rep(<span class="st">"spa_high"</span>, <span class="dv">4</span>)),</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>      vis_spa_group <span class="op">=</span> paste0(group, <span class="st">"_"</span>, spatial_group),</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>      verbal_group <span class="op">=</span> <span class="st">"verbal_low"</span>,</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>      verbal_group  <span class="op">=</span> case_when(</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>        vis_spa_group <span class="op">==</span> <span class="st">"aph_spa_low"</span> <span class="op">~</span> <span class="st">"verbal_high"</span>, </span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>        vis_spa_group <span class="op">==</span> <span class="st">"phant_spa_low"</span> <span class="op">~</span> <span class="st">"verbal_mid"</span>,</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>        TRUE <span class="op">~</span> verbal_group)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    ) <span class="op">|&gt;</span> </span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    group_by(vis_spa_group) <span class="op">|&gt;</span> </span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># ─── visual ───</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    sim_discr(</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>      n_vars <span class="op">=</span> <span class="dv">1</span>, </span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>      var <span class="op">=</span> var, </span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>      cov <span class="op">=</span> cov, </span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>      <span class="co"># aph_s, aph_v, phant_s, phant_v</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>      group_means <span class="op">=</span> c(<span class="dv">0</span>, <span class="dv">0</span>, <span class="fl">0.6</span>, <span class="fl">0.87</span>), </span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>      name <span class="op">=</span> <span class="st">"v"</span>) <span class="op">|&gt;</span> </span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># ─── spatial ───</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>    sim_discr(</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>      n_vars <span class="op">=</span> <span class="dv">1</span>,  </span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>      var <span class="op">=</span> var, </span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>      cov <span class="op">=</span> cov, </span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>      <span class="co"># aph_s, aph_v, phant_s, phant_v</span></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>      group_means <span class="op">=</span> c(<span class="fl">0.75</span>, <span class="fl">0.4</span>, <span class="fl">0.7</span>, <span class="fl">0.3</span>), </span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>      name <span class="op">=</span> <span class="st">"s"</span>) <span class="op">|&gt;</span></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>    <span class="co"># ─── verbal ───</span></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>    sim_discr(</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>      n_vars <span class="op">=</span> <span class="dv">1</span>,  </span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>      var <span class="op">=</span> var, </span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>      cov <span class="op">=</span> cov, </span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>      <span class="co"># aph_s, aph_v, phant_s, phant_v</span></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>      group_means <span class="op">=</span> c(<span class="fl">0.3</span>, <span class="fl">0.7</span>, <span class="fl">0.3</span>, <span class="fl">0.5</span>), </span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>      name <span class="op">=</span> <span class="st">"i"</span>) <span class="op">|&gt;</span></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>    rename(</span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>      visual_imagery  <span class="op">=</span> v_1,</span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>      spatial_imagery <span class="op">=</span> s_1,</span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>      verbal_profile  <span class="op">=</span> i_1</span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>df <span class="op">&lt;-</span> generate_osv_model(<span class="fl">0.03</span>, <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div></div>
 </div>
-<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [3]:</pre></div><div id="cell-fig-plot_osv_model" class="cell">
+<div class="cell-container code-fold"><div class="cell-decorator"><pre>In [3]:</pre></div><div id="cell-fig-plot-osv-model" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>plotting_osv_model <span class="ot">&lt;-</span> <span class="cf">function</span>(df, grouping_variable, size){</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  df <span class="sc">|&gt;</span> </span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">plot_ly</span>(</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>      <span class="at">x =</span> <span class="sc">~</span>visual_imagery,</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>      <span class="at">y =</span> <span class="sc">~</span>spatial_imagery,</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>      <span class="at">z =</span> <span class="sc">~</span>verbal_profile,</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>      <span class="at">color =</span> <span class="sc">~</span>df[[grouping_variable]],</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>      <span class="at">text  =</span> <span class="sc">~</span>df[[grouping_variable]],</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>      <span class="at">colors =</span> <span class="fu">c</span>(<span class="st">"#E69F00"</span>, <span class="st">"#56B4E9"</span>, <span class="st">"#009E73"</span>, <span class="st">"#F5C710"</span>),</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>      <span class="at">type =</span> <span class="st">"scatter3d"</span>,</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>      <span class="at">mode =</span> <span class="st">"markers+text"</span>,</span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>      <span class="at">marker =</span> <span class="fu">list</span>(<span class="at">size =</span> size),</span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>      <span class="at">textfont =</span> <span class="fu">list</span>(<span class="at">size =</span> size <span class="sc">+</span> <span class="dv">4</span>)</span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">|&gt;</span> </span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">layout</span>(</span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>      <span class="at">scene =</span> <span class="fu">list</span>(</span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>        <span class="at">xaxis =</span> <span class="fu">list</span>(</span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>          <span class="at">title =</span> <span class="fu">list</span>(<span class="at">text =</span> <span class="st">"Visual imagery"</span>, <span class="at">font =</span> <span class="fu">list</span>(<span class="at">color =</span> <span class="st">"grey"</span>)),</span>
-<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>          <span class="at">tickfont =</span> <span class="fu">list</span>(<span class="at">color =</span> <span class="st">"grey"</span>)</span>
-<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>          ),</span>
-<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>        <span class="at">yaxis =</span> <span class="fu">list</span>(</span>
-<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>          <span class="at">title =</span> <span class="fu">list</span>(<span class="at">text =</span> <span class="st">"Spatial imagery"</span>, <span class="at">font =</span> <span class="fu">list</span>(<span class="at">color =</span> <span class="st">"grey"</span>)),</span>
-<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>          <span class="at">tickfont =</span> <span class="fu">list</span>(<span class="at">color =</span> <span class="st">"grey"</span>)</span>
-<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>          ),</span>
-<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>        <span class="at">zaxis =</span> <span class="fu">list</span>(</span>
-<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>          <span class="at">title =</span> <span class="fu">list</span>(<span class="at">text =</span> <span class="st">"Verbal profile"</span>, <span class="at">font =</span> <span class="fu">list</span>(<span class="at">color =</span> <span class="st">"grey"</span>)),</span>
-<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>          <span class="at">tickfont =</span> <span class="fu">list</span>(<span class="at">color =</span> <span class="st">"grey"</span>)</span>
-<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>          )</span>
-<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>      ),</span>
-<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>      <span class="at">legend =</span> <span class="fu">list</span>(<span class="at">title =</span> <span class="fu">list</span>(<span class="at">text =</span> <span class="st">"Group"</span>)),</span>
-<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>      <span class="at">paper_bgcolor =</span> <span class="st">"transparent"</span></span>
-<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>      )</span>
-<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>df <span class="sc">|&gt;</span> </span>
-<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">vis_spa_group =</span> <span class="fu">case_when</span>(</span>
-<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>    vis_spa_group <span class="sc">==</span> <span class="st">"aph_spa_high"</span> <span class="sc">~</span> <span class="st">"Aph. spatial"</span>,</span>
-<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>    vis_spa_group <span class="sc">==</span> <span class="st">"aph_spa_low"</span>  <span class="sc">~</span> <span class="st">"Aph. verbal"</span>,</span>
-<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>    vis_spa_group <span class="sc">==</span> <span class="st">"phant_spa_high"</span> <span class="sc">~</span> <span class="st">"Phant. spatial"</span>,</span>
-<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>    vis_spa_group <span class="sc">==</span> <span class="st">"phant_spa_low"</span>  <span class="sc">~</span> <span class="st">"Phant. visual"</span></span>
-<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">|&gt;</span> </span>
-<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plotting_osv_model</span>(<span class="at">grouping_variable =</span> <span class="st">"vis_spa_group"</span>, <span class="at">size =</span> <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>plotting_osv_model <span class="ot">&lt;-</span> <span class="cf">function</span>(df, grouping_variable, size){</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  df <span class="sc">|&gt;</span> </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">plot_ly</span>(</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>      <span class="at">x =</span> <span class="sc">~</span>visual_imagery,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>      <span class="at">y =</span> <span class="sc">~</span>spatial_imagery,</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>      <span class="at">z =</span> <span class="sc">~</span>verbal_profile,</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>      <span class="at">color =</span> <span class="sc">~</span>df[[grouping_variable]],</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>      <span class="at">text  =</span> <span class="sc">~</span>df[[grouping_variable]],</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>      <span class="at">colors =</span> <span class="fu">c</span>(<span class="st">"#E69F00"</span>, <span class="st">"#56B4E9"</span>, <span class="st">"#009E73"</span>, <span class="st">"#F5C710"</span>),</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>      <span class="at">type =</span> <span class="st">"scatter3d"</span>,</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>      <span class="at">mode =</span> <span class="st">"markers+text"</span>,</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>      <span class="at">marker =</span> <span class="fu">list</span>(<span class="at">size =</span> size),</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>      <span class="at">textfont =</span> <span class="fu">list</span>(<span class="at">size =</span> size <span class="sc">+</span> <span class="dv">4</span>)</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">|&gt;</span> </span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">layout</span>(</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>      <span class="at">scene =</span> <span class="fu">list</span>(</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>        <span class="at">xaxis =</span> <span class="fu">list</span>(</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>          <span class="at">title =</span> <span class="fu">list</span>(<span class="at">text =</span> <span class="st">"Visual imagery"</span>, <span class="at">font =</span> <span class="fu">list</span>(<span class="at">color =</span> <span class="st">"grey"</span>)),</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>          <span class="at">tickfont =</span> <span class="fu">list</span>(<span class="at">color =</span> <span class="st">"grey"</span>)</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>          ),</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>        <span class="at">yaxis =</span> <span class="fu">list</span>(</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>          <span class="at">title =</span> <span class="fu">list</span>(<span class="at">text =</span> <span class="st">"Spatial imagery"</span>, <span class="at">font =</span> <span class="fu">list</span>(<span class="at">color =</span> <span class="st">"grey"</span>)),</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>          <span class="at">tickfont =</span> <span class="fu">list</span>(<span class="at">color =</span> <span class="st">"grey"</span>)</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>          ),</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>        <span class="at">zaxis =</span> <span class="fu">list</span>(</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>          <span class="at">title =</span> <span class="fu">list</span>(<span class="at">text =</span> <span class="st">"Verbal profile"</span>, <span class="at">font =</span> <span class="fu">list</span>(<span class="at">color =</span> <span class="st">"grey"</span>)),</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>          <span class="at">tickfont =</span> <span class="fu">list</span>(<span class="at">color =</span> <span class="st">"grey"</span>)</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>          )</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>      ),</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>      <span class="at">legend =</span> <span class="fu">list</span>(<span class="at">title =</span> <span class="fu">list</span>(<span class="at">text =</span> <span class="st">"Group"</span>)),</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>      <span class="at">paper_bgcolor =</span> <span class="st">"transparent"</span></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>df <span class="sc">|&gt;</span> </span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">vis_spa_group =</span> <span class="fu">case_when</span>(</span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>    vis_spa_group <span class="sc">==</span> <span class="st">"aph_spa_high"</span> <span class="sc">~</span> <span class="st">"Aph. spatial"</span>,</span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>    vis_spa_group <span class="sc">==</span> <span class="st">"aph_spa_low"</span>  <span class="sc">~</span> <span class="st">"Aph. verbal"</span>,</span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>    vis_spa_group <span class="sc">==</span> <span class="st">"phant_spa_high"</span> <span class="sc">~</span> <span class="st">"Phant. spatial"</span>,</span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>    vis_spa_group <span class="sc">==</span> <span class="st">"phant_spa_low"</span>  <span class="sc">~</span> <span class="st">"Phant. visual"</span></span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">|&gt;</span> </span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plotting_osv_model</span>(<span class="at">grouping_variable =</span> <span class="st">"vis_spa_group"</span>, <span class="at">size =</span> <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div id="fig-plot_osv_model" class="cell-output-display quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-plot-osv-model" class="cell-output-display quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-plot_osv_model-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="plotly html-widget html-fill-item" id="htmlwidget-b4efef87301996c3c786" style="width:672px;height:480px;"></div>
-<script type="application/json" data-for="htmlwidget-b4efef87301996c3c786">{"x":{"visdat":{"2728ae862b0":["function () ","plotlyVisDat"]},"cur_data":"2728ae862b0","attrs":{"2728ae862b0":{"x":{},"y":{},"z":{},"text":{},"mode":"markers+text","marker":{"size":4},"textfont":{"size":8},"color":{},"colors":["#E69F00","#56B4E9","#009E73","#F5C710"],"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter3d"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"scene":{"xaxis":{"title":{"text":"Visual imagery","font":{"color":"grey"}},"tickfont":{"color":"grey"}},"yaxis":{"title":{"text":"Spatial imagery","font":{"color":"grey"}},"tickfont":{"color":"grey"}},"zaxis":{"title":{"text":"Verbal profile","font":{"color":"grey"}},"tickfont":{"color":"grey"}}},"legend":{"title":{"text":"Group"}},"paper_bgcolor":"transparent","hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[-0.036640408157145976,0.032135165776453471,-0.23114036852084763,-0.03286385746881252,0.46365788701643423,0.046246978019755067,-0.15990438091959489],"y":[0.8092596649106395,0.9181050980868094,0.97440441509825804,1.0024534880692733,0.69229079295427742,0.89782001779250031,0.70406385738737387],"z":[0.23767465902410329,0.48935370636711645,0.16138488517155131,0.26781100284524345,0.27163625306646155,0.099616322742655999,0.1436690095419996],"text":["Aph. spatial","Aph. spatial","Aph. spatial","Aph. spatial","Aph. spatial","Aph. spatial","Aph. spatial"],"mode":"markers+text","marker":{"color":"rgba(230,159,0,1)","size":4,"line":{"color":"rgba(230,159,0,1)"}},"textfont":{"color":"rgba(230,159,0,1)","size":8},"type":"scatter3d","name":"Aph. spatial","error_y":{"color":"rgba(230,159,0,1)"},"error_x":{"color":"rgba(230,159,0,1)"},"line":{"color":"rgba(230,159,0,1)"},"frame":null},{"x":[-0.025429768636669441,0.20540568530003891,0.39728317988015294,0.14173565715250605,0.046671484230633879,-0.091550981754586078,0.24115219376733835,-0.0031252223462148957],"y":[0.28768025699895849,0.66052940881134692,0.51856860955690887,0.38961701935818965,0.1405293057853374,0.37274729653807609,0.25503830665271376,0.23688592302030451],"z":[0.64016397019294979,0.95193303931403672,0.80447184300766228,0.63985204409744911,0.8823914052752575,0.65998947099625216,0.81018776299107276,0.97201145308433856],"text":["Aph. verbal","Aph. verbal","Aph. verbal","Aph. verbal","Aph. verbal","Aph. verbal","Aph. verbal","Aph. verbal"],"mode":"markers+text","marker":{"color":"rgba(86,180,233,1)","size":4,"line":{"color":"rgba(86,180,233,1)"}},"textfont":{"color":"rgba(86,180,233,1)","size":8},"type":"scatter3d","name":"Aph. verbal","error_y":{"color":"rgba(86,180,233,1)"},"error_x":{"color":"rgba(86,180,233,1)"},"line":{"color":"rgba(86,180,233,1)"},"frame":null},{"x":[0.74481985224987479,0.63269072880560084,0.69925449101644432,0.65422881534251864,0.81601255966431641,0.81229196076556276,0.50160614878139609],"y":[0.67867666218266998,0.27831000980543458,0.52182701228762196,0.50943441424031544,0.61438500079481451,0.91029741083467663,0.76711977618888827],"z":[0.45913811760608259,0.3244745718620089,0.24346070415584314,0.01744647135913846,0.10174591033524269,0.25380696822500592,0.17896423253579011],"text":["Phant. spatial","Phant. spatial","Phant. spatial","Phant. spatial","Phant. spatial","Phant. spatial","Phant. spatial"],"mode":"markers+text","marker":{"color":"rgba(0,158,115,1)","size":4,"line":{"color":"rgba(0,158,115,1)"}},"textfont":{"color":"rgba(0,158,115,1)","size":8},"type":"scatter3d","name":"Phant. spatial","error_y":{"color":"rgba(0,158,115,1)"},"error_x":{"color":"rgba(0,158,115,1)"},"line":{"color":"rgba(0,158,115,1)"},"frame":null},{"x":[0.67831641540239429,1.1422797876722326,0.81262592711973258,1.060174306829138,0.662557283931551,1.0736825733106234,0.94234040029112065,1.0334903414928389],"y":[0.45873604497674658,0.52907881530186329,0.66152156986357102,0.0077177840797507113,0.32899576237076489,0.30893873337987554,0.44331306526420589,0.25071725641675868],"z":[0.66867015783560002,0.53043379043594585,0.26623635715828653,0.68633684399556916,0.34336243473597405,0.73504592448457806,0.64907679257819506,0.23109420803880515],"text":["Phant. visual","Phant. visual","Phant. visual","Phant. visual","Phant. visual","Phant. visual","Phant. visual","Phant. visual"],"mode":"markers+text","marker":{"color":"rgba(245,199,16,1)","size":4,"line":{"color":"rgba(245,199,16,1)"}},"textfont":{"color":"rgba(245,199,16,1)","size":8},"type":"scatter3d","name":"Phant. visual","error_y":{"color":"rgba(245,199,16,1)"},"error_x":{"color":"rgba(245,199,16,1)"},"line":{"color":"rgba(245,199,16,1)"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div aria-describedby="fig-plot-osv-model-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-3b7bcb34d630d348dfdd" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-3b7bcb34d630d348dfdd">{"x":{"visdat":{"25742cc43f36":["function () ","plotlyVisDat"]},"cur_data":"25742cc43f36","attrs":{"25742cc43f36":{"x":{},"y":{},"z":{},"text":{},"mode":"markers+text","marker":{"size":4},"textfont":{"size":8},"color":{},"colors":["#E69F00","#56B4E9","#009E73","#F5C710"],"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter3d"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"scene":{"xaxis":{"title":{"text":"Visual imagery","font":{"color":"grey"}},"tickfont":{"color":"grey"}},"yaxis":{"title":{"text":"Spatial imagery","font":{"color":"grey"}},"tickfont":{"color":"grey"}},"zaxis":{"title":{"text":"Verbal profile","font":{"color":"grey"}},"tickfont":{"color":"grey"}}},"legend":{"title":{"text":"Group"}},"paper_bgcolor":"transparent","hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[-0.036640408157145976,0.032135165776453471,-0.23114036852084763,-0.03286385746881252,0.46365788701643423,0.046246978019755067,-0.15990438091959489],"y":[0.8092596649106395,0.9181050980868094,0.97440441509825804,1.0024534880692733,0.69229079295427742,0.89782001779250031,0.70406385738737387],"z":[0.23767465902410329,0.48935370636711645,0.16138488517155131,0.26781100284524345,0.27163625306646155,0.099616322742655999,0.1436690095419996],"text":["Aph. spatial","Aph. spatial","Aph. spatial","Aph. spatial","Aph. spatial","Aph. spatial","Aph. spatial"],"mode":"markers+text","marker":{"color":"rgba(230,159,0,1)","size":4,"line":{"color":"rgba(230,159,0,1)"}},"textfont":{"color":"rgba(230,159,0,1)","size":8},"type":"scatter3d","name":"Aph. spatial","error_y":{"color":"rgba(230,159,0,1)"},"error_x":{"color":"rgba(230,159,0,1)"},"line":{"color":"rgba(230,159,0,1)"},"frame":null},{"x":[-0.025429768636669441,0.20540568530003891,0.39728317988015294,0.14173565715250605,0.046671484230633879,-0.091550981754586078,0.24115219376733835,-0.0031252223462148957],"y":[0.28768025699895849,0.66052940881134692,0.51856860955690887,0.38961701935818965,0.1405293057853374,0.37274729653807609,0.25503830665271376,0.23688592302030451],"z":[0.64016397019294979,0.95193303931403672,0.80447184300766228,0.63985204409744911,0.8823914052752575,0.65998947099625216,0.81018776299107276,0.97201145308433856],"text":["Aph. verbal","Aph. verbal","Aph. verbal","Aph. verbal","Aph. verbal","Aph. verbal","Aph. verbal","Aph. verbal"],"mode":"markers+text","marker":{"color":"rgba(86,180,233,1)","size":4,"line":{"color":"rgba(86,180,233,1)"}},"textfont":{"color":"rgba(86,180,233,1)","size":8},"type":"scatter3d","name":"Aph. verbal","error_y":{"color":"rgba(86,180,233,1)"},"error_x":{"color":"rgba(86,180,233,1)"},"line":{"color":"rgba(86,180,233,1)"},"frame":null},{"x":[0.74481985224987479,0.63269072880560084,0.69925449101644432,0.65422881534251864,0.81601255966431641,0.81229196076556276,0.50160614878139609],"y":[0.67867666218266998,0.27831000980543458,0.52182701228762196,0.50943441424031544,0.61438500079481451,0.91029741083467663,0.76711977618888827],"z":[0.45913811760608259,0.3244745718620089,0.24346070415584314,0.01744647135913846,0.10174591033524269,0.25380696822500592,0.17896423253579011],"text":["Phant. spatial","Phant. spatial","Phant. spatial","Phant. spatial","Phant. spatial","Phant. spatial","Phant. spatial"],"mode":"markers+text","marker":{"color":"rgba(0,158,115,1)","size":4,"line":{"color":"rgba(0,158,115,1)"}},"textfont":{"color":"rgba(0,158,115,1)","size":8},"type":"scatter3d","name":"Phant. spatial","error_y":{"color":"rgba(0,158,115,1)"},"error_x":{"color":"rgba(0,158,115,1)"},"line":{"color":"rgba(0,158,115,1)"},"frame":null},{"x":[0.67831641540239429,1.1422797876722326,0.81262592711973258,1.060174306829138,0.662557283931551,1.0736825733106234,0.94234040029112065,1.0334903414928389],"y":[0.45873604497674658,0.52907881530186329,0.66152156986357102,0.0077177840797507113,0.32899576237076489,0.30893873337987554,0.44331306526420589,0.25071725641675868],"z":[0.66867015783560002,0.53043379043594585,0.26623635715828653,0.68633684399556916,0.34336243473597405,0.73504592448457806,0.64907679257819506,0.23109420803880515],"text":["Phant. visual","Phant. visual","Phant. visual","Phant. visual","Phant. visual","Phant. visual","Phant. visual","Phant. visual"],"mode":"markers+text","marker":{"color":"rgba(245,199,16,1)","size":4,"line":{"color":"rgba(245,199,16,1)"}},"textfont":{"color":"rgba(245,199,16,1)","size":8},"type":"scatter3d","name":"Phant. visual","error_y":{"color":"rgba(245,199,16,1)"},"error_x":{"color":"rgba(245,199,16,1)"},"line":{"color":"rgba(245,199,16,1)"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-plot_osv_model-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-plot-osv-model-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;3.1: Imagery profiles generated for 30 subjects on the three object, spatial, and verbal dimensions.
 </figcaption>
 </figure>
@@ -1408,7 +1272,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","loop":false,"openEffect":"zoom"});
+</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

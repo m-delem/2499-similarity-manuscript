@@ -90,9 +90,9 @@ coordinates_aligned_embeddings <- read_rds(paste0(path, "coordinates_aligned_emb
 4. These are R objects that were the results of a previous run of the simulation.
 :::
 
-```{r osv_model}
+```{r osv-model}
 #| code-summary: "Generating hypothetical imagery values for 30 subjects"
-#| label: osv_model
+#| label: osv-model
 #| echo: true
 #| eval: false
 

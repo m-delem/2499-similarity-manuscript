@@ -13,8 +13,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <title-group>
 <article-title>Unravelling mental representations in aphantasia through
 unsupervised alignment</article-title>
-<subtitle>Project design and data analysis simulation - testing the
-Quarto publish</subtitle>
+<subtitle>Project design and data analysis simulation</subtitle>
 </title-group>
 
 <contrib-group>
@@ -396,7 +395,7 @@ too many other things to do elsewhere.</italic></p>
     that is both well-defined and not exagerrated. The 30 subjects’
     imagery profiles are represented in the three dimensional space of
     the visual-spatial-verbal dimensions in
-    <xref alt="Figure 3.1" rid="fig-plot_osv_model">Figure 3.1</xref>.</p>
+    <xref alt="Figure 3.1" rid="fig-plot-osv-model">Figure 3.1</xref>.</p>
     <fig id="tbl-imageries">
       <caption><p>Table 3.1: Imagery abilities of the four hypothesized
       cognitive profiles.</p></caption>
@@ -488,10 +487,10 @@ generate_osv_model &lt;- function(var, cov){
 }
 
 df &lt;- generate_osv_model(0.03, 0)</code>
-    <fig id="fig-plot_osv_model">
+    <fig id="fig-plot-osv-model">
       <caption><p>Figure 3.1: Imagery profiles generated for 30 subjects
       on the three object, spatial, and verbal dimensions.</p></caption>
-      <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-plot_osv_model-1.png" />
+      <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-plot-osv-model-1.png" />
     </fig>
   </sec>
 </sec>
@@ -667,8 +666,7 @@ df &lt;- generate_osv_model(0.03, 0)</code>
 <title-group>
 <article-title>Unravelling mental representations in aphantasia through
 unsupervised alignment</article-title>
-<subtitle>Project design and data analysis simulation - testing the
-Quarto publish</subtitle>
+<subtitle>Project design and data analysis simulation</subtitle>
 </title-group>
 <contrib-group>
 <contrib contrib-type="author">
@@ -1108,7 +1106,7 @@ coordinates_aligned_embeddings &lt;- read_rds(paste0(path, &quot;coordinates_ali
     that is both well-defined and not exagerrated. The 30 subjects’
     imagery profiles are represented in the three dimensional space of
     the visual-spatial-verbal dimensions in
-    <xref alt="Figure 3.1" rid="fig-plot_osv_model-nb-article">Figure 3.1</xref>.</p>
+    <xref alt="Figure 3.1" rid="fig-plot-osv-model-nb-article">Figure 3.1</xref>.</p>
     <fig id="tbl-imageries-nb-article">
       <caption><p>Table 3.1: Imagery abilities of the four hypothesized
       cognitive profiles.</p></caption>
@@ -1152,7 +1150,7 @@ coordinates_aligned_embeddings &lt;- read_rds(paste0(path, &quot;coordinates_ali
       </table-wrap>
     </fig>
     <p>Down below is the code to generate these scores.</p>
-    <sec id="osv_model-nb-article" specific-use="notebook-code">
+    <sec id="osv-model-nb-article" specific-use="notebook-code">
     <code language="python"># The function takes the variance and covariance of the imagery distributions
 # as arguments
 generate_osv_model &lt;- function(var, cov){
@@ -1202,7 +1200,7 @@ generate_osv_model &lt;- function(var, cov){
 
 df &lt;- generate_osv_model(0.03, 0)</code>
     </sec>
-    <sec id="cell-fig-plot_osv_model-nb-article" specific-use="notebook-code">
+    <sec id="cell-fig-plot-osv-model-nb-article" specific-use="notebook-code">
     <code language="r script">plotting_osv_model &lt;- function(df, grouping_variable, size){
   df |&gt; 
     plot_ly(
@@ -1245,12 +1243,12 @@ df |&gt;
     vis_spa_group == &quot;phant_spa_low&quot;  ~ &quot;Phant. visual&quot;
   )) |&gt; 
   plotting_osv_model(grouping_variable = &quot;vis_spa_group&quot;, size = 4)</code>
-    <fig id="fig-plot_osv_model-nb-article">
+    <fig id="fig-plot-osv-model-nb-article">
       <caption><p>Figure 3.1: Imagery profiles generated for 30 subjects
       on the three object, spatial, and verbal dimensions.</p></caption>
-      <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-plot_osv_model-1.png" />
+      <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-plot-osv-model-1.png" />
     </fig>
-    <sec id="cell-fig-plot_osv_model-output-0-nb-article" specific-use="notebook-output">
+    <sec id="cell-fig-plot-osv-model-output-0-nb-article" specific-use="notebook-output">
     <preformat>PhantomJS not found. You can install it with webshot::install_phantomjs(). If it is installed, please make sure the phantomjs executable can be found via the PATH variable.</preformat>
     </sec>
     </sec>
