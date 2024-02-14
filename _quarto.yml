@@ -11,9 +11,9 @@ manuscript:
 format:
   html:
     # color theme
-    theme:
-      dark: darkly
-      light: cosmo
+    theme: darkly
+      # dark: darkly
+      # light: cosmo
     # formatting
     fontsize: "medium"
   docx: default

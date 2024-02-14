@@ -1,23 +1,22 @@
 ---
 title: "Study simulation"
 author: "Maël Delem"
-# code reading options
-code-fold: false
 ---
 
-::: {.callout-note collapse="true"}
+::: {.callout-note collapse="false"}
 ## Packages and setup
 
 Down below is the code to load necessary packages used for the simulation and analysis, along with some setups for the whole document (*hover over the numbers on the far right for additional explanation of code and mechanics*).
 
 ```{r setup}
 #| output: false
-#| echo: true
 
 # ═══ Packages ═════════════════════════════════════════════════════════════════
 
-if (!require(librarian)) install.packages(librarian)   # <1>
-library(librarian)                                     # <1>      
+if (!require(librarian)) install.packages(librarian)
+
+# loading   # <1>
+library(librarian)     
 
 # now putting packages on our library's shelves:
 shelf(
@@ -40,15 +39,16 @@ shelf(
   
   # ─── essential package collections ───
   doParallel,     # parallel execution
-  easystats,      # data analysis ecosystem
-  reticulate,     # R to Python                       # <2>
+  easystats,      # data analysis ecosystem # <2>
+  reticulate,     # R to Python                       
   tidyverse,      # modern R ecosystem
 )
 
 # ─── Global cosmetic theme ───
-theme_set(theme_modern(base_size = 14))
+theme_set(theme_modern(base_size = 14))  
 
-pal_okabe_ito <- c(     # <3>                                                
+# ─── My palettes ─── # <3> 
+pal_okabe_ito <- c(                                                  
   "#E69F00", "#56B4E9", "#009E73",                            
   "#F5C710", "#0072B2", "#D55E00", "#CC79A7", "#6c0009")      
 
@@ -63,12 +63,13 @@ cool_30_colors <- c(
   "#D55E00", "#E69F00", "#F5C710", "#FDE725FF", "#f2bb7b", "#f1afad", "#CC79A7", 
   "#e57774", "#7AD151FF", "#57b571", "#318a4a", "#009E73", "#22A884FF", 
   "#2A788EFF", "#0072B2", "#2da6b5", "#56B4E9", "#889be0", "#6677e0",   
-  "#3d51b4", "#414487FF", "#003d73", "#440154FF", "#6c0009", "#b64e4e"  
-  ) # <3>                                                                      
+  "#3d51b4", "#414487FF", "#003d73", "#440154FF", "#6c0009", "#b64e4e"   # <3>     
+  )                                                                 
 
 path = "data/"
 
-df <- read_rds(paste0(path, "df.RDS")) # <4>
+# loading result data   # <4>
+df <- read_rds(paste0(path, "df.RDS"))
 df_embeds <- read_rds(paste0(path, "df_embeds.RDS"))
 # Categorical and visual embeddings
 df_embeds_categ  <- read_rds(paste0(path, "df_embeds_categ.RDS"))
@@ -81,8 +82,8 @@ df_embed_vs_sub <- read_rds(paste0(path, "df_embed_vs_sub.RDS"))
 # Accuracy of the unsupervised alignment (bad = not tidy data)
 df_accuracy_all_bad <- read_rds(paste0(path, "df_accuracy_all_bad.RDS"))
 df_accuracy_cat_bad <- read_rds(paste0(path, "df_accuracy_cat_bad.RDS"))
-# Coordinates of the aligned embeddings from the Python output
-coordinates_aligned_embeddings <- read_rds(paste0(path, "coordinates_aligned_embeddings.RDS")) # <4>
+# Coordinates of the aligned embeddings from the Python output # <4>
+coordinates_aligned_embeddings <- read_rds(paste0(path, "coordinates_aligned_embeddings.RDS")) 
 ```
 1.  The package `librairian` eases package management with the "shelf" function, which automatically: (1) checks if a package is installed; (2) installs it if need be; (3) loads the package like the "library()" function would.
 2.  `reticulate` allows to translate and transfer objects and functions from R to Python and vice-versa, and was thus of primary importance for the successful use of the Python toolbox on our simulated data.
@@ -92,15 +93,14 @@ coordinates_aligned_embeddings <- read_rds(paste0(path, "coordinates_aligned_emb
 
 ## Visual-spatial-verbal model of cognitive profiles
 
-We are going to simulate 30 participants presenting four different cognitive profiles, that I defined as, respectively, *verbal* aphantasics, *spatial* aphantasics, *spatial* phantasics, and *visual* phantasics. Their imagery abilities are summarised in @tbl-imageries.
+We are going to simulate 30 participants presenting four different cognitive profiles, that I defined as, respectively, *verbal* aphantasics, *spatial* aphantasics, *spatial* phantasics, and *visual* phantasics.
 
 To simulate these four sub-groups, we use the `holodeck` R package to generate multivariate normal distributions of scores on these three dimensions for each sub-group. For instance, verbal aphantasics have normally distributed visual imagery scores centered around a mean of 0 (normalized, so negative scores are possible), 0.4 for spatial imagery, and 0.7 for verbal style; Spatial aphantasics have means of 0 for visual, 0.75 spatial, and 0.3 for verbal; etc. The numbers are arbitrary, but have been chosen by trial-and-error to obtain a model that is both well-defined and not exaggerated.
 
 ```{r osv-model}
-#| code-summary: "Generating hypothetical imagery values for 30 subjects"
-#| label: osv-model
-#| echo: true
 #| eval: false
+
+# ─── Generating hypothetical imagery values for 30 subjects ─── 
 
 # The function takes the variance and covariance of the imagery distributions
 # as arguments
@@ -158,11 +158,10 @@ Proposal from [StackExchange](https://stats.stackexchange.com/questions/7977/how
 
 Let's use a function to generate embeddings. We get 8 nicely distributed clusters. We'll retrieve the centroids of each cluster, which would be the "perfect" categories of each species group (say, generated by a computational model on categorical criteria).
 
-```{r generating_sphere}
-#| code-summary: "Generating a sphere of 1000 points and 8 equally distributed clusters"
-#| label: generating-sphere
-#| echo: true
+```{r generating-sphere}
 #| eval: false
+
+# ─── Generating a sphere of 1000 points and 8 equally distributed clusters ─── 
 
 generate_sphere <- function(n){
   z     <- 2*runif(n) - 1          # uniform on [-1, 1]
@@ -206,11 +205,10 @@ $$d(centroid, observation) = \sqrt{(x_{c} - x_{o})^{2} + (y_{c} - y_{o})^{2} + (
 
 This can be done using the function `norm(coordinates, type = "2")` in R.
 
-```{r embeddings_categorical}
-#| code-summary: "Selecting categorical embeddings based on distances to the centroids"
-#| label: categorical-embeddings
-#| echo: true
+```{r categorical-embeddings}
 #| eval: false
+
+# ─── Selecting categorical embeddings based on distances to the centroids ───
 
 # Function to filter points of the sphere based on the distance to the centroids
 generate_embeddings <- function(df, n_embeddings, distance_quantile){
@@ -243,11 +241,11 @@ In the case of the **visual model**, we would like approximately evenly distribu
 
 [^2]: A simpler alternative would be generating the visual embeddings with the same code as the categorical ones, selecting 8 points per cluster but much more spread out (e.g. selecting 8 among the 90% closest to the centroids, which would create more variability than the categorical one set to 60%). I chose otherwise because this wouldn't have had points reaching *inside* the sphere.
 
-```{r embeddings_visual}
-#| code-summary: "Generating visual embeddings based on multivariate distributions around the categorical embeddings"
-#| label: visual-embeddings
-#| echo: true
+```{r visual-embeddings}
 #| eval: false
+
+# ─── Generating visual embeddings based on multivariate distributions 
+# around the categorical embeddings ───
 
 # defining the variance and covariance of the distributions
 var2 <- 0.05
@@ -294,11 +292,10 @@ To generate the embeddings of each subject in each condition, we will start from
 
 The visual and verbal groups will be generated with slightly more intra-group variance, so as to try to make the spatial groups as coherent as possible (and avoid blurring everything and making the groups disappear in noise).
 
-```{r embeddings_subjects}
-#| code-summary: "Generating unique embeddings for each subject based on the models"
-#| label: subject-embeddings
-#| echo: true
+```{r subject-embeddings}
 #| eval: false
+
+# ─── Generating unique embeddings for each subject based on the models ───
 
 # creating dfs with participants
 df_subjects_7 <- 
