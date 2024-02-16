@@ -24,6 +24,8 @@ This project stems from several elements:
 
 # Theoretical context
 
+## Work in progress
+
 ## Psychological spaces and aphantasia
 
 While attempting to demonstrate the uselessness of the concept of similarity as a philosophical and scientific notion[^1], @goodmanSevenStricturesSimilarity1972 has inadvertently expressed an aspect of similarity judgements of primary importance to us aphantasia researchers:
