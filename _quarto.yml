@@ -13,7 +13,7 @@ format:
     # color theme
     theme:
       dark: darkly
-      light: cosmo
+      light: darkly
     # formatting
     fontsize: "medium"
   docx: default
@@ -39,7 +39,7 @@ date-modified: last-modified
 
 # table of contents
 toc: true
-toc-location: right
+toc-location: left
 toc-depth: 2
 toc-expand: 1
 number-sections: true
