@@ -35,6 +35,8 @@ This project stems from several elements:
 
 # Theoretical context
 
+## From similarity to second-order isomorphism
+
 When we try to compare our thoughts and representations with those of others, we quickly realize that the task will be really difficult, if not impossible, as we are of course incapable of "living in someone else's head". If we both try to imagine a dog, I can examine what goes on in my head, so can you, but apart from trying to describe our experiences verbally, we are up against a wall.
 
 Now, what if I asked you to tell me how similar you think a dog and a panther look like? Let's say, in the context of the animal kingdom as a whole. Visualize them well. Well, I could tell you that, *in my opinion, a dog and a panther look no more alike than a dog and a whale*. You might tell me: [*For this thought experiment, let's imagine two things: (1) that someone could honestly say that, and (2) that people would be rating the animals purely on the basis of their mental images, and not on categorical features (number of legs, fur, etc.), which is unfortunately almost* ***never*** *the case in reality.*]{.aside}
@@ -47,7 +49,7 @@ The study of individual differences in the format of representations and the att
 
 [^mach]: Most notably in the works of @fechner1860 and @mach1890a; see also @roads2024 for an extended review.
 
-## From similarity to second-order isomorphism
+## Work-In-Progress
 
 ## Psychological spaces and aphantasia
 
@@ -64,6 +66,8 @@ The dominant hypothesis seems to be that aphantasics simply have an episodic or 
 @gardenforsConceptualSpacesFramework2004 proposed that differences in psychological (in his terms, conceptual) spaces could arise from various sources, whether innate, due to learning, or broader cultural or social differences. All these hypotheses could be coherent to explain the sources of aphantasia. Nevertheless, the study of these sources should be the subject of very large-scale or longitudinal studies, which are out of the scope of this project.
 
 Here, we shall rather attempt to **develop a method to characterize the differences in aphantasics' representational structures and psychological spaces.**
+
+## The present project
 
 # Methods
 
@@ -378,6 +382,7 @@ A function will be used to generate embeddings. These spherical embeddings are d
 #|   - "Generated spherical distribution of 1000 observations grouped in 8 equal clusers with Gaussian Mixture Clustering."
 #|   - "Centroids of the 8 clusters created on the sphere."
 #| layout-ncol: 2
+#| layout-nrow: 1
 #| column: page
 
 # function for 3D plotting up to 8 groups (due to the palette)
@@ -606,6 +611,7 @@ Although the groups and species in @fig-subject-embeddings-1 look fairly obvious
 #|   - "Distribution of the embeddings of the 30 subjects,***colored by the species groups*** <br>they represent. The symbols represent the four imagery groups (Aph. verbal, spatial, etc.)"
 #|   - "Distribution of the embeddings of the 30 subjects, ***colored by subject***.<br>This is the only information the unsupervised algorithm will have to work with."
 #| layout-ncol: 2
+#| layout-nrow: 1
 #| column: page
 
 size = 2
