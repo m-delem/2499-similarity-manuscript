@@ -46,7 +46,7 @@ number-sections: true
 number-depth: 2
 
 # figures and captions
-fig-format: svg
+fig-format: png
 cap-location: top
 fig-cap-location: bottom
 tbl-cap-location: top
