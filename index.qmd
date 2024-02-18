@@ -288,9 +288,7 @@ One of the objectives of the study would be to link the subjective cognitive pro
 
 We are going to simulate 30 participants presenting four different cognitive profiles, that I defined as, respectively, *verbal* aphantasics, *spatial* aphantasics, *spatial* phantasics, and *visual* phantasics. Their imagery abilities are summarised in @tbl-imageries.
 
-To simulate these four sub-groups, we will generate multivariate normal distributions of scores on these three dimensions for each sub-group. For instance, verbal aphantasics have normally distributed visual imagery scores centred around a mean of 0 (normalized, so negative scores are possible), 0.4 for spatial imagery, and 0.7 for verbal style; Spatial aphantasics have means of 0 for visual, 0.75 spatial, and 0.3 for verbal; etc. The numbers are arbitrary, but have been chosen by trial-and-error to obtain a model that is both well-defined and not exaggerated. The 30 subjects' imagery profiles are represented in the three dimensional space of the visual-spatial-verbal dimensions in @fig-plot-osv-model.
-
-<!-- The code used to generate these scores can be found in the Study simulation notebook. -->
+To simulate these four sub-groups, we will generate multivariate normal distributions of scores on these three dimensions for each sub-group. For instance, verbal aphantasics have normally distributed visual imagery scores centred around a mean of 0 (normalized, so negative scores are possible), 0.4 for spatial imagery, and 0.7 for verbal style; Spatial aphantasics have means of 0 for visual, 0.75 spatial, and 0.3 for verbal; etc. The numbers are arbitrary, but have been chosen by trial-and-error to obtain a model that is both well-defined and not exaggerated. The 30 subjects' imagery profiles are represented in the three dimensional space of the visual-spatial-verbal dimensions in @fig-osv-model.
 
 | Cognitive profile  | Visual imagery | Spatial imagery | Verbal style |
 |--------------------|:--------------:|:---------------:|:------------:|
@@ -301,60 +299,13 @@ To simulate these four sub-groups, we will generate multivariate normal distribu
 
 : Imagery abilities of the four hypothesized cognitive profiles. {#tbl-imageries}
 
-```{r plot_osv_model}
-#| label: fig-plot-osv-model
-#| fig-cap: "Imagery profiles generated for 30 subjects on the three object, spatial, and verbal dimensions."
-
-plotting_osv_model <- function(df, grouping_variable, size){
-  df |> 
-    plot_ly(
-      x = ~visual_imagery,
-      y = ~spatial_imagery,
-      z = ~verbal_profile,
-      color = ~df[[grouping_variable]],
-      text  = ~df[[grouping_variable]],
-      colors = c("#E69F00", "#56B4E9", "#009E73", "#F5C710"),
-      type = "scatter3d",
-      mode = "markers+text",
-      marker = list(size = size),
-      textfont = list(size = size + 4)
-    ) |> 
-    layout(
-      scene = list(
-        xaxis = list(
-          title = list(text = "Visual imagery", font = list(color = "grey")),
-          tickfont = list(color = "grey")
-          ),
-        yaxis = list(
-          title = list(text = "Spatial imagery", font = list(color = "grey")),
-          tickfont = list(color = "grey")
-          ),
-        zaxis = list(
-          title = list(text = "Verbal profile", font = list(color = "grey")),
-          tickfont = list(color = "grey")
-          )
-      ),
-      legend = list(title = list(text = "Group")),
-      paper_bgcolor = "transparent"
-      )
-}
-
-df |> 
-  mutate(vis_spa_group = case_when(
-    vis_spa_group == "aph_spa_high" ~ "Aph. spatial",
-    vis_spa_group == "aph_spa_low"  ~ "Aph. verbal",
-    vis_spa_group == "phant_spa_high" ~ "Phant. spatial",
-    vis_spa_group == "phant_spa_low"  ~ "Phant. visual"
-  )) |> 
-  plotting_osv_model(grouping_variable = "vis_spa_group", size = 4)
-```
-
+{{< embed notebooks/simulation-code.qmd#fig-osv-model >}}
 
 ## Data simulation: Creating representational structures
 
 @gardenfors2004 invokes two scientific concepts, to wit, prototypes and Voronoi tessellations. Prototype theory builds on the observation that among the instances of a property, some are more representative than others. The most representative one is the prototype of the property. *We hypothesize that aphantasics will be more inclined to categorize items according to prototypes than phantasics.*
 
-A Voronoi tesselation of a given space divides that space into a number of cells such that each cell has a center and consists of all and only those points that lie no closer to the center of any other cell than to its own center; the centers of the various cells are called the generator points of the tesselation. This principle will underlie our data simulation, as we will build representations in a 3D space based on distances to "centroids", namely, prototypes. These representations will thus be located inside of the tessellations around these prototypes, more or less close to the centroid depending on the subject's representational structures.
+A Voronoi tessellation of a given space divides that space into a number of cells such that each cell has a center and consists of all and only those points that lie no closer to the center of any other cell than to its own center; the centers of the various cells are called the generator points of the tessellation. This principle will underlie our data simulation, as we will build representations in a 3D space based on distances to "centroids", namely, prototypes. These representations will thus be located inside of the tessellations around these prototypes, more or less close to the centroid depending on the subject's representational structures.
 
 ### Generating "prototype" embeddings from a sphere
 
@@ -375,15 +326,17 @@ df_embeds_2 <- left_join(df_embeds, df_centroids, by = "group")
 
 A function will be used to generate embeddings. These spherical embeddings are displayed in @fig-perfect-embeddings We get 8 nicely distributed clusters. We'll retrieve the centroids of each cluster, which would be the "perfect" categories of each species group (say, generated by a computational model on categorical criteria).
 
+:::{.content-visible unless-format="pdf"}
+
+:::{.column-page-inset}
 ```{r plot_sphere}
-#| label: fig-perfect-embeddings
+#| label: fig-perfect-embeddings-a
 #| fig-cap: "Initial random generations of 1000 points grouped in 8 clusters to represent the theoretical embeddings of 8 groups (i.e. groups of species here). ***Interact with the figures to see the details.***"
 #| fig-subcap: 
 #|   - "Generated spherical distribution of 1000 observations grouped in 8 equal clusers with Gaussian Mixture Clustering."
 #|   - "Centroids of the 8 clusters created on the sphere."
 #| layout-ncol: 2
-#| layout-nrow: 1
-#| column: page
+
 
 # function for 3D plotting up to 8 groups (due to the palette)
 plotting_3d <- function(df, size, opacity){
@@ -431,6 +384,67 @@ df_centroids |>
     showlegend = FALSE
     )
 ```
+:::
+
+:::
+
+:::{.content-visible when-format="pdf"}
+```{r plot_sphere}
+#| label: fig-perfect-embeddings
+#| fig-cap: "Initial random generations of 1000 points grouped in 8 clusters to represent the theoretical embeddings of 8 groups (i.e. groups of species here). ***Interact with the figures to see the details.***"
+#| fig-subcap: 
+#|   - "Generated spherical distribution of 1000 observations grouped in 8 equal clusers with Gaussian Mixture Clustering."
+#|   - "Centroids of the 8 clusters created on the sphere."
+#| layout-ncol: 2
+
+
+# function for 3D plotting up to 8 groups (due to the palette)
+plotting_3d <- function(df, size, opacity){
+  df |> 
+    plot_ly(
+      type = "scatter3d",
+      mode = "markers",
+      x = ~x,
+      y = ~y,
+      z = ~z,
+      color = ~paste0("Species group ", group),
+      colors = pal_okabe_ito,
+      marker = list(size = size, opacity = opacity)
+    ) |> 
+    layout(paper_bgcolor = "transparent")
+}
+
+plotting_3d(df_embeds, 3, 1) |> 
+  layout(legend = list(
+    yanchor = "top",
+    y = 1,
+    xanchor = "right",
+    x = 0
+    ))
+
+df_centroids |> 
+  plot_ly(
+    type = "scatter3d",
+    mode = "markers+text",
+    x = ~x_centroid,
+    y = ~y_centroid,
+    z = ~z_centroid,
+    text = ~paste0("Species group ", group),
+    color = ~paste0("Species group ", group),
+    colors = pal_okabe_ito,
+    marker = list(size = 12, opacity = 1)
+    ) |> 
+  layout(
+    scene = list(
+      xaxis = list(title = "x"),
+      yaxis = list(title = "y"),
+      zaxis = list(title = "z")
+    ),
+    paper_bgcolor = "transparent",
+    showlegend = FALSE
+    )
+```
+:::
 
 Now we want two sets of embeddings: one where the observations are very concentrated around the centroids, which would be the **categorical model**, and one where the observations are more spread out, which would be the **visual model**.
 
@@ -604,15 +618,14 @@ The visual and verbal groups will be generated with slightly more intra-group va
 
 Although the groups and species in @fig-subject-embeddings-1 look fairly obvious when we colour the embeddings using the knowledge about how we built them, the algorithm will only be fed with the data for each subject, without any labelling or additional information. Thus, @fig-subject-embeddings-2 is what the algorithm will actually "see" (and what it will try to decrypt). Said otherwise, its objective will be to find all the correct colours and shapes in @fig-subject-embeddings-1 using only 30 sub-datasets (one for each subject) that are illustrated in @fig-subject-embeddings-2. Admittedly, that looks a lot more complicated.
 
-```{r plot_embeddings_subjects_a}
+:::{#fig-subject-embeddings-box .column-page-inset}
+```{r plot_embeddings_subjects}
 #| label: fig-subject-embeddings
 #| fig-cap: "Final distribution of the 64 embeddings of all the 30 subjects, amounting to 1920 points total. ***Interact with the figures to see the details.***"
 #| fig-subcap: 
 #|   - "Distribution of the embeddings of the 30 subjects,***colored by the species groups*** <br>they represent. The symbols represent the four imagery groups (Aph. verbal, spatial, etc.)"
 #|   - "Distribution of the embeddings of the 30 subjects, ***colored by subject***.<br>This is the only information the unsupervised algorithm will have to work with."
 #| layout-ncol: 2
-#| layout-nrow: 1
-#| column: page
 
 size = 2
 
@@ -704,6 +717,7 @@ bind_rows(
     showlegend = FALSE
     )
 ```
+:::
 
 ```{r embeddings_subject_matrices}
 
@@ -976,7 +990,8 @@ ggplot() +
   theme(
     axis.line.y = element_blank(),
     axis.line.x = element_blank(),
-    axis.text.x = element_blank()
+    axis.text.x = element_blank(),
+    plot.background = element_rect(color = "black")
   )
 ```
 
@@ -988,19 +1003,21 @@ ggplot() +
 
 df_9_cluster_accuracy |> 
   ggplot(aes(x = cluster_a, y = cluster_b, fill = accuracy)) +
-  geom_tile(color = "white", linewidth = .5) +
+  geom_tile(color = "black", linewidth = .5) +
   geom_text(aes(label = round(accuracy/100, digits  =2)), color = "black") +
   scale_fill_viridis(guide = "none") +
+  theme_blackboard() +
   theme(
     axis.title.x = element_blank(),
     axis.title.y = element_blank(),
-    axis.line  = element_blank()
+    axis.line  = element_blank(),
+    plot.background = element_rect(color = "black")
   )
 ```
 
 #### Evaluating the clusters in light of our theoretical OSV model
 
-Let's see the composition of the clusters in light of our initial O-S-V model. The cognitive profiles of the subjects are represented in @fig-plot-osv-clusters, and the distribution of the cognitive profiles in the clusters is represented in @fig-clusters-distribution.
+Let's see the composition of the clusters in light of our initial O-S-V model. The cognitive profiles of the subjects are represented in @fig-osv-clusters, and the distribution of the cognitive profiles in the clusters is represented in @fig-clusters-distribution.
 
 ```{r df_aligned_clustered}
 df_coordinates <- coordinates_aligned_embeddings |> lapply(as.data.frame)
@@ -1039,8 +1056,8 @@ df_aligned_subjects <-
 df_clustered <- bind_cols(df_aligned_subjects, df[,c(6:8)])
 ```
 
-```{r plot_osv_clusters}
-#| label: fig-plot-osv-clusters
+```{r osv_clusters}
+#| label: fig-osv-clusters
 #| fig-cap: "Imagery profiles of the nine identified clusters on the three object, spatial, and verbal dimensions. ***Interact with the figure to see the details.***"
 
 df_clustered |> 
@@ -1091,15 +1108,17 @@ df_clustered |>
   labs(x = "Cluster", y = "Count") +
   scale_color_manual(values = pal_okabe_ito, labels = names, name = "Group") +
   scale_fill_manual(values = pal_okabe_ito, labels = names, name = "Group") +
-  theme_blackboard()
+  theme_blackboard() +
+  theme(plot.background = element_rect(color = "black"))
 ```
 
 Now let's visualize the embeddings of the subjects in each cluster to get a visual idea of their representational structures and the intra-cluster alignment between the subjects.
 
+:::{#fig-clusters-embeddings-final-box .column-page-inset}
 ```{r plot_clusters_embeddings_final}
-#| label: fig-clusters_embeddings_final
+#| label: fig-clusters-embeddings-final
 #| fig-cap: "Psychological spaces (embeddings) of the 30 subjects, aligned and clustered with other subjects having the most similar representations. The eight colors represent the initial eight groups of species that each subject had to 'represent' with imagery (legends for these colors have been taken out for display clarity purposes). ***Interact with the figures to see the details.***"
-#| fig-cap-location: margin
+#| fig-cap-location: top
 #| fig-subcap: 
 #|   - "**Cluster 1** embeddings (Aphantasic cluster).<br>Within-cluster aligment accuracy = 95.83%."
 #|   - "**Cluster 2** embeddings (Spatial aphantasic cluster).<br>Within-cluster aligment accuracy = 97.66%."
@@ -1112,7 +1131,6 @@ Now let's visualize the embeddings of the subjects in each cluster to get a visu
 #|   - "**Cluster 9** embeddings (Phantasic cluster).<br>Within-cluster aligment accuracy = 42.45%."
 #| layout-ncol: 3
 #| layout-nrow: 3
-#| column: page
 
 size = 4
 
@@ -1269,7 +1287,7 @@ plot_ly(
     showlegend = FALSE
     )
 ```
-
+:::
 
 ------------------------------------------------------------------------
 
