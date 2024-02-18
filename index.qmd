@@ -299,8 +299,6 @@ To simulate these four sub-groups, we will generate multivariate normal distribu
 
 : Imagery abilities of the four hypothesized cognitive profiles. {#tbl-imageries}
 
-{{< embed notebooks/simulation-code.qmd#fig-osv-model >}}
-
 ## Data simulation: Creating representational structures
 
 @gardenfors2004 invokes two scientific concepts, to wit, prototypes and Voronoi tessellations. Prototype theory builds on the observation that among the instances of a property, some are more representative than others. The most representative one is the prototype of the property. *We hypothesize that aphantasics will be more inclined to categorize items according to prototypes than phantasics.*
