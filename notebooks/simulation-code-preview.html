@@ -200,7 +200,7 @@
                 <div>
             <div class="quarto-title-meta-heading">Modified</div>
             <div class="quarto-title-meta-contents">
-              <p class="date-modified">17/02/2024</p>
+              <p class="date-modified">18/02/2024</p>
             </div>
           </div>
                 
@@ -246,32 +246,12 @@ Packages and setup
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ═══ Packages ═════════════════════════════════════════════════════════════════</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(librarian)) <span class="fu">install.packages</span>(librarian)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-annotation">
-<dl class="code-annotation-container-hidden code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-7" data-target-annotation="1">1</dt>
-<dd>
-<span data-code-cell="annotated-cell-7" data-code-lines="3" data-code-annotation="1">The package <code>librairian</code> eases package management with the “shelf” function, which automatically: (1) checks if a package is installed; (2) installs it if need be; (3) loads the package like the “library()” function would.</span>
-</dd>
-<dt data-target-cell="annotated-cell-7" data-target-annotation="2">2</dt>
-<dd>
-<span data-code-cell="annotated-cell-7" data-code-lines="27" data-code-annotation="2"><code>reticulate</code> allows to translate and transfer objects and functions from R to Python and vice-versa, and was thus of primary importance for the successful use of the Python toolbox on our simulated data.</span>
-</dd>
-<dt data-target-cell="annotated-cell-7" data-target-annotation="3">3</dt>
-<dd>
-<span data-code-cell="annotated-cell-7" data-code-lines="35,51" data-code-annotation="3">These are personal custom color palettes meant to extend my favourite palette, the color-atypical friendly Okabe-Ito color palette. The palette originally has only eight colors, but I will need nine, then up to 30 for later graphs, so I extended it with a hand-picked selection of mine.</span>
-</dd>
-<dt data-target-cell="annotated-cell-7" data-target-annotation="4">4</dt>
-<dd>
-<span data-code-cell="annotated-cell-7" data-code-lines="56,70" data-code-annotation="4">These are R objects that were the results of a previous run of the simulation.</span>
-</dd>
-</dl>
-</div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Le chargement a nécessité le package : librarian</code></pre>
 </div>
-<div class="sourceCode cell-code" id="annotated-cell-7"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-7-1"><a href="#annotated-cell-7-1" aria-hidden="true" tabindex="-1"></a></span>
+<div class="sourceCode cell-code" id="annotated-cell-7"><pre class="sourceCode r code-annotation-code code-with-copy"><code class="sourceCode r"><span id="annotated-cell-7-1"><a href="#annotated-cell-7-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="annotated-cell-7-2"><a href="#annotated-cell-7-2" aria-hidden="true" tabindex="-1"></a><span class="co"># loading</span></span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-7" data-target-annotation="1">1</button><span id="annotated-cell-7-3" class="code-annotation-target"><a href="#annotated-cell-7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(librarian)     </span>
+<span id="annotated-cell-7-3"><a href="#annotated-cell-7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(librarian)</span>
 <span id="annotated-cell-7-4"><a href="#annotated-cell-7-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="annotated-cell-7-5"><a href="#annotated-cell-7-5" aria-hidden="true" tabindex="-1"></a><span class="co"># now putting packages on our library's shelves:</span></span>
 <span id="annotated-cell-7-6"><a href="#annotated-cell-7-6" aria-hidden="true" tabindex="-1"></a><span class="fu">shelf</span>(</span>
@@ -295,50 +275,59 @@ Packages and setup
 <span id="annotated-cell-7-24"><a href="#annotated-cell-7-24" aria-hidden="true" tabindex="-1"></a>  <span class="co"># ─── essential package collections ───</span></span>
 <span id="annotated-cell-7-25"><a href="#annotated-cell-7-25" aria-hidden="true" tabindex="-1"></a>  doParallel,     <span class="co"># parallel execution</span></span>
 <span id="annotated-cell-7-26"><a href="#annotated-cell-7-26" aria-hidden="true" tabindex="-1"></a>  easystats,      <span class="co"># data analysis ecosystem</span></span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-7" data-target-annotation="2">2</button><span id="annotated-cell-7-27" class="code-annotation-target"><a href="#annotated-cell-7-27" aria-hidden="true" tabindex="-1"></a>  reticulate,     <span class="co"># R to Python                       </span></span>
+<span id="annotated-cell-7-27"><a href="#annotated-cell-7-27" aria-hidden="true" tabindex="-1"></a>  reticulate,     <span class="co"># R to Python                       </span></span>
 <span id="annotated-cell-7-28"><a href="#annotated-cell-7-28" aria-hidden="true" tabindex="-1"></a>  tidyverse,      <span class="co"># modern R ecosystem</span></span>
-<span id="annotated-cell-7-29"><a href="#annotated-cell-7-29" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="annotated-cell-7-30"><a href="#annotated-cell-7-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="annotated-cell-7-31"><a href="#annotated-cell-7-31" aria-hidden="true" tabindex="-1"></a><span class="co"># ─── Global cosmetic theme ───</span></span>
-<span id="annotated-cell-7-32"><a href="#annotated-cell-7-32" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_modern</span>(<span class="at">base_size =</span> <span class="dv">14</span>))  </span>
-<span id="annotated-cell-7-33"><a href="#annotated-cell-7-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="annotated-cell-7-34"><a href="#annotated-cell-7-34" aria-hidden="true" tabindex="-1"></a><span class="co"># ─── My palettes ───</span></span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-7" data-target-annotation="3">3</button><span id="annotated-cell-7-35" class="code-annotation-target"><a href="#annotated-cell-7-35" aria-hidden="true" tabindex="-1"></a>pal_okabe_ito <span class="ot">&lt;-</span> <span class="fu">c</span>(                                                  </span>
-<span id="annotated-cell-7-36"><a href="#annotated-cell-7-36" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#E69F00"</span>, <span class="st">"#56B4E9"</span>, <span class="st">"#009E73"</span>,                            </span>
-<span id="annotated-cell-7-37"><a href="#annotated-cell-7-37" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#F5C710"</span>, <span class="st">"#0072B2"</span>, <span class="st">"#D55E00"</span>, <span class="st">"#CC79A7"</span>, <span class="st">"#6c0009"</span>)      </span>
-<span id="annotated-cell-7-38"><a href="#annotated-cell-7-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="annotated-cell-7-39"><a href="#annotated-cell-7-39" aria-hidden="true" tabindex="-1"></a><span class="co"># We'll need 9 colors at some point</span></span>
-<span id="annotated-cell-7-40"><a href="#annotated-cell-7-40" aria-hidden="true" tabindex="-1"></a>pal_okabe_ito_extended <span class="ot">&lt;-</span> <span class="fu">c</span>(                                 </span>
-<span id="annotated-cell-7-41"><a href="#annotated-cell-7-41" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#E69F00"</span>, <span class="st">"#56B4E9"</span>, <span class="st">"#009E73"</span>,                           </span>
-<span id="annotated-cell-7-42"><a href="#annotated-cell-7-42" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#F5C710"</span>, <span class="st">"#0072B2"</span>, <span class="st">"#D55E00"</span>, <span class="st">"#CC79A7"</span>, <span class="st">"#6c0009"</span>, <span class="st">"#414487FF"</span>)</span>
-<span id="annotated-cell-7-43"><a href="#annotated-cell-7-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="annotated-cell-7-44"><a href="#annotated-cell-7-44" aria-hidden="true" tabindex="-1"></a><span class="co"># We'll need 30 colors at another moment</span></span>
-<span id="annotated-cell-7-45"><a href="#annotated-cell-7-45" aria-hidden="true" tabindex="-1"></a>cool_30_colors <span class="ot">&lt;-</span> <span class="fu">c</span>(                                                   </span>
-<span id="annotated-cell-7-46"><a href="#annotated-cell-7-46" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#3d51b4"</span>, <span class="st">"#414487FF"</span>, <span class="st">"#003d73"</span>, <span class="st">"#440154FF"</span>, <span class="st">"#6c0009"</span>, <span class="st">"#b64e4e"</span>,</span>
-<span id="annotated-cell-7-47"><a href="#annotated-cell-7-47" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#D55E00"</span>, <span class="st">"#E69F00"</span>, <span class="st">"#F5C710"</span>, <span class="st">"#FDE725FF"</span>, <span class="st">"#f2bb7b"</span>, <span class="st">"#f1afad"</span>, <span class="st">"#CC79A7"</span>, </span>
-<span id="annotated-cell-7-48"><a href="#annotated-cell-7-48" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#e57774"</span>, <span class="st">"#7AD151FF"</span>, <span class="st">"#57b571"</span>, <span class="st">"#318a4a"</span>, <span class="st">"#009E73"</span>, <span class="st">"#22A884FF"</span>, </span>
-<span id="annotated-cell-7-49"><a href="#annotated-cell-7-49" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#2A788EFF"</span>, <span class="st">"#0072B2"</span>, <span class="st">"#2da6b5"</span>, <span class="st">"#56B4E9"</span>, <span class="st">"#889be0"</span>, <span class="st">"#6677e0"</span>,   </span>
-<span id="annotated-cell-7-50"><a href="#annotated-cell-7-50" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#3d51b4"</span>, <span class="st">"#414487FF"</span>, <span class="st">"#003d73"</span>, <span class="st">"#440154FF"</span>, <span class="st">"#6c0009"</span>, <span class="st">"#b64e4e"</span></span>
-<span id="annotated-cell-7-51"><a href="#annotated-cell-7-51" aria-hidden="true" tabindex="-1"></a>  )                                                                 </span>
-<span id="annotated-cell-7-52"><a href="#annotated-cell-7-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="annotated-cell-7-53"><a href="#annotated-cell-7-53" aria-hidden="true" tabindex="-1"></a>path <span class="ot">=</span> <span class="st">"data/"</span></span>
-<span id="annotated-cell-7-54"><a href="#annotated-cell-7-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="annotated-cell-7-55"><a href="#annotated-cell-7-55" aria-hidden="true" tabindex="-1"></a><span class="co"># loading result data</span></span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-7" data-target-annotation="4">4</button><span id="annotated-cell-7-56" class="code-annotation-target"><a href="#annotated-cell-7-56" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df.RDS"</span>))</span>
-<span id="annotated-cell-7-57"><a href="#annotated-cell-7-57" aria-hidden="true" tabindex="-1"></a>df_embeds <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_embeds.RDS"</span>))</span>
-<span id="annotated-cell-7-58"><a href="#annotated-cell-7-58" aria-hidden="true" tabindex="-1"></a><span class="co"># Categorical and visual embeddings</span></span>
-<span id="annotated-cell-7-59"><a href="#annotated-cell-7-59" aria-hidden="true" tabindex="-1"></a>df_embeds_categ  <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_embeds_categ.RDS"</span>))</span>
-<span id="annotated-cell-7-60"><a href="#annotated-cell-7-60" aria-hidden="true" tabindex="-1"></a>df_embeds_visual <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_embeds_visual.RDS"</span>))</span>
-<span id="annotated-cell-7-61"><a href="#annotated-cell-7-61" aria-hidden="true" tabindex="-1"></a><span class="co"># Subject embeddings per sub-group</span></span>
-<span id="annotated-cell-7-62"><a href="#annotated-cell-7-62" aria-hidden="true" tabindex="-1"></a>df_embed_c_sub  <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_embed_c_sub.RDS"</span>))</span>
-<span id="annotated-cell-7-63"><a href="#annotated-cell-7-63" aria-hidden="true" tabindex="-1"></a>df_embed_cs_sub <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_embed_cs_sub.RDS"</span>))</span>
-<span id="annotated-cell-7-64"><a href="#annotated-cell-7-64" aria-hidden="true" tabindex="-1"></a>df_embed_v_sub  <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_embed_v_sub.RDS"</span>))</span>
-<span id="annotated-cell-7-65"><a href="#annotated-cell-7-65" aria-hidden="true" tabindex="-1"></a>df_embed_vs_sub <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_embed_vs_sub.RDS"</span>))</span>
-<span id="annotated-cell-7-66"><a href="#annotated-cell-7-66" aria-hidden="true" tabindex="-1"></a><span class="co"># Accuracy of the unsupervised alignment (bad = not tidy data)</span></span>
-<span id="annotated-cell-7-67"><a href="#annotated-cell-7-67" aria-hidden="true" tabindex="-1"></a>df_accuracy_all_bad <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_accuracy_all_bad.RDS"</span>))</span>
-<span id="annotated-cell-7-68"><a href="#annotated-cell-7-68" aria-hidden="true" tabindex="-1"></a>df_accuracy_cat_bad <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_accuracy_cat_bad.RDS"</span>))</span>
-<span id="annotated-cell-7-69"><a href="#annotated-cell-7-69" aria-hidden="true" tabindex="-1"></a><span class="co"># Coordinates of the aligned embeddings from the Python output</span></span>
-<span id="annotated-cell-7-70"><a href="#annotated-cell-7-70" aria-hidden="true" tabindex="-1"></a>coordinates_aligned_embeddings <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"coordinates_aligned_embeddings.RDS"</span>)) </span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="annotated-cell-7-29"><a href="#annotated-cell-7-29" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+  The 'cran_repo' argument in shelf() was not set, so it will use
+  cran_repo = 'https://cran.r-project.org' by default.
+
+  To avoid this message, set the 'cran_repo' argument to a CRAN
+  mirror URL (see https://cran.r-project.org/mirrors.html) or set
+  'quiet = TRUE'.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="annotated-cell-8"><pre class="sourceCode r code-annotation-code code-with-copy"><code class="sourceCode r"><span id="annotated-cell-8-1"><a href="#annotated-cell-8-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-8-2"><a href="#annotated-cell-8-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ─── Global cosmetic theme ───</span></span>
+<span id="annotated-cell-8-3"><a href="#annotated-cell-8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_modern</span>(<span class="at">base_size =</span> <span class="dv">14</span>))  </span>
+<span id="annotated-cell-8-4"><a href="#annotated-cell-8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-8-5"><a href="#annotated-cell-8-5" aria-hidden="true" tabindex="-1"></a><span class="co"># ─── My palettes ───</span></span>
+<span id="annotated-cell-8-6"><a href="#annotated-cell-8-6" aria-hidden="true" tabindex="-1"></a>pal_okabe_ito <span class="ot">&lt;-</span> <span class="fu">c</span>(                                                  </span>
+<span id="annotated-cell-8-7"><a href="#annotated-cell-8-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#E69F00"</span>, <span class="st">"#56B4E9"</span>, <span class="st">"#009E73"</span>,                            </span>
+<span id="annotated-cell-8-8"><a href="#annotated-cell-8-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#F5C710"</span>, <span class="st">"#0072B2"</span>, <span class="st">"#D55E00"</span>, <span class="st">"#CC79A7"</span>, <span class="st">"#6c0009"</span>)      </span>
+<span id="annotated-cell-8-9"><a href="#annotated-cell-8-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-8-10"><a href="#annotated-cell-8-10" aria-hidden="true" tabindex="-1"></a><span class="co"># We'll need 9 colors at some point</span></span>
+<span id="annotated-cell-8-11"><a href="#annotated-cell-8-11" aria-hidden="true" tabindex="-1"></a>pal_okabe_ito_extended <span class="ot">&lt;-</span> <span class="fu">c</span>(                                 </span>
+<span id="annotated-cell-8-12"><a href="#annotated-cell-8-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#E69F00"</span>, <span class="st">"#56B4E9"</span>, <span class="st">"#009E73"</span>,                           </span>
+<span id="annotated-cell-8-13"><a href="#annotated-cell-8-13" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#F5C710"</span>, <span class="st">"#0072B2"</span>, <span class="st">"#D55E00"</span>, <span class="st">"#CC79A7"</span>, <span class="st">"#6c0009"</span>, <span class="st">"#414487FF"</span>)</span>
+<span id="annotated-cell-8-14"><a href="#annotated-cell-8-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-8-15"><a href="#annotated-cell-8-15" aria-hidden="true" tabindex="-1"></a><span class="co"># We'll need 30 colors at another moment</span></span>
+<span id="annotated-cell-8-16"><a href="#annotated-cell-8-16" aria-hidden="true" tabindex="-1"></a>cool_30_colors <span class="ot">&lt;-</span> <span class="fu">c</span>(                                                   </span>
+<span id="annotated-cell-8-17"><a href="#annotated-cell-8-17" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#3d51b4"</span>, <span class="st">"#414487FF"</span>, <span class="st">"#003d73"</span>, <span class="st">"#440154FF"</span>, <span class="st">"#6c0009"</span>, <span class="st">"#b64e4e"</span>,</span>
+<span id="annotated-cell-8-18"><a href="#annotated-cell-8-18" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#D55E00"</span>, <span class="st">"#E69F00"</span>, <span class="st">"#F5C710"</span>, <span class="st">"#FDE725FF"</span>, <span class="st">"#f2bb7b"</span>, <span class="st">"#f1afad"</span>, <span class="st">"#CC79A7"</span>, </span>
+<span id="annotated-cell-8-19"><a href="#annotated-cell-8-19" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#e57774"</span>, <span class="st">"#7AD151FF"</span>, <span class="st">"#57b571"</span>, <span class="st">"#318a4a"</span>, <span class="st">"#009E73"</span>, <span class="st">"#22A884FF"</span>, </span>
+<span id="annotated-cell-8-20"><a href="#annotated-cell-8-20" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#2A788EFF"</span>, <span class="st">"#0072B2"</span>, <span class="st">"#2da6b5"</span>, <span class="st">"#56B4E9"</span>, <span class="st">"#889be0"</span>, <span class="st">"#6677e0"</span>,   </span>
+<span id="annotated-cell-8-21"><a href="#annotated-cell-8-21" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#3d51b4"</span>, <span class="st">"#414487FF"</span>, <span class="st">"#003d73"</span>, <span class="st">"#440154FF"</span>, <span class="st">"#6c0009"</span>, <span class="st">"#b64e4e"</span></span>
+<span id="annotated-cell-8-22"><a href="#annotated-cell-8-22" aria-hidden="true" tabindex="-1"></a>  )                                                                 </span>
+<span id="annotated-cell-8-23"><a href="#annotated-cell-8-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-8-24"><a href="#annotated-cell-8-24" aria-hidden="true" tabindex="-1"></a>path <span class="ot">=</span> <span class="st">"data/"</span></span>
+<span id="annotated-cell-8-25"><a href="#annotated-cell-8-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-8-26"><a href="#annotated-cell-8-26" aria-hidden="true" tabindex="-1"></a><span class="co"># loading result data</span></span>
+<span id="annotated-cell-8-27"><a href="#annotated-cell-8-27" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df.RDS"</span>))</span>
+<span id="annotated-cell-8-28"><a href="#annotated-cell-8-28" aria-hidden="true" tabindex="-1"></a>df_embeds <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_embeds.RDS"</span>))</span>
+<span id="annotated-cell-8-29"><a href="#annotated-cell-8-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Categorical and visual embeddings</span></span>
+<span id="annotated-cell-8-30"><a href="#annotated-cell-8-30" aria-hidden="true" tabindex="-1"></a>df_embeds_categ  <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_embeds_categ.RDS"</span>))</span>
+<span id="annotated-cell-8-31"><a href="#annotated-cell-8-31" aria-hidden="true" tabindex="-1"></a>df_embeds_visual <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_embeds_visual.RDS"</span>))</span>
+<span id="annotated-cell-8-32"><a href="#annotated-cell-8-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Subject embeddings per sub-group</span></span>
+<span id="annotated-cell-8-33"><a href="#annotated-cell-8-33" aria-hidden="true" tabindex="-1"></a>df_embed_c_sub  <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_embed_c_sub.RDS"</span>))</span>
+<span id="annotated-cell-8-34"><a href="#annotated-cell-8-34" aria-hidden="true" tabindex="-1"></a>df_embed_cs_sub <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_embed_cs_sub.RDS"</span>))</span>
+<span id="annotated-cell-8-35"><a href="#annotated-cell-8-35" aria-hidden="true" tabindex="-1"></a>df_embed_v_sub  <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_embed_v_sub.RDS"</span>))</span>
+<span id="annotated-cell-8-36"><a href="#annotated-cell-8-36" aria-hidden="true" tabindex="-1"></a>df_embed_vs_sub <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_embed_vs_sub.RDS"</span>))</span>
+<span id="annotated-cell-8-37"><a href="#annotated-cell-8-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Accuracy of the unsupervised alignment (bad = not tidy data)</span></span>
+<span id="annotated-cell-8-38"><a href="#annotated-cell-8-38" aria-hidden="true" tabindex="-1"></a>df_accuracy_all_bad <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_accuracy_all_bad.RDS"</span>))</span>
+<span id="annotated-cell-8-39"><a href="#annotated-cell-8-39" aria-hidden="true" tabindex="-1"></a>df_accuracy_cat_bad <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"df_accuracy_cat_bad.RDS"</span>))</span>
+<span id="annotated-cell-8-40"><a href="#annotated-cell-8-40" aria-hidden="true" tabindex="-1"></a><span class="co"># Coordinates of the aligned embeddings from the Python output</span></span>
+<span id="annotated-cell-8-41"><a href="#annotated-cell-8-41" aria-hidden="true" tabindex="-1"></a>coordinates_aligned_embeddings <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">paste0</span>(path, <span class="st">"coordinates_aligned_embeddings.RDS"</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
 </div>
 </div>
@@ -348,98 +337,98 @@ Packages and setup
 <p>We are going to simulate 30 participants presenting four different cognitive profiles, that I defined as, respectively, <em>verbal</em> aphantasics, <em>spatial</em> aphantasics, <em>spatial</em> phantasics, and <em>visual</em> phantasics.</p>
 <p>To simulate these four sub-groups, we use the <code>holodeck</code> R package to generate multivariate normal distributions of scores on these three dimensions for each sub-group. For instance, verbal aphantasics have normally distributed visual imagery scores centered around a mean of 0 (normalized, so negative scores are possible), 0.4 for spatial imagery, and 0.7 for verbal style; Spatial aphantasics have means of 0 for visual, 0.75 spatial, and 0.3 for verbal; etc. The numbers are arbitrary, but have been chosen by trial-and-error to obtain a model that is both well-defined and not exaggerated.</p>
 <div class="cell-container"><div class="cell-decorator"><pre>In [2]:</pre></div><div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ─── Generating hypothetical imagery values for 30 subjects ─── </span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># The function takes the variance and covariance of the imagery distributions</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># as arguments</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>generate_osv_model <span class="ot">&lt;-</span> <span class="cf">function</span>(var, cov){</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  df <span class="ot">&lt;-</span> </span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">tibble</span>(<span class="at">group =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"aph"</span>, <span class="st">"phant"</span>), <span class="at">each =</span> <span class="dv">8</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(group) <span class="sc">|&gt;</span> </span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>      <span class="at">spatial_group =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"spa_low"</span>, <span class="dv">4</span>), <span class="fu">rep</span>(<span class="st">"spa_high"</span>, <span class="dv">4</span>)),</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>      <span class="at">vis_spa_group =</span> <span class="fu">paste0</span>(group, <span class="st">"_"</span>, spatial_group),</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>      <span class="at">verbal_group =</span> <span class="st">"verbal_low"</span>,</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>      <span class="at">verbal_group  =</span> <span class="fu">case_when</span>(</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>        vis_spa_group <span class="sc">==</span> <span class="st">"aph_spa_low"</span> <span class="sc">~</span> <span class="st">"verbal_high"</span>, </span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>        vis_spa_group <span class="sc">==</span> <span class="st">"phant_spa_low"</span> <span class="sc">~</span> <span class="st">"verbal_mid"</span>,</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>        <span class="cn">TRUE</span> <span class="sc">~</span> verbal_group)</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">|&gt;</span> </span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(vis_spa_group) <span class="sc">|&gt;</span> </span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># ─── visual ───</span></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sim_discr</span>(</span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>      <span class="at">n_vars =</span> <span class="dv">1</span>, </span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>      <span class="at">var =</span> var, </span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>      <span class="at">cov =</span> cov, </span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>      <span class="co"># aph_s, aph_v, phant_s, phant_v</span></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>      <span class="at">group_means =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="fl">0.6</span>, <span class="fl">0.87</span>), </span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>      <span class="at">name =</span> <span class="st">"v"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    <span class="co"># ─── spatial ───</span></span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sim_discr</span>(</span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>      <span class="at">n_vars =</span> <span class="dv">1</span>,  </span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>      <span class="at">var =</span> var, </span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>      <span class="at">cov =</span> cov, </span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>      <span class="co"># aph_s, aph_v, phant_s, phant_v</span></span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>      <span class="at">group_means =</span> <span class="fu">c</span>(<span class="fl">0.75</span>, <span class="fl">0.4</span>, <span class="fl">0.7</span>, <span class="fl">0.3</span>), </span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>      <span class="at">name =</span> <span class="st">"s"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>    <span class="co"># ─── verbal ───</span></span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sim_discr</span>(</span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>      <span class="at">n_vars =</span> <span class="dv">1</span>,  </span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>      <span class="at">var =</span> var, </span>
-<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>      <span class="at">cov =</span> cov, </span>
-<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>      <span class="co"># aph_s, aph_v, phant_s, phant_v</span></span>
-<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>      <span class="at">group_means =</span> <span class="fu">c</span>(<span class="fl">0.3</span>, <span class="fl">0.7</span>, <span class="fl">0.3</span>, <span class="fl">0.5</span>), </span>
-<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>      <span class="at">name =</span> <span class="st">"i"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rename</span>(</span>
-<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>      <span class="at">visual_imagery  =</span> v_1,</span>
-<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>      <span class="at">spatial_imagery =</span> s_1,</span>
-<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>      <span class="at">verbal_profile  =</span> i_1</span>
-<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>      )</span>
-<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">generate_osv_model</span>(<span class="fl">0.03</span>, <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ─── Generating hypothetical imagery values for 30 subjects ─── </span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># The function takes the variance and covariance of the imagery distributions</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># as arguments</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>generate_osv_model <span class="ot">&lt;-</span> <span class="cf">function</span>(var, cov){</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  df <span class="ot">&lt;-</span> </span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">tibble</span>(<span class="at">group =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"aph"</span>, <span class="st">"phant"</span>), <span class="at">each =</span> <span class="dv">8</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(group) <span class="sc">|&gt;</span> </span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>      <span class="at">spatial_group =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"spa_low"</span>, <span class="dv">4</span>), <span class="fu">rep</span>(<span class="st">"spa_high"</span>, <span class="dv">4</span>)),</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>      <span class="at">vis_spa_group =</span> <span class="fu">paste0</span>(group, <span class="st">"_"</span>, spatial_group),</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>      <span class="at">verbal_group =</span> <span class="st">"verbal_low"</span>,</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>      <span class="at">verbal_group  =</span> <span class="fu">case_when</span>(</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>        vis_spa_group <span class="sc">==</span> <span class="st">"aph_spa_low"</span> <span class="sc">~</span> <span class="st">"verbal_high"</span>, </span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>        vis_spa_group <span class="sc">==</span> <span class="st">"phant_spa_low"</span> <span class="sc">~</span> <span class="st">"verbal_mid"</span>,</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>        <span class="cn">TRUE</span> <span class="sc">~</span> verbal_group)</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">|&gt;</span> </span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(vis_spa_group) <span class="sc">|&gt;</span> </span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># ─── visual ───</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sim_discr</span>(</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>      <span class="at">n_vars =</span> <span class="dv">1</span>, </span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>      <span class="at">var =</span> var, </span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>      <span class="at">cov =</span> cov, </span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>      <span class="co"># aph_s, aph_v, phant_s, phant_v</span></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>      <span class="at">group_means =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="fl">0.6</span>, <span class="fl">0.87</span>), </span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>      <span class="at">name =</span> <span class="st">"v"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>    <span class="co"># ─── spatial ───</span></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sim_discr</span>(</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>      <span class="at">n_vars =</span> <span class="dv">1</span>,  </span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>      <span class="at">var =</span> var, </span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>      <span class="at">cov =</span> cov, </span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>      <span class="co"># aph_s, aph_v, phant_s, phant_v</span></span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>      <span class="at">group_means =</span> <span class="fu">c</span>(<span class="fl">0.75</span>, <span class="fl">0.4</span>, <span class="fl">0.7</span>, <span class="fl">0.3</span>), </span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>      <span class="at">name =</span> <span class="st">"s"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>    <span class="co"># ─── verbal ───</span></span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sim_discr</span>(</span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>      <span class="at">n_vars =</span> <span class="dv">1</span>,  </span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>      <span class="at">var =</span> var, </span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>      <span class="at">cov =</span> cov, </span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>      <span class="co"># aph_s, aph_v, phant_s, phant_v</span></span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>      <span class="at">group_means =</span> <span class="fu">c</span>(<span class="fl">0.3</span>, <span class="fl">0.7</span>, <span class="fl">0.3</span>, <span class="fl">0.5</span>), </span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>      <span class="at">name =</span> <span class="st">"i"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rename</span>(</span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>      <span class="at">visual_imagery  =</span> v_1,</span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a>      <span class="at">spatial_imagery =</span> s_1,</span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>      <span class="at">verbal_profile  =</span> i_1</span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">generate_osv_model</span>(<span class="fl">0.03</span>, <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
 <section id="generating-prototype-embeddings-from-a-sphere" class="level3">
 <h3 class="anchored" data-anchor-id="generating-prototype-embeddings-from-a-sphere">Generating “prototype” embeddings from a sphere</h3>
 <p>Proposal from <a href="https://stats.stackexchange.com/questions/7977/how-to-generate-uniformly-distributed-points-on-the-surface-of-the-3-d-unit-sphe">StackExchange</a> to generate points on a sphere:</p>
 <p>Let’s use a function to generate embeddings. We get 8 nicely distributed clusters. We’ll retrieve the centroids of each cluster, which would be the “perfect” categories of each species group (say, generated by a computational model on categorical criteria).</p>
 <div class="cell-container"><div class="cell-decorator"><pre>In [3]:</pre></div><div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ─── Generating a sphere of 1000 points and 8 equally distributed clusters ─── </span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>generate_sphere <span class="ot">&lt;-</span> <span class="cf">function</span>(n){</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  z     <span class="ot">&lt;-</span> <span class="dv">2</span><span class="sc">*</span><span class="fu">runif</span>(n) <span class="sc">-</span> <span class="dv">1</span>          <span class="co"># uniform on [-1, 1]</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  theta <span class="ot">&lt;-</span> <span class="dv">2</span><span class="sc">*</span>pi<span class="sc">*</span><span class="fu">runif</span>(n) <span class="sc">-</span> pi      <span class="co"># uniform on [-pi, pi]</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  x     <span class="ot">&lt;-</span> <span class="fu">sin</span>(theta)<span class="sc">*</span><span class="fu">sqrt</span>(<span class="dv">1</span><span class="sc">-</span>z<span class="sc">^</span><span class="dv">2</span>)  <span class="co"># based on angle</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  y     <span class="ot">&lt;-</span> <span class="fu">cos</span>(theta)<span class="sc">*</span><span class="fu">sqrt</span>(<span class="dv">1</span><span class="sc">-</span>z<span class="sc">^</span><span class="dv">2</span>) </span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">z =</span> z)</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(df)</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="co"># 1000 random observations with embeddings uniformly distributed on a sphere</span></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>df_embeds <span class="ot">&lt;-</span> <span class="fu">generate_sphere</span>(<span class="dv">1000</span>)</span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Clustering the observations in 8 groups based on their coordinates</span></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>clusters <span class="ot">&lt;-</span> <span class="fu">Mclust</span>(df_embeds, <span class="at">G =</span> <span class="dv">8</span>)</span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="co"># adding the classification to the data</span></span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>df_embeds <span class="ot">&lt;-</span> df_embeds <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">group =</span> <span class="fu">as.factor</span>(clusters<span class="sc">$</span>classification))</span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="co"># getting the centroids of each cluster</span></span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>df_centroids <span class="ot">&lt;-</span> </span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>  df_embeds <span class="sc">|&gt;</span> </span>
-<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(group) <span class="sc">|&gt;</span> </span>
-<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">x_centroid =</span> <span class="fu">mean</span>(x),</span>
-<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">y_centroid =</span> <span class="fu">mean</span>(y),</span>
-<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">z_centroid =</span> <span class="fu">mean</span>(z)</span>
-<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a><span class="co"># adding them to the data</span></span>
-<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>df_embeds_2 <span class="ot">&lt;-</span> <span class="fu">left_join</span>(df_embeds, df_centroids, <span class="at">by =</span> <span class="st">"group"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ─── Generating a sphere of 1000 points and 8 equally distributed clusters ─── </span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>generate_sphere <span class="ot">&lt;-</span> <span class="cf">function</span>(n){</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  z     <span class="ot">&lt;-</span> <span class="dv">2</span><span class="sc">*</span><span class="fu">runif</span>(n) <span class="sc">-</span> <span class="dv">1</span>          <span class="co"># uniform on [-1, 1]</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  theta <span class="ot">&lt;-</span> <span class="dv">2</span><span class="sc">*</span>pi<span class="sc">*</span><span class="fu">runif</span>(n) <span class="sc">-</span> pi      <span class="co"># uniform on [-pi, pi]</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  x     <span class="ot">&lt;-</span> <span class="fu">sin</span>(theta)<span class="sc">*</span><span class="fu">sqrt</span>(<span class="dv">1</span><span class="sc">-</span>z<span class="sc">^</span><span class="dv">2</span>)  <span class="co"># based on angle</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  y     <span class="ot">&lt;-</span> <span class="fu">cos</span>(theta)<span class="sc">*</span><span class="fu">sqrt</span>(<span class="dv">1</span><span class="sc">-</span>z<span class="sc">^</span><span class="dv">2</span>) </span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">z =</span> z)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(df)</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="co"># 1000 random observations with embeddings uniformly distributed on a sphere</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>df_embeds <span class="ot">&lt;-</span> <span class="fu">generate_sphere</span>(<span class="dv">1000</span>)</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Clustering the observations in 8 groups based on their coordinates</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>clusters <span class="ot">&lt;-</span> <span class="fu">Mclust</span>(df_embeds, <span class="at">G =</span> <span class="dv">8</span>)</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="co"># adding the classification to the data</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>df_embeds <span class="ot">&lt;-</span> df_embeds <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">group =</span> <span class="fu">as.factor</span>(clusters<span class="sc">$</span>classification))</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="co"># getting the centroids of each cluster</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>df_centroids <span class="ot">&lt;-</span> </span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>  df_embeds <span class="sc">|&gt;</span> </span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(group) <span class="sc">|&gt;</span> </span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">x_centroid =</span> <span class="fu">mean</span>(x),</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">y_centroid =</span> <span class="fu">mean</span>(y),</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">z_centroid =</span> <span class="fu">mean</span>(z)</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a><span class="co"># adding them to the data</span></span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>df_embeds_2 <span class="ot">&lt;-</span> <span class="fu">left_join</span>(df_embeds, df_centroids, <span class="at">by =</span> <span class="st">"group"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
 </section>
 <section id="categorical-model-embeddings" class="level3">
@@ -448,77 +437,77 @@ Packages and setup
 <p><span class="math display">\[d(centroid, observation) = \sqrt{(x_{c} - x_{o})^{2} + (y_{c} - y_{o})^{2} + (z_{c} - z_{o})^{2}}\]</span></p>
 <p>This can be done using the function <code>norm(coordinates, type = "2")</code> in R.</p>
 <div class="cell-container"><div class="cell-decorator"><pre>In [4]:</pre></div><div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ─── Selecting categorical embeddings based on distances to the centroids ───</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Function to filter points of the sphere based on the distance to the centroids</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>generate_embeddings <span class="ot">&lt;-</span> <span class="cf">function</span>(df, n_embeddings, distance_quantile){</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  df <span class="ot">&lt;-</span> </span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    df <span class="sc">|&gt;</span> </span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># computing the euclidean distance to the centroids for each observation</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rowwise</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>      <span class="at">distance =</span> <span class="fu">norm</span>(</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>        <span class="fu">c</span>((x_centroid <span class="sc">-</span> x), (y_centroid <span class="sc">-</span> y), (z_centroid <span class="sc">-</span> z)),</span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">type =</span> <span class="st">"2"</span>)</span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>      ) <span class="sc">|&gt;</span> </span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># filtering by distance to the centroid by group</span></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(group) <span class="sc">|&gt;</span> </span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># selecting the X% closest (specified with "distance_quantile")</span></span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(distance <span class="sc">&lt;</span> <span class="fu">quantile</span>(distance, <span class="at">probs =</span> distance_quantile)) <span class="sc">|&gt;</span> </span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># selecting X random observations per cluster in these </span></span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># (specified with "n_embeddings")</span></span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span>n_embeddings) <span class="sc">|&gt;</span> </span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(group, x, y, z) <span class="sc">|&gt;</span></span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ungroup</span>()</span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>df_embeds_categ <span class="ot">&lt;-</span> <span class="fu">generate_embeddings</span>(df_embeds_2, <span class="dv">8</span>, <span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ─── Selecting categorical embeddings based on distances to the centroids ───</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Function to filter points of the sphere based on the distance to the centroids</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>generate_embeddings <span class="ot">&lt;-</span> <span class="cf">function</span>(df, n_embeddings, distance_quantile){</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  df <span class="ot">&lt;-</span> </span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    df <span class="sc">|&gt;</span> </span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># computing the euclidean distance to the centroids for each observation</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rowwise</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>      <span class="at">distance =</span> <span class="fu">norm</span>(</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>        <span class="fu">c</span>((x_centroid <span class="sc">-</span> x), (y_centroid <span class="sc">-</span> y), (z_centroid <span class="sc">-</span> z)),</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">type =</span> <span class="st">"2"</span>)</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>      ) <span class="sc">|&gt;</span> </span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># filtering by distance to the centroid by group</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(group) <span class="sc">|&gt;</span> </span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># selecting the X% closest (specified with "distance_quantile")</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(distance <span class="sc">&lt;</span> <span class="fu">quantile</span>(distance, <span class="at">probs =</span> distance_quantile)) <span class="sc">|&gt;</span> </span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># selecting X random observations per cluster in these </span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># (specified with "n_embeddings")</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span>n_embeddings) <span class="sc">|&gt;</span> </span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(group, x, y, z) <span class="sc">|&gt;</span></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ungroup</span>()</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>df_embeds_categ <span class="ot">&lt;-</span> <span class="fu">generate_embeddings</span>(df_embeds_2, <span class="dv">8</span>, <span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
 </section>
 <section id="visual-model-embeddings" class="level3">
 <h3 class="anchored" data-anchor-id="visual-model-embeddings">Visual model embeddings</h3>
 <p>In the case of the <strong>visual model</strong>, we would like approximately evenly distributed embeddings, that could also dive <em>inside</em> the sphere, i.e.&nbsp;representing species that are visually close although diametrically opposed when it comes to taxonomy. To do this we could try to simulate multivariate normal distributions around the centroids<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. This can be done with the <code>holodeck</code> package.</p>
 <div class="cell-container"><div class="cell-decorator"><pre>In [5]:</pre></div><div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ─── Generating visual embeddings based on multivariate distributions </span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># around the categorical embeddings ───</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co"># defining the variance and covariance of the distributions</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>var2 <span class="ot">&lt;-</span> <span class="fl">0.05</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>cov2 <span class="ot">&lt;-</span> <span class="dv">0</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="co"># generating multivariate distributions around the categorical 3D means</span></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>df_embeds_visual <span class="ot">&lt;-</span></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tibble</span>(</span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">id =</span> <span class="fu">as.factor</span>(<span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">6400</span>)),</span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">category =</span> <span class="fu">as.factor</span>(<span class="fu">rep</span>(<span class="fu">seq</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">64</span>), <span class="at">each =</span> <span class="dv">100</span>))</span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  )<span class="sc">|&gt;</span> </span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(category) <span class="sc">|&gt;</span> </span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sim_discr</span>(</span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">n_vars =</span> <span class="dv">1</span>, </span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">var =</span> var2, </span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">cov =</span> cov2, </span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">group_means =</span> df_embeds_categ<span class="sc">$</span>x, </span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">name =</span> <span class="st">"x"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sim_discr</span>(</span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">n_vars =</span> <span class="dv">1</span>, </span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">var =</span> var2, </span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">cov =</span> cov2, </span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">group_means =</span> df_embeds_categ<span class="sc">$</span>y, </span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">name =</span> <span class="st">"y"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sim_discr</span>(</span>
-<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">n_vars =</span> <span class="dv">1</span>, </span>
-<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">var =</span> var2, </span>
-<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">cov =</span> cov2, </span>
-<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>    <span class="at">group_means =</span> df_embeds_categ<span class="sc">$</span>z, </span>
-<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">name =</span> <span class="st">"z"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>  <span class="co"># keeping only 8 points per distribution</span></span>
-<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="dv">1</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">group =</span> <span class="fu">as.factor</span>(<span class="fu">rep</span>(<span class="fu">seq</span>(<span class="dv">1</span>, <span class="dv">8</span>), <span class="at">each =</span> <span class="dv">8</span>))) <span class="sc">|&gt;</span> </span>
-<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">x =</span> x_1, <span class="at">y =</span> y_1, <span class="at">z =</span> z_1) <span class="sc">|&gt;</span> </span>
-<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(group, x, y, z)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ─── Generating visual embeddings based on multivariate distributions </span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># around the categorical embeddings ───</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co"># defining the variance and covariance of the distributions</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>var2 <span class="ot">&lt;-</span> <span class="fl">0.05</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>cov2 <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="co"># generating multivariate distributions around the categorical 3D means</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>df_embeds_visual <span class="ot">&lt;-</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tibble</span>(</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">id =</span> <span class="fu">as.factor</span>(<span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">6400</span>)),</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">category =</span> <span class="fu">as.factor</span>(<span class="fu">rep</span>(<span class="fu">seq</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">64</span>), <span class="at">each =</span> <span class="dv">100</span>))</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  )<span class="sc">|&gt;</span> </span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(category) <span class="sc">|&gt;</span> </span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sim_discr</span>(</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">n_vars =</span> <span class="dv">1</span>, </span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">var =</span> var2, </span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">cov =</span> cov2, </span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">group_means =</span> df_embeds_categ<span class="sc">$</span>x, </span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">name =</span> <span class="st">"x"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sim_discr</span>(</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">n_vars =</span> <span class="dv">1</span>, </span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">var =</span> var2, </span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">cov =</span> cov2, </span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">group_means =</span> df_embeds_categ<span class="sc">$</span>y, </span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">name =</span> <span class="st">"y"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sim_discr</span>(</span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">n_vars =</span> <span class="dv">1</span>, </span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">var =</span> var2, </span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">cov =</span> cov2, </span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>    <span class="at">group_means =</span> df_embeds_categ<span class="sc">$</span>z, </span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">name =</span> <span class="st">"z"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>  <span class="co"># keeping only 8 points per distribution</span></span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="dv">1</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">group =</span> <span class="fu">as.factor</span>(<span class="fu">rep</span>(<span class="fu">seq</span>(<span class="dv">1</span>, <span class="dv">8</span>), <span class="at">each =</span> <span class="dv">8</span>))) <span class="sc">|&gt;</span> </span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">x =</span> x_1, <span class="at">y =</span> y_1, <span class="at">z =</span> z_1) <span class="sc">|&gt;</span> </span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(group, x, y, z)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
 </section>
 <section id="generating-the-subject-embeddings" class="level3">
@@ -527,66 +516,66 @@ Packages and setup
 <p>To generate the embeddings of each subject in each condition, we will start from these reference embeddings and generate random noise around <em>each item</em>, i.e.&nbsp;for all 64 animals. For 100 subjects, we would thus generate 100 noisy points around each animal, each point corresponding to a given subject.</p>
 <p>The visual and verbal groups will be generated with slightly more intra-group variance, so as to try to make the spatial groups as coherent as possible (and avoid blurring everything and making the groups disappear in noise).</p>
 <div class="cell-container"><div class="cell-decorator"><pre>In [6]:</pre></div><div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ─── Generating unique embeddings for each subject based on the models ───</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># creating dfs with participants</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>df_subjects_7 <span class="ot">&lt;-</span> </span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tibble</span>(<span class="at">subject =</span> <span class="fu">seq</span>(<span class="dv">1</span>, <span class="dv">7</span>, <span class="dv">1</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">subject =</span> <span class="fu">paste0</span>(<span class="st">"subject_"</span>, subject))</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>df_subjects_8 <span class="ot">&lt;-</span> </span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tibble</span>(<span class="at">subject =</span> <span class="fu">seq</span>(<span class="dv">1</span>, <span class="dv">8</span>, <span class="dv">1</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">subject =</span> <span class="fu">paste0</span>(<span class="st">"subject_"</span>, subject))</span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="co"># splitting df_embeddings</span></span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>df_embed_c  <span class="ot">&lt;-</span> df_embeddings <span class="sc">|&gt;</span> <span class="fu">select</span>(group, species,  x_c<span class="sc">:</span>z_c)</span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>df_embed_cs <span class="ot">&lt;-</span> df_embeddings <span class="sc">|&gt;</span> <span class="fu">select</span>(group, species, x_cs<span class="sc">:</span>z_cs)</span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>df_embed_vs <span class="ot">&lt;-</span> df_embeddings <span class="sc">|&gt;</span> <span class="fu">select</span>(group, species, x_vs<span class="sc">:</span>z_vs)</span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>df_embed_v  <span class="ot">&lt;-</span> df_embeddings <span class="sc">|&gt;</span> <span class="fu">select</span>(group, species,  x_v<span class="sc">:</span>z_v)</span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="co"># function to create embeddings per subject with normal random noise</span></span>
-<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>generate_subject_embeddings <span class="ot">&lt;-</span> <span class="cf">function</span>(df, df_subjects, var){</span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>  df <span class="ot">&lt;-</span></span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>    df <span class="sc">|&gt;</span> </span>
-<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">subject =</span> <span class="fu">list</span>(df_subjects)) <span class="sc">|&gt;</span> </span>
-<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">unnest</span>(subject) <span class="sc">|&gt;</span> </span>
-<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(species) <span class="sc">|&gt;</span> </span>
-<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>    <span class="co"># simulating x coordinates</span></span>
-<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sim_discr</span>(</span>
-<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>      <span class="at">n_vars =</span> <span class="dv">1</span>, </span>
-<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>      <span class="at">var =</span> var, </span>
-<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>      <span class="at">cov =</span> <span class="dv">0</span>, </span>
-<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>      <span class="at">group_means =</span> <span class="fu">pull</span>(df, <span class="dv">3</span>), </span>
-<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>      <span class="at">name =</span> <span class="st">"x"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>    <span class="co"># simulating y coordinates</span></span>
-<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sim_discr</span>(</span>
-<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>      <span class="at">n_vars =</span> <span class="dv">1</span>, </span>
-<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>      <span class="at">var =</span> var, </span>
-<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>      <span class="at">cov =</span> <span class="dv">0</span>, </span>
-<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>      <span class="at">group_means =</span> <span class="fu">pull</span>(df, <span class="dv">4</span>), </span>
-<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>      <span class="at">name =</span> <span class="st">"y"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>    <span class="co"># simulating z coordinates</span></span>
-<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sim_discr</span>(</span>
-<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>      <span class="at">n_vars =</span> <span class="dv">1</span>, </span>
-<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a>      <span class="at">var =</span> var, </span>
-<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>      <span class="at">cov =</span> <span class="dv">0</span>, </span>
-<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a>      <span class="at">group_means =</span> <span class="fu">pull</span>(df, <span class="dv">5</span>), </span>
-<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a>      <span class="at">name =</span> <span class="st">"z"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(group, species, subject, <span class="dv">7</span><span class="sc">:</span><span class="dv">9</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">x =</span> <span class="dv">4</span>, <span class="at">y =</span> <span class="dv">5</span>, <span class="at">z =</span> <span class="dv">6</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span>
-<span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(df)</span>
-<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-54"><a href="#cb7-54" aria-hidden="true" tabindex="-1"></a>var_s1 <span class="ot">=</span> <span class="fl">0.001</span></span>
-<span id="cb7-55"><a href="#cb7-55" aria-hidden="true" tabindex="-1"></a>var_s2 <span class="ot">=</span> <span class="fl">0.0005</span></span>
-<span id="cb7-56"><a href="#cb7-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-57"><a href="#cb7-57" aria-hidden="true" tabindex="-1"></a>df_embed_c_sub  <span class="ot">&lt;-</span> <span class="fu">generate_subject_embeddings</span>(df_embed_c,  df_subjects_4, var_s1)</span>
-<span id="cb7-58"><a href="#cb7-58" aria-hidden="true" tabindex="-1"></a>df_embed_cs_sub <span class="ot">&lt;-</span> <span class="fu">generate_subject_embeddings</span>(df_embed_cs, df_subjects_4, var_s2)</span>
-<span id="cb7-59"><a href="#cb7-59" aria-hidden="true" tabindex="-1"></a>df_embed_vs_sub <span class="ot">&lt;-</span> <span class="fu">generate_subject_embeddings</span>(df_embed_vs, df_subjects_4, var_s2)</span>
-<span id="cb7-60"><a href="#cb7-60" aria-hidden="true" tabindex="-1"></a>df_embed_v_sub  <span class="ot">&lt;-</span> <span class="fu">generate_subject_embeddings</span>(df_embed_v,  df_subjects_4, var_s1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ─── Generating unique embeddings for each subject based on the models ───</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># creating dfs with participants</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>df_subjects_7 <span class="ot">&lt;-</span> </span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tibble</span>(<span class="at">subject =</span> <span class="fu">seq</span>(<span class="dv">1</span>, <span class="dv">7</span>, <span class="dv">1</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">subject =</span> <span class="fu">paste0</span>(<span class="st">"subject_"</span>, subject))</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>df_subjects_8 <span class="ot">&lt;-</span> </span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tibble</span>(<span class="at">subject =</span> <span class="fu">seq</span>(<span class="dv">1</span>, <span class="dv">8</span>, <span class="dv">1</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">subject =</span> <span class="fu">paste0</span>(<span class="st">"subject_"</span>, subject))</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="co"># splitting df_embeddings</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>df_embed_c  <span class="ot">&lt;-</span> df_embeddings <span class="sc">|&gt;</span> <span class="fu">select</span>(group, species,  x_c<span class="sc">:</span>z_c)</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>df_embed_cs <span class="ot">&lt;-</span> df_embeddings <span class="sc">|&gt;</span> <span class="fu">select</span>(group, species, x_cs<span class="sc">:</span>z_cs)</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>df_embed_vs <span class="ot">&lt;-</span> df_embeddings <span class="sc">|&gt;</span> <span class="fu">select</span>(group, species, x_vs<span class="sc">:</span>z_vs)</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>df_embed_v  <span class="ot">&lt;-</span> df_embeddings <span class="sc">|&gt;</span> <span class="fu">select</span>(group, species,  x_v<span class="sc">:</span>z_v)</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="co"># function to create embeddings per subject with normal random noise</span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>generate_subject_embeddings <span class="ot">&lt;-</span> <span class="cf">function</span>(df, df_subjects, var){</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>  df <span class="ot">&lt;-</span></span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>    df <span class="sc">|&gt;</span> </span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">subject =</span> <span class="fu">list</span>(df_subjects)) <span class="sc">|&gt;</span> </span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">unnest</span>(subject) <span class="sc">|&gt;</span> </span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(species) <span class="sc">|&gt;</span> </span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>    <span class="co"># simulating x coordinates</span></span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sim_discr</span>(</span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>      <span class="at">n_vars =</span> <span class="dv">1</span>, </span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>      <span class="at">var =</span> var, </span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>      <span class="at">cov =</span> <span class="dv">0</span>, </span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>      <span class="at">group_means =</span> <span class="fu">pull</span>(df, <span class="dv">3</span>), </span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>      <span class="at">name =</span> <span class="st">"x"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>    <span class="co"># simulating y coordinates</span></span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sim_discr</span>(</span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>      <span class="at">n_vars =</span> <span class="dv">1</span>, </span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>      <span class="at">var =</span> var, </span>
+<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>      <span class="at">cov =</span> <span class="dv">0</span>, </span>
+<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>      <span class="at">group_means =</span> <span class="fu">pull</span>(df, <span class="dv">4</span>), </span>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>      <span class="at">name =</span> <span class="st">"y"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>    <span class="co"># simulating z coordinates</span></span>
+<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sim_discr</span>(</span>
+<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a>      <span class="at">n_vars =</span> <span class="dv">1</span>, </span>
+<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a>      <span class="at">var =</span> var, </span>
+<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a>      <span class="at">cov =</span> <span class="dv">0</span>, </span>
+<span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a>      <span class="at">group_means =</span> <span class="fu">pull</span>(df, <span class="dv">5</span>), </span>
+<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a>      <span class="at">name =</span> <span class="st">"z"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(group, species, subject, <span class="dv">7</span><span class="sc">:</span><span class="dv">9</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">x =</span> <span class="dv">4</span>, <span class="at">y =</span> <span class="dv">5</span>, <span class="at">z =</span> <span class="dv">6</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb8-49"><a href="#cb8-49" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span>
+<span id="cb8-50"><a href="#cb8-50" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb8-51"><a href="#cb8-51" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(df)</span>
+<span id="cb8-52"><a href="#cb8-52" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-53"><a href="#cb8-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-54"><a href="#cb8-54" aria-hidden="true" tabindex="-1"></a>var_s1 <span class="ot">=</span> <span class="fl">0.001</span></span>
+<span id="cb8-55"><a href="#cb8-55" aria-hidden="true" tabindex="-1"></a>var_s2 <span class="ot">=</span> <span class="fl">0.0005</span></span>
+<span id="cb8-56"><a href="#cb8-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-57"><a href="#cb8-57" aria-hidden="true" tabindex="-1"></a>df_embed_c_sub  <span class="ot">&lt;-</span> <span class="fu">generate_subject_embeddings</span>(df_embed_c,  df_subjects_4, var_s1)</span>
+<span id="cb8-58"><a href="#cb8-58" aria-hidden="true" tabindex="-1"></a>df_embed_cs_sub <span class="ot">&lt;-</span> <span class="fu">generate_subject_embeddings</span>(df_embed_cs, df_subjects_4, var_s2)</span>
+<span id="cb8-59"><a href="#cb8-59" aria-hidden="true" tabindex="-1"></a>df_embed_vs_sub <span class="ot">&lt;-</span> <span class="fu">generate_subject_embeddings</span>(df_embed_vs, df_subjects_4, var_s2)</span>
+<span id="cb8-60"><a href="#cb8-60" aria-hidden="true" tabindex="-1"></a>df_embed_v_sub  <span class="ot">&lt;-</span> <span class="fu">generate_subject_embeddings</span>(df_embed_v,  df_subjects_4, var_s1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
 </section>
 </section>

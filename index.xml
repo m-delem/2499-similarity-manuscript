@@ -133,50 +133,55 @@ utility and benefits of this project.</p>
 </sec>
 <sec id="theoretical-context">
   <title>1. Theoretical context</title>
-  <p>When we try to compare our thoughts and representations with those
-  of others, we quickly realize that the task will be really difficult,
-  if not impossible, as we are of course incapable of “living in someone
-  else’s head”. If we both try to imagine a dog, I can examine what goes
-  on in my head, so can you, but apart from trying to describe our
-  experiences verbally, we are up against a wall.</p>
-  <p>Now, what if I asked you to tell me how similar you think a dog and
-  a panther look like? Let’s say, in the context of the animal kingdom
-  as a whole. Visualize them well. Well, I could tell you that,
-  <italic>in my opinion, a dog and a panther look no more alike than a
-  dog and a whale</italic>. You might tell me:
-  <named-content content-type="column-margin"><italic>For this thought
-  experiment, let’s imagine two things: (1) that someone could honestly
-  say that, and (2) that people would be rating the animals purely on
-  the basis of their mental images, and not on categorical features
-  (number of legs, fur, etc.), which is unfortunately almost</italic>
-  <bold><italic>never</italic></bold> <italic>the case in
-  reality.</italic></named-content></p>
-  <disp-quote>
-    <p>“<bold><italic>What on earth do you imagine a dog and a panther
-    look like? Do you also think that a dog looks nothing like a cat?
-    What goes on in your head?</italic></bold>”</p>
-  </disp-quote>
-  <p>…And many people probably agree with you. They mentally “see” and
-  compare certain items the same way you do… And just like that,
-  <italic>we are back on track</italic>. We managed to better “compare
-  our thoughts”! And we even felt we could dive a bit into the “weird”
-  representations of someone else.</p>
-  <p>The study of individual differences in the format of
-  representations and the attempt at understanding those of others
-  obviously has a very rich history. It has interested many fields, in
-  philosophy, linguistics, sociology, biology, psychology, or
-  neuroscience, to name but a few. A myriad of ideas, concepts, models,
-  methods, and paradigms have tried to deepen our understanding of
-  representations and find the “key” to objectifying them. The principle
-  I tried to illustrate with the thought experiment above is at the
-  heart of one of these methods trying to unravel representations that
-  was born in psychophysics<xref ref-type="fn" rid="fn1">1</xref>: the
-  study of <bold><italic>similarity.</italic></bold></p>
   <sec id="from-similarity-to-second-order-isomorphism">
     <title>1.1 From similarity to second-order isomorphism</title>
+    <p>When we try to compare our thoughts and representations with
+    those of others, we quickly realize that the task will be really
+    difficult, if not impossible, as we are of course incapable of
+    “living in someone else’s head”. If we both try to imagine a dog, I
+    can examine what goes on in my head, so can you, but apart from
+    trying to describe our experiences verbally, we are up against a
+    wall.</p>
+    <p>Now, what if I asked you to tell me how similar you think a dog
+    and a panther look like? Let’s say, in the context of the animal
+    kingdom as a whole. Visualize them well. Well, I could tell you
+    that, <italic>in my opinion, a dog and a panther look no more alike
+    than a dog and a whale</italic>. You might tell me:
+    <named-content content-type="column-margin"><italic>For this thought
+    experiment, let’s imagine two things: (1) that someone could
+    honestly say that, and (2) that people would be rating the animals
+    purely on the basis of their mental images, and not on categorical
+    features (number of legs, fur, etc.), which is unfortunately
+    almost</italic> <bold><italic>never</italic></bold> <italic>the case
+    in reality.</italic></named-content></p>
+    <disp-quote>
+      <p>“<bold><italic>What on earth do you imagine a dog and a panther
+      look like? Do you also think that a dog looks nothing like a cat?
+      What goes on in your head?</italic></bold>”</p>
+    </disp-quote>
+    <p>…And many people probably agree with you. They mentally “see” and
+    compare certain items the same way you do… And just like that,
+    <italic>we are back on track</italic>. We managed to better “compare
+    our thoughts”! And we even felt we could dive a bit into the “weird”
+    representations of someone else.</p>
+    <p>The study of individual differences in the format of
+    representations and the attempt at understanding those of others
+    obviously has a very rich history. It has interested many fields, in
+    philosophy, linguistics, sociology, biology, psychology, or
+    neuroscience, to name but a few. A myriad of ideas, concepts,
+    models, methods, and paradigms have tried to deepen our
+    understanding of representations and find the “key” to objectifying
+    them. The principle I tried to illustrate with the thought
+    experiment above is at the heart of one of these methods trying to
+    unravel representations that was born in
+    psychophysics<xref ref-type="fn" rid="fn1">1</xref>: the study of
+    <bold><italic>similarity.</italic></bold></p>
+  </sec>
+  <sec id="work-in-progress">
+    <title>1.2 Work-In-Progress</title>
   </sec>
   <sec id="psychological-spaces-and-aphantasia">
-    <title>1.2 Psychological spaces and aphantasia</title>
+    <title>1.3 Psychological spaces and aphantasia</title>
     <p>While attempting to demonstrate the uselessness of the concept of
     similarity as a philosophical and scientific notion, Goodman
     (<xref alt="1972" rid="ref-goodmanSevenStricturesSimilarity1972" ref-type="bibr">1972</xref>)
@@ -196,7 +201,7 @@ utility and benefits of this project.</p>
       <named-content content-type="column-margin"><italic>Goodman’s
       claim was dismissed since then by propositions of robust
       mathematical models of similarity, e.g. Gardenfors
-      (<xref alt="2004a" rid="ref-gardenforsConceptualSpacesFramework2004" ref-type="bibr">2004a</xref>),
+      (<xref alt="2004" rid="ref-gardenforsConceptualSpacesFramework2004" ref-type="bibr">2004</xref>),
       Decock &amp; Douven
       (<xref alt="2011" rid="ref-decockSimilarityGoodman2011" ref-type="bibr">2011</xref>).</italic></named-content></p>
     </disp-quote>
@@ -250,7 +255,7 @@ utility and benefits of this project.</p>
     psychological spaces.</bold> This selectivity would have, as we
     already hypothesized several times, benefits and drawbacks.</p>
     <p>Gardenfors
-    (<xref alt="2004a" rid="ref-gardenforsConceptualSpacesFramework2004" ref-type="bibr">2004a</xref>)
+    (<xref alt="2004" rid="ref-gardenforsConceptualSpacesFramework2004" ref-type="bibr">2004</xref>)
     proposed that differences in psychological (in his terms,
     conceptual) spaces could arise from various sources, whether innate,
     due to learning, or broader cultural or social differences. All
@@ -261,6 +266,9 @@ utility and benefits of this project.</p>
     <p>Here, we shall rather attempt to <bold>develop a method to
     characterize the differences in aphantasics’ representational
     structures and psychological spaces.</bold></p>
+  </sec>
+  <sec id="the-present-project">
+    <title>1.4 The present project</title>
   </sec>
 </sec>
 <sec id="methods">
@@ -306,32 +314,7 @@ utility and benefits of this project.</p>
       evidence from the subset arrangements.</p>
       <p>The procedure is illustrated in
       <xref alt="Figure 2.1" rid="fig-multi-arrangement">Figure 2.1</xref>.</p>
-      <fig id="fig-multi-arrangement">
-        <caption><p>Figure 2.1: <bold>Acquiring similarity judgements
-        with the multi-arrangement method. (A)</bold> Subjects are asked
-        to arrange items according to their similarity, using mouse
-        drag-and-drop on a computer. The similarity measure is taken as
-        the distances between the items: similar items are closer, while
-        dissimilar items are further apart. The upper part of the figure
-        shows screenshots at different moments of the acquisition for
-        one subject. Columns are trials and rows show the object
-        arrangements over time, running from the start (top row) to the
-        end (last row). The first trial contains all items; subsequent
-        trials contain subsets of items that are adaptively selected to
-        optimally estimate judged similarity for each subject.
-        <bold>(B)</bold> Once acquisition of the final judgements is
-        completed, inter-item distances in the final trial arrangements
-        are combined over trials by rescaling and averaging to yield a
-        single dissimilarity estimate for each object pair. The process
-        is illustrated in this figure for two example item pairs: a
-        boy’s face and a hand (red), and carrots and a stop sign (blue).
-        Their single-trial dissimilarity estimates (arrows) are combined
-        into a single dissimilarity estimate, which is placed at the
-        corresponding entry of the RDM (lower panel). Mirror-symmetric
-        entries are indicated by lighter colors. Figure from Mur et al.
-        (<xref alt="2013" rid="ref-murHumanObjectSimilarityJudgments2013" ref-type="bibr">2013</xref>).</p></caption>
-        <graphic mimetype="image" mime-subtype="png" xlink:href="images/multi-arrangement-method-mur-2013.png" />
-      </fig>
+      <graphic mimetype="image" mime-subtype="png" xlink:href="images/multi-arrangement-method-mur-2013.png" />
       <p>A key strength of this method that sets it as particularly
       effective is the “adaptive” part. The goal of the process is to
       acquire similarity judgements as precisely as possible while
@@ -375,14 +358,7 @@ utility and benefits of this project.</p>
       representations, the subjects would also perform the same task
       afterwards, this time with actual pictures to compare. Subjects
       would also fill our usual psychometric imagery questionnaires.</p>
-      <fig id="fig-spam-mur">
-        <caption><p>Figure 2.2: Arena layout of the MA protocol used by
-        Mur et al.
-        (<xref alt="2013" rid="ref-murHumanObjectSimilarityJudgments2013" ref-type="bibr">2013</xref>)
-        to acquire perceptual similarity judgements on natural images.
-        <italic>Click to expand.</italic></p></caption>
-        <graphic mimetype="image" mime-subtype="png" xlink:href="images/mur-spam-2.png" />
-      </fig>
+      <graphic mimetype="image" mime-subtype="png" xlink:href="images/mur-spam-2.png" />
       <p>To “compare imagined items”, we could use a “word” version of
       the MA paradigm. An example from Majewska et al.
       (<xref alt="2020" rid="ref-majewskaSpatialMultiarrangementClustering2020" ref-type="bibr">2020</xref>)
@@ -390,14 +366,7 @@ utility and benefits of this project.</p>
       similarity resources for Natural Language Processing
       systems</italic> - is represented in
       <xref alt="Figure 2.3" rid="fig-majewska">Figure 2.3</xref>.</p>
-      <fig id="fig-majewska">
-        <caption><p>Figure 2.3: Arena layout of the MA protocol used by
-        Majewska et al.
-        (<xref alt="2020" rid="ref-majewskaSpatialMultiarrangementClustering2020" ref-type="bibr">2020</xref>)
-        to acquire similarity judgements on word pairs. <italic>Click to
-        expand.</italic></p></caption>
-        <graphic mimetype="image" mime-subtype="png" xlink:href="images/majewska-spam-2.png" />
-      </fig>
+      <graphic mimetype="image" mime-subtype="png" xlink:href="images/majewska-spam-2.png" />
       <p>We could have the stimuli rated by another set of participants
       on several features.</p>
       <disp-quote>
@@ -471,13 +440,7 @@ utility and benefits of this project.</p>
       <title>Stimuli</title>
       <p>We would have a list of animal items, that would have several
       characteristics:</p>
-      <fig id="fig-marr">
-        <caption><p>Figure 2.4: Representing the characteristics of
-        shapes with cylinders. Figure from Marr et al.
-        (<xref alt="1997" rid="ref-marr1997" ref-type="bibr">1997</xref>).
-        <italic>Click to expand.</italic></p></caption>
-        <graphic mimetype="image" mime-subtype="png" xlink:href="images/shapes-marr.png" />
-      </fig>
+      <graphic mimetype="image" mime-subtype="png" xlink:href="images/shapes-marr.png" />
       <list list-type="bullet">
         <list-item>
           <p>A name</p>
@@ -508,7 +471,7 @@ utility and benefits of this project.</p>
       would rather tend towards category sorting, while high-imagery
       would tend towards shape sorting.</p>
       <p>Shapes could be very tricky stimuli to discuss. Gardenfors
-      (<xref alt="2004b" rid="ref-gardenfors2004" ref-type="bibr">2004b</xref>)
+      (<xref alt="2004" rid="ref-gardenforsConceptualSpacesFramework2004" ref-type="bibr">2004</xref>)
       noted that we only have a very sketchy understanding of how we
       perceive and conceptualize things according to their shapes. The
       works of Marr et al.
@@ -599,13 +562,7 @@ utility and benefits of this project.</p>
       has a similar relationship to other points. The principle of the
       method is illustrated in
       <xref alt="Figure 2.5" rid="fig-gwot-kawa">Figure 2.5</xref></p>
-      <fig id="fig-gwot-kawa">
-        <caption><p>Figure 2.5: Gromov-Wassertein optimal transport
-        principle. Figure from Kawakita et al.
-        (<xref alt="2023" rid="ref-kawakita2023" ref-type="bibr">2023</xref>).
-        <italic>Click to expand.</italic></p></caption>
-        <graphic mimetype="image" mime-subtype="png" xlink:href="images/kawa-gwot-2.PNG" />
-      </fig>
+      <graphic mimetype="image" mime-subtype="png" xlink:href="images/kawa-gwot-2.PNG" />
       <p>We first computed the GWD for all pairs of the dissimilarity
       matrices of the 5 groups (Group 1-5) using the optimized
       <inline-formula><alternatives>
@@ -781,7 +738,7 @@ utility and benefits of this project.</p>
       instances of a property, some are more representative than others.
       The most representative one is the prototype of the property.</p>
       <p>Thus, following the concepts illustrated by Gardenfors
-      (<xref alt="2004b" rid="ref-gardenfors2004" ref-type="bibr">2004b</xref>),
+      (<xref alt="2004" rid="ref-gardenforsConceptualSpacesFramework2004" ref-type="bibr">2004</xref>),
       we would expect that aphantasics, when doing shape similarity
       judgements, would be more inclined to group items close to the
       prototypical items due to a lower definition of the mental image.
@@ -839,7 +796,7 @@ utility and benefits of this project.</p>
     that is both well-defined and not exaggerated. The 30 subjects’
     imagery profiles are represented in the three dimensional space of
     the visual-spatial-verbal dimensions in
-    <xref alt="Figure 3.1" rid="fig-plot-osv-model">Figure 3.1</xref>.</p>
+    <xref alt="Figure 3.1" rid="fig-osv-model">Figure 3.1</xref>.</p>
     <fig id="tbl-imageries">
       <caption><p>Table 3.1: Imagery abilities of the four hypothesized
       cognitive profiles.</p></caption>
@@ -882,17 +839,17 @@ utility and benefits of this project.</p>
         </table>
       </table-wrap>
     </fig>
-    <fig id="fig-plot-osv-model">
+    <fig id="fig-osv-model">
       <caption><p>Figure 3.1: Imagery profiles generated for 30 subjects
       on the three object, spatial, and verbal dimensions.</p></caption>
-      <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-plot-osv-model-1.png" />
+      <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-osv-model-1.png" />
     </fig>
   </sec>
   <sec id="data-simulation-creating-representational-structures">
     <title>3.2 Data simulation: Creating representational
     structures</title>
     <p>Gardenfors
-    (<xref alt="2004b" rid="ref-gardenfors2004" ref-type="bibr">2004b</xref>)
+    (<xref alt="2004" rid="ref-gardenforsConceptualSpacesFramework2004" ref-type="bibr">2004</xref>)
     invokes two scientific concepts, to wit, prototypes and Voronoi
     tessellations. Prototype theory builds on the observation that among
     the instances of a property, some are more representative than
@@ -900,11 +857,11 @@ utility and benefits of this project.</p>
     property. <italic>We hypothesize that aphantasics will be more
     inclined to categorize items according to prototypes than
     phantasics.</italic></p>
-    <p>A Voronoi tesselation of a given space divides that space into a
+    <p>A Voronoi tessellation of a given space divides that space into a
     number of cells such that each cell has a center and consists of all
     and only those points that lie no closer to the center of any other
     cell than to its own center; the centers of the various cells are
-    called the generator points of the tesselation. This principle will
+    called the generator points of the tessellation. This principle will
     underlie our data simulation, as we will build representations in a
     3D space based on distances to “centroids”, namely, prototypes.
     These representations will thus be located inside of the
@@ -914,13 +871,13 @@ utility and benefits of this project.</p>
       <title>Generating “prototype” embeddings from a sphere</title>
       <p>A function will be used to generate embeddings. These spherical
       embeddings are displayed in
-      <xref alt="Figure 3.2" rid="fig-perfect-embeddings">Figure 3.2</xref>
-      We get 8 nicely distributed clusters. We’ll retrieve the centroids
-      of each cluster, which would be the “perfect” categories of each
-      species group (say, generated by a computational model on
+      <xref alt="Figure 3.2" rid="fig-perfect-embeddings-html">Figure 3.2</xref>
+      . We get 8 nicely distributed clusters. We’ll retrieve the
+      centroids of each cluster, which would be the “perfect” categories
+      of each species group (say, generated by a computational model on
       categorical criteria).</p>
       <p></p>
-      <fig id="fig-perfect-embeddings">
+      <fig id="fig-perfect-embeddings-html">
         <caption><p>Figure 3.2: Initial random generations of 1000
         points grouped in 8 clusters to represent the theoretical
         embeddings of 8 groups (i.e. groups of species here).
@@ -936,20 +893,20 @@ utility and benefits of this project.</p>
               <tr>
                 <td align="left"><p specific-use="wrapper">
                   <boxed-text>
-                    <fig id="fig-perfect-embeddings-1">
+                    <fig id="fig-perfect-embeddings-html-1">
                       <caption><p>(a) Generated spherical distribution
                       of 1000 observations grouped in 8 equal clusers
                       with Gaussian Mixture Clustering.</p></caption>
-                      <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-perfect-embeddings-1.png" />
+                      <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-perfect-embeddings-html-1.png" />
                     </fig>
                   </boxed-text>
                 </p></td>
                 <td align="left"><p specific-use="wrapper">
                   <boxed-text>
-                    <fig id="fig-perfect-embeddings-2">
+                    <fig id="fig-perfect-embeddings-html-2">
                       <caption><p>(b) Centroids of the 8 clusters
                       created on the sphere.</p></caption>
-                      <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-perfect-embeddings-2.png" />
+                      <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-perfect-embeddings-html-2.png" />
                     </fig>
                   </boxed-text>
                 </p></td>
@@ -1065,22 +1022,22 @@ utility and benefits of this project.</p>
       as coherent as possible (and avoid blurring everything and making
       the groups disappear in noise).</p>
       <p>Although the groups and species in
-      <xref alt="Figure 3.7 (a)" rid="fig-subject-embeddings-1">Figure 3.7
+      <xref alt="Figure 3.7 (a)" rid="fig-subject-embeddings-html-1">Figure 3.7
       (a)</xref> look fairly obvious when we colour the embeddings using
       the knowledge about how we built them, the algorithm will only be
       fed with the data for each subject, without any labelling or
       additional information. Thus,
-      <xref alt="Figure 3.7 (b)" rid="fig-subject-embeddings-2">Figure 3.7
+      <xref alt="Figure 3.7 (b)" rid="fig-subject-embeddings-html-2">Figure 3.7
       (b)</xref> is what the algorithm will actually “see” (and what it
       will try to decrypt). Said otherwise, its objective will be to
       find all the correct colours and shapes in
-      <xref alt="Figure 3.7 (a)" rid="fig-subject-embeddings-1">Figure 3.7
+      <xref alt="Figure 3.7 (a)" rid="fig-subject-embeddings-html-1">Figure 3.7
       (a)</xref> using only 30 sub-datasets (one for each subject) that
       are illustrated in
-      <xref alt="Figure 3.7 (b)" rid="fig-subject-embeddings-2">Figure 3.7
-      (b)</xref>. Admittedly, that looks a lot more complicated.</p>
+      <xref alt="Figure 3.7 (b)" rid="fig-subject-embeddings-html-2">Figure 3.7
+      (b)</xref> . Admittedly, that looks a lot more complicated.</p>
       <p></p>
-      <fig id="fig-subject-embeddings">
+      <fig id="fig-subject-embeddings-html">
         <caption><p>Figure 3.7: Final distribution of the 64 embeddings
         of all the 30 subjects, amounting to 1920 points total.
         <bold><italic>Interact with the figures to see the
@@ -1095,25 +1052,25 @@ utility and benefits of this project.</p>
               <tr>
                 <td align="left"><p specific-use="wrapper">
                   <boxed-text>
-                    <fig id="fig-subject-embeddings-1">
+                    <fig id="fig-subject-embeddings-html-1">
                       <caption><p>(a) Distribution of the embeddings of
                       the 30 subjects,<bold><italic>colored by the
                       species groups</italic></bold> they represent. The
                       symbols represent the four imagery groups (Aph.
                       verbal, spatial, etc.)</p></caption>
-                      <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-subject-embeddings-1.png" />
+                      <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-subject-embeddings-html-1.png" />
                     </fig>
                   </boxed-text>
                 </p></td>
                 <td align="left"><p specific-use="wrapper">
                   <boxed-text>
-                    <fig id="fig-subject-embeddings-2">
+                    <fig id="fig-subject-embeddings-html-2">
                       <caption><p>(b) Distribution of the embeddings of
                       the 30 subjects, <bold><italic>colored by
                       subject</italic></bold>.This is the only
                       information the unsupervised algorithm will have
                       to work with.</p></caption>
-                      <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-subject-embeddings-2.png" />
+                      <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-subject-embeddings-html-2.png" />
                     </fig>
                   </boxed-text>
                 </p></td>
@@ -1182,16 +1139,16 @@ utility and benefits of this project.</p>
         <p>Let’s see the composition of the clusters in light of our
         initial O-S-V model. The cognitive profiles of the subjects are
         represented in
-        <xref alt="Figure 3.10" rid="fig-plot-osv-clusters">Figure 3.10</xref>,
+        <xref alt="Figure 3.10" rid="fig-osv-clusters">Figure 3.10</xref>,
         and the distribution of the cognitive profiles in the clusters
         is represented in
         <xref alt="Figure 3.11" rid="fig-clusters-distribution">Figure 3.11</xref>.</p>
-        <fig id="fig-plot-osv-clusters">
+        <fig id="fig-osv-clusters">
           <caption><p>Figure 3.10: Imagery profiles of the nine
           identified clusters on the three object, spatial, and verbal
           dimensions. <bold><italic>Interact with the figure to see the
           details.</italic></bold></p></caption>
-          <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-plot-osv-clusters-1.png" />
+          <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-osv-clusters-1.png" />
         </fig>
         <fig id="fig-clusters-distribution">
           <caption><p>Figure 3.11: Repartion of our intial O-S-V groups
@@ -1203,8 +1160,13 @@ utility and benefits of this project.</p>
         cluster to get a visual idea of their representational
         structures and the intra-cluster alignment between the
         subjects.</p>
+        <p>Let’s try referencing
+        <xref alt="Figure 3.12 (a)" rid="fig-clusters-final-html-1">Figure 3.12
+        (a)</xref> , or
+        <xref alt="Figure 3.12 (i)" rid="fig-clusters-final-html-9">Figure 3.12
+        (i)</xref> , the last one.</p>
         <p></p>
-        <fig id="fig-clusters_embeddings_final">
+        <fig id="fig-clusters-final-html">
           <caption><p>Figure 3.12: Psychological spaces (embeddings) of
           the 30 subjects, aligned and clustered with other subjects
           having the most similar representations. The eight colors
@@ -1224,33 +1186,33 @@ utility and benefits of this project.</p>
                 <tr>
                   <td align="left"><p specific-use="wrapper">
                     <boxed-text>
-                      <fig id="fig-clusters_embeddings_final-1">
+                      <fig id="fig-clusters-final-html-1">
                         <caption><p>(a) <bold>Cluster 1</bold>
                         embeddings (Aphantasic cluster).Within-cluster
                         aligment accuracy = 95.83%.</p></caption>
-                        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-clusters_embeddings_final-1.png" />
+                        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-clusters-final-html-1.png" />
                       </fig>
                     </boxed-text>
                   </p></td>
                   <td align="left"><p specific-use="wrapper">
                     <boxed-text>
-                      <fig id="fig-clusters_embeddings_final-2">
+                      <fig id="fig-clusters-final-html-2">
                         <caption><p>(b) <bold>Cluster 2</bold>
                         embeddings (Spatial aphantasic
                         cluster).Within-cluster aligment accuracy =
                         97.66%.</p></caption>
-                        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-clusters_embeddings_final-2.png" />
+                        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-clusters-final-html-2.png" />
                       </fig>
                     </boxed-text>
                   </p></td>
                   <td align="left"><p specific-use="wrapper">
                     <boxed-text>
-                      <fig id="fig-clusters_embeddings_final-3">
+                      <fig id="fig-clusters-final-html-3">
                         <caption><p>(c) <bold>Cluster 3</bold>
                         embeddings (Spatial aphantasic
                         cluster).Within-cluster aligment accuracy =
                         94.01%.</p></caption>
-                        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-clusters_embeddings_final-3.png" />
+                        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-clusters-final-html-3.png" />
                       </fig>
                     </boxed-text>
                   </p></td>
@@ -1269,33 +1231,33 @@ utility and benefits of this project.</p>
                 <tr>
                   <td align="left"><p specific-use="wrapper">
                     <boxed-text>
-                      <fig id="fig-clusters_embeddings_final-4">
+                      <fig id="fig-clusters-final-html-4">
                         <caption><p>(d) <bold>Cluster 4</bold>
                         embeddings (Aphantasic cluster).Within-cluster
                         aligment accuracy = 85.03%.</p></caption>
-                        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-clusters_embeddings_final-4.png" />
+                        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-clusters-final-html-4.png" />
                       </fig>
                     </boxed-text>
                   </p></td>
                   <td align="left"><p specific-use="wrapper">
                     <boxed-text>
-                      <fig id="fig-clusters_embeddings_final-5">
+                      <fig id="fig-clusters-final-html-5">
                         <caption><p>(e) <bold>Cluster 5</bold>
                         embeddings (Verbal aphantasic
                         cluster).Within-cluster aligment accuracy =
                         96.88%.</p></caption>
-                        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-clusters_embeddings_final-5.png" />
+                        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-clusters-final-html-5.png" />
                       </fig>
                     </boxed-text>
                   </p></td>
                   <td align="left"><p specific-use="wrapper">
                     <boxed-text>
-                      <fig id="fig-clusters_embeddings_final-6">
+                      <fig id="fig-clusters-final-html-6">
                         <caption><p>(f) <bold>Cluster 6</bold>
                         embeddings (Verbal aphantasic
                         cluster).Within-cluster aligment accuracy =
                         81.80%.</p></caption>
-                        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-clusters_embeddings_final-6.png" />
+                        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-clusters-final-html-6.png" />
                       </fig>
                     </boxed-text>
                   </p></td>
@@ -1314,31 +1276,31 @@ utility and benefits of this project.</p>
                 <tr>
                   <td align="left"><p specific-use="wrapper">
                     <boxed-text>
-                      <fig id="fig-clusters_embeddings_final-7">
+                      <fig id="fig-clusters-final-html-7">
                         <caption><p>(g) <bold>Cluster 7</bold>
                         embeddings (Phantasic cluster).Within-cluster
                         aligment accuracy = 98.23%.</p></caption>
-                        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-clusters_embeddings_final-7.png" />
+                        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-clusters-final-html-7.png" />
                       </fig>
                     </boxed-text>
                   </p></td>
                   <td align="left"><p specific-use="wrapper">
                     <boxed-text>
-                      <fig id="fig-clusters_embeddings_final-8">
+                      <fig id="fig-clusters-final-html-8">
                         <caption><p>(h) <bold>Cluster 8</bold>
                         embeddings (Phantasic cluster).Within-cluster
                         aligment accuracy = 74.64%.</p></caption>
-                        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-clusters_embeddings_final-8.png" />
+                        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-clusters-final-html-8.png" />
                       </fig>
                     </boxed-text>
                   </p></td>
                   <td align="left"><p specific-use="wrapper">
                     <boxed-text>
-                      <fig id="fig-clusters_embeddings_final-9">
+                      <fig id="fig-clusters-final-html-9">
                         <caption><p>(i) <bold>Cluster 9</bold>
                         embeddings (Phantasic cluster).Within-cluster
                         aligment accuracy = 42.45%.</p></caption>
-                        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-clusters_embeddings_final-9.png" />
+                        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-clusters-final-html-9.png" />
                       </fig>
                     </boxed-text>
                   </p></td>
@@ -1727,23 +1689,6 @@ utility and benefits of this project.</p>
       <year iso-8601-date="2004">2004</year>
     </element-citation>
   </ref>
-  <ref id="ref-murHumanObjectSimilarityJudgments2013">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Mur</surname><given-names>Marieke</given-names></name>
-        <name><surname>Meys</surname><given-names>Mirjam</given-names></name>
-        <name><surname>Bodurka</surname><given-names>Jerzy</given-names></name>
-        <name><surname>Goebel</surname><given-names>Rainer</given-names></name>
-        <name><surname>Bandettini</surname><given-names>Peter</given-names></name>
-        <name><surname>Kriegeskorte</surname><given-names>Nikolaus</given-names></name>
-      </person-group>
-      <article-title>Human object-similarity judgments reflect and transcend the primate-IT object representation</article-title>
-      <source>Frontiers in Psychology</source>
-      <year iso-8601-date="2013">2013</year>
-      <volume>4</volume>
-      <uri>https://www.frontiersin.org/articles/10.3389/fpsyg.2013.00128</uri>
-    </element-citation>
-  </ref>
   <ref id="ref-majewskaSpatialMultiarrangementClustering2020">
     <element-citation publication-type="book">
       <person-group person-group-type="author">
@@ -1758,15 +1703,6 @@ utility and benefits of this project.</p>
       <publisher-name>European Language Resources Association</publisher-name>
       <year iso-8601-date="2020">2020</year>
       <uri>https://www.repository.cam.ac.uk/handle/1810/306834</uri>
-    </element-citation>
-  </ref>
-  <ref id="ref-gardenfors2004">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Gardenfors</surname><given-names>Peter</given-names></name>
-      </person-group>
-      <article-title>Conceptual Spaces as a Framework for Knowledge Representation</article-title>
-      <year iso-8601-date="2004">2004</year>
     </element-citation>
   </ref>
   <ref id="ref-jozwik2016">
@@ -1998,50 +1934,55 @@ utility and benefits of this project.</p>
 </sec>
 <sec id="theoretical-context-nb-article">
   <title>1. Theoretical context</title>
-  <p>When we try to compare our thoughts and representations with those
-  of others, we quickly realize that the task will be really difficult,
-  if not impossible, as we are of course incapable of “living in someone
-  else’s head”. If we both try to imagine a dog, I can examine what goes
-  on in my head, so can you, but apart from trying to describe our
-  experiences verbally, we are up against a wall.</p>
-  <p>Now, what if I asked you to tell me how similar you think a dog and
-  a panther look like? Let’s say, in the context of the animal kingdom
-  as a whole. Visualize them well. Well, I could tell you that,
-  <italic>in my opinion, a dog and a panther look no more alike than a
-  dog and a whale</italic>. You might tell me:
-  <named-content content-type="column-margin"><italic>For this thought
-  experiment, let’s imagine two things: (1) that someone could honestly
-  say that, and (2) that people would be rating the animals purely on
-  the basis of their mental images, and not on categorical features
-  (number of legs, fur, etc.), which is unfortunately almost</italic>
-  <bold><italic>never</italic></bold> <italic>the case in
-  reality.</italic></named-content></p>
-  <disp-quote>
-    <p>“<bold><italic>What on earth do you imagine a dog and a panther
-    look like? Do you also think that a dog looks nothing like a cat?
-    What goes on in your head?</italic></bold>”</p>
-  </disp-quote>
-  <p>…And many people probably agree with you. They mentally “see” and
-  compare certain items the same way you do… And just like that,
-  <italic>we are back on track</italic>. We managed to better “compare
-  our thoughts”! And we even felt we could dive a bit into the “weird”
-  representations of someone else.</p>
-  <p>The study of individual differences in the format of
-  representations and the attempt at understanding those of others
-  obviously has a very rich history. It has interested many fields, in
-  philosophy, linguistics, sociology, biology, psychology, or
-  neuroscience, to name but a few. A myriad of ideas, concepts, models,
-  methods, and paradigms have tried to deepen our understanding of
-  representations and find the “key” to objectifying them. The principle
-  I tried to illustrate with the thought experiment above is at the
-  heart of one of these methods trying to unravel representations that
-  was born in psychophysics<xref ref-type="fn" rid="fn1-nb-article">1</xref>: the
-  study of <bold><italic>similarity.</italic></bold></p>
   <sec id="from-similarity-to-second-order-isomorphism-nb-article">
     <title>1.1 From similarity to second-order isomorphism</title>
+    <p>When we try to compare our thoughts and representations with
+    those of others, we quickly realize that the task will be really
+    difficult, if not impossible, as we are of course incapable of
+    “living in someone else’s head”. If we both try to imagine a dog, I
+    can examine what goes on in my head, so can you, but apart from
+    trying to describe our experiences verbally, we are up against a
+    wall.</p>
+    <p>Now, what if I asked you to tell me how similar you think a dog
+    and a panther look like? Let’s say, in the context of the animal
+    kingdom as a whole. Visualize them well. Well, I could tell you
+    that, <italic>in my opinion, a dog and a panther look no more alike
+    than a dog and a whale</italic>. You might tell me:
+    <named-content content-type="column-margin"><italic>For this thought
+    experiment, let’s imagine two things: (1) that someone could
+    honestly say that, and (2) that people would be rating the animals
+    purely on the basis of their mental images, and not on categorical
+    features (number of legs, fur, etc.), which is unfortunately
+    almost</italic> <bold><italic>never</italic></bold> <italic>the case
+    in reality.</italic></named-content></p>
+    <disp-quote>
+      <p>“<bold><italic>What on earth do you imagine a dog and a panther
+      look like? Do you also think that a dog looks nothing like a cat?
+      What goes on in your head?</italic></bold>”</p>
+    </disp-quote>
+    <p>…And many people probably agree with you. They mentally “see” and
+    compare certain items the same way you do… And just like that,
+    <italic>we are back on track</italic>. We managed to better “compare
+    our thoughts”! And we even felt we could dive a bit into the “weird”
+    representations of someone else.</p>
+    <p>The study of individual differences in the format of
+    representations and the attempt at understanding those of others
+    obviously has a very rich history. It has interested many fields, in
+    philosophy, linguistics, sociology, biology, psychology, or
+    neuroscience, to name but a few. A myriad of ideas, concepts,
+    models, methods, and paradigms have tried to deepen our
+    understanding of representations and find the “key” to objectifying
+    them. The principle I tried to illustrate with the thought
+    experiment above is at the heart of one of these methods trying to
+    unravel representations that was born in
+    psychophysics<xref ref-type="fn" rid="fn1-nb-article">1</xref>: the study of
+    <bold><italic>similarity.</italic></bold></p>
+  </sec>
+  <sec id="work-in-progress-nb-article">
+    <title>1.2 Work-In-Progress</title>
   </sec>
   <sec id="psychological-spaces-and-aphantasia-nb-article">
-    <title>1.2 Psychological spaces and aphantasia</title>
+    <title>1.3 Psychological spaces and aphantasia</title>
     <p>While attempting to demonstrate the uselessness of the concept of
     similarity as a philosophical and scientific notion, Goodman
     (<xref alt="1972" rid="ref-goodmanSevenStricturesSimilarity1972-nb-article" ref-type="bibr">1972</xref>)
@@ -2061,7 +2002,7 @@ utility and benefits of this project.</p>
       <named-content content-type="column-margin"><italic>Goodman’s
       claim was dismissed since then by propositions of robust
       mathematical models of similarity, e.g. Gardenfors
-      (<xref alt="2004a" rid="ref-gardenforsConceptualSpacesFramework2004-nb-article" ref-type="bibr">2004a</xref>),
+      (<xref alt="2004" rid="ref-gardenforsConceptualSpacesFramework2004-nb-article" ref-type="bibr">2004</xref>),
       Decock &amp; Douven
       (<xref alt="2011" rid="ref-decockSimilarityGoodman2011-nb-article" ref-type="bibr">2011</xref>).</italic></named-content></p>
     </disp-quote>
@@ -2115,7 +2056,7 @@ utility and benefits of this project.</p>
     psychological spaces.</bold> This selectivity would have, as we
     already hypothesized several times, benefits and drawbacks.</p>
     <p>Gardenfors
-    (<xref alt="2004a" rid="ref-gardenforsConceptualSpacesFramework2004-nb-article" ref-type="bibr">2004a</xref>)
+    (<xref alt="2004" rid="ref-gardenforsConceptualSpacesFramework2004-nb-article" ref-type="bibr">2004</xref>)
     proposed that differences in psychological (in his terms,
     conceptual) spaces could arise from various sources, whether innate,
     due to learning, or broader cultural or social differences. All
@@ -2126,6 +2067,9 @@ utility and benefits of this project.</p>
     <p>Here, we shall rather attempt to <bold>develop a method to
     characterize the differences in aphantasics’ representational
     structures and psychological spaces.</bold></p>
+  </sec>
+  <sec id="the-present-project-nb-article">
+    <title>1.4 The present project</title>
   </sec>
 </sec>
 <sec id="methods-nb-article">
@@ -2171,32 +2115,7 @@ utility and benefits of this project.</p>
       evidence from the subset arrangements.</p>
       <p>The procedure is illustrated in
       <xref alt="Figure 2.1" rid="fig-multi-arrangement-nb-article">Figure 2.1</xref>.</p>
-      <fig id="fig-multi-arrangement-nb-article">
-        <caption><p>Figure 2.1: <bold>Acquiring similarity judgements
-        with the multi-arrangement method. (A)</bold> Subjects are asked
-        to arrange items according to their similarity, using mouse
-        drag-and-drop on a computer. The similarity measure is taken as
-        the distances between the items: similar items are closer, while
-        dissimilar items are further apart. The upper part of the figure
-        shows screenshots at different moments of the acquisition for
-        one subject. Columns are trials and rows show the object
-        arrangements over time, running from the start (top row) to the
-        end (last row). The first trial contains all items; subsequent
-        trials contain subsets of items that are adaptively selected to
-        optimally estimate judged similarity for each subject.
-        <bold>(B)</bold> Once acquisition of the final judgements is
-        completed, inter-item distances in the final trial arrangements
-        are combined over trials by rescaling and averaging to yield a
-        single dissimilarity estimate for each object pair. The process
-        is illustrated in this figure for two example item pairs: a
-        boy’s face and a hand (red), and carrots and a stop sign (blue).
-        Their single-trial dissimilarity estimates (arrows) are combined
-        into a single dissimilarity estimate, which is placed at the
-        corresponding entry of the RDM (lower panel). Mirror-symmetric
-        entries are indicated by lighter colors. Figure from Mur et al.
-        (<xref alt="2013" rid="ref-murHumanObjectSimilarityJudgments2013-nb-article" ref-type="bibr">2013</xref>).</p></caption>
-        <graphic mimetype="image" mime-subtype="png" xlink:href="images/multi-arrangement-method-mur-2013.png" />
-      </fig>
+      <graphic mimetype="image" mime-subtype="png" xlink:href="images/multi-arrangement-method-mur-2013.png" />
       <p>A key strength of this method that sets it as particularly
       effective is the “adaptive” part. The goal of the process is to
       acquire similarity judgements as precisely as possible while
@@ -2240,14 +2159,7 @@ utility and benefits of this project.</p>
       representations, the subjects would also perform the same task
       afterwards, this time with actual pictures to compare. Subjects
       would also fill our usual psychometric imagery questionnaires.</p>
-      <fig id="fig-spam-mur-nb-article">
-        <caption><p>Figure 2.2: Arena layout of the MA protocol used by
-        Mur et al.
-        (<xref alt="2013" rid="ref-murHumanObjectSimilarityJudgments2013-nb-article" ref-type="bibr">2013</xref>)
-        to acquire perceptual similarity judgements on natural images.
-        <italic>Click to expand.</italic></p></caption>
-        <graphic mimetype="image" mime-subtype="png" xlink:href="images/mur-spam-2.png" />
-      </fig>
+      <graphic mimetype="image" mime-subtype="png" xlink:href="images/mur-spam-2.png" />
       <p>To “compare imagined items”, we could use a “word” version of
       the MA paradigm. An example from Majewska et al.
       (<xref alt="2020" rid="ref-majewskaSpatialMultiarrangementClustering2020-nb-article" ref-type="bibr">2020</xref>)
@@ -2255,14 +2167,7 @@ utility and benefits of this project.</p>
       similarity resources for Natural Language Processing
       systems</italic> - is represented in
       <xref alt="Figure 2.3" rid="fig-majewska-nb-article">Figure 2.3</xref>.</p>
-      <fig id="fig-majewska-nb-article">
-        <caption><p>Figure 2.3: Arena layout of the MA protocol used by
-        Majewska et al.
-        (<xref alt="2020" rid="ref-majewskaSpatialMultiarrangementClustering2020-nb-article" ref-type="bibr">2020</xref>)
-        to acquire similarity judgements on word pairs. <italic>Click to
-        expand.</italic></p></caption>
-        <graphic mimetype="image" mime-subtype="png" xlink:href="images/majewska-spam-2.png" />
-      </fig>
+      <graphic mimetype="image" mime-subtype="png" xlink:href="images/majewska-spam-2.png" />
       <p>We could have the stimuli rated by another set of participants
       on several features.</p>
       <disp-quote>
@@ -2336,13 +2241,7 @@ utility and benefits of this project.</p>
       <title>Stimuli</title>
       <p>We would have a list of animal items, that would have several
       characteristics:</p>
-      <fig id="fig-marr-nb-article">
-        <caption><p>Figure 2.4: Representing the characteristics of
-        shapes with cylinders. Figure from Marr et al.
-        (<xref alt="1997" rid="ref-marr1997-nb-article" ref-type="bibr">1997</xref>).
-        <italic>Click to expand.</italic></p></caption>
-        <graphic mimetype="image" mime-subtype="png" xlink:href="images/shapes-marr.png" />
-      </fig>
+      <graphic mimetype="image" mime-subtype="png" xlink:href="images/shapes-marr.png" />
       <list list-type="bullet">
         <list-item>
           <p>A name</p>
@@ -2373,7 +2272,7 @@ utility and benefits of this project.</p>
       would rather tend towards category sorting, while high-imagery
       would tend towards shape sorting.</p>
       <p>Shapes could be very tricky stimuli to discuss. Gardenfors
-      (<xref alt="2004b" rid="ref-gardenfors2004-nb-article" ref-type="bibr">2004b</xref>)
+      (<xref alt="2004" rid="ref-gardenforsConceptualSpacesFramework2004-nb-article" ref-type="bibr">2004</xref>)
       noted that we only have a very sketchy understanding of how we
       perceive and conceptualize things according to their shapes. The
       works of Marr et al.
@@ -2464,13 +2363,7 @@ utility and benefits of this project.</p>
       has a similar relationship to other points. The principle of the
       method is illustrated in
       <xref alt="Figure 2.5" rid="fig-gwot-kawa-nb-article">Figure 2.5</xref></p>
-      <fig id="fig-gwot-kawa-nb-article">
-        <caption><p>Figure 2.5: Gromov-Wassertein optimal transport
-        principle. Figure from Kawakita et al.
-        (<xref alt="2023" rid="ref-kawakita2023-nb-article" ref-type="bibr">2023</xref>).
-        <italic>Click to expand.</italic></p></caption>
-        <graphic mimetype="image" mime-subtype="png" xlink:href="images/kawa-gwot-2.PNG" />
-      </fig>
+      <graphic mimetype="image" mime-subtype="png" xlink:href="images/kawa-gwot-2.PNG" />
       <p>We first computed the GWD for all pairs of the dissimilarity
       matrices of the 5 groups (Group 1-5) using the optimized
       <inline-formula><alternatives>
@@ -2646,7 +2539,7 @@ utility and benefits of this project.</p>
       instances of a property, some are more representative than others.
       The most representative one is the prototype of the property.</p>
       <p>Thus, following the concepts illustrated by Gardenfors
-      (<xref alt="2004b" rid="ref-gardenfors2004-nb-article" ref-type="bibr">2004b</xref>),
+      (<xref alt="2004" rid="ref-gardenforsConceptualSpacesFramework2004-nb-article" ref-type="bibr">2004</xref>),
       we would expect that aphantasics, when doing shape similarity
       judgements, would be more inclined to group items close to the
       prototypical items due to a lower definition of the mental image.
@@ -2682,7 +2575,7 @@ utility and benefits of this project.</p>
   <code language="r script"># ═══ Packages ═════════════════════════════════════════════════════════════════
 
 if (!require(librarian)) install.packages(librarian) </code>
-  <code id="annotated-cell-2-nb-article" language="r script">library(librarian)                                     
+  <code language="r script">library(librarian)                                     
 
 # now putting packages on our library's shelves:
 shelf(
@@ -2708,9 +2601,8 @@ shelf(
   easystats,      # data analysis ecosystem
   reticulate,     # R to Python                    
   tidyverse,      # modern R ecosystem
-)
-
-# ─── Global cosmetic theme ───
+)</code>
+  <code id="annotated-cell-3-nb-article" language="r script"># ─── Global cosmetic theme ───
 theme_set(theme_modern(base_size = 14))
 
 pal_okabe_ito &lt;- c(
@@ -2751,6 +2643,15 @@ coordinates_aligned_embeddings &lt;- read_rds(paste0(path, &quot;coordinates_ali
   <sec id="nb-code-cell-1-output-0-nb-article" specific-use="notebook-output">
   <preformat>Le chargement a nécessité le package : librarian</preformat>
   </sec>
+  <sec id="nb-code-cell-1-output-1-nb-article" specific-use="notebook-output">
+  <preformat>
+  The 'cran_repo' argument in shelf() was not set, so it will use
+  cran_repo = 'https://cran.r-project.org' by default.
+
+  To avoid this message, set the 'cran_repo' argument to a CRAN
+  mirror URL (see https://cran.r-project.org/mirrors.html) or set
+  'quiet = TRUE'.</preformat>
+  </sec>
   </sec>
   <sec id="sec-osv-model-theory-nb-article">
     <title>3.1 Visual-spatial-verbal model of cognitive profiles</title>
@@ -2778,7 +2679,7 @@ coordinates_aligned_embeddings &lt;- read_rds(paste0(path, &quot;coordinates_ali
     that is both well-defined and not exaggerated. The 30 subjects’
     imagery profiles are represented in the three dimensional space of
     the visual-spatial-verbal dimensions in
-    <xref alt="Figure 3.1" rid="fig-plot-osv-model-nb-article">Figure 3.1</xref>.</p>
+    <xref alt="Figure 3.1" rid="fig-osv-model-nb-article">Figure 3.1</xref>.</p>
     <fig id="tbl-imageries-nb-article">
       <caption><p>Table 3.1: Imagery abilities of the four hypothesized
       cognitive profiles.</p></caption>
@@ -2821,7 +2722,7 @@ coordinates_aligned_embeddings &lt;- read_rds(paste0(path, &quot;coordinates_ali
         </table>
       </table-wrap>
     </fig>
-    <sec id="cell-fig-plot-osv-model-nb-article" specific-use="notebook-code">
+    <sec id="cell-fig-osv-model-nb-article" specific-use="notebook-code">
     <code language="r script">plotting_osv_model &lt;- function(df, grouping_variable, size){
   df |&gt; 
     plot_ly(
@@ -2864,12 +2765,12 @@ df |&gt;
     vis_spa_group == &quot;phant_spa_low&quot;  ~ &quot;Phant. visual&quot;
   )) |&gt; 
   plotting_osv_model(grouping_variable = &quot;vis_spa_group&quot;, size = 4)</code>
-    <fig id="fig-plot-osv-model-nb-article">
+    <fig id="fig-osv-model-nb-article">
       <caption><p>Figure 3.1: Imagery profiles generated for 30 subjects
       on the three object, spatial, and verbal dimensions.</p></caption>
-      <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-plot-osv-model-1.png" />
+      <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-osv-model-1.png" />
     </fig>
-    <sec id="cell-fig-plot-osv-model-output-0-nb-article" specific-use="notebook-output">
+    <sec id="cell-fig-osv-model-output-0-nb-article" specific-use="notebook-output">
     <preformat>PhantomJS not found. You can install it with webshot::install_phantomjs(). If it is installed, please make sure the phantomjs executable can be found via the PATH variable.</preformat>
     </sec>
     </sec>
@@ -2878,7 +2779,7 @@ df |&gt;
     <title>3.2 Data simulation: Creating representational
     structures</title>
     <p>Gardenfors
-    (<xref alt="2004b" rid="ref-gardenfors2004-nb-article" ref-type="bibr">2004b</xref>)
+    (<xref alt="2004" rid="ref-gardenforsConceptualSpacesFramework2004-nb-article" ref-type="bibr">2004</xref>)
     invokes two scientific concepts, to wit, prototypes and Voronoi
     tessellations. Prototype theory builds on the observation that among
     the instances of a property, some are more representative than
@@ -2886,11 +2787,11 @@ df |&gt;
     property. <italic>We hypothesize that aphantasics will be more
     inclined to categorize items according to prototypes than
     phantasics.</italic></p>
-    <p>A Voronoi tesselation of a given space divides that space into a
+    <p>A Voronoi tessellation of a given space divides that space into a
     number of cells such that each cell has a center and consists of all
     and only those points that lie no closer to the center of any other
     cell than to its own center; the centers of the various cells are
-    called the generator points of the tesselation. This principle will
+    called the generator points of the tessellation. This principle will
     underlie our data simulation, as we will build representations in a
     3D space based on distances to “centroids”, namely, prototypes.
     These representations will thus be located inside of the
@@ -2914,11 +2815,58 @@ df_embeds_2 &lt;- left_join(df_embeds, df_centroids, by = &quot;group&quot;)</co
       </sec>
       <p>A function will be used to generate embeddings. These spherical
       embeddings are displayed in
-      <xref alt="Figure 3.2" rid="fig-perfect-embeddings-nb-article">Figure 3.2</xref>
-      We get 8 nicely distributed clusters. We’ll retrieve the centroids
-      of each cluster, which would be the “perfect” categories of each
-      species group (say, generated by a computational model on
+      <xref alt="Figure 3.2" rid="fig-perfect-embeddings-html-nb-article">Figure 3.2</xref>
+      . We get 8 nicely distributed clusters. We’ll retrieve the
+      centroids of each cluster, which would be the “perfect” categories
+      of each species group (say, generated by a computational model on
       categorical criteria).</p>
+      <sec id="nb-code-cell-3-nb-article" specific-use="notebook-code">
+      <code language="r script"># function for 3D plotting up to 8 groups (due to the palette)
+plotting_3d &lt;- function(df, size, opacity){
+  df |&gt; 
+    plot_ly(
+      type = &quot;scatter3d&quot;,
+      mode = &quot;markers&quot;,
+      x = ~x,
+      y = ~y,
+      z = ~z,
+      color = ~paste0(&quot;Species group &quot;, group),
+      colors = pal_okabe_ito,
+      marker = list(size = size, opacity = opacity)
+    ) |&gt; 
+    layout(paper_bgcolor = &quot;transparent&quot;)
+}
+
+plotting_3d(df_embeds, 3, 1) |&gt; 
+  layout(legend = list(
+    yanchor = &quot;top&quot;,
+    y = 1,
+    xanchor = &quot;right&quot;,
+    x = 0
+    ))
+
+df_centroids |&gt; 
+  plot_ly(
+    type = &quot;scatter3d&quot;,
+    mode = &quot;markers+text&quot;,
+    x = ~x_centroid,
+    y = ~y_centroid,
+    z = ~z_centroid,
+    text = ~paste0(&quot;Species group &quot;, group),
+    color = ~paste0(&quot;Species group &quot;, group),
+    colors = pal_okabe_ito,
+    marker = list(size = 12, opacity = 1)
+    ) |&gt; 
+  layout(
+    scene = list(
+      xaxis = list(title = &quot;x&quot;),
+      yaxis = list(title = &quot;y&quot;),
+      zaxis = list(title = &quot;z&quot;)
+    ),
+    paper_bgcolor = &quot;transparent&quot;,
+    showlegend = FALSE
+    )</code>
+      </sec>
       <code language="r script"># function for 3D plotting up to 8 groups (due to the palette)
 plotting_3d &lt;- function(df, size, opacity){
   df |&gt; 
@@ -2963,7 +2911,7 @@ df_centroids |&gt;
     paper_bgcolor = &quot;transparent&quot;,
     showlegend = FALSE
     )</code>
-      <fig id="fig-perfect-embeddings-nb-article">
+      <fig id="fig-perfect-embeddings-html-nb-article">
         <caption><p>Figure 3.2: Initial random generations of 1000
         points grouped in 8 clusters to represent the theoretical
         embeddings of 8 groups (i.e. groups of species here).
@@ -2979,20 +2927,20 @@ df_centroids |&gt;
               <tr>
                 <td align="left"><p specific-use="wrapper">
                   <boxed-text>
-                    <fig id="fig-perfect-embeddings-1-nb-article">
+                    <fig id="fig-perfect-embeddings-html-1-nb-article">
                       <caption><p>(a) Generated spherical distribution
                       of 1000 observations grouped in 8 equal clusers
                       with Gaussian Mixture Clustering.</p></caption>
-                      <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-perfect-embeddings-1.png" />
+                      <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-perfect-embeddings-html-1.png" />
                     </fig>
                   </boxed-text>
                 </p></td>
                 <td align="left"><p specific-use="wrapper">
                   <boxed-text>
-                    <fig id="fig-perfect-embeddings-2-nb-article">
+                    <fig id="fig-perfect-embeddings-html-2-nb-article">
                       <caption><p>(b) Centroids of the 8 clusters
                       created on the sphere.</p></caption>
-                      <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-perfect-embeddings-2.png" />
+                      <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-perfect-embeddings-html-2.png" />
                     </fig>
                   </boxed-text>
                 </p></td>
@@ -3070,7 +3018,7 @@ plotting_3d(df_embeds_categ, 6, 1)</code>
     </sec>
     <sec id="intermediate-embeddings-nb-article">
       <title>Intermediate embeddings</title>
-      <sec id="nb-code-cell-3-nb-article" specific-use="notebook-code">
+      <sec id="nb-code-cell-4-nb-article" specific-use="notebook-code">
       <fig id="fig-diagram-intermediate-nb-article">
         <caption><p>Figure 3.5: Model of the distances between
         participants’ representations. Note that here d is a
@@ -3086,7 +3034,7 @@ plotting_3d(df_embeds_categ, 6, 1)</code>
         <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/mermaid-figure-2.png" />
       </fig>
       </sec>
-      <sec id="nb-code-cell-4-nb-article" specific-use="notebook-code">
+      <sec id="nb-code-cell-5-nb-article" specific-use="notebook-code">
       <code language="r script"># ─── Generating visual embeddings based on multivariate distributions around 
 # the categorical embeddings ───
 
@@ -3118,7 +3066,7 @@ df_embeddings &lt;-
     y_vs = y_c + dist_v*(y_v - y_c),
     z_vs = z_c + dist_v*(z_v - z_c)
   )</code>
-      <sec id="nb-code-cell-4-output-0-nb-article" specific-use="notebook-output">
+      <sec id="nb-code-cell-5-output-0-nb-article" specific-use="notebook-output">
       <preformat>New names:
 • `species` -&gt; `species...2`
 • `species` -&gt; `species...7`</preformat>
@@ -3185,7 +3133,7 @@ df_embeddings |&gt;
       have four sets of coherent coordinates, around which we will
       simulate the embeddings of the 30 participants, depending on their
       groups.</p>
-      <sec id="nb-code-cell-5-nb-article" specific-use="notebook-code">
+      <sec id="nb-code-cell-6-nb-article" specific-use="notebook-code">
       <code language="r script"># ─── Labeling each species in each group ───
 
 df_embeddings &lt;- 
@@ -3230,20 +3178,111 @@ df_embeddings &lt;-
       as coherent as possible (and avoid blurring everything and making
       the groups disappear in noise).</p>
       <p>Although the groups and species in
-      <xref alt="Figure 3.7 (a)" rid="fig-subject-embeddings-1-nb-article">Figure 3.7
+      <xref alt="Figure 3.7 (a)" rid="fig-subject-embeddings-html-1-nb-article">Figure 3.7
       (a)</xref> look fairly obvious when we colour the embeddings using
       the knowledge about how we built them, the algorithm will only be
       fed with the data for each subject, without any labelling or
       additional information. Thus,
-      <xref alt="Figure 3.7 (b)" rid="fig-subject-embeddings-2-nb-article">Figure 3.7
+      <xref alt="Figure 3.7 (b)" rid="fig-subject-embeddings-html-2-nb-article">Figure 3.7
       (b)</xref> is what the algorithm will actually “see” (and what it
       will try to decrypt). Said otherwise, its objective will be to
       find all the correct colours and shapes in
-      <xref alt="Figure 3.7 (a)" rid="fig-subject-embeddings-1-nb-article">Figure 3.7
+      <xref alt="Figure 3.7 (a)" rid="fig-subject-embeddings-html-1-nb-article">Figure 3.7
       (a)</xref> using only 30 sub-datasets (one for each subject) that
       are illustrated in
-      <xref alt="Figure 3.7 (b)" rid="fig-subject-embeddings-2-nb-article">Figure 3.7
-      (b)</xref>. Admittedly, that looks a lot more complicated.</p>
+      <xref alt="Figure 3.7 (b)" rid="fig-subject-embeddings-html-2-nb-article">Figure 3.7
+      (b)</xref> . Admittedly, that looks a lot more complicated.</p>
+      <sec id="nb-code-cell-7-nb-article" specific-use="notebook-code">
+      <code language="r script">size = 2
+
+plot_ly(
+    type = &quot;scatter3d&quot;, 
+    mode = &quot;marker&quot;,
+    colors = ~pal_okabe_ito
+    ) |&gt; 
+  add_markers(
+    data = df_embed_c_sub, 
+    x = ~x, y = ~y, z = ~z, color  = ~paste0(&quot;Species group &quot;, group),
+    mode = &quot;marker&quot;,
+    marker = list(size = size, symbol = &quot;circle&quot;)
+  ) |&gt; 
+  add_markers(
+    data = df_embed_v_sub, 
+    x = ~x, y = ~y, z = ~z, color  = ~paste0(&quot;Species group &quot;, group),
+    mode = &quot;marker&quot;,
+    marker = list(size = size, symbol = &quot;diamond&quot;)
+  ) |&gt; 
+  add_markers(
+    data = df_embed_cs_sub, 
+    x = ~x, y = ~y, z = ~z, color  = ~paste0(&quot;Species group &quot;, group), 
+    mode = &quot;marker&quot;,
+    marker = list(size = size, symbol = &quot;circle-open&quot;)
+  ) |&gt; 
+  add_markers(
+    data = df_embed_vs_sub, 
+    x = ~x, y = ~y, z = ~z, color  = ~paste0(&quot;Species group &quot;, group), 
+    mode = &quot;marker&quot;,
+    marker = list(size = size, symbol = &quot;diamond-open&quot;)
+  ) |&gt; 
+  layout(legend = list(
+    yanchor = &quot;top&quot;,
+    y = 1,
+    xanchor = &quot;right&quot;,
+    x = 0
+    ),
+    paper_bgcolor = &quot;transparent&quot;,
+    showlegend = FALSE
+    )
+
+bind_rows(
+  # aph_spatial
+  df_embed_cs_sub |&gt; 
+    separate_wider_delim(
+      subject,
+      delim = &quot;_&quot;,
+      names = c(&quot;subject&quot;, &quot;number&quot;)
+    ) |&gt; 
+    mutate(subject = paste0(subject,&quot;_a_aph_s&quot;, number), .keep = &quot;unused&quot;),
+  
+  # aph_verbal
+  df_embed_c_sub  |&gt;
+    separate_wider_delim(
+      subject,
+      delim = &quot;_&quot;,
+      names = c(&quot;subject&quot;, &quot;number&quot;)
+    ) |&gt; 
+    mutate(subject = paste0(subject,&quot;_b_aph_v&quot;, number), .keep = &quot;unused&quot;),
+  
+  # phant spatial
+  df_embed_vs_sub  |&gt;
+    separate_wider_delim(
+      subject,
+      delim = &quot;_&quot;,
+      names = c(&quot;subject&quot;, &quot;number&quot;)
+    ) |&gt; 
+    mutate(subject = paste0(subject,&quot;_c_phant_s&quot;, number), .keep = &quot;unused&quot;),
+  
+  # phant visual
+  df_embed_v_sub  |&gt;
+    separate_wider_delim(
+      subject,
+      delim = &quot;_&quot;,
+      names = c(&quot;subject&quot;, &quot;number&quot;)
+    ) |&gt; 
+    mutate(subject = paste0(subject,&quot;_d_phant_v&quot;, number), .keep = &quot;unused&quot;)
+  ) |&gt;
+  plot_ly() |&gt; 
+  add_markers(
+      x = ~x, y = ~y, z = ~z,
+      color = ~subject,
+      colors = cool_30_colors,
+      marker = list(size = 3)
+    ) |&gt; 
+  layout(
+    paper_bgcolor = &quot;transparent&quot;,
+    showlegend = FALSE
+    )</code>
+      </sec>
       <code language="r script">size = 2
 
 plot_ly(
@@ -3332,7 +3371,7 @@ bind_rows(
     paper_bgcolor = &quot;transparent&quot;,
     showlegend = FALSE
     )</code>
-      <fig id="fig-subject-embeddings-nb-article">
+      <fig id="fig-subject-embeddings-html-nb-article">
         <caption><p>Figure 3.7: Final distribution of the 64 embeddings
         of all the 30 subjects, amounting to 1920 points total.
         <bold><italic>Interact with the figures to see the
@@ -3347,25 +3386,25 @@ bind_rows(
               <tr>
                 <td align="left"><p specific-use="wrapper">
                   <boxed-text>
-                    <fig id="fig-subject-embeddings-1-nb-article">
+                    <fig id="fig-subject-embeddings-html-1-nb-article">
                       <caption><p>(a) Distribution of the embeddings of
                       the 30 subjects,<bold><italic>colored by the
                       species groups</italic></bold> they represent. The
                       symbols represent the four imagery groups (Aph.
                       verbal, spatial, etc.)</p></caption>
-                      <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-subject-embeddings-1.png" />
+                      <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-subject-embeddings-html-1.png" />
                     </fig>
                   </boxed-text>
                 </p></td>
                 <td align="left"><p specific-use="wrapper">
                   <boxed-text>
-                    <fig id="fig-subject-embeddings-2-nb-article">
+                    <fig id="fig-subject-embeddings-html-2-nb-article">
                       <caption><p>(b) Distribution of the embeddings of
                       the 30 subjects, <bold><italic>colored by
                       subject</italic></bold>.This is the only
                       information the unsupervised algorithm will have
                       to work with.</p></caption>
-                      <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-subject-embeddings-2.png" />
+                      <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-subject-embeddings-html-2.png" />
                     </fig>
                   </boxed-text>
                 </p></td>
@@ -3374,7 +3413,7 @@ bind_rows(
           </table>
         </table-wrap>
       </fig>
-      <sec id="nb-code-cell-6-nb-article" specific-use="notebook-code">
+      <sec id="nb-code-cell-8-nb-article" specific-use="notebook-code">
       <code language="r script"># ─── Grouping the 64 embeddings of each subject in their own dataframe ───
 
 df_embeddings_sub &lt;-
@@ -3423,7 +3462,7 @@ df_embeddings_sub &lt;-
   rowwise() |&gt; 
   mutate(embedding = list(as.matrix(embedding)))</code>
       </sec>
-      <sec id="nb-code-cell-7-nb-article" specific-use="notebook-code">
+      <sec id="nb-code-cell-9-nb-article" specific-use="notebook-code">
       <code language="r script"># number of available cores
 n_cores &lt;- as.integer(parallel::detectCores() - 1)
 
@@ -3509,7 +3548,7 @@ row.names(animal_matrix) &lt;- animal_names |&gt; sort()
         <xref alt="Figure 3.8" rid="fig-hclust-nb-article">Figure 3.8</xref>.
         Second, we evaluate the accuracy of the alignment between these
         clusters.</p>
-        <sec id="nb-code-cell-8-nb-article" specific-use="notebook-code">
+        <sec id="nb-code-cell-10-nb-article" specific-use="notebook-code">
         <code language="r script">group_aph_s  &lt;- paste0(&quot;Subject_&quot;, seq(1, 7, 1))
 group_aph_v   &lt;- paste0(&quot;Subject_&quot;, seq(8, 15, 1))
 groups_aph    &lt;- paste0(&quot;Subject_&quot;, seq(1, 15, 1))
@@ -3570,7 +3609,7 @@ dist_matrix &lt;-
 
 clustering &lt;- hclust(dist_matrix)</code>
         </sec>
-        <sec id="nb-code-cell-9-nb-article" specific-use="notebook-code">
+        <sec id="nb-code-cell-11-nb-article" specific-use="notebook-code">
         <code language="r script">clusters &lt;- clustering |&gt; cutree(k = 9)
 
 # 9 Cluster solution
@@ -3653,7 +3692,8 @@ ggplot() +
   theme(
     axis.line.y = element_blank(),
     axis.line.x = element_blank(),
-    axis.text.x = element_blank()
+    axis.text.x = element_blank(),
+    plot.background = element_rect(color = &quot;black&quot;)
   )</code>
         <fig id="fig-hclust-nb-article">
           <caption><p>Figure 3.8: Hierachical clustering of the 30
@@ -3665,13 +3705,15 @@ ggplot() +
         <sec id="cell-fig-clusters-accuracy-nb-article" specific-use="notebook-code">
         <code language="r script">df_9_cluster_accuracy |&gt; 
   ggplot(aes(x = cluster_a, y = cluster_b, fill = accuracy)) +
-  geom_tile(color = &quot;white&quot;, linewidth = .5) +
+  geom_tile(color = &quot;black&quot;, linewidth = .5) +
   geom_text(aes(label = round(accuracy/100, digits  =2)), color = &quot;black&quot;) +
   scale_fill_viridis(guide = &quot;none&quot;) +
+  theme_blackboard() +
   theme(
     axis.title.x = element_blank(),
     axis.title.y = element_blank(),
-    axis.line  = element_blank()
+    axis.line  = element_blank(),
+    plot.background = element_rect(color = &quot;black&quot;)
   )</code>
         <fig id="fig-clusters-accuracy-nb-article">
           <caption><p>Figure 3.9: Accuracy of the alignments between the
@@ -3690,11 +3732,11 @@ ggplot() +
         <p>Let’s see the composition of the clusters in light of our
         initial O-S-V model. The cognitive profiles of the subjects are
         represented in
-        <xref alt="Figure 3.10" rid="fig-plot-osv-clusters-nb-article">Figure 3.10</xref>,
+        <xref alt="Figure 3.10" rid="fig-osv-clusters-nb-article">Figure 3.10</xref>,
         and the distribution of the cognitive profiles in the clusters
         is represented in
         <xref alt="Figure 3.11" rid="fig-clusters-distribution-nb-article">Figure 3.11</xref>.</p>
-        <sec id="nb-code-cell-10-nb-article" specific-use="notebook-code">
+        <sec id="nb-code-cell-12-nb-article" specific-use="notebook-code">
         <code language="r script">df_coordinates &lt;- coordinates_aligned_embeddings |&gt; lapply(as.data.frame)
 
 df_aligned_clustered &lt;-
@@ -3730,7 +3772,7 @@ df_aligned_subjects &lt;-
 
 df_clustered &lt;- bind_cols(df_aligned_subjects, df[,c(6:8)])</code>
         </sec>
-        <sec id="cell-fig-plot-osv-clusters-nb-article" specific-use="notebook-code">
+        <sec id="cell-fig-osv-clusters-nb-article" specific-use="notebook-code">
         <code language="r script">df_clustered |&gt; 
   plot_ly(
     x = ~visual_imagery,
@@ -3765,12 +3807,12 @@ df_clustered &lt;- bind_cols(df_aligned_subjects, df[,c(6:8)])</code>
     paper_bgcolor = &quot;transparent&quot;,
     showlegend = FALSE
     )</code>
-        <fig id="fig-plot-osv-clusters-nb-article">
+        <fig id="fig-osv-clusters-nb-article">
           <caption><p>Figure 3.10: Imagery profiles of the nine
           identified clusters on the three object, spatial, and verbal
           dimensions. <bold><italic>Interact with the figure to see the
           details.</italic></bold></p></caption>
-          <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-plot-osv-clusters-1.png" />
+          <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-osv-clusters-1.png" />
         </fig>
         </sec>
         <sec id="cell-fig-clusters-distribution-nb-article" specific-use="notebook-code">
@@ -3782,7 +3824,8 @@ df_clustered |&gt;
   labs(x = &quot;Cluster&quot;, y = &quot;Count&quot;) +
   scale_color_manual(values = pal_okabe_ito, labels = names, name = &quot;Group&quot;) +
   scale_fill_manual(values = pal_okabe_ito, labels = names, name = &quot;Group&quot;) +
-  theme_blackboard()</code>
+  theme_blackboard() +
+  theme(plot.background = element_rect(color = &quot;black&quot;))</code>
         <fig id="fig-clusters-distribution-nb-article">
           <caption><p>Figure 3.11: Repartion of our intial O-S-V groups
           in the clusters created by the unsupervised
@@ -3794,6 +3837,167 @@ df_clustered |&gt;
         cluster to get a visual idea of their representational
         structures and the intra-cluster alignment between the
         subjects.</p>
+        <sec id="nb-code-cell-13-nb-article" specific-use="notebook-code">
+        <code language="r script">size = 4
+
+# Cluster 1
+plot_ly(
+  type = &quot;scatter3d&quot;, 
+  mode = &quot;marker+text&quot;, 
+  colors = c(&quot;#E69F00&quot;, &quot;#56B4E9&quot;, &quot;#009E73&quot;, &quot;#F5C710&quot;, 
+             &quot;#0072B2&quot;, &quot;#D55E00&quot;, &quot;#CC79A7&quot;, &quot;#6c0009&quot;)) |&gt; 
+  add_markers(
+    data = df_aligned_clustered |&gt; filter(clusters == &quot;1&quot;),
+    x = ~x, y = ~y, z = ~z,
+    color = ~paste0(&quot;Species group &quot;, species_group),
+    marker = list(size = size, symbol = &quot;circle&quot;)
+  ) |&gt; 
+  layout(
+    paper_bgcolor = &quot;transparent&quot;,
+    showlegend = FALSE
+    )
+
+# Cluster 2
+plot_ly(
+  type = &quot;scatter3d&quot;, 
+  mode = &quot;marker+text&quot;, 
+  colors = c(&quot;#E69F00&quot;, &quot;#56B4E9&quot;, &quot;#009E73&quot;, &quot;#F5C710&quot;, 
+             &quot;#0072B2&quot;, &quot;#D55E00&quot;, &quot;#CC79A7&quot;, &quot;#6c0009&quot;)) |&gt; 
+  add_markers(
+    data = df_aligned_clustered |&gt; filter(clusters == &quot;2&quot;),
+    x = ~x, y = ~y, z = ~z,
+    color = ~paste0(&quot;Species group &quot;, species_group),
+    marker = list(size = size, symbol = &quot;circle&quot;)
+  ) |&gt; 
+  layout(
+    paper_bgcolor = &quot;transparent&quot;,
+    showlegend = FALSE
+    )
+
+# Cluster 3
+plot_ly(
+  type = &quot;scatter3d&quot;, 
+  mode = &quot;marker+text&quot;, 
+  colors = c(&quot;#E69F00&quot;, &quot;#56B4E9&quot;, &quot;#009E73&quot;, &quot;#F5C710&quot;, 
+             &quot;#0072B2&quot;, &quot;#D55E00&quot;, &quot;#CC79A7&quot;, &quot;#6c0009&quot;)) |&gt; 
+  add_markers(
+    data = df_aligned_clustered |&gt; filter(clusters == &quot;3&quot;),
+    x = ~x, y = ~y, z = ~z,
+    color = ~paste0(&quot;Species group &quot;, species_group),
+    marker = list(size = size, symbol = &quot;circle&quot;)
+  ) |&gt; 
+  layout(
+    paper_bgcolor = &quot;transparent&quot;,
+    showlegend = FALSE
+    )
+
+# Cluster 4
+plot_ly(
+  type = &quot;scatter3d&quot;, 
+  mode = &quot;marker+text&quot;, 
+  colors = c(&quot;#E69F00&quot;, &quot;#56B4E9&quot;, &quot;#009E73&quot;, &quot;#F5C710&quot;, 
+             &quot;#0072B2&quot;, &quot;#D55E00&quot;, &quot;#CC79A7&quot;, &quot;#6c0009&quot;)) |&gt; 
+  add_markers(
+    data = df_aligned_clustered |&gt; filter(clusters == &quot;4&quot;),
+    x = ~x, y = ~y, z = ~z,
+    color = ~species_group,
+    marker = list(size = size, symbol = &quot;circle&quot;)
+  ) |&gt; 
+  layout(
+    paper_bgcolor = &quot;transparent&quot;,
+    showlegend = FALSE
+    )
+
+# Cluster 5
+plot_ly(
+  type = &quot;scatter3d&quot;, 
+  mode = &quot;marker+text&quot;, 
+  colors = c(&quot;#E69F00&quot;, &quot;#56B4E9&quot;, &quot;#009E73&quot;, &quot;#F5C710&quot;, 
+             &quot;#0072B2&quot;, &quot;#D55E00&quot;, &quot;#CC79A7&quot;, &quot;#6c0009&quot;)) |&gt; 
+  add_markers(
+    data = df_aligned_clustered |&gt; filter(clusters == &quot;5&quot;),
+    x = ~x, y = ~y, z = ~z,
+    color = ~species_group,
+    marker = list(size = size, symbol = &quot;circle&quot;)
+  ) |&gt; 
+  layout(
+    paper_bgcolor = &quot;transparent&quot;,
+    showlegend = FALSE
+    )
+
+# Cluster 6
+plot_ly(
+  type = &quot;scatter3d&quot;, 
+  mode = &quot;marker+text&quot;, 
+  colors = c(&quot;#E69F00&quot;, &quot;#56B4E9&quot;, &quot;#009E73&quot;, &quot;#F5C710&quot;, 
+             &quot;#0072B2&quot;, &quot;#D55E00&quot;, &quot;#CC79A7&quot;, &quot;#6c0009&quot;)) |&gt; 
+  add_markers(
+    data = df_aligned_clustered |&gt; filter(clusters == &quot;6&quot;),
+    x = ~x, y = ~y, z = ~z,
+    color = ~species_group,
+    marker = list(size = size, symbol = &quot;circle&quot;)
+  ) |&gt; 
+  layout(
+    paper_bgcolor = &quot;transparent&quot;,
+    showlegend = FALSE
+    )
+
+# Cluster 7
+plot_ly(
+  type = &quot;scatter3d&quot;, 
+  mode = &quot;marker+text&quot;, 
+  colors = c(&quot;#E69F00&quot;, &quot;#56B4E9&quot;, &quot;#009E73&quot;, &quot;#F5C710&quot;, 
+             &quot;#0072B2&quot;, &quot;#D55E00&quot;, &quot;#CC79A7&quot;, &quot;#6c0009&quot;)) |&gt; 
+  add_markers(
+    data = df_aligned_clustered |&gt; filter(clusters == &quot;7&quot;),
+    x = ~x, y = ~y, z = ~z,
+    color = ~species_group,
+    marker = list(size = size, symbol = &quot;circle&quot;)
+  ) |&gt; 
+  layout(
+    paper_bgcolor = &quot;transparent&quot;,
+    showlegend = FALSE
+    )
+
+# Cluster 8
+plot_ly(
+  type = &quot;scatter3d&quot;, 
+  mode = &quot;marker+text&quot;, 
+  colors = c(&quot;#E69F00&quot;, &quot;#56B4E9&quot;, &quot;#009E73&quot;, &quot;#F5C710&quot;, 
+             &quot;#0072B2&quot;, &quot;#D55E00&quot;, &quot;#CC79A7&quot;, &quot;#6c0009&quot;)) |&gt; 
+  add_markers(
+    data = df_aligned_clustered |&gt; filter(clusters == &quot;8&quot;),
+    x = ~x, y = ~y, z = ~z,
+    color = ~species_group,
+    marker = list(size = size, symbol = &quot;circle&quot;)
+  ) |&gt; 
+  layout(
+    paper_bgcolor = &quot;transparent&quot;,
+    showlegend = FALSE
+    )
+
+# Cluster 9
+plot_ly(
+  type = &quot;scatter3d&quot;, 
+  mode = &quot;marker+text&quot;, 
+  colors = c(&quot;#E69F00&quot;, &quot;#56B4E9&quot;, &quot;#009E73&quot;, &quot;#F5C710&quot;, 
+             &quot;#0072B2&quot;, &quot;#D55E00&quot;, &quot;#CC79A7&quot;, &quot;#6c0009&quot;)) |&gt; 
+  add_markers(
+    data = df_aligned_clustered |&gt; filter(clusters == &quot;9&quot;),
+    x = ~x, y = ~y, z = ~z,
+    color = ~species_group,
+    marker = list(size = size, symbol = &quot;circle&quot;)
+  ) |&gt; 
+  layout(
+    paper_bgcolor = &quot;transparent&quot;,
+    showlegend = FALSE
+    )</code>
+        </sec>
+        <p>Let’s try referencing
+        <xref alt="Figure 3.12 (a)" rid="fig-clusters-final-html-1-nb-article">Figure 3.12
+        (a)</xref> , or
+        <xref alt="Figure 3.12 (i)" rid="fig-clusters-final-html-9-nb-article">Figure 3.12
+        (i)</xref> , the last one.</p>
         <code language="r script">size = 4
 
 # Cluster 1
@@ -3940,7 +4144,7 @@ plot_ly(
     paper_bgcolor = &quot;transparent&quot;,
     showlegend = FALSE
     )</code>
-        <fig id="fig-clusters_embeddings_final-nb-article">
+        <fig id="fig-clusters-final-html-nb-article">
           <caption><p>Figure 3.12: Psychological spaces (embeddings) of
           the 30 subjects, aligned and clustered with other subjects
           having the most similar representations. The eight colors
@@ -3960,33 +4164,33 @@ plot_ly(
                 <tr>
                   <td align="left"><p specific-use="wrapper">
                     <boxed-text>
-                      <fig id="fig-clusters_embeddings_final-1-nb-article">
+                      <fig id="fig-clusters-final-html-1-nb-article">
                         <caption><p>(a) <bold>Cluster 1</bold>
                         embeddings (Aphantasic cluster).Within-cluster
                         aligment accuracy = 95.83%.</p></caption>
-                        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-clusters_embeddings_final-1.png" />
+                        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-clusters-final-html-1.png" />
                       </fig>
                     </boxed-text>
                   </p></td>
                   <td align="left"><p specific-use="wrapper">
                     <boxed-text>
-                      <fig id="fig-clusters_embeddings_final-2-nb-article">
+                      <fig id="fig-clusters-final-html-2-nb-article">
                         <caption><p>(b) <bold>Cluster 2</bold>
                         embeddings (Spatial aphantasic
                         cluster).Within-cluster aligment accuracy =
                         97.66%.</p></caption>
-                        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-clusters_embeddings_final-2.png" />
+                        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-clusters-final-html-2.png" />
                       </fig>
                     </boxed-text>
                   </p></td>
                   <td align="left"><p specific-use="wrapper">
                     <boxed-text>
-                      <fig id="fig-clusters_embeddings_final-3-nb-article">
+                      <fig id="fig-clusters-final-html-3-nb-article">
                         <caption><p>(c) <bold>Cluster 3</bold>
                         embeddings (Spatial aphantasic
                         cluster).Within-cluster aligment accuracy =
                         94.01%.</p></caption>
-                        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-clusters_embeddings_final-3.png" />
+                        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-clusters-final-html-3.png" />
                       </fig>
                     </boxed-text>
                   </p></td>
@@ -4005,33 +4209,33 @@ plot_ly(
                 <tr>
                   <td align="left"><p specific-use="wrapper">
                     <boxed-text>
-                      <fig id="fig-clusters_embeddings_final-4-nb-article">
+                      <fig id="fig-clusters-final-html-4-nb-article">
                         <caption><p>(d) <bold>Cluster 4</bold>
                         embeddings (Aphantasic cluster).Within-cluster
                         aligment accuracy = 85.03%.</p></caption>
-                        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-clusters_embeddings_final-4.png" />
+                        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-clusters-final-html-4.png" />
                       </fig>
                     </boxed-text>
                   </p></td>
                   <td align="left"><p specific-use="wrapper">
                     <boxed-text>
-                      <fig id="fig-clusters_embeddings_final-5-nb-article">
+                      <fig id="fig-clusters-final-html-5-nb-article">
                         <caption><p>(e) <bold>Cluster 5</bold>
                         embeddings (Verbal aphantasic
                         cluster).Within-cluster aligment accuracy =
                         96.88%.</p></caption>
-                        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-clusters_embeddings_final-5.png" />
+                        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-clusters-final-html-5.png" />
                       </fig>
                     </boxed-text>
                   </p></td>
                   <td align="left"><p specific-use="wrapper">
                     <boxed-text>
-                      <fig id="fig-clusters_embeddings_final-6-nb-article">
+                      <fig id="fig-clusters-final-html-6-nb-article">
                         <caption><p>(f) <bold>Cluster 6</bold>
                         embeddings (Verbal aphantasic
                         cluster).Within-cluster aligment accuracy =
                         81.80%.</p></caption>
-                        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-clusters_embeddings_final-6.png" />
+                        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-clusters-final-html-6.png" />
                       </fig>
                     </boxed-text>
                   </p></td>
@@ -4050,31 +4254,31 @@ plot_ly(
                 <tr>
                   <td align="left"><p specific-use="wrapper">
                     <boxed-text>
-                      <fig id="fig-clusters_embeddings_final-7-nb-article">
+                      <fig id="fig-clusters-final-html-7-nb-article">
                         <caption><p>(g) <bold>Cluster 7</bold>
                         embeddings (Phantasic cluster).Within-cluster
                         aligment accuracy = 98.23%.</p></caption>
-                        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-clusters_embeddings_final-7.png" />
+                        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-clusters-final-html-7.png" />
                       </fig>
                     </boxed-text>
                   </p></td>
                   <td align="left"><p specific-use="wrapper">
                     <boxed-text>
-                      <fig id="fig-clusters_embeddings_final-8-nb-article">
+                      <fig id="fig-clusters-final-html-8-nb-article">
                         <caption><p>(h) <bold>Cluster 8</bold>
                         embeddings (Phantasic cluster).Within-cluster
                         aligment accuracy = 74.64%.</p></caption>
-                        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-clusters_embeddings_final-8.png" />
+                        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-clusters-final-html-8.png" />
                       </fig>
                     </boxed-text>
                   </p></td>
                   <td align="left"><p specific-use="wrapper">
                     <boxed-text>
-                      <fig id="fig-clusters_embeddings_final-9-nb-article">
+                      <fig id="fig-clusters-final-html-9-nb-article">
                         <caption><p>(i) <bold>Cluster 9</bold>
                         embeddings (Phantasic cluster).Within-cluster
                         aligment accuracy = 42.45%.</p></caption>
-                        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-clusters_embeddings_final-9.png" />
+                        <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-clusters-final-html-9.png" />
                       </fig>
                     </boxed-text>
                   </p></td>
@@ -4465,23 +4669,6 @@ plot_ly(
       <year iso-8601-date="2004">2004</year>
     </element-citation>
   </ref>
-  <ref id="ref-murHumanObjectSimilarityJudgments2013-nb-article">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Mur</surname><given-names>Marieke</given-names></name>
-        <name><surname>Meys</surname><given-names>Mirjam</given-names></name>
-        <name><surname>Bodurka</surname><given-names>Jerzy</given-names></name>
-        <name><surname>Goebel</surname><given-names>Rainer</given-names></name>
-        <name><surname>Bandettini</surname><given-names>Peter</given-names></name>
-        <name><surname>Kriegeskorte</surname><given-names>Nikolaus</given-names></name>
-      </person-group>
-      <article-title>Human object-similarity judgments reflect and transcend the primate-IT object representation</article-title>
-      <source>Frontiers in Psychology</source>
-      <year iso-8601-date="2013">2013</year>
-      <volume>4</volume>
-      <uri>https://www.frontiersin.org/articles/10.3389/fpsyg.2013.00128</uri>
-    </element-citation>
-  </ref>
   <ref id="ref-majewskaSpatialMultiarrangementClustering2020-nb-article">
     <element-citation publication-type="book">
       <person-group person-group-type="author">
@@ -4496,15 +4683,6 @@ plot_ly(
       <publisher-name>European Language Resources Association</publisher-name>
       <year iso-8601-date="2020">2020</year>
       <uri>https://www.repository.cam.ac.uk/handle/1810/306834</uri>
-    </element-citation>
-  </ref>
-  <ref id="ref-gardenfors2004-nb-article">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Gardenfors</surname><given-names>Peter</given-names></name>
-      </person-group>
-      <article-title>Conceptual Spaces as a Framework for Knowledge Representation</article-title>
-      <year iso-8601-date="2004">2004</year>
     </element-citation>
   </ref>
   <ref id="ref-jozwik2016-nb-article">
@@ -4660,47 +4838,9 @@ plot_ly(
 
 if (!require(librarian)) install.packages(librarian)
     </code>
-    <def-list>
-      <def-item>
-        <term>Line 3</term>
-        <def>
-          <p>The package <monospace>librairian</monospace> eases package
-          management with the “shelf” function, which automatically: (1)
-          checks if a package is installed; (2) installs it if need be;
-          (3) loads the package like the “library()” function would.</p>
-        </def>
-      </def-item>
-      <def-item>
-        <term>Line 27</term>
-        <def>
-          <p><monospace>reticulate</monospace> allows to translate and
-          transfer objects and functions from R to Python and
-          vice-versa, and was thus of primary importance for the
-          successful use of the Python toolbox on our simulated
-          data.</p>
-        </def>
-      </def-item>
-      <def-item>
-        <term>Lines 35,51</term>
-        <def>
-          <p>These are personal custom color palettes meant to extend my
-          favourite palette, the color-atypical friendly Okabe-Ito color
-          palette. The palette originally has only eight colors, but I
-          will need nine, then up to 30 for later graphs, so I extended
-          it with a hand-picked selection of mine.</p>
-        </def>
-      </def-item>
-      <def-item>
-        <term>Lines 56,70</term>
-        <def>
-          <p>These are R objects that were the results of a previous run
-          of the simulation.</p>
-        </def>
-      </def-item>
-    </def-list>
     <code id="annotated-cell-7-nb-1" language="r script">
 # loading
-library(librarian)     
+library(librarian)
 
 # now putting packages on our library's shelves:
 shelf(
@@ -4727,7 +4867,8 @@ shelf(
   reticulate,     # R to Python                       
   tidyverse,      # modern R ecosystem
 )
-
+    </code>
+    <code id="annotated-cell-8-nb-1" language="r script">
 # ─── Global cosmetic theme ───
 theme_set(theme_modern(base_size = 14))  
 
@@ -4771,6 +4912,15 @@ coordinates_aligned_embeddings &lt;- read_rds(paste0(path, &quot;coordinates_ali
     </code>
     <sec id="nb-code-cell-1-output-0-nb-1" specific-use="notebook-output">
     <preformat>Le chargement a nécessité le package : librarian</preformat>
+    </sec>
+    <sec id="nb-code-cell-1-output-1-nb-1" specific-use="notebook-output">
+    <preformat>
+  The 'cran_repo' argument in shelf() was not set, so it will use
+  cran_repo = 'https://cran.r-project.org' by default.
+
+  To avoid this message, set the 'cran_repo' argument to a CRAN
+  mirror URL (see https://cran.r-project.org/mirrors.html) or set
+  'quiet = TRUE'.</preformat>
     </sec>
     </sec>
   </disp-quote>

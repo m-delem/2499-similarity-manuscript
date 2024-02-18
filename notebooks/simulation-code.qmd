@@ -16,7 +16,7 @@ Down below is the code to load necessary packages used for the simulation and an
 if (!require(librarian)) install.packages(librarian)
 
 # loading   # <1>
-library(librarian)     
+library(librarian)       # <1> 
 
 # now putting packages on our library's shelves:
 shelf(
@@ -85,10 +85,6 @@ df_accuracy_cat_bad <- read_rds(paste0(path, "df_accuracy_cat_bad.RDS"))
 # Coordinates of the aligned embeddings from the Python output # <4>
 coordinates_aligned_embeddings <- read_rds(paste0(path, "coordinates_aligned_embeddings.RDS")) 
 ```
-1.  The package `librairian` eases package management with the "shelf" function, which automatically: (1) checks if a package is installed; (2) installs it if need be; (3) loads the package like the "library()" function would.
-2.  `reticulate` allows to translate and transfer objects and functions from R to Python and vice-versa, and was thus of primary importance for the successful use of the Python toolbox on our simulated data.
-3.  These are personal custom color palettes meant to extend my favourite palette, the color-atypical friendly Okabe-Ito color palette. The palette originally has only eight colors, but I will need nine, then up to 30 for later graphs, so I extended it with a hand-picked selection of mine.
-4. These are R objects that were the results of a previous run of the simulation.
 :::
 
 ## Visual-spatial-verbal model of cognitive profiles
@@ -97,8 +93,9 @@ We are going to simulate 30 participants presenting four different cognitive pro
 
 To simulate these four sub-groups, we use the `holodeck` R package to generate multivariate normal distributions of scores on these three dimensions for each sub-group. For instance, verbal aphantasics have normally distributed visual imagery scores centered around a mean of 0 (normalized, so negative scores are possible), 0.4 for spatial imagery, and 0.7 for verbal style; Spatial aphantasics have means of 0 for visual, 0.75 spatial, and 0.3 for verbal; etc. The numbers are arbitrary, but have been chosen by trial-and-error to obtain a model that is both well-defined and not exaggerated.
 
-```{r osv-model}
+```{r osv-generation}
 #| eval: false
+#| label: osv-generation
 
 # ─── Generating hypothetical imagery values for 30 subjects ─── 
 

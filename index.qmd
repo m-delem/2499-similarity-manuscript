@@ -35,6 +35,8 @@ This project stems from several elements:
 
 # Theoretical context
 
+## From similarity to second-order isomorphism
+
 When we try to compare our thoughts and representations with those of others, we quickly realize that the task will be really difficult, if not impossible, as we are of course incapable of "living in someone else's head". If we both try to imagine a dog, I can examine what goes on in my head, so can you, but apart from trying to describe our experiences verbally, we are up against a wall.
 
 Now, what if I asked you to tell me how similar you think a dog and a panther look like? Let's say, in the context of the animal kingdom as a whole. Visualize them well. Well, I could tell you that, *in my opinion, a dog and a panther look no more alike than a dog and a whale*. You might tell me: [*For this thought experiment, let's imagine two things: (1) that someone could honestly say that, and (2) that people would be rating the animals purely on the basis of their mental images, and not on categorical features (number of legs, fur, etc.), which is unfortunately almost* ***never*** *the case in reality.*]{.aside}
@@ -47,7 +49,7 @@ The study of individual differences in the format of representations and the att
 
 [^mach]: Most notably in the works of @fechner1860 and @mach1890a; see also @roads2024 for an extended review.
 
-## From similarity to second-order isomorphism
+## Work-In-Progress
 
 ## Psychological spaces and aphantasia
 
@@ -64,6 +66,8 @@ The dominant hypothesis seems to be that aphantasics simply have an episodic or 
 @gardenforsConceptualSpacesFramework2004 proposed that differences in psychological (in his terms, conceptual) spaces could arise from various sources, whether innate, due to learning, or broader cultural or social differences. All these hypotheses could be coherent to explain the sources of aphantasia. Nevertheless, the study of these sources should be the subject of very large-scale or longitudinal studies, which are out of the scope of this project.
 
 Here, we shall rather attempt to **develop a method to characterize the differences in aphantasics' representational structures and psychological spaces.**
+
+## The present project
 
 # Methods
 
@@ -82,7 +86,13 @@ Assuming a geometric model of representational similarities, @kriegeskorteInvers
 
 The procedure is illustrated in @fig-multi-arrangement.
 
+:::{.content-hidden when-format="pdf"}
 ![**Acquiring similarity judgements with the multi-arrangement method. (A)** Subjects are asked to arrange items according to their similarity, using mouse drag-and-drop on a computer. The similarity measure is taken as the distances between the items: similar items are closer, while dissimilar items are further apart. The upper part of the figure shows screenshots at different moments of the acquisition for one subject. Columns are trials and rows show the object arrangements over time, running from the start (top row) to the end (last row). The first trial contains all items; subsequent trials contain subsets of items that are adaptively selected to optimally estimate judged similarity for each subject. **(B)** Once acquisition of the final judgements is completed, inter-item distances in the final trial arrangements are combined over trials by rescaling and averaging to yield a single dissimilarity estimate for each object pair. The process is illustrated in this figure for two example item pairs: a boy's face and a hand (red), and carrots and a stop sign (blue). Their single-trial dissimilarity estimates (arrows) are combined into a single dissimilarity estimate, which is placed at the corresponding entry of the RDM (lower panel). Mirror-symmetric entries are indicated by lighter colors. Figure from @murHumanObjectSimilarityJudgments2013.](images/multi-arrangement-method-mur-2013.png){#fig-multi-arrangement width="90%" cap-location="margin"}
+:::
+
+:::{.content-visible when-format="pdf"}
+![**Acquiring similarity judgements with the multi-arrangement method. (A)** Subjects are asked to arrange items according to their similarity, using mouse drag-and-drop on a computer. The similarity measure is taken as the distances between the items: similar items are closer, while dissimilar items are further apart. The upper part of the figure shows screenshots at different moments of the acquisition for one subject. Columns are trials and rows show the object arrangements over time, running from the start (top row) to the end (last row). The first trial contains all items; subsequent trials contain subsets of items that are adaptively selected to optimally estimate judged similarity for each subject. **(B)** Once acquisition of the final judgements is completed, inter-item distances in the final trial arrangements are combined over trials by rescaling and averaging to yield a single dissimilarity estimate for each object pair. The process is illustrated in this figure for two example item pairs: a boy's face and a hand (red), and carrots and a stop sign (blue). Their single-trial dissimilarity estimates (arrows) are combined into a single dissimilarity estimate, which is placed at the corresponding entry of the RDM (lower panel). Mirror-symmetric entries are indicated by lighter colors. Figure from @murHumanObjectSimilarityJudgments2013.](images/multi-arrangement-method-mur-2013.png){#fig-multi-arrangement width="90%" cap-location="bottom"}
+:::
 
 A key strength of this method that sets it as particularly effective is the "adaptive" part. The goal of the process is to acquire similarity judgements as precisely as possible while minimizing the total amount of trials. To do so, starting from the second trial, selected subsets of the items to be compared are presented to the subject: these items are the ones that were very close on-screen in previous trials and thus had their distance evaluated with lower accuracy by the subject. As the subject has to fill the entire "arena" with the items, these subsequent trials will necessarily increase the level of precision in the similarity judgement between pairs of items. The second key benefit of this method is the time and effort gain compared to others. For example, to compare every pair of items among 64 different items would require $\frac{64 \times (64-1)}{2} = 2016$ comparisons (i.e. trials). This would be extremely time-consuming, while also losing the *context-independence* afforded by the MA method due to the presence of other items around every time the subject mentally performs a pairwise comparison.
 
@@ -92,11 +102,29 @@ Historically, when referring to the projection of the representations of stimuli
 
 The idea is simple: for a given set of items that have distinct and very pictorial visual properties, we would ask a wide range of aphantasics, phantasics or hyperphantasics to imagine, mentally compare and make similarity judgements between the items. To compare these representations with actual perceptual representations, the subjects would also perform the same task afterwards, this time with actual pictures to compare. Subjects would also fill our usual psychometric imagery questionnaires.
 
+:::{.content-hidden when-format="pdf"}
 ![Arena layout of the MA protocol used by @murHumanObjectSimilarityJudgments2013 to acquire perceptual similarity judgements on natural images. *Click to expand.*](images/mur-spam-2.png){#fig-spam-mur .column-margin}
+:::
 
 To "compare imagined items", we could use a "word" version of the MA paradigm. An example from @majewskaSpatialMultiarrangementClustering2020 - *who used the method to build large-scale semantic similarity resources for Natural Language Processing systems* - is represented in @fig-majewska.
 
+:::{.content-hidden when-format="pdf"}
 ![Arena layout of the MA protocol used by @majewskaSpatialMultiarrangementClustering2020 to acquire similarity judgements on word pairs. *Click to expand.*](images/majewska-spam-2.png){#fig-majewska .column-margin}
+:::
+
+:::{.content-visible when-format="pdf"}
+
+:::{#fig-spam-arenas layout-ncol=1}
+
+![Arena layout of the MA protocol used by @murHumanObjectSimilarityJudgments2013 to acquire perceptual similarity judgements on natural images.](images/mur-spam-2.png){#fig-spam-mur}
+
+![Arena layout of the MA protocol used by @majewskaSpatialMultiarrangementClustering2020 to acquire similarity judgements on word pairs.](images/majewska-spam-2.png){#fig-majewska}
+
+Examples of arena layouts for the multi-arrangement (MA) paradigm.
+:::
+
+:::
+
 
 We could have the stimuli rated by another set of participants on several features.
 
@@ -124,7 +152,13 @@ We could even go for several comparisons - even though this would increase quadr
 
 We would have a list of animal items, that would have several characteristics:
 
+:::{.content-hidden when-format="pdf"}
 ![Representing the characteristics of shapes with cylinders. Figure from @marr1997. *Click to expand.*](images/shapes-marr.png){#fig-marr .column-margin}
+:::
+
+:::{.content-visible when-format="pdf"}
+![Representing the characteristics of shapes with cylinders. Figure from @marr1997. *Click to expand.*](images/shapes-marr.png){#fig-marr out-width=60%}
+:::
 
 -   A name
 
@@ -140,7 +174,7 @@ We need orthogonal data:
 
 This would imply that category cannot be derived from shape, and vice-versa. Thus, a **sorting by shape would reveal to be innately visual** (or maybe spatial, if shape concerns this type of imagery), and a **sorting by category would reveal an abstraction** from these shapes. We expect that the two will be mixed to some degree in every subject, but that low-imagery would rather tend towards category sorting, while high-imagery would tend towards shape sorting.
 
-Shapes could be very tricky stimuli to discuss. @gardenfors2004 noted that we only have a very sketchy understanding of how we perceive and conceptualize things according to their shapes. The works of @marr1997 highlight this difficulty when analysing the complexity of the hierarchical judgements of shapes and volumes, as shown in @fig-marr.
+Shapes could be very tricky stimuli to discuss. @gardenforsConceptualSpacesFramework2004 noted that we only have a very sketchy understanding of how we perceive and conceptualize things according to their shapes. The works of @marr1997 highlight this difficulty when analysing the complexity of the hierarchical judgements of shapes and volumes, as shown in @fig-marr.
 
 ## Data analysis plan
 
@@ -162,7 +196,13 @@ To account for all possible correspondences, we use an unsupervised alignment me
 
 To this end, we used the Gromov-Wasserstein optimal transport (GWOT) method, which has been applied with great success in various fields. GWOT aims to find the optimal mapping between two point clouds in different domains based on the distance between points within each domain. Importantly, the distances (or correspondences) between points "across" different domains are not given while those "within" the same domain are given. GWOT aligns the point clouds according to the principle that a point in one domain should correspond to another point in the other domain that has a similar relationship to other points. The principle of the method is illustrated in @fig-gwot-kawa
 
+:::{.content-hidden when-format="pdf"}
 ![Gromov-Wassertein optimal transport principle. Figure from @kawakita2023. *Click to expand.*](images/kawa-gwot-2.PNG){#fig-gwot-kawa .column-margin}
+:::
+
+:::{.content-visible when-format="pdf"}
+![Gromov-Wassertein optimal transport principle. Figure from @kawakita2023. *Click to expand.*](images/kawa-gwot-2.PNG){#fig-gwot-kawa out-width=60%}
+:::
 
 We first computed the GWD for all pairs of the dissimilarity matrices of the 5 groups (Group 1-5) using the optimized $\epsilon$. In Fig. 3b, we show the optimized mapping $\Gamma*$ between Group 1 and Groups 2-5 (see Supplementary Figure S1 for the other pairs). As shown in Fig. 3b, most of the diagonal elements in $\Gamma*$ show high values, indicating that most colors in one group correspond to the same colors in the other groups with high probability. We next performed unsupervised alignment of the vector embeddings of qualia structures. Although $\Gamma*$ provides the rough correspondence between the embeddings of qualia structures, we should find a more precise mathematical mapping between qualia structures in terms of their vector embeddings to more accurately assess the similarity between the qualia structures. Here, we consider aligning the embeddings of all the groups in a common space.
 
@@ -194,7 +234,7 @@ The most representative members of a category are called prototypical members.
 
 Prototype theory builds on the observation that among the instances of a property, some are more representative than others. The most representative one is the prototype of the property.
 
-Thus, following the concepts illustrated by @gardenfors2004, we would expect that aphantasics, when doing shape similarity judgements, would be more inclined to group items close to the prototypical items due to a lower definition of the mental image. In comparison, phantasics would have a much more distributed conceptual space of item shapes due to their higher-resolution mental images of said items.
+Thus, following the concepts illustrated by @gardenforsConceptualSpacesFramework2004, we would expect that aphantasics, when doing shape similarity judgements, would be more inclined to group items close to the prototypical items due to a lower definition of the mental image. In comparison, phantasics would have a much more distributed conceptual space of item shapes due to their higher-resolution mental images of said items.
 
 ### Subjective imagery and psychological spaces
 
@@ -284,9 +324,7 @@ One of the objectives of the study would be to link the subjective cognitive pro
 
 We are going to simulate 30 participants presenting four different cognitive profiles, that I defined as, respectively, *verbal* aphantasics, *spatial* aphantasics, *spatial* phantasics, and *visual* phantasics. Their imagery abilities are summarised in @tbl-imageries.
 
-To simulate these four sub-groups, we will generate multivariate normal distributions of scores on these three dimensions for each sub-group. For instance, verbal aphantasics have normally distributed visual imagery scores centred around a mean of 0 (normalized, so negative scores are possible), 0.4 for spatial imagery, and 0.7 for verbal style; Spatial aphantasics have means of 0 for visual, 0.75 spatial, and 0.3 for verbal; etc. The numbers are arbitrary, but have been chosen by trial-and-error to obtain a model that is both well-defined and not exaggerated. The 30 subjects' imagery profiles are represented in the three dimensional space of the visual-spatial-verbal dimensions in @fig-plot-osv-model.
-
-<!-- The code used to generate these scores can be found in the Study simulation notebook. -->
+To simulate these four sub-groups, we will generate multivariate normal distributions of scores on these three dimensions for each sub-group. For instance, verbal aphantasics have normally distributed visual imagery scores centred around a mean of 0 (normalized, so negative scores are possible), 0.4 for spatial imagery, and 0.7 for verbal style; Spatial aphantasics have means of 0 for visual, 0.75 spatial, and 0.3 for verbal; etc. The numbers are arbitrary, but have been chosen by trial-and-error to obtain a model that is both well-defined and not exaggerated. The 30 subjects' imagery profiles are represented in the three dimensional space of the visual-spatial-verbal dimensions in @fig-osv-model.
 
 | Cognitive profile  | Visual imagery | Spatial imagery | Verbal style |
 |--------------------|:--------------:|:---------------:|:------------:|
@@ -297,8 +335,8 @@ To simulate these four sub-groups, we will generate multivariate normal distribu
 
 : Imagery abilities of the four hypothesized cognitive profiles. {#tbl-imageries}
 
-```{r plot_osv_model}
-#| label: fig-plot-osv-model
+```{r}
+#| label: fig-osv-model
 #| fig-cap: "Imagery profiles generated for 30 subjects on the three object, spatial, and verbal dimensions."
 
 plotting_osv_model <- function(df, grouping_variable, size){
@@ -345,16 +383,17 @@ df |>
   plotting_osv_model(grouping_variable = "vis_spa_group", size = 4)
 ```
 
-
 ## Data simulation: Creating representational structures
 
-@gardenfors2004 invokes two scientific concepts, to wit, prototypes and Voronoi tessellations. Prototype theory builds on the observation that among the instances of a property, some are more representative than others. The most representative one is the prototype of the property. *We hypothesize that aphantasics will be more inclined to categorize items according to prototypes than phantasics.*
+@gardenforsConceptualSpacesFramework2004 invokes two scientific concepts, to wit, prototypes and Voronoi tessellations. Prototype theory builds on the observation that among the instances of a property, some are more representative than others. The most representative one is the prototype of the property. *We hypothesize that aphantasics will be more inclined to categorize items according to prototypes than phantasics.*
 
-A Voronoi tesselation of a given space divides that space into a number of cells such that each cell has a center and consists of all and only those points that lie no closer to the center of any other cell than to its own center; the centers of the various cells are called the generator points of the tesselation. This principle will underlie our data simulation, as we will build representations in a 3D space based on distances to "centroids", namely, prototypes. These representations will thus be located inside of the tessellations around these prototypes, more or less close to the centroid depending on the subject's representational structures.
+A Voronoi tessellation of a given space divides that space into a number of cells such that each cell has a center and consists of all and only those points that lie no closer to the center of any other cell than to its own center; the centers of the various cells are called the generator points of the tessellation. This principle will underlie our data simulation, as we will build representations in a 3D space based on distances to "centroids", namely, prototypes. These representations will thus be located inside of the tessellations around these prototypes, more or less close to the centroid depending on the subject's representational structures.
 
 ### Generating "prototype" embeddings from a sphere
 
-```{r getting_centroids}
+```{r}
+#| label: getting-centroids
+
 # getting the centroids of each cluster
 df_centroids <- 
   df_embeds |> 
@@ -369,16 +408,12 @@ df_centroids <-
 df_embeds_2 <- left_join(df_embeds, df_centroids, by = "group")
 ```
 
-A function will be used to generate embeddings. These spherical embeddings are displayed in @fig-perfect-embeddings We get 8 nicely distributed clusters. We'll retrieve the centroids of each cluster, which would be the "perfect" categories of each species group (say, generated by a computational model on categorical criteria).
+A function will be used to generate embeddings. These spherical embeddings are displayed in [@fig-perfect-embeddings-html]{.content-hidden when-format="pdf"} [@fig-perfect-embeddings-pdf]{.content-visible when-format="pdf"}. We get 8 nicely distributed clusters. We'll retrieve the centroids of each cluster, which would be the "perfect" categories of each species group (say, generated by a computational model on categorical criteria).
 
-```{r plot_sphere}
-#| label: fig-perfect-embeddings
-#| fig-cap: "Initial random generations of 1000 points grouped in 8 clusters to represent the theoretical embeddings of 8 groups (i.e. groups of species here). ***Interact with the figures to see the details.***"
-#| fig-subcap: 
-#|   - "Generated spherical distribution of 1000 observations grouped in 8 equal clusers with Gaussian Mixture Clustering."
-#|   - "Centroids of the 8 clusters created on the sphere."
-#| layout-ncol: 2
-#| column: page
+```{r}
+#| label: perfect-embeddings
+#| eval: false
+#| include: false
 
 # function for 3D plotting up to 8 groups (due to the palette)
 plotting_3d <- function(df, size, opacity){
@@ -427,6 +462,32 @@ df_centroids |>
     )
 ```
 
+::: {.content-hidden when-format="pdf"}
+::: column-page-inset
+```{r}
+#| ref-label: perfect-embeddings
+#| label: fig-perfect-embeddings-html
+#| fig-cap: "Initial random generations of 1000 points grouped in 8 clusters to represent the theoretical embeddings of 8 groups (i.e. groups of species here). ***Interact with the figures to see the details.***"
+#| fig-subcap: 
+#|   - "Generated spherical distribution of 1000 observations grouped in 8 equal clusers with Gaussian Mixture Clustering."
+#|   - "Centroids of the 8 clusters created on the sphere."
+#| layout-ncol: 2
+```
+:::
+:::
+
+::: {.content-visible when-format="pdf"}
+```{r}
+#| ref-label: perfect-embeddings
+#| label: fig-perfect-embeddings-pdf
+#| fig-cap: "Initial random generations of 1000 points grouped in 8 clusters to represent the theoretical embeddings of 8 groups (i.e. groups of species here). ***Interact with the figures to see the details.***"
+#| fig-subcap: 
+#|   - "Generated spherical distribution of 1000 observations grouped in 8 equal clusers with Gaussian Mixture Clustering."
+#|   - "Centroids of the 8 clusters created on the sphere."
+#| layout-ncol: 2
+```
+:::
+
 Now we want two sets of embeddings: one where the observations are very concentrated around the centroids, which would be the **categorical model**, and one where the observations are more spread out, which would be the **visual model**.
 
 We need to select 8 observations per cluster, which would be our animals per group. These observations will be subsets of the 1000 observations we generated.
@@ -438,7 +499,7 @@ The selection procedure for the **categorical model** will consist of selecting 
 
 $$d(centroid, observation) = \sqrt{(x_{c} - x_{o})^{2} + (y_{c} - y_{o})^{2} + (z_{c} - z_{o})^{2}}$$
 
-```{r plot_categorical}
+```{r}
 #| label: fig-categorical-embeddings
 #| fig-cap: "Selection of 64 points to represent prototypical categorical embeddings, based on the distances to each groups' centroid. These will be the bases of the verbal aphantasics' embeddings. ***Interact with the figure to see the details.***"
 
@@ -450,7 +511,7 @@ plotting_3d(df_embeds_categ, 6, 1)
 
 In the case of the **visual model**, we would like approximately evenly distributed embeddings, that could also dive *inside* the sphere, i.e. representing species that are visually close although diametrically opposed when it comes to taxonomy. To do this we can simulate multivariate normal distributions around the centroids.
 
-```{r plot_visual}
+```{r}
 #| label: fig-visual-embeddings
 #| fig-cap: "Selection of 64 points to represent prototypical visual embeddings, chosen randomly in multivariate distributions centered around each categorical embedding. The visual embeddings are overlaid as diamonds along with categorical ones as dots. The two distributions keep the group structure, but are pretty far apart at times. ***Interact with the figure to see the details.***"
 
@@ -470,7 +531,7 @@ plotting_3d(df_embeds_categ, 4, 1) |>
 
 ### Intermediate embeddings
 
-```{mermaid diagram_intermediate}
+```{mermaid diagram-intermediate}
 %%| label: fig-diagram-intermediate
 %%| fig-width: 5
 %%| fig-cap: "Model of the distances between participants' representations. Note that here d is a one-dimensional distance between the representations, but it will be computed as a three-dimensional distance in our toy-model. The verbal aphantasic profile is hypothesized to be very categorical, thus diametrically opposed to the visual phantasic profile, by a given distance d. Spatial profiles are in-between: they are close to each other (10% x d), but the spatial aphantasic profile is a bit closer to the verbal aphantasic one (45% x d), and the spatial phantasic is a bit closer to the visual phantasic one (45% x d)."
@@ -479,7 +540,8 @@ flowchart LR
     A ---|d| D
 ```
 
-```{r embeddings_intermediate}
+```{r}
+#| label: intermediate-embeddings-df
 
 # ─── Generating visual embeddings based on multivariate distributions around 
 # the categorical embeddings ───
@@ -514,7 +576,7 @@ df_embeddings <-
   )
 ```
 
-```{r plot_intermediate}
+```{r}
 #| label: fig-intermediate-embeddings
 #| fig-cap: "Space of embeddings with 128 additional points based on the euclidean distances between the visual and categorical embeddings. The empty dots are the *aphantasics-spatial* ones, and the empty diamonds are the *phantasic-spatial* ones. Some can be very close together, and sometimes further apart due to the various pairs of visual and categorical points used to create them. A network-like structure seems to appear, with empty points seemingly 'connecting' the dots and diamonds. ***Interact with the figure to see the details.***"
 
@@ -560,7 +622,8 @@ The distributions created are still gathered around the centroids of each group,
 
 Perfect! Now we have two 3D embeddings per animal, in a categorical or a visual description of their features. Thus, we have four sets of coherent coordinates, around which we will simulate the embeddings of the 30 participants, depending on their groups.
 
-```{r adding_species}
+```{r}
+#| label: adding-species
 
 # ─── Labeling each species in each group ───
 
@@ -597,16 +660,12 @@ To generate the embeddings of each subject in each condition, we will start from
 
 The visual and verbal groups will be generated with slightly more intra-group variance, so as to try to make the spatial groups as coherent as possible (and avoid blurring everything and making the groups disappear in noise).
 
-Although the groups and species in @fig-subject-embeddings-1 look fairly obvious when we colour the embeddings using the knowledge about how we built them, the algorithm will only be fed with the data for each subject, without any labelling or additional information. Thus, @fig-subject-embeddings-2 is what the algorithm will actually "see" (and what it will try to decrypt). Said otherwise, its objective will be to find all the correct colours and shapes in @fig-subject-embeddings-1 using only 30 sub-datasets (one for each subject) that are illustrated in @fig-subject-embeddings-2. Admittedly, that looks a lot more complicated.
+Although the groups and species in [@fig-subject-embeddings-html-1]{.content-hidden when-format="pdf"} [@fig-subject-embeddings-pdf-1]{.content-visible when-format="pdf"} look fairly obvious when we colour the embeddings using the knowledge about how we built them, the algorithm will only be fed with the data for each subject, without any labelling or additional information. Thus, [@fig-subject-embeddings-html-2]{.content-hidden when-format="pdf"} [@fig-subject-embeddings-pdf-2]{.content-visible when-format="pdf"} is what the algorithm will actually "see" (and what it will try to decrypt). Said otherwise, its objective will be to find all the correct colours and shapes in [@fig-subject-embeddings-html-1]{.content-hidden when-format="pdf"} [@fig-subject-embeddings-pdf-1]{.content-visible when-format="pdf"} using only 30 sub-datasets (one for each subject) that are illustrated in [@fig-subject-embeddings-html-2]{.content-hidden when-format="pdf"} [@fig-subject-embeddings-pdf-2]{.content-visible when-format="pdf"}. Admittedly, that looks a lot more complicated.
 
-```{r plot_embeddings_subjects_a}
-#| label: fig-subject-embeddings
-#| fig-cap: "Final distribution of the 64 embeddings of all the 30 subjects, amounting to 1920 points total. ***Interact with the figures to see the details.***"
-#| fig-subcap: 
-#|   - "Distribution of the embeddings of the 30 subjects,***colored by the species groups*** <br>they represent. The symbols represent the four imagery groups (Aph. verbal, spatial, etc.)"
-#|   - "Distribution of the embeddings of the 30 subjects, ***colored by subject***.<br>This is the only information the unsupervised algorithm will have to work with."
-#| layout-ncol: 2
-#| column: page
+```{r}
+#| label: subject-embeddings
+#| eval: false
+#| include: false
 
 size = 2
 
@@ -699,7 +758,34 @@ bind_rows(
     )
 ```
 
-```{r embeddings_subject_matrices}
+:::{.content-hidden when-format="pdf"}
+::: column-page-inset
+```{r}
+#| ref-label: subject-embeddings
+#| label: fig-subject-embeddings-html
+#| fig-cap: "Final distribution of the 64 embeddings of all the 30 subjects, amounting to 1920 points total. ***Interact with the figures to see the details.***"
+#| fig-subcap: 
+#|   - "Distribution of the embeddings of the 30 subjects,***colored by the species groups*** <br>they represent. The symbols represent the four imagery groups (Aph. verbal, spatial, etc.)"
+#|   - "Distribution of the embeddings of the 30 subjects, ***colored by subject***.<br>This is the only information the unsupervised algorithm will have to work with."
+#| layout-ncol: 2
+```
+:::
+:::
+
+:::{.content-visible when-format="pdf"}
+```{r}
+#| ref-label: subject-embeddings
+#| label: fig-subject-embeddings-pdf
+#| fig-cap: "Final distribution of the 64 embeddings of all the 30 subjects, amounting to 1920 points total. ***Interact with the figures to see the details.***"
+#| fig-subcap: 
+#|   - "Distribution of the embeddings of the 30 subjects,***colored by the species groups*** <br>they represent. The symbols represent the four imagery groups (Aph. verbal, spatial, etc.)"
+#|   - "Distribution of the embeddings of the 30 subjects, ***colored by subject***.<br>This is the only information the unsupervised algorithm will have to work with."
+#| layout-ncol: 2
+```
+:::
+
+```{r}
+#| label: subject-embeddings-matrices
 
 # ─── Grouping the 64 embeddings of each subject in their own dataframe ───
 
@@ -750,7 +836,8 @@ df_embeddings_sub <-
   mutate(embedding = list(as.matrix(embedding)))
 ```
 
-```{r r_final_setups}
+```{r}
+#| label: final-r-setups
 
 # number of available cores
 n_cores <- as.integer(parallel::detectCores() - 1)
@@ -818,7 +905,9 @@ From there on, most of the code follows the instructions from the open-source sc
 
 First, we evaluate the accuracy per subject and group the subjects based on the alignment accuracy via hierarchical clustering. This procedure is represented in @fig-hclust. Second, we evaluate the accuracy of the alignment between these clusters.
 
-```{r accuracy_means}
+```{r}
+#| label: accuracy-means
+
 group_aph_s  <- paste0("Subject_", seq(1, 7, 1))
 group_aph_v   <- paste0("Subject_", seq(8, 15, 1))
 groups_aph    <- paste0("Subject_", seq(1, 15, 1))
@@ -880,7 +969,9 @@ dist_matrix <-
 clustering <- hclust(dist_matrix)
 ```
 
-```{r clusters_accuracy}
+```{r}
+#| label: clusters-accuracy
+
 clusters <- clustering |> cutree(k = 9)
 
 # 9 Cluster solution
@@ -927,7 +1018,7 @@ df_9_cluster_accuracy <-
   separate_wider_delim(alignment, " - ", names = c("cluster_a", "cluster_b"))
 ```
 
-```{r dist_matrix_hclust}
+```{r}
 #| label: fig-hclust
 #| fig-cap: "Hierachical clustering of the 30 subjects based on their representational alignment."
 #| fig-width: 12
@@ -970,11 +1061,12 @@ ggplot() +
   theme(
     axis.line.y = element_blank(),
     axis.line.x = element_blank(),
-    axis.text.x = element_blank()
+    axis.text.x = element_blank(),
+    plot.background = element_rect(color = "black")
   )
 ```
 
-```{r clusters_accuracy}
+```{r}
 #| label: fig-clusters-accuracy
 #| fig-cap: "Accuracy of the alignments between the subject's embeddings in each cluster. An alignment of a cluster with itself (e.g. Cluster 7 - Cluster 7) is the evaluation of the alignment of the subjects ***inside*** the cluster."
 #| fig-width: 10
@@ -982,21 +1074,25 @@ ggplot() +
 
 df_9_cluster_accuracy |> 
   ggplot(aes(x = cluster_a, y = cluster_b, fill = accuracy)) +
-  geom_tile(color = "white", linewidth = .5) +
+  geom_tile(color = "black", linewidth = .5) +
   geom_text(aes(label = round(accuracy/100, digits  =2)), color = "black") +
   scale_fill_viridis(guide = "none") +
+  theme_blackboard() +
   theme(
     axis.title.x = element_blank(),
     axis.title.y = element_blank(),
-    axis.line  = element_blank()
+    axis.line  = element_blank(),
+    plot.background = element_rect(color = "black")
   )
 ```
 
 #### Evaluating the clusters in light of our theoretical OSV model
 
-Let's see the composition of the clusters in light of our initial O-S-V model. The cognitive profiles of the subjects are represented in @fig-plot-osv-clusters, and the distribution of the cognitive profiles in the clusters is represented in @fig-clusters-distribution.
+Let's see the composition of the clusters in light of our initial O-S-V model. The cognitive profiles of the subjects are represented in @fig-osv-clusters, and the distribution of the cognitive profiles in the clusters is represented in @fig-clusters-distribution.
 
-```{r df_aligned_clustered}
+```{r}
+#| label: aligned-clustered-df
+
 df_coordinates <- coordinates_aligned_embeddings |> lapply(as.data.frame)
 
 df_aligned_clustered <-
@@ -1033,8 +1129,8 @@ df_aligned_subjects <-
 df_clustered <- bind_cols(df_aligned_subjects, df[,c(6:8)])
 ```
 
-```{r plot_osv_clusters}
-#| label: fig-plot-osv-clusters
+```{r}
+#| label: fig-osv-clusters
 #| fig-cap: "Imagery profiles of the nine identified clusters on the three object, spatial, and verbal dimensions. ***Interact with the figure to see the details.***"
 
 df_clustered |> 
@@ -1085,28 +1181,16 @@ df_clustered |>
   labs(x = "Cluster", y = "Count") +
   scale_color_manual(values = pal_okabe_ito, labels = names, name = "Group") +
   scale_fill_manual(values = pal_okabe_ito, labels = names, name = "Group") +
-  theme_blackboard()
+  theme_blackboard() +
+  theme(plot.background = element_rect(color = "black"))
 ```
 
 Now let's visualize the embeddings of the subjects in each cluster to get a visual idea of their representational structures and the intra-cluster alignment between the subjects.
 
-```{r plot_clusters_embeddings_final}
-#| label: fig-clusters_embeddings_final
-#| fig-cap: "Psychological spaces (embeddings) of the 30 subjects, aligned and clustered with other subjects having the most similar representations. The eight colors represent the initial eight groups of species that each subject had to 'represent' with imagery (legends for these colors have been taken out for display clarity purposes). ***Interact with the figures to see the details.***"
-#| fig-cap-location: margin
-#| fig-subcap: 
-#|   - "**Cluster 1** embeddings (Aphantasic cluster).<br>Within-cluster aligment accuracy = 95.83%."
-#|   - "**Cluster 2** embeddings (Spatial aphantasic cluster).<br>Within-cluster aligment accuracy = 97.66%."
-#|   - "**Cluster 3** embeddings (Spatial aphantasic cluster).<br>Within-cluster aligment accuracy = 94.01%."
-#|   - "**Cluster 4** embeddings (Aphantasic cluster).<br>Within-cluster aligment accuracy = 85.03%."
-#|   - "**Cluster 5** embeddings (Verbal aphantasic cluster).<br>Within-cluster aligment accuracy = 96.88%."
-#|   - "**Cluster 6** embeddings (Verbal aphantasic cluster).<br>Within-cluster aligment accuracy = 81.80%."
-#|   - "**Cluster 7** embeddings (Phantasic cluster).<br>Within-cluster aligment accuracy = 98.23%."
-#|   - "**Cluster 8** embeddings (Phantasic cluster).<br>Within-cluster aligment accuracy = 74.64%."
-#|   - "**Cluster 9** embeddings (Phantasic cluster).<br>Within-cluster aligment accuracy = 42.45%."
-#| layout-ncol: 3
-#| layout-nrow: 3
-#| column: page
+```{r}
+#| label: clusters-embeddings-final
+#| eval: false
+#| include: false
 
 size = 4
 
@@ -1264,6 +1348,51 @@ plot_ly(
     )
 ```
 
+Let's try referencing [@fig-clusters-final-html-1]{.content-hidden when-format="pdf"} [@fig-clusters-final-pdf-1]{.content-visible when-format="pdf"}, or [@fig-clusters-final-html-9]{.content-hidden when-format="pdf"} [@fig-clusters-final-pdf-9]{.content-visible when-format="pdf"}, the last one.
+
+:::{.content-hidden when-format="pdf"}
+::: column-page-inset
+```{r}
+#| ref-label: clusters-embeddings-final
+#| label: fig-clusters-final-html
+#| fig-cap: "Psychological spaces (embeddings) of the 30 subjects, aligned and clustered with other subjects having the most similar representations. The eight colors represent the initial eight groups of species that each subject had to 'represent' with imagery (legends for these colors have been taken out for display clarity purposes). ***Interact with the figures to see the details.***"
+#| fig-cap-location: top
+#| fig-subcap: 
+#|   - "**Cluster 1** embeddings (Aphantasic cluster).<br>Within-cluster aligment accuracy = 95.83%."
+#|   - "**Cluster 2** embeddings (Spatial aphantasic cluster).<br>Within-cluster aligment accuracy = 97.66%."
+#|   - "**Cluster 3** embeddings (Spatial aphantasic cluster).<br>Within-cluster aligment accuracy = 94.01%."
+#|   - "**Cluster 4** embeddings (Aphantasic cluster).<br>Within-cluster aligment accuracy = 85.03%."
+#|   - "**Cluster 5** embeddings (Verbal aphantasic cluster).<br>Within-cluster aligment accuracy = 96.88%."
+#|   - "**Cluster 6** embeddings (Verbal aphantasic cluster).<br>Within-cluster aligment accuracy = 81.80%."
+#|   - "**Cluster 7** embeddings (Phantasic cluster).<br>Within-cluster aligment accuracy = 98.23%."
+#|   - "**Cluster 8** embeddings (Phantasic cluster).<br>Within-cluster aligment accuracy = 74.64%."
+#|   - "**Cluster 9** embeddings (Phantasic cluster).<br>Within-cluster aligment accuracy = 42.45%."
+#| layout-ncol: 3
+#| layout-nrow: 3
+```
+:::
+:::
+
+:::{.content-visible when-format="pdf"}
+```{r}
+#| ref-label: clusters-embeddings-final
+#| label: fig-clusters-final-pdf
+#| fig-cap: "Psychological spaces (embeddings) of the 30 subjects, aligned and clustered with other subjects having the most similar representations. The eight colors represent the initial eight groups of species that each subject had to 'represent' with imagery (legends for these colors have been taken out for display clarity purposes). ***Interact with the figures to see the details.***"
+#| fig-cap-location: top
+#| fig-subcap: 
+#|   - "**Cluster 1** embeddings (Aphantasic cluster).<br>Within-cluster aligment accuracy = 95.83%."
+#|   - "**Cluster 2** embeddings (Spatial aphantasic cluster).<br>Within-cluster aligment accuracy = 97.66%."
+#|   - "**Cluster 3** embeddings (Spatial aphantasic cluster).<br>Within-cluster aligment accuracy = 94.01%."
+#|   - "**Cluster 4** embeddings (Aphantasic cluster).<br>Within-cluster aligment accuracy = 85.03%."
+#|   - "**Cluster 5** embeddings (Verbal aphantasic cluster).<br>Within-cluster aligment accuracy = 96.88%."
+#|   - "**Cluster 6** embeddings (Verbal aphantasic cluster).<br>Within-cluster aligment accuracy = 81.80%."
+#|   - "**Cluster 7** embeddings (Phantasic cluster).<br>Within-cluster aligment accuracy = 98.23%."
+#|   - "**Cluster 8** embeddings (Phantasic cluster).<br>Within-cluster aligment accuracy = 74.64%."
+#|   - "**Cluster 9** embeddings (Phantasic cluster).<br>Within-cluster aligment accuracy = 42.45%."
+#| layout-ncol: 3
+#| layout-nrow: 3
+```
+:::
 
 ------------------------------------------------------------------------
 

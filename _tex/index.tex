@@ -221,7 +221,7 @@ I just wanted to try
 format} with this personal project. Conclusion: it's
 \textbf{\emph{incredibly cool}}.
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, colback=white, arc=.35mm, coltitle=black, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colframe=quarto-callout-tip-color-frame, titlerule=0mm, bottomtitle=1mm, toptitle=1mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Project inception}, rightrule=.15mm, toprule=.15mm, left=2mm, bottomrule=.15mm, leftrule=.75mm]
+\begin{tcolorbox}[enhanced jigsaw, bottomrule=.15mm, opacityback=0, colback=white, breakable, colbacktitle=quarto-callout-tip-color!10!white, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Project inception}, bottomtitle=1mm, titlerule=0mm, coltitle=black, colframe=quarto-callout-tip-color-frame, leftrule=.75mm, toptitle=1mm, rightrule=.15mm, arc=.35mm, left=2mm, toprule=.15mm, opacitybacktitle=0.6]
 
 This project stems from several elements:
 
@@ -270,6 +270,9 @@ formats. \textbf{Awesome, I tell you}.}
 
 \section{Theoretical context}\label{theoretical-context}
 
+\subsection{From similarity to second-order
+isomorphism}\label{from-similarity-to-second-order-isomorphism}
+
 When we try to compare our thoughts and representations with those of
 others, we quickly realize that the task will be really difficult, if
 not impossible, as we are of course incapable of ``living in someone
@@ -313,8 +316,7 @@ unravel representations that was born in psychophysics\footnote{Most
   also \citet{roads2024} for an extended review.}: the study of
 \textbf{\emph{similarity.}}
 
-\subsection{From similarity to second-order
-isomorphism}\label{from-similarity-to-second-order-isomorphism}
+\subsection{Work-In-Progress}\label{work-in-progress}
 
 \subsection{Psychological spaces and
 aphantasia}\label{psychological-spaces-and-aphantasia}
@@ -402,6 +404,8 @@ Here, we shall rather attempt to \textbf{develop a method to
 characterize the differences in aphantasics' representational structures
 and psychological spaces.}
 
+\subsection{The present project}\label{the-present-project}
+
 \section{Methods}\label{methods}
 
 \citet{roads2024}, in a recent review on the state and perspectives of
@@ -445,7 +449,13 @@ The procedure is illustrated in Figure~\ref{fig-multi-arrangement}.
 
 \begin{figure}
 
-\sidecaption{\label{fig-multi-arrangement}\textbf{Acquiring similarity
+\centering{
+
+\includegraphics[width=0.9\textwidth,height=\textheight]{images/multi-arrangement-method-mur-2013.png}
+
+}
+
+\caption{\label{fig-multi-arrangement}\textbf{Acquiring similarity
 judgements with the multi-arrangement method. (A)} Subjects are asked to
 arrange items according to their similarity, using mouse drag-and-drop
 on a computer. The similarity measure is taken as the distances between
@@ -466,12 +476,6 @@ into a single dissimilarity estimate, which is placed at the
 corresponding entry of the RDM (lower panel). Mirror-symmetric entries
 are indicated by lighter colors. Figure from
 \citet{murHumanObjectSimilarityJudgments2013}.}
-
-\centering{
-
-\includegraphics[width=0.9\textwidth,height=\textheight]{images/multi-arrangement-method-mur-2013.png}
-
-}
 
 \end{figure}%
 
@@ -514,20 +518,6 @@ would also perform the same task afterwards, this time with actual
 pictures to compare. Subjects would also fill our usual psychometric
 imagery questionnaires.
 
-\begin{marginfigure}
-
-\centering{
-
-\includegraphics{images/mur-spam-2.png}
-
-}
-
-\caption{\label{fig-spam-mur}Arena layout of the MA protocol used by
-\citet{murHumanObjectSimilarityJudgments2013} to acquire perceptual
-similarity judgements on natural images. \emph{Click to expand.}}
-
-\end{marginfigure}%
-
 To ``compare imagined items'', we could use a ``word'' version of the MA
 paradigm. An example from
 \citet{majewskaSpatialMultiarrangementClustering2020} - \emph{who used
@@ -535,7 +525,23 @@ the method to build large-scale semantic similarity resources for
 Natural Language Processing systems} - is represented in
 Figure~\ref{fig-majewska}.
 
-\begin{marginfigure}
+\begin{figure}
+
+\begin{minipage}{\linewidth}
+
+\centering{
+
+\includegraphics{images/mur-spam-2.png}
+
+}
+
+\subcaption{\label{fig-spam-mur}Arena layout of the MA protocol used by
+\citet{murHumanObjectSimilarityJudgments2013} to acquire perceptual
+similarity judgements on natural images.}
+
+\end{minipage}%
+\newline
+\begin{minipage}{\linewidth}
 
 \centering{
 
@@ -543,11 +549,16 @@ Figure~\ref{fig-majewska}.
 
 }
 
-\caption{\label{fig-majewska}Arena layout of the MA protocol used by
+\subcaption{\label{fig-majewska}Arena layout of the MA protocol used by
 \citet{majewskaSpatialMultiarrangementClustering2020} to acquire
-similarity judgements on word pairs. \emph{Click to expand.}}
+similarity judgements on word pairs.}
 
-\end{marginfigure}%
+\end{minipage}%
+
+\caption{\label{fig-spam-arenas}Examples of arena layouts for the
+multi-arrangement (MA) paradigm.}
+
+\end{figure}%
 
 We could have the stimuli rated by another set of participants on
 several features.
@@ -614,7 +625,7 @@ dissimilarity matrices referred to as Group 1 to Group 5.
 We would have a list of animal items, that would have several
 characteristics:
 
-\begin{marginfigure}
+\begin{figure}
 
 \centering{
 
@@ -625,7 +636,7 @@ characteristics:
 \caption{\label{fig-marr}Representing the characteristics of shapes with
 cylinders. Figure from \citet{marr1997}. \emph{Click to expand.}}
 
-\end{marginfigure}%
+\end{figure}%
 
 \begin{itemize}
 \item
@@ -653,12 +664,12 @@ shapes. We expect that the two will be mixed to some degree in every
 subject, but that low-imagery would rather tend towards category
 sorting, while high-imagery would tend towards shape sorting.
 
-Shapes could be very tricky stimuli to discuss. \citet{gardenfors2004}
-noted that we only have a very sketchy understanding of how we perceive
-and conceptualize things according to their shapes. The works of
-\citet{marr1997} highlight this difficulty when analysing the complexity
-of the hierarchical judgements of shapes and volumes, as shown in
-Figure~\ref{fig-marr}.
+Shapes could be very tricky stimuli to discuss.
+\citet{gardenforsConceptualSpacesFramework2004} noted that we only have
+a very sketchy understanding of how we perceive and conceptualize things
+according to their shapes. The works of \citet{marr1997} highlight this
+difficulty when analysing the complexity of the hierarchical judgements
+of shapes and volumes, as shown in Figure~\ref{fig-marr}.
 
 \subsection{Data analysis plan}\label{data-analysis-plan}
 
@@ -739,7 +750,7 @@ principle that a point in one domain should correspond to another point
 in the other domain that has a similar relationship to other points. The
 principle of the method is illustrated in Figure~\ref{fig-gwot-kawa}
 
-\begin{marginfigure}
+\begin{figure}
 
 \centering{
 
@@ -750,7 +761,7 @@ principle of the method is illustrated in Figure~\ref{fig-gwot-kawa}
 \caption{\label{fig-gwot-kawa}Gromov-Wassertein optimal transport
 principle. Figure from \citet{kawakita2023}. \emph{Click to expand.}}
 
-\end{marginfigure}%
+\end{figure}%
 
 We first computed the GWD for all pairs of the dissimilarity matrices of
 the 5 groups (Group 1-5) using the optimized \(\epsilon\). In Fig. 3b,
@@ -895,12 +906,13 @@ Prototype theory builds on the observation that among the instances of a
 property, some are more representative than others. The most
 representative one is the prototype of the property.
 
-Thus, following the concepts illustrated by \citet{gardenfors2004}, we
-would expect that aphantasics, when doing shape similarity judgements,
-would be more inclined to group items close to the prototypical items
-due to a lower definition of the mental image. In comparison, phantasics
-would have a much more distributed conceptual space of item shapes due
-to their higher-resolution mental images of said items.
+Thus, following the concepts illustrated by
+\citet{gardenforsConceptualSpacesFramework2004}, we would expect that
+aphantasics, when doing shape similarity judgements, would be more
+inclined to group items close to the prototypical items due to a lower
+definition of the mental image. In comparison, phantasics would have a
+much more distributed conceptual space of item shapes due to their
+higher-resolution mental images of said items.
 
 \subsubsection{Subjective imagery and psychological
 spaces}\label{subjective-imagery-and-psychological-spaces}
@@ -956,7 +968,7 @@ for verbal; etc. The numbers are arbitrary, but have been chosen by
 trial-and-error to obtain a model that is both well-defined and not
 exaggerated. The 30 subjects' imagery profiles are represented in the
 three dimensional space of the visual-spatial-verbal dimensions in
-Figure~\ref{fig-plot-osv-model}.
+Figure~\ref{fig-osv-model}.
 
 \begin{longtable}[]{@{}lccc@{}}
 \caption{Imagery abilities of the four hypothesized cognitive
@@ -977,17 +989,17 @@ Spatial phantasic & + & ++ & - \\
 Visual phantasic & ++ & - & + \\
 \end{longtable}
 
-\phantomsection\label{cell-fig-plot-osv-model}
+\phantomsection\label{cell-fig-osv-model}
 \begin{figure}[H]
 
 \centering{
 
-\includegraphics{index_files/figure-pdf/fig-plot-osv-model-1.png}
+\includegraphics{index_files/figure-pdf/fig-osv-model-1.png}
 
 }
 
-\caption{\label{fig-plot-osv-model}Imagery profiles generated for 30
-subjects on the three object, spatial, and verbal dimensions.}
+\caption{\label{fig-osv-model}Imagery profiles generated for 30 subjects
+on the three object, spatial, and verbal dimensions.}
 
 \end{figure}%
 
@@ -998,18 +1010,19 @@ Notebook}}
 \subsection{Data simulation: Creating representational
 structures}\label{data-simulation-creating-representational-structures}
 
-\citet{gardenfors2004} invokes two scientific concepts, to wit,
-prototypes and Voronoi tessellations. Prototype theory builds on the
-observation that among the instances of a property, some are more
-representative than others. The most representative one is the prototype
-of the property. \emph{We hypothesize that aphantasics will be more
-inclined to categorize items according to prototypes than phantasics.}
+\citet{gardenforsConceptualSpacesFramework2004} invokes two scientific
+concepts, to wit, prototypes and Voronoi tessellations. Prototype theory
+builds on the observation that among the instances of a property, some
+are more representative than others. The most representative one is the
+prototype of the property. \emph{We hypothesize that aphantasics will be
+more inclined to categorize items according to prototypes than
+phantasics.}
 
-A Voronoi tesselation of a given space divides that space into a number
+A Voronoi tessellation of a given space divides that space into a number
 of cells such that each cell has a center and consists of all and only
 those points that lie no closer to the center of any other cell than to
 its own center; the centers of the various cells are called the
-generator points of the tesselation. This principle will underlie our
+generator points of the tessellation. This principle will underlie our
 data simulation, as we will build representations in a 3D space based on
 distances to ``centroids'', namely, prototypes. These representations
 will thus be located inside of the tessellations around these
@@ -1024,10 +1037,10 @@ sphere}\label{generating-prototype-embeddings-from-a-sphere}
 Notebook}}
 
 A function will be used to generate embeddings. These spherical
-embeddings are displayed in Figure~\ref{fig-perfect-embeddings} We get 8
-nicely distributed clusters. We'll retrieve the centroids of each
-cluster, which would be the ``perfect'' categories of each species group
-(say, generated by a computational model on categorical criteria).
+embeddings are displayed in {Figure~\ref{fig-perfect-embeddings-pdf}}.
+We get 8 nicely distributed clusters. We'll retrieve the centroids of
+each cluster, which would be the ``perfect'' categories of each species
+group (say, generated by a computational model on categorical criteria).
 
 \begin{figure}
 
@@ -1035,11 +1048,11 @@ cluster, which would be the ``perfect'' categories of each species group
 
 \centering{
 
-\includegraphics{index_files/figure-pdf/fig-perfect-embeddings-1.png}
+\includegraphics{index_files/figure-pdf/fig-perfect-embeddings-pdf-1.png}
 
 }
 
-\subcaption{\label{fig-perfect-embeddings-1}Generated spherical
+\subcaption{\label{fig-perfect-embeddings-pdf-1}Generated spherical
 distribution of 1000 observations grouped in 8 equal clusers with
 Gaussian Mixture Clustering.}
 
@@ -1049,16 +1062,16 @@ Gaussian Mixture Clustering.}
 
 \centering{
 
-\includegraphics{index_files/figure-pdf/fig-perfect-embeddings-2.png}
+\includegraphics{index_files/figure-pdf/fig-perfect-embeddings-pdf-2.png}
 
 }
 
-\subcaption{\label{fig-perfect-embeddings-2}Centroids of the 8 clusters
-created on the sphere.}
+\subcaption{\label{fig-perfect-embeddings-pdf-2}Centroids of the 8
+clusters created on the sphere.}
 
 \end{minipage}%
 
-\caption{\label{fig-perfect-embeddings}Initial random generations of
+\caption{\label{fig-perfect-embeddings-pdf}Initial random generations of
 1000 points grouped in 8 clusters to represent the theoretical
 embeddings of 8 groups (i.e.~groups of species here).
 \textbf{\emph{Interact with the figures to see the details.}}}
@@ -1228,17 +1241,18 @@ intra-group variance, so as to try to make the spatial groups as
 coherent as possible (and avoid blurring everything and making the
 groups disappear in noise).
 
-Although the groups and species in Figure~\ref{fig-subject-embeddings-1}
-look fairly obvious when we colour the embeddings using the knowledge
-about how we built them, the algorithm will only be fed with the data
-for each subject, without any labelling or additional information. Thus,
-Figure~\ref{fig-subject-embeddings-2} is what the algorithm will
+Although the groups and species in
+{Figure~\ref{fig-subject-embeddings-pdf-1}} look fairly obvious when we
+colour the embeddings using the knowledge about how we built them, the
+algorithm will only be fed with the data for each subject, without any
+labelling or additional information. Thus,
+{Figure~\ref{fig-subject-embeddings-pdf-2}} is what the algorithm will
 actually ``see'' (and what it will try to decrypt). Said otherwise, its
 objective will be to find all the correct colours and shapes in
-Figure~\ref{fig-subject-embeddings-1} using only 30 sub-datasets (one
-for each subject) that are illustrated in
-Figure~\ref{fig-subject-embeddings-2}. Admittedly, that looks a lot more
-complicated.
+{Figure~\ref{fig-subject-embeddings-pdf-1}} using only 30 sub-datasets
+(one for each subject) that are illustrated in
+{Figure~\ref{fig-subject-embeddings-pdf-2}}. Admittedly, that looks a
+lot more complicated.
 
 \begin{figure}
 
@@ -1246,11 +1260,11 @@ complicated.
 
 \centering{
 
-\includegraphics{index_files/figure-pdf/fig-subject-embeddings-1.png}
+\includegraphics{index_files/figure-pdf/fig-subject-embeddings-pdf-1.png}
 
 }
 
-\subcaption{\label{fig-subject-embeddings-1}Distribution of the
+\subcaption{\label{fig-subject-embeddings-pdf-1}Distribution of the
 embeddings of the 30 subjects,\textbf{\emph{colored by the species
 groups}} they represent. The symbols represent the four imagery groups
 (Aph. verbal, spatial, etc.)}
@@ -1261,18 +1275,18 @@ groups}} they represent. The symbols represent the four imagery groups
 
 \centering{
 
-\includegraphics{index_files/figure-pdf/fig-subject-embeddings-2.png}
+\includegraphics{index_files/figure-pdf/fig-subject-embeddings-pdf-2.png}
 
 }
 
-\subcaption{\label{fig-subject-embeddings-2}Distribution of the
+\subcaption{\label{fig-subject-embeddings-pdf-2}Distribution of the
 embeddings of the 30 subjects, \textbf{\emph{colored by subject}}.This
 is the only information the unsupervised algorithm will have to work
 with.}
 
 \end{minipage}%
 
-\caption{\label{fig-subject-embeddings}Final distribution of the 64
+\caption{\label{fig-subject-embeddings-pdf}Final distribution of the 64
 embeddings of all the 30 subjects, amounting to 1920 points total.
 \textbf{\emph{Interact with the figures to see the details.}}}
 
@@ -1378,25 +1392,25 @@ model}\label{evaluating-the-clusters-in-light-of-our-theoretical-osv-model}
 
 Let's see the composition of the clusters in light of our initial O-S-V
 model. The cognitive profiles of the subjects are represented in
-Figure~\ref{fig-plot-osv-clusters}, and the distribution of the
-cognitive profiles in the clusters is represented in
+Figure~\ref{fig-osv-clusters}, and the distribution of the cognitive
+profiles in the clusters is represented in
 Figure~\ref{fig-clusters-distribution}.
 
 \textsubscript{Source:
 \href{https://m-delem.github.io/2499-similarity-manuscript/index.qmd.html}{Article
 Notebook}}
 
-\phantomsection\label{cell-fig-plot-osv-clusters}
+\phantomsection\label{cell-fig-osv-clusters}
 \begin{figure}[H]
 
 \centering{
 
-\includegraphics{index_files/figure-pdf/fig-plot-osv-clusters-1.png}
+\includegraphics{index_files/figure-pdf/fig-osv-clusters-1.png}
 
 }
 
-\caption{\label{fig-plot-osv-clusters}Imagery profiles of the nine
-identified clusters on the three object, spatial, and verbal dimensions.
+\caption{\label{fig-osv-clusters}Imagery profiles of the nine identified
+clusters on the three object, spatial, and verbal dimensions.
 \textbf{\emph{Interact with the figure to see the details.}}}
 
 \end{figure}%
@@ -1427,17 +1441,28 @@ Now let's visualize the embeddings of the subjects in each cluster to
 get a visual idea of their representational structures and the
 intra-cluster alignment between the subjects.
 
+Let's try referencing {Figure~\ref{fig-clusters-final-pdf-1}}, or
+{Figure~\ref{fig-clusters-final-pdf-9}}, the last one.
+
 \begin{figure}
+
+\caption{\label{fig-clusters-final-pdf}Psychological spaces (embeddings)
+of the 30 subjects, aligned and clustered with other subjects having the
+most similar representations. The eight colors represent the initial
+eight groups of species that each subject had to `represent' with
+imagery (legends for these colors have been taken out for display
+clarity purposes). \textbf{\emph{Interact with the figures to see the
+details.}}}
 
 \begin{minipage}{0.33\linewidth}
 
 \centering{
 
-\includegraphics{index_files/figure-pdf/fig-clusters_embeddings_final-1.png}
+\includegraphics{index_files/figure-pdf/fig-clusters-final-pdf-1.png}
 
 }
 
-\subcaption{\label{fig-clusters_embeddings_final-1}\textbf{Cluster 1}
+\subcaption{\label{fig-clusters-final-pdf-1}\textbf{Cluster 1}
 embeddings (Aphantasic cluster).Within-cluster aligment accuracy =
 95.83\%.}
 
@@ -1447,11 +1472,11 @@ embeddings (Aphantasic cluster).Within-cluster aligment accuracy =
 
 \centering{
 
-\includegraphics{index_files/figure-pdf/fig-clusters_embeddings_final-2.png}
+\includegraphics{index_files/figure-pdf/fig-clusters-final-pdf-2.png}
 
 }
 
-\subcaption{\label{fig-clusters_embeddings_final-2}\textbf{Cluster 2}
+\subcaption{\label{fig-clusters-final-pdf-2}\textbf{Cluster 2}
 embeddings (Spatial aphantasic cluster).Within-cluster aligment accuracy
 = 97.66\%.}
 
@@ -1461,11 +1486,11 @@ embeddings (Spatial aphantasic cluster).Within-cluster aligment accuracy
 
 \centering{
 
-\includegraphics{index_files/figure-pdf/fig-clusters_embeddings_final-3.png}
+\includegraphics{index_files/figure-pdf/fig-clusters-final-pdf-3.png}
 
 }
 
-\subcaption{\label{fig-clusters_embeddings_final-3}\textbf{Cluster 3}
+\subcaption{\label{fig-clusters-final-pdf-3}\textbf{Cluster 3}
 embeddings (Spatial aphantasic cluster).Within-cluster aligment accuracy
 = 94.01\%.}
 
@@ -1475,11 +1500,11 @@ embeddings (Spatial aphantasic cluster).Within-cluster aligment accuracy
 
 \centering{
 
-\includegraphics{index_files/figure-pdf/fig-clusters_embeddings_final-4.png}
+\includegraphics{index_files/figure-pdf/fig-clusters-final-pdf-4.png}
 
 }
 
-\subcaption{\label{fig-clusters_embeddings_final-4}\textbf{Cluster 4}
+\subcaption{\label{fig-clusters-final-pdf-4}\textbf{Cluster 4}
 embeddings (Aphantasic cluster).Within-cluster aligment accuracy =
 85.03\%.}
 
@@ -1489,11 +1514,11 @@ embeddings (Aphantasic cluster).Within-cluster aligment accuracy =
 
 \centering{
 
-\includegraphics{index_files/figure-pdf/fig-clusters_embeddings_final-5.png}
+\includegraphics{index_files/figure-pdf/fig-clusters-final-pdf-5.png}
 
 }
 
-\subcaption{\label{fig-clusters_embeddings_final-5}\textbf{Cluster 5}
+\subcaption{\label{fig-clusters-final-pdf-5}\textbf{Cluster 5}
 embeddings (Verbal aphantasic cluster).Within-cluster aligment accuracy
 = 96.88\%.}
 
@@ -1503,11 +1528,11 @@ embeddings (Verbal aphantasic cluster).Within-cluster aligment accuracy
 
 \centering{
 
-\includegraphics{index_files/figure-pdf/fig-clusters_embeddings_final-6.png}
+\includegraphics{index_files/figure-pdf/fig-clusters-final-pdf-6.png}
 
 }
 
-\subcaption{\label{fig-clusters_embeddings_final-6}\textbf{Cluster 6}
+\subcaption{\label{fig-clusters-final-pdf-6}\textbf{Cluster 6}
 embeddings (Verbal aphantasic cluster).Within-cluster aligment accuracy
 = 81.80\%.}
 
@@ -1517,11 +1542,11 @@ embeddings (Verbal aphantasic cluster).Within-cluster aligment accuracy
 
 \centering{
 
-\includegraphics{index_files/figure-pdf/fig-clusters_embeddings_final-7.png}
+\includegraphics{index_files/figure-pdf/fig-clusters-final-pdf-7.png}
 
 }
 
-\subcaption{\label{fig-clusters_embeddings_final-7}\textbf{Cluster 7}
+\subcaption{\label{fig-clusters-final-pdf-7}\textbf{Cluster 7}
 embeddings (Phantasic cluster).Within-cluster aligment accuracy =
 98.23\%.}
 
@@ -1531,11 +1556,11 @@ embeddings (Phantasic cluster).Within-cluster aligment accuracy =
 
 \centering{
 
-\includegraphics{index_files/figure-pdf/fig-clusters_embeddings_final-8.png}
+\includegraphics{index_files/figure-pdf/fig-clusters-final-pdf-8.png}
 
 }
 
-\subcaption{\label{fig-clusters_embeddings_final-8}\textbf{Cluster 8}
+\subcaption{\label{fig-clusters-final-pdf-8}\textbf{Cluster 8}
 embeddings (Phantasic cluster).Within-cluster aligment accuracy =
 74.64\%.}
 
@@ -1545,11 +1570,11 @@ embeddings (Phantasic cluster).Within-cluster aligment accuracy =
 
 \centering{
 
-\includegraphics{index_files/figure-pdf/fig-clusters_embeddings_final-9.png}
+\includegraphics{index_files/figure-pdf/fig-clusters-final-pdf-9.png}
 
 }
 
-\subcaption{\label{fig-clusters_embeddings_final-9}\textbf{Cluster 9}
+\subcaption{\label{fig-clusters-final-pdf-9}\textbf{Cluster 9}
 embeddings (Phantasic cluster).Within-cluster aligment accuracy =
 42.45\%.}
 
