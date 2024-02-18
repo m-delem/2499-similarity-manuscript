@@ -116,9 +116,9 @@ To "compare imagined items", we could use a "word" version of the MA paradigm. A
 
 :::{#fig-spam-arenas layout-ncol=1}
 
-![Arena layout of the MA protocol used by @murHumanObjectSimilarityJudgments2013 to acquire perceptual similarity judgements on natural images.](images/mur-spam-2.png){#fig-spam-mur}
+![Arena layout of the MA protocol used by @murHumanObjectSimilarityJudgments2013 to acquire perceptual similarity judgements on natural images.](images/mur-spam-2.png){#fig-spam-mur width=50%}
 
-![Arena layout of the MA protocol used by @majewskaSpatialMultiarrangementClustering2020 to acquire similarity judgements on word pairs.](images/majewska-spam-2.png){#fig-majewska}
+![Arena layout of the MA protocol used by @majewskaSpatialMultiarrangementClustering2020 to acquire similarity judgements on word pairs.](images/majewska-spam-2.png){#fig-majewska width=65%}
 
 Examples of arena layouts for the multi-arrangement (MA) paradigm.
 :::
@@ -157,7 +157,7 @@ We would have a list of animal items, that would have several characteristics:
 :::
 
 :::{.content-visible when-format="pdf"}
-![Representing the characteristics of shapes with cylinders. Figure from @marr1997. *Click to expand.*](images/shapes-marr.png){#fig-marr out-width=60%}
+![Representing the characteristics of shapes with cylinders. Figure from @marr1997. *Click to expand.*](images/shapes-marr.png){#fig-marr width=60%}
 :::
 
 -   A name
@@ -201,7 +201,7 @@ To this end, we used the Gromov-Wasserstein optimal transport (GWOT) method, whi
 :::
 
 :::{.content-visible when-format="pdf"}
-![Gromov-Wassertein optimal transport principle. Figure from @kawakita2023. *Click to expand.*](images/kawa-gwot-2.PNG){#fig-gwot-kawa out-width=60%}
+![Gromov-Wassertein optimal transport principle. Figure from @kawakita2023. *Click to expand.*](images/kawa-gwot-2.PNG){#fig-gwot-kawa width=70%}
 :::
 
 We first computed the GWD for all pairs of the dissimilarity matrices of the 5 groups (Group 1-5) using the optimized $\epsilon$. In Fig. 3b, we show the optimized mapping $\Gamma*$ between Group 1 and Groups 2-5 (see Supplementary Figure S1 for the other pairs). As shown in Fig. 3b, most of the diagonal elements in $\Gamma*$ show high values, indicating that most colors in one group correspond to the same colors in the other groups with high probability. We next performed unsupervised alignment of the vector embeddings of qualia structures. Although $\Gamma*$ provides the rough correspondence between the embeddings of qualia structures, we should find a more precise mathematical mapping between qualia structures in terms of their vector embeddings to more accurately assess the similarity between the qualia structures. Here, we consider aligning the embeddings of all the groups in a common space.
@@ -218,7 +218,7 @@ These results indicate that the difference between the qualia structures of neur
 
 The experimental design and data analysis plans are succinctly summarised in @fig-expe-conditions.
 
-::: {#fig-expe-conditions .column-page-inset layout-ncol="2" cap-location="bottom"}
+::: {#fig-expe-conditions .column-page-inset layout-ncol=2 cap-location="bottom"}
 ![](images/my-protocol-1.png){#fig-expe-subject}
 
 ![](images/my-protocol-2.png){#fig-expe-group}
